@@ -1,0 +1,882 @@
+{
+	"info": {
+		"_postman_id": "41912905-ba51-4e4d-8977-89d5a64dcad3",
+		"name": "IS213 G3T8 user_microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32110674"
+	},
+	"item": [
+		{
+			"name": "Datahase Reset",
+			"item": [
+				{
+					"name": "Database Reset - Wrong URL FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/reset/obviously_wrong",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"reset",
+								"obviously_wrong"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Database Reset - Empty",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/reset/empty",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"reset",
+								"empty"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ALL User - Empty FAIL",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/users/get/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"users",
+								"get",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Database Reset - With Dataset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/reset/dataset1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"reset",
+								"dataset1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get All User",
+			"item": [
+				{
+					"name": "Get ALL User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/users/get/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"users",
+								"get",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ALL User - Patients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/users/get/patients",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"users",
+								"get",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ALL User - Nurses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/users/get/nurses",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"users",
+								"get",
+								"nurses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ALL User - Doctors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/users/get/doctors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"users",
+								"get",
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ALL User - FAIL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/users/get/obviously_wrong",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"users",
+								"get",
+								"obviously_wrong"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get a User by ID",
+			"item": [
+				{
+					"name": "Get a User by ID - Patient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/get/patients/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"get",
+								"patients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a User by ID - Nurse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/get/nurses/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"get",
+								"nurses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a User by ID - Doctor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/get/doctors/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"get",
+								"doctors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a User by ID - User Not Found",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/get/doctors/999999",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"get",
+								"doctors",
+								"999999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a User by ID - Wrong URL FAIL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/get/obviouslt_wrong/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"get",
+								"obviouslt_wrong",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create User",
+			"item": [
+				{
+					"name": "Create User - Patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"bigbaby\",\r\n    \"password\": \"pass123\",\r\n    \"fname\": \"Finn\",\r\n    \"lname\": \"Mertens\",\r\n    \"age\": \"16\",\r\n    \"gender\": \"M\",\r\n    \"salutation\": \"Mr\",\r\n    \"email\": \"finn.mertens@gmail.com\",\r\n    \"contactNo\": \"9123 5123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/create/patients",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"create",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User - Patient User Exists FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"pat1\",\r\n    \"password\": \"pass123\",\r\n    \"fname\": \"Finn\",\r\n    \"lname\": \"Mertens\",\r\n    \"age\": \"16\",\r\n    \"gender\": \"M\",\r\n    \"salutation\": \"Mr\",\r\n    \"email\": \"finn.mertens@gmail.com\",\r\n    \"contactNo\": \"9123 5123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/create/patients",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"create",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User - Nurse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"pancakes\",\r\n    \"password\": \"pass123\",\r\n    \"fname\": \"Jake\",\r\n    \"lname\": \"Doge\",\r\n    \"gender\": \"M\",\r\n    \"salutation\": \"Mr\",\r\n    \"position\": \"Senior Nurse\",\r\n    \"salary\": 4000,\r\n    \"email\": \"jake.doge@yata.com\",\r\n    \"contactNo\": \"8460 2732\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/create/nurses",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"create",
+								"nurses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User - Nurse User Exists FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"nur1\",\r\n    \"password\": \"pass123\",\r\n    \"fname\": \"Jake\",\r\n    \"lname\": \"Doge\",\r\n    \"gender\": \"M\",\r\n    \"salutation\": \"Mr\",\r\n    \"position\": \"Senior Nurse\",\r\n    \"salary\": 4000,\r\n    \"email\": \"jake.doge@yata.com\",\r\n    \"contactNo\": \"8460 2732\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/create/nurses",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"create",
+								"nurses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User - Doctor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"princess\",\r\n    \"password\": \"pass123\",\r\n    \"fname\": \"Bonnibel\",\r\n    \"lname\": \"Bubblegum\",\r\n    \"gender\": \"F\",\r\n    \"salutation\": \"Dr\",\r\n    \"position\": \"Junior Doctor\",\r\n    \"salary\": 7000,\r\n    \"email\": \"bonnibel@yata.com\",\r\n    \"contactNo\": \"8000 2153\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/create/doctors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"create",
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User - Doctor User Exists FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"doc1\",\r\n    \"password\": \"pass123\",\r\n    \"fname\": \"Bonnibel\",\r\n    \"lname\": \"Bubblegum\",\r\n    \"gender\": \"F\",\r\n    \"salutation\": \"Dr\",\r\n    \"position\": \"Junior Doctor\",\r\n    \"salary\": 7000,\r\n    \"email\": \"bonnibel@yata.com\",\r\n    \"contactNo\": \"8000 2153\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/create/doctors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"create",
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User - Invalid Payload FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"SickMan\",\r\n    \"fname\": \"Martin\",\r\n    \"lname\": \"Mertens\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/create/patients",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"create",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User - Invalid Usertype FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Doctorasd\",\r\n    \"password\": \"pass123\",\r\n    \"fname\": \"Bonnibel\",\r\n    \"lname\": \"Bubblegum\",\r\n    \"gender\": \"F\",\r\n    \"salutation\": \"Dr\",\r\n    \"position\": \"Junior Doctor\",\r\n    \"salary\": 7000,\r\n    \"email\": \"bonnibel@yata.com\",\r\n    \"contactNo\": \"8000 2153\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/create/obviously_wrong",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"create",
+								"obviously_wrong"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login - Patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"pat1\",\r\n    \"password\": \"pass123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/login/patients",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"login",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login - Patients FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"obviously_wrong\",\r\n    \"password\": \"pass123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/login/patients",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"login",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login - Nurse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"nur1\",\r\n    \"password\": \"pass123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/login/nurses",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"login",
+								"nurses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login - Nurse FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"obviously_wrong\",\r\n    \"password\": \"pass123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/login/nurses",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"login",
+								"nurses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login - Doctor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"doc1\",\r\n    \"password\": \"pass123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/login/doctors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"login",
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login - Doctor FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"obviously_wrong\",\r\n    \"password\": \"pass123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/login/doctors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"login",
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login - Usertype FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Doctorasd\",\r\n    \"password\": \"pass123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/user/login/obviously_wrong",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"login",
+								"obviously_wrong"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,46 @@
+Starting existing workspace
+1. `python3 -m venv .venv`
+2. `.venv\Scripts\activate`
+3. `pip install -r requirements.txt`
+5. `pip list`
+6. `python <file>.py`
+
+
+Code snippets
+
+1. Create a python environment
+- `python3 -m venv .venv`
+
+2. Select the python environment
+- `.venv\Scripts\activate`
+
+3. Install the required dependencies
+- `pip install <dependency>`
+- `pip install -r requirements.txt`
+
+4. Run Python project
+By microservice
+- `python <file>.py`
+By Web page (Flask)
+- `python -m flask run`
+
+
+Others
+
+1. View installed dependencies
+- `pip list`
+
+2. Create requirements.txt
+- `pip freeze > requirements.txt`
+- `py -m pip freeze > requirements.txt`
+
+3. Deactivate python environment
+- `deactivate`
+
+4. Environment Variables
+Bash 
+- $env:<key> <value>
+- dir env:
+CMD
+- set <key> <value>
+- set <key>
