@@ -8,7 +8,7 @@ export const fontSans = FontSans({
 });
 
 export const metadata = {
-    title: "Healthy",
+    title: "YATA",
     description: "Healthy life, Healthy living",
 };
 
