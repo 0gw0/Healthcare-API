@@ -5,7 +5,6 @@ import { Boxes } from '@/components/aceternity/background-boxes';
 import { cn } from '@/lib/utils';
 
 import { Button } from '@/components/ui/button';
-import { redirect } from 'next/navigation';
 import axios from 'axios';
 
 export default function Home() {
@@ -48,6 +47,7 @@ export default function Home() {
 
 	async function callAuthorizeApi() {
 		// Change back after Singpass works
+        
 		// let code_challenge = await axios
 		//     .get("/api/singpass/generateCodeChallenge")
 		//     .then((res) => {
