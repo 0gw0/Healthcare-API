@@ -1,6 +1,6 @@
 import { NavbarSimple } from '@/components/Navbar';
 import Image from 'next/image';
-import bgImg from '../../../public/bg_header.png';
+import bgImg from '../../../public/user_images/bg_homepage.png';
 
 export default function Homepage() {
 	return (
