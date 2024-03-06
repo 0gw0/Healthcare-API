@@ -36,12 +36,10 @@ export default function Page() {
 					</div>
 				</div>
 				<Container className="basis-4/12">
-					{/* <h1 className="text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
+					<h1 className="text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
 						Upcoming Appointments
 					</h1>
-					<div className="grid lg:grid-cols-1 xl:grid-cols-2 mt-4">
-								<GreyBox />
-					</div> */}
+					
 					<UpcomingAppt></UpcomingAppt>
 				</Container>
 			</div>
