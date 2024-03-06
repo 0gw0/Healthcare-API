@@ -13,18 +13,18 @@ export default function Page() {
 			<div className="flex flex-row">
 				<div className="basis-8/12">
 					<Container>
-						<h1 className="text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
+						<h1 className="ml-4 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
 							Specialty
 						</h1>
 					</Container>
 					<div className="flex flex-row">
 						<Container className="basis-1/2">
-							<h1 className="text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
+							<h1 className="ml-4 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
 								Prescription Status
 							</h1>
 						</Container>
 						<Container className="basis-1/2">
-							<h1 className="text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
+							<h1 className="ml-4 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
 								History
 							</h1>
 							<div className="grid lg:grid-cols-1 xl:grid-cols-2 mt-4">
