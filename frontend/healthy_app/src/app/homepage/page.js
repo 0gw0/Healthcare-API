@@ -2,12 +2,14 @@ import Navbar from '@/components/Navbar';
 import Container from '@/components/container';
 import Hero from '@/components/hero';
 import GreyBox from '@/components/GreyBox';
+import Footer from '@/components/footer';
 
 export default function Page() {
 	return (
 		<>
 			<Navbar />
 			<Hero />
+			{/* User Homepage items */}
 			<div className="flex flex-row">
 				<div className="basis-8/12">
 					<Container>
@@ -37,6 +39,7 @@ export default function Page() {
 					</h1>
 				</Container>
 			</div>
+			<Footer />
 		</>
 	);
 }

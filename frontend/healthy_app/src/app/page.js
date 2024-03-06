@@ -58,7 +58,6 @@ export default function Home() {
 		//         console.log(error);
 		//         return false;
 		//     });
-
 		// if (code_challenge) {
 		//     localStorage.setItem("codeVerifier", code_challenge[1]);
 		//     const authApiUrl =
@@ -79,7 +78,6 @@ export default function Home() {
 		//         Object.entries(queryComponents)
 		//             .map(([k, v]) => `${k}=${v}`)
 		//             .join("&");
-
 		//     // Example output:
 		//     // "https://test.api.myinfo.gov.sg/com/v4/authorize?client_id=STG2-MYINFO-SELF-TEST&scope=uinfin name sex race nationality dob email mobileno regadd housingtype hdbtype marital edulevel noa-basic ownerprivate cpfcontributions cpfbalances&purpose_id=demonstration&code_challenge=MITPE6RARV4Xg0RGxJMsObnY5TGagjwg7-FF92h4UYM&code_challenge_method=S256&redirect_uri=http://localhost:3001/callback";
 		//     window.location = authorizeUrl;
