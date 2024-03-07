@@ -3,6 +3,8 @@ import Container from '@/components/container';
 import Hero from '@/components/hero';
 import GreyBox from '@/components/GreyBox';
 import Footer from '@/components/footer';
+import UpcomingAppt from '@/components/UpcomingAppt';
+
 
 export default function Page() {
 	return (
@@ -37,6 +39,8 @@ export default function Page() {
 					<h1 className="text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
 						Upcoming Appointments
 					</h1>
+					
+					<UpcomingAppt></UpcomingAppt>
 				</Container>
 			</div>
 			<Footer />
