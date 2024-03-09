@@ -5,6 +5,13 @@ import logo from '../app/favicon.ico';
 const Navbar = () => {
 	const navigation = ['Homepage', 'Make Appointment', 'History'];
 
+	function spinalCase(str) {
+		return str
+			.split(' ')
+			.map((c) => c.toLowerCase())
+			.join('-');
+	}
+
 	return (
 		<div className="w-full">
 			<nav className="container-fluid relative flex flex-wrap items-center justify-between p-6 mx-auto lg:justify-between xl:px-8 bg-blue-950">
@@ -31,8 +38,8 @@ const Navbar = () => {
 						{navigation.map((menu, index) => (
 							<li className="mr-3 nav__item" key={index}>
 								<Link
-									href="/"
-									className="inline-block px-4 py-2 text-lg font-normal text-white no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+									href={spinalCase(menu)}
+									className="inline-block px-4 py-2 text-lg font-normal text-white no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 hover:bg-indigo-100 hover:outline-none dark:hover:bg-gray-800"
 								>
 									{menu}
 								</Link>
