@@ -18,6 +18,7 @@ const DatePickerComponent = () => {
       <DatePicker 
         selected={selectedDate} 
         onChange={handleChange}
+        minDate={new Date()}
         className="border border-gray-200 rounded-md px-3 py-2 text-gray-700 bg-white shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 font-medium border-b  pb-2" 
         
       />
