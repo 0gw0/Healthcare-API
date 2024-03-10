@@ -6,7 +6,6 @@ import Hero from '@/components/hero';
 import GreyBox from '@/components/GreyBox';
 import Footer from '@/components/footer';
 import UpcomingAppt from '@/components/UpcomingAppt';
-import DatePickerComponent from '@/components/DatePickerComponent';
 
 import React, { useState } from 'react';
 
@@ -48,15 +47,8 @@ export default function Page() {
 				</Container>
 			</div>
 
-			{/* <div> 
-            <h1>NextJs Calendar - GeeksforGeeks</h1> 
-            <Calendar 
-                onChange={onChange} 
-                value={value} 
-            /> 
-        </div>  */}
+			
 			<div className="container mx-auto p-4 flex justify-center">
-				<DatePickerComponent />
 			</div>
 
 			<Footer />
