@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <Hero />
+      <Hero title="Make Appointment" />
       {/* User Homepage items */}
       <Container>
         <div className="flex flex-row">

@@ -19,7 +19,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <Hero />
+      <Hero title="History" />
       {/* User Homepage items */}
       <Container>
         <div className="flex flex-row">

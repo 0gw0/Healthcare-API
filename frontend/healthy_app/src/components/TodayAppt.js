@@ -1,15 +1,16 @@
+import React from 'react'
 import userOneImg from "../../public/doc1.jpeg";
 import Image from "next/image";
 
-const UpcomingAppt = () => {
+const TodayAppt = () => {
   return (
-    <div className="mt-6 lg:col-span-2 xl:col-auto bg-gray-200 dark:bg-gray-700 rounded-2xl py-8 px-2 flex flex-col items-center">
+<div className="lg:col-span-2 xl:col-auto bg-gray-200 dark:bg-gray-700 rounded-2xl py-8 px-2 flex flex-col items-center mt-6">
       {/* first card */}
       <div className="flex flex-col justify-between w-96 h-full bg-white px-5 rounded-2xl py-1 pb-10 dark:bg-trueGray-800 mb-10 mt-4">
         <Avatar 
-		image={userOneImg} 
-		name="Dr. Mary Tan" 
-		title="Cardiologist"
+		
+		name="Jessica Chan" 
+		title="Meical History: None"
 		date= "Tue, May 23"
 		time="11:30am"
 		 />
@@ -19,9 +20,9 @@ const UpcomingAppt = () => {
 		{/* second card */}
 		<div className="flex flex-col justify-between w-96 h-full bg-white px-5 rounded-2xl py-1 pb-10 dark:bg-trueGray-800 mb-10 mt-4">
         <Avatar 
-		image={userOneImg} 
-		name="Dr. Mary Tan" 
-		title="Cardiologist"
+		
+		name="Henry Lim" 
+		title="Medical History: Asthma"
 		date= "Tue, May 23"
 		time="11:30am"
 		 />
@@ -44,13 +45,30 @@ function Avatar(props) {
                     
                     <div className="text-lg">
 						{props.date}, {props.time}
+                        <button
+              type="button"
+              className="px-3 py-1 text-sm text-white focus:outline-none bg-blue-950 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 float-right  mx-6 " // Added styles for positioning
+            >
+              Start
+            </button>
                         
                     </div>
+                    
+                    
 					
                 </div>
             </div>
 
-            <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
+            {/* <button
+          type="button"
+          class="mx-8 p-3 text-sm text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 float-right"
+        >
+          Confirm Appointment
+        </button> */}
+
+
+
+            {/* <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
                 <Image
                     src={props.image}
                     width="100"
@@ -58,11 +76,11 @@ function Avatar(props) {
                     alt="Avatar"
                     placeholder="blur"
                 />
-            </div>
+            </div> */}
 
 			
         </div>
-    );
+  )
 }
 
-export default UpcomingAppt;
+export default TodayAppt
