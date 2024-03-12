@@ -16,6 +16,7 @@ export default function Page() {
 			<Hero
 				title="Make Appointment"
 				description="Book appointments with our doctors here."
+				heroImg="doc"
 			/>
 			{/* User Homepage items */}
 			<Container>

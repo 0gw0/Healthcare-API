@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import heroImg from '../../public/hero.svg';
+import doctorImg from '../../public/hero.svg';
+import timeImg from '../../public/time.svg';
 import Container from './container';
 
-const Hero = ({ title, description }) => {
+const Hero = ({ title, description, heroImg }) => {
 	return (
 		<>
 			<Container>
@@ -16,9 +17,9 @@ const Hero = ({ title, description }) => {
 						</p>
 					</div>
 					<div className="flex items-center justify-center">
-						<div className="w-64">
+						<div className="w-60">
 							<Image
-								src={heroImg}
+								src={heroImg == 'doc' ? doctorImg : timeImg}
 								alt="Hero Illustration"
 								loading="eager"
 							/>

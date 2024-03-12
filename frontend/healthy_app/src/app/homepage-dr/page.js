@@ -33,6 +33,7 @@ export default function Page() {
 			<Hero
 				title="Doctor homepage"
 				description="Book and manage your consultations below."
+				heroImg="doc"
 			/>
 			{/* User Homepage items */}
 			<div className="flex flex-row">

@@ -16,6 +16,7 @@ export default function Page() {
 			<Hero
 				title="Homepage"
 				description="Book and manage your consultations below."
+				heroImg="doc"
 			/>
 			{/* User Homepage items */}
 			<div className="flex flex-row">

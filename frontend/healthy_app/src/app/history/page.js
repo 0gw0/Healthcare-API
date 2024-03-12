@@ -36,6 +36,7 @@ export default function Page() {
 			<Hero
 				title="History"
 				description="View previous appointments here."
+				heroImg="time"
 			/>
 			{/* User Homepage items */}
 			<Container>
