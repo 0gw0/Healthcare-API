@@ -1,22 +1,36 @@
-"use client"; // This is a client component
+'use client'; // This is a client component
 
-import Navbar from "@/components/Navbar";
-import Container from "@/components/container";
-import Hero from "@/components/hero";
-import Footer from "@/components/footer";
-import HistoryLog from "@/components/HistoryLog";
+import Navbar from '@/components/Navbar';
+import Container from '@/components/container';
+import Hero from '@/components/hero';
+import Footer from '@/components/footer';
+import HistoryLog from '@/components/HistoryLog';
 
-
-
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 export default function Page() {
-    const medicationLogData = [
-        { id: 1, date: '2024-03-01', time: '01:00 PM', doctorname: "Dr Peter Lam", medicinePrescribed: 'Paracetamol', mcissued:"Yes", medicineDelivered: 'Yes' },
-        { id: 2, date: '2024-03-09', time: '05:00 PM', doctorname: "Dr Alice Tan", medicinePrescribed: 'Paracetamol', mcissued:"Yes", medicineDelivered: 'No' }
-      ];
-      
-  return (
+	const medicationLogData = [
+		{
+			id: 1,
+			date: '2024-03-01',
+			time: '01:00 PM',
+			doctorname: 'Dr Peter Lam',
+			medicinePrescribed: 'Paracetamol',
+			mcissued: 'Yes',
+			medicineDelivered: 'Yes',
+		},
+		{
+			id: 2,
+			date: '2024-03-09',
+			time: '05:00 PM',
+			doctorname: 'Dr Alice Tan',
+			medicinePrescribed: 'Paracetamol',
+			mcissued: 'Yes',
+			medicineDelivered: 'No',
+		},
+	];
+
+	return (
 		<>
 			<Navbar />
 			<Hero
@@ -42,5 +56,5 @@ export default function Page() {
 
 			<Footer />
 		</>
-  );
+	);
 }
