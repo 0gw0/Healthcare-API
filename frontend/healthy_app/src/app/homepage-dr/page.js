@@ -7,8 +7,26 @@ import Footer from '@/components/footer';
 import TodayAppt from '@/components/TodayAppt';
 
 import React, { useState } from 'react';
+import SlotsTable from '@/components/SlotsTable';
 
 export default function Page() {
+	const medicationLogData = [
+		{
+			id: 1,
+			date: '2024-03-01',
+			time: '01:00 PM',
+			ptName: 'Dr Peter Lam',
+			appType: 'Consult',
+		},
+		{
+			id: 2,
+			date: '2024-03-09',
+			time: '05:00 PM',
+			ptName: 'Dr Alice Tan',
+			medicinePrescribed: 'Paracetamol',
+			appType: 'Consult',
+		},
+	];
 	return (
 		<>
 			<Navbar />
@@ -23,12 +41,15 @@ export default function Page() {
 						<h1 className="ml-4 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
 							View All Slots
 						</h1>
+						<div className="mx-4">
+							<SlotsTable data={medicationLogData} />
+						</div>
 					</Container>
-					<div className="flex flex-row">
+					<Container>
 						<h1 className="ml-4 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
 							History
 						</h1>
-					</div>
+					</Container>
 				</div>
 				<Container className="basis-4/12">
 					<h1 className="text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
