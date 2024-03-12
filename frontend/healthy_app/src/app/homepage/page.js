@@ -13,7 +13,10 @@ export default function Page() {
 	return (
 		<>
 			<Navbar />
-			<Hero title="Homepage" />
+			<Hero
+				title="Homepage"
+				description="Book and manage your consultations below."
+			/>
 			{/* User Homepage items */}
 			<div className="flex flex-row">
 				<div className="basis-8/12">
@@ -47,9 +50,7 @@ export default function Page() {
 				</Container>
 			</div>
 
-			
-			<div className="container mx-auto p-4 flex justify-center">
-			</div>
+			<div className="container mx-auto p-4 flex justify-center"></div>
 
 			<Footer />
 		</>

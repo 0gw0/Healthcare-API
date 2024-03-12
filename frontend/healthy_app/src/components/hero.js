@@ -2,7 +2,7 @@ import Image from 'next/image';
 import heroImg from '../../public/hero.svg';
 import Container from './container';
 
-const Hero = ({title}) => {
+const Hero = ({ title, description }) => {
 	return (
 		<>
 			<Container>
@@ -12,7 +12,7 @@ const Hero = ({title}) => {
 							{title}
 						</h1>
 						<p className="py-5 text-lg leading-normal text-gray-500 lg:text-lg xl:text-xl dark:text-gray-300">
-							Book and manage your consultations below
+							{description}
 						</p>
 					</div>
 					<div className="flex items-center justify-center">

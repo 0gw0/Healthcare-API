@@ -17,32 +17,30 @@ export default function Page() {
       ];
       
   return (
-    <>
-      <Navbar />
-      <Hero title="History" />
-      {/* User Homepage items */}
-      <Container>
-        <div className="flex flex-row">
-          <div className="basis-5/12">
-            <Container>
-              <h1 className="ml-4 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
-                Past Teleconsultation Details
-              </h1>
-              
-            </Container>
+		<>
+			<Navbar />
+			<Hero
+				title="History"
+				description="View previous appointments here."
+			/>
+			{/* User Homepage items */}
+			<Container>
+				<div className="flex flex-row">
+					<div className="basis-5/12">
+						<Container>
+							<h1 className="ml-4 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
+								Past Teleconsultation Details
+							</h1>
+						</Container>
+					</div>
+				</div>
 
-            
-          </div>
-          
-        </div>
+				<HistoryLog data={medicationLogData}></HistoryLog>
+			</Container>
 
-        <HistoryLog data={medicationLogData}></HistoryLog>
-       
-      </Container>
+			<div className="container mx-auto p-4 flex justify-center"></div>
 
-      <div className="container mx-auto p-4 flex justify-center"></div>
-
-      <Footer />
-    </>
+			<Footer />
+		</>
   );
 }
