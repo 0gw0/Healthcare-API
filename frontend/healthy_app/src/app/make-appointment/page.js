@@ -40,7 +40,7 @@ export default function Page() {
 					</div>
 					<Container className="basis-7/12">
 						<h1 className="text-xl  leading-snug tracking-tight text-gray-800 lg:text-xl lg:leading-tight xl:text-xl xl:leading-tight dark:text-white">
-							Slots available for selected date:
+							Appointment slots available for selected date:
 						</h1>
 
 						<TimeslotPicker></TimeslotPicker>

@@ -1,6 +1,6 @@
 'use client'; // This is a client component
 
-import Navbar from '@/components/Navbar';
+import Navbar2 from '@/components/Navbar2';
 import Container from '@/components/container';
 import Hero from '@/components/hero';
 import Footer from '@/components/footer';
@@ -29,13 +29,14 @@ export default function Page() {
 	];
 	return (
 		<>
-			<Navbar />
+			<Navbar2 />
 			<Hero
 				title="Doctor homepage"
 				description="Book and manage your consultations below."
 				heroImg="doc"
 			/>
 			{/* User Homepage items */}
+			<Container>
 			<div className="flex flex-row">
 				<div className="basis-8/12">
 					<Container>
@@ -60,6 +61,7 @@ export default function Page() {
 					<TodayAppt></TodayAppt>
 				</Container>
 			</div>
+			</Container>
 
 			<div className="container mx-auto p-4 flex justify-center"></div>
 
