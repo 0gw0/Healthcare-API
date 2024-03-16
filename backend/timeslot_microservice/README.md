@@ -39,7 +39,9 @@ Helpful Documentations
 
 7. [Creating database file one directory above current](https://stackoverflow.com/questions/36784897/creating-database-file-one-directory-above-current)
 
-8 [Docker COPY multiple files](https://stackoverflow.com/questions/30256386/how-to-copy-multiple-files-in-one-layer-using-a-dockerfile)
+8. [Docker COPY multiple files](https://stackoverflow.com/questions/30256386/how-to-copy-multiple-files-in-one-layer-using-a-dockerfile)
+
+9. [Docker Python app prints](https://stackoverflow.com/questions/29663459/why-doesnt-python-app-print-anything-when-run-in-a-detached-docker-container)
 
 #### (WINDOWS) Run the code in this directory:
 
@@ -47,7 +49,7 @@ Helpful Documentations
     python3 -m venv .venv
     .venv\Scripts\activate
     pip install -r requirements.txt
-    python user.py
+    python timeslot.py
 ```
 
 #### (DOCKER) Run the code in docker:

@@ -4,4 +4,4 @@ COPY requirements.txt ./
 RUN python -m pip install --no-cache-dir -r requirements.txt
 COPY ["user.py", "./"]
 COPY ["database", "./database"]
-CMD [ "python", "./user.py" ]
+CMD [ "python", "-u", "./user.py" ]
