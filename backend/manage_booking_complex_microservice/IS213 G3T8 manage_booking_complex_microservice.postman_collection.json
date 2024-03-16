@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "54e5d438-a74f-45f6-87c9-1d781f9d1542",
+		"name": "IS213 G3T8 manage_booking_complex_microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32110674"
+	},
+	"item": [
+		{
+			"name": "Make an appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patient_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5101/make_appointment/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5101",
+					"path": [
+						"make_appointment",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel an appointment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5101/cancel_appointment/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5101",
+					"path": [
+						"cancel_appointment",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
