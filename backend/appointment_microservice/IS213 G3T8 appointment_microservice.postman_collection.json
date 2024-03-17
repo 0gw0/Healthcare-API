@@ -58,7 +58,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Timeslots History - Empty FAIL",
+					"name": "Get Appointment History - Empty FAIL",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -117,7 +117,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Timeslots History",
+					"name": "Get Appointment History",
 					"event": [
 						{
 							"listen": "prerequest",
