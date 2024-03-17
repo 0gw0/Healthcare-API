@@ -172,13 +172,13 @@ Clinic Administrator at YATA'''
     print("\n")
 
     if email_sent and sms_sent:
-        return ("Email and SMS sent!", email_sent, sms_sent)
+        return (f"Email and SMS sent! Sent to {TEAM_MEMBER_ACCOUNT} at {TEAM_MEMBER_EMAIL} and {TEAM_MEMBER_PHONE}", email_sent, sms_sent)
     elif email_sent:
-        return ("Email sent but SMS not sent!", email_sent, sms_sent)
+        return ("Email sent but SMS not sent! Sent to {TEAM_MEMBER_ACCOUNT} at {TEAM_MEMBER_EMAIL}", email_sent, sms_sent)
     elif sms_sent:
-        return ("SMS sent but Email not sent!", email_sent, sms_sent)
+        return ("SMS sent but Email not sent! Sent to {TEAM_MEMBER_ACCOUNT} at {TEAM_MEMBER_PHONE}", email_sent, sms_sent)
     else:
-        return ("Email and SMS not sent!", email_sent, sms_sent)
+        return ("Email and SMS not sent! The API is not working, ask {TEAM_MEMBER_ACCOUNT} to debug.", email_sent, sms_sent)
 
 # Reset Database
 @app.route("/notification/reset/<string:dataset>", methods=['POST'])
