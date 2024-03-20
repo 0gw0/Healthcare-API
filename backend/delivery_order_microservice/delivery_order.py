@@ -147,4 +147,4 @@ def create_delivery_order_api():
 
 if __name__ == '__main__':
     print("This is flask for " + os.path.basename(__file__) + ": delivery order...")
-    app.run(host='0.0.0.0', port=5002, debug=True)
+    app.run(host='0.0.0.0', port=5006, debug=True)

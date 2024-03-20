@@ -24,7 +24,7 @@
 								"1"
 							],
 							"port": "5002",
-							"path": [
+							"path": [o
 								"timeslot",
 								"reset",
 								"obviously_wrong"
