@@ -33,10 +33,6 @@ app.get("/", (req, res) => {
     res.send({ Title: "Manage Cancellation Complex Microservice" });
 });
 
-// Makes cancellation request
-// [POST] /make_cancellation_request
-// [BODY] {data: {doctor_id} start_date, end_date}}
-
 /**
  * Makes cancellation request
  * @summary With doctor_id, start_date, and end_date, this function makes a cancellation request.
@@ -256,6 +252,21 @@ app.post("/make_cancellation_request", async (req, res) => {
     // (7) Send response to client, success
     res.status(200).send({ message: "Request received" });
     return;
+});
+
+// Makes cancellation
+// [POST] /booking/make_cancellation/{session_id}
+
+/**
+ * Makes cancellation
+ * @summary With session_id, this function performs a cancellation and sends a notification.
+ * @type {POST} /make_cancellation/{session_id}
+ */
+app.post("/make_cancellation/{session_id}", async (req, res) => {
+    // (1) Get session_id from request params
+    const session_id = req.params.session_id;
+
+    // (2) D
 });
 
 // On startup - `npm run start`

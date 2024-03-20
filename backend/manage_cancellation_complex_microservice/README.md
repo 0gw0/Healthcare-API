@@ -4,12 +4,16 @@ To manage both timeslot and appointment cancellation requests, and making notifi
 
 ### Functions (WIP)
 
-1. Make an appointment by timeslot_id
-    1. Calls `timeslot` microservice to update isAccepted=1 by id
-    2. Calls `appointment` microservice to create an appointment based on the updated timeslot
-2. Cancel an appointment by appointment_id
-    1. Calls `timeslot` microservice to update isAccepted=0 by id
-    2. Calls `appointment` microservice to delete an appointment based on appointment_id
+1. Make cancellation request (Doctor)
+    1. Doctor cancels his schedule for a specific time period
+    2. Calls `timeslot` microservice to get affected time slots
+    3. Calls `appointment` microservice to get affected appointments
+    4. Calls `notification` microservice to create notifications for all affected timeslots and appointments, ignoring duplicates
+2. Makes cancellation (Nurse)
+    1. Nurse confirms doctor's cancellation one-by-one
+    2. Calls `timeslot` microservice to delete
+    3. Calls `appointment` microservice to delete
+    4. Calls `notification` microservice to update status to'completed'
 
 ### How to code
 
