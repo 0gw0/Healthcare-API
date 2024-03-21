@@ -89,7 +89,7 @@ app.post("/make_cancellation_request", async (req, res) => {
             res.status(error_code).send({
                 message,
                 used_payload: payload,
-                error: error,
+                error,
             });
             return null;
         });
@@ -123,7 +123,7 @@ app.post("/make_cancellation_request", async (req, res) => {
                 res.status(500).send({
                     message,
                     used_payload: payload,
-                    error: error,
+                    error,
                 });
                 return null;
             }
@@ -177,7 +177,7 @@ app.post("/make_cancellation_request", async (req, res) => {
                     res.status(500).send({
                         message,
                         used_payload: payload,
-                        error: error,
+                        error,
                     });
                     isDown = true;
                     return;
@@ -262,11 +262,149 @@ app.post("/make_cancellation_request", async (req, res) => {
  * @summary With session_id, this function performs a cancellation and sends a notification.
  * @type {POST} /make_cancellation/{session_id}
  */
-app.post("/make_cancellation/{session_id}", async (req, res) => {
+app.post("/make_cancellation/:session_id", async (req, res) => {
+    // (0) Information
+    console.log(`\n===============  (0) Information  ===============`);
+    console.log("Note:");
+    console.log("- If there is an appointment, there is associated time slot");
+    console.log("- But a time slot may not have an associated appointment");
+    console.log(`=================================================`);
+
     // (1) Get session_id from request params
     const session_id = req.params.session_id;
 
-    // (2) D
+    // (2) Delete all timeslot with that session_id
+    console.log(`\n===============  (1) Deleting time slots  ===============`);
+    let url = `${timeslot_URL}/delete/${session_id}`;
+    const timeslot = await axios
+        .delete(url)
+        .then((response) => {
+            // console.log(response.data);
+            console.log(
+                `This item slot has been deleted: ${JSON.stringify(
+                    response.data.deleted
+                )}`
+            );
+            return response.data.deleted;
+        })
+        // (2.1) If error, handle error and exit
+        .catch((error) => {
+            // (3.1.1) If error.response.status is undefined, microservice is down
+            if (error.response === undefined) {
+                message = `ERROR - The timeslot_microservice is down. ${url}`;
+                error_code = 500;
+            }
+            // (2.1.2) No timeslots found - 404
+            else if (error.response.status === 404) {
+                message = "No timeslot or appointment found";
+                error_code = 404;
+            }
+
+            console.log(message);
+
+            // (2.2) Send error to client
+            res.status(error_code).send({
+                message,
+                error,
+            });
+            return null;
+        });
+    console.log(`=========================================================`);
+
+    // console.log(timeslots);
+    // (2.1) EXIT - Code stops here
+    if (timeslot === null) return;
+
+    // (3) Delete all appointments with that session_id
+    console.log(
+        `\n===============  (2) Deleting appointments  ===============`
+    );
+    url = `${appointment_URL}/delete/${session_id}`;
+    const appointment = await axios
+        .delete(url)
+        .then((response) => {
+            // console.log(response.data);
+            console.log(
+                `This appointment has been deleted: ${JSON.stringify(
+                    response.data.deleted
+                )}`
+            );
+            return response.data.deleted;
+        })
+        // (3.1) If error, handle error
+        // - EXIT only at (4.1.1)
+        .catch((error) => {
+            // (4.1.1) If error.response.status is undefined, microservice is down
+            if (error.response === undefined) {
+                let message =
+                    "ERROR - The appointment_microservice is down but time slot was already deleted...";
+                message +=
+                    " Please reset the database, ensure all microservice is running, and retest again.";
+                message += " If not, there will be unexpected results.";
+                message += `Down site: ${url}`;
+                console.log(message);
+                res.status(500).send({
+                    message,
+                    error,
+                });
+                return null;
+            }
+            console.log("No appointment found");
+            // (3.1.2) No appointments found - 404
+            return [];
+        });
+    console.log(`============================================================`);
+
+    // console.log(appointment);
+    // (3.1.1) EXIT - Code stops here
+    if (appointment === null) return;
+
+    // (4) Update the one affected notifications to 'completed'
+    console.log(
+        `\n===============  (3) Updating notifications  ===============`
+    );
+    url = `${notification_URL}/update/${session_id}`;
+    await axios
+        .put(url)
+        .then((response) => {
+            // console.log(response.data);
+            console.log(
+                `This notification has been updated: ${response.data.message}`
+            );
+        })
+        // (4.1) If error, handle error
+        // - EXIT only at (4.1.1)
+        .catch((error) => {
+            // (4.1.1) If error.response.status is undefined, microservice is down
+            if (error.response === undefined) {
+                let message = `ERROR - The notification_microservice is down. ${url}`;
+                console.log(message);
+                res.status(500).send({
+                    message,
+                    error,
+                });
+                return;
+            }
+            // Should never occur
+            // - As notification should always exist
+            console.log("No notification found");
+        });
+
+    console.log(`============================================================`);
+
+    // (5) Status Information
+    console.log(`\n===============  (4) Status Information  ===============`);
+    console.log(`Cancellation successful`);
+    console.log(`Deleted timeslot: ${JSON.stringify(timeslot)}`);
+    const statusMessage =
+        appointment.length > 0
+            ? `Deleted appointment: ${JSON.stringify(appointment)}`
+            : "No appointment was deleted";
+    console.log(statusMessage);
+    console.log(`========================================================`);
+
+    // (6) Send response to client, success
+    res.status(200).send({ message: "Cancellation successful" });
 });
 
 // On startup - `npm run start`
