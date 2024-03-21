@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "54e5d438-a74f-45f6-87c9-1d781f9d1542",
+		"_postman_id": "8db1f977-ddfc-4ab0-a209-d5d78fa86a2f",
 		"name": "IS213 G3T8 manage_booking_complex_microservice",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "32110674"
+		"_exporter_id": "26201401"
 	},
 	"item": [
 		{
@@ -36,7 +36,70 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "200 - Make an appointment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patient_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5101/make_appointment/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5101",
+							"path": [
+								"make_appointment",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Mar 2024 09:25:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"success\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Cancel an appointment",
@@ -59,7 +122,61 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "200 - Cancel an appointment",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5101/cancel_appointment/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5101",
+							"path": [
+								"cancel_appointment",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Mar 2024 09:26:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"success\"\n}"
+				}
+			]
 		}
 	]
 }

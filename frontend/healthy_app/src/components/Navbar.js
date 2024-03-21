@@ -3,7 +3,12 @@ import Image from 'next/image';
 import logo from '../app/favicon.ico';
 
 const Navbar = () => {
-	const navigation = ['Homepage', 'Make Appointment', 'History'];
+	var navigation = ['Homepage', 'Make Appointment', 'History'];
+	//  change to API call
+	const role = 'doctor';
+	if (role === 'doctor') {
+		navigation = ['Homepage', 'My Slots', 'History'];
+	}
 
 	function spinalCase(str) {
 		return str
@@ -25,6 +30,7 @@ const Navbar = () => {
 									width="32"
 									height="32"
 									className="w-8"
+									alt="YATA"
 								/>
 							</span>
 							<span>YATA</span>

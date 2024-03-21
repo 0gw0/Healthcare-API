@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "9edf8cd7-98b3-48f9-8e10-a97452e6b61b",
+		"_postman_id": "0610feea-1759-43a9-b737-b2b8429e9cd2",
 		"name": "IS213 G3T8 appointment_microservice",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "32110674"
+		"_exporter_id": "26201401"
 	},
 	"item": [
 		{
@@ -31,7 +31,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - Database Reset - Wrong URL FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/reset/obviously_wrong",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"reset",
+										"obviously_wrong"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:27:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Database was not reset. Invalid Dataset: obviously_wrong\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Database Reset - Empty",
@@ -55,7 +110,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "205 - Database Reset - Empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/reset/empty",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"reset",
+										"empty"
+									]
+								}
+							},
+							"status": "RESET CONTENT",
+							"code": 205,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:27:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 205,\n    \"message\": \"Database reset! No Dataset was used\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Get Appointment History - Empty FAIL",
@@ -90,7 +200,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "404 - Get Appointment History - Empty FAIL",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/get/history",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"get",
+										"history"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:27:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No appointments found\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Database Reset - With Dataset",
@@ -114,7 +279,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "205 - Database Reset - With Dataset",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/reset/dataset1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"reset",
+										"dataset1"
+									]
+								}
+							},
+							"status": "RESET CONTENT",
+							"code": 205,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:28:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2179"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 205,\n    \"data_created\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:00:00\",\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:04:00\",\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 8,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:07:00\",\n            \"time_created\": \"2024-02-28 13:07:00\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:09:00\",\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:11:00\",\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:15:00\",\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:18:00\",\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:20:00\",\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "Get Appointment History",
@@ -149,7 +369,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - Get Appointment History",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/get/history",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"get",
+										"history"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:28:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2171"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:00:00\",\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:04:00\",\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 8,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:07:00\",\n            \"time_created\": \"2024-02-28 13:07:00\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:09:00\",\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:11:00\",\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:15:00\",\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:18:00\",\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:20:00\",\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				}
 			]
 		},
@@ -190,7 +465,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET upcoming appointments by patient",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"patient_id\": 1,\r\n        \"isCompleted\": 0\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:28:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1651"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 6,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:00:00\",\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:04:00\",\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:09:00\",\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:11:00\",\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:18:00\",\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:20:00\",\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET upcoming appointments by doctor",
@@ -226,7 +565,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET upcoming appointments by doctor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"doctor_id\": 1,\r\n        \"isCompleted\": 0\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:29:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1651"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 6,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:00:00\",\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:04:00\",\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:09:00\",\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:11:00\",\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:18:00\",\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:20:00\",\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "CREATE appointment",
@@ -258,7 +661,70 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "201 - CREATE appointment",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"id\": 999,\r\n        \"doctor_id\": 1,\r\n        \"time_created\": \"2024-03-01 08:37:00\",\r\n        \"timeslot_datetime\": \"2024-03-20 12:00:00\",\r\n        \"duration_minutes\": 30,\r\n        \"patient_id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"create"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:29:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "339"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 999,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-21 16:29:25\",\n            \"time_created\": \"2024-03-01 08:37:00\",\n            \"timeslot_datetime\": \"2024-03-20 12:00:00\"\n        }\n    ],\n    \"message\": \"Appointment created\"\n}"
+						}
+					]
 				},
 				{
 					"name": "DELETE appointment",
@@ -291,7 +757,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - DELETE appointment",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/delete/999",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"delete",
+										"999"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:29:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "342"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"deleted\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 999,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-21 16:29:25\",\n            \"time_created\": \"2024-03-01 08:37:00\",\n            \"timeslot_datetime\": \"2024-03-20 12:00:00\"\n        }\n    ],\n    \"message\": \"Appointment deleted\"\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE appointment completed",
@@ -324,7 +854,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "404 - UPDATE appointment completed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"isCompleted\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/update/999",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"update",
+										"999"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:30:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No appointment found\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -365,7 +959,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET All Appointments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:31:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2185"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 8,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:00:00\",\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:04:00\",\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 8,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:07:00\",\n            \"time_created\": \"2024-02-28 13:07:00\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:09:00\",\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:11:00\",\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:15:00\",\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:18:00\",\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:20:00\",\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET Incorrect Format will get ALL",
@@ -401,7 +1059,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET Incorrect Format will get ALL",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"obviously wrong\":{\r\n        \"doctor_id\": 2\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:31:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2185"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 8,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:00:00\",\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:04:00\",\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 8,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:07:00\",\n            \"time_created\": \"2024-02-28 13:07:00\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:09:00\",\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:11:00\",\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:15:00\",\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:18:00\",\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:20:00\",\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET upcoming appointments by patient",
@@ -437,7 +1159,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET upcoming appointments by patient",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"patient_id\": 1,\r\n        \"isCompleted\": 0\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:32:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1651"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 6,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:00:00\",\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:04:00\",\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:09:00\",\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:11:00\",\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:18:00\",\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:20:00\",\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET upcoming appointments by doctor",
@@ -473,7 +1259,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET upcoming appointments by doctor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"doctor_id\": 1,\r\n        \"isCompleted\": 0\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:32:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1651"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 6,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:00:00\",\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:04:00\",\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:09:00\",\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:11:00\",\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:18:00\",\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:20:00\",\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET all completed appointments",
@@ -509,7 +1359,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET all completed appointments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"isCompleted\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:33:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "582"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 2,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 8,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:07:00\",\n            \"time_created\": \"2024-02-28 13:07:00\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:15:00\",\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET No Appointment Found",
@@ -545,7 +1459,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "404 - GET No Appointment Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"doctor_id\": 9999999999\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:34:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No appointments found\"\n}"
+						}
+					]
 				},
 				{
 					"name": "GET With end date range inclusive",
@@ -581,7 +1559,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET With end date range inclusive",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"end_date\": \"2024-03-04\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:34:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1117"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 4,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:00:00\",\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:04:00\",\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 8,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:07:00\",\n            \"time_created\": \"2024-02-28 13:07:00\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-02-28 19:09:00\",\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET With date range inclusive",
@@ -617,7 +1659,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET With date range inclusive",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"start_date\": \"2024-03-06\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:34:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1116"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 4,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:11:00\",\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:15:00\",\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:18:00\",\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:20:00\",\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET Multiple data V1",
@@ -653,7 +1759,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET Multiple data V1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"isCompleted\": 1,\r\n        \"timeslot_datetime\": \"2024-03-06\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:35:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "315"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 1,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:15:00\",\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET Multiple data V2",
@@ -689,7 +1859,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET Multiple data V2",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"isCompleted\": 1\r\n    },\r\n    \"start_date\": \"2024-03-06\",\r\n    \"end_date\": \"2024-03-06\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:35:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "315"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 1,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-4 10:15:00\",\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				}
 			]
 		},
@@ -726,7 +1960,70 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "201 - CREATE appointment",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"id\": 999,\r\n        \"doctor_id\": 1,\r\n        \"time_created\": \"2024-03-01 08:37:00\",\r\n        \"timeslot_datetime\": \"2024-03-20 12:00:00\",\r\n        \"duration_minutes\": 30,\r\n        \"patient_id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"create"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:37:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "339"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 999,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-21 16:37:06\",\n            \"time_created\": \"2024-03-01 08:37:00\",\n            \"timeslot_datetime\": \"2024-03-20 12:00:00\"\n        }\n    ],\n    \"message\": \"Appointment created\"\n}"
+						}
+					]
 				},
 				{
 					"name": "CREATE invalid query FAIL",
@@ -758,7 +2055,70 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - CREATE invalid query FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"obviously_wrong\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"create"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:37:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid POST payload\"\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE appointment status - 0",
@@ -791,7 +2151,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - UPDATE appointment status - 0",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"isCompleted\": 0\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/update/999",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"update",
+										"999"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:37:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "356"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 999,\n            \"isCompleted\": 0,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-21 16:37:06\",\n            \"time_created\": \"2024-03-01 08:37:00\",\n            \"timeslot_datetime\": \"2024-03-20 12:00:00\"\n        }\n    ],\n    \"message\": \"Appointment isCompleted updated to 0\"\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE appointment status - 1",
@@ -824,7 +2248,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - UPDATE appointment status - 1",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"isCompleted\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/update/999",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"update",
+										"999"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:38:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "356"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 999,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-21 16:37:06\",\n            \"time_created\": \"2024-03-01 08:37:00\",\n            \"timeslot_datetime\": \"2024-03-20 12:00:00\"\n        }\n    ],\n    \"message\": \"Appointment isCompleted updated to 1\"\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE appointment status - Invalid payload FAIL",
@@ -857,7 +2345,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - UPDATE appointment status - Invalid payload FAIL",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"obviously_wrong\": {\r\n        \"isCompleted\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/update/999",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"update",
+										"999"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:40:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid POST payload\"\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE appointment status - Invalid status FAIL",
@@ -890,7 +2442,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - UPDATE appointment status - Invalid status FAIL",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"isCompleted\": \"obviously_wrong\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/update/999",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"update",
+										"999"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:40:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid isCompleted Value. Must be 0 or 1\"\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE time slot status - No appointment found FAIL",
@@ -923,7 +2539,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "404 - UPDATE time slot status - No appointment found FAIL",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"isCompleted\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/update/99999",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"update",
+										"99999"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:41:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No appointment found\"\n}"
+						}
+					]
 				},
 				{
 					"name": "DELETE appointment",
@@ -956,7 +2636,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - DELETE appointment",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/delete/999",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"delete",
+										"999"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:41:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "342"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"deleted\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 999,\n            \"isCompleted\": 1,\n            \"patient_id\": 1,\n            \"time_accepted\": \"2024-03-21 16:37:06\",\n            \"time_created\": \"2024-03-01 08:37:00\",\n            \"timeslot_datetime\": \"2024-03-20 12:00:00\"\n        }\n    ],\n    \"message\": \"Appointment deleted\"\n}"
+						}
+					]
 				},
 				{
 					"name": "DELETE No appointment found FAIL",
@@ -989,7 +2733,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "404 - DELETE No appointment found FAIL",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5003/appointment/delete/99999",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5003",
+									"path": [
+										"appointment",
+										"delete",
+										"99999"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:41:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No appointment found\"\n}"
+						}
+					]
 				}
 			]
 		}

@@ -47,42 +47,41 @@ export default function Home() {
 	// });
 
 	async function callAuthorizeApi() {
-		// Change back after Singpass works
-		// let code_challenge = await axios
-		//     .get("/api/singpass/generateCodeChallenge")
-		//     .then((res) => {
-		//         console.log(res);
-		//         return res.data;
-		//     })
-		//     .catch((error) => {
-		//         console.log(error);
-		//         return false;
-		//     });
-		// if (code_challenge) {
-		//     localStorage.setItem("codeVerifier", code_challenge[1]);
-		//     const authApiUrl =
-		//         "https://test.api.myinfo.gov.sg/com/v4/authorize";
-		//     // For full scope:
-		//     // https://sandbox.api.myinfo.gov.sg/com/v4/person-sample/S9812381D
-		//     const queryComponents = {
-		//         client_id: "STG2-MYINFO-SELF-TEST",
-		//         scope: "uinfin name sex race nationality dob email mobileno regadd housingtype hdbtype marital edulevel noa-basic ownerprivate cpfcontributions cpfbalances",
-		//         purpose_id: "demonstration",
-		//         code_challenge: code_challenge[0],
-		//         code_challenge_method: "S256",
-		//         redirect_uri: "http://localhost:3001/callback",
-		//     };
-		//     const authorizeUrl =
-		//         authApiUrl +
-		//         "?" +
-		//         Object.entries(queryComponents)
-		//             .map(([k, v]) => `${k}=${v}`)
-		//             .join("&");
-		//     // Example output:
-		//     // "https://test.api.myinfo.gov.sg/com/v4/authorize?client_id=STG2-MYINFO-SELF-TEST&scope=uinfin name sex race nationality dob email mobileno regadd housingtype hdbtype marital edulevel noa-basic ownerprivate cpfcontributions cpfbalances&purpose_id=demonstration&code_challenge=MITPE6RARV4Xg0RGxJMsObnY5TGagjwg7-FF92h4UYM&code_challenge_method=S256&redirect_uri=http://localhost:3001/callback";
-		//     window.location = authorizeUrl;
-		//     // console.log(authorizeUrl);
-		// }
+		let code_challenge = await axios
+			.get('/api/singpass/generateCodeChallenge')
+			.then((res) => {
+				console.log(res);
+				return res.data;
+			})
+			.catch((error) => {
+				console.log(error);
+				return false;
+			});
+		if (code_challenge) {
+			localStorage.setItem('codeVerifier', code_challenge[1]);
+			const authApiUrl =
+				'https://test.api.myinfo.gov.sg/com/v4/authorize';
+			// For full scope:
+			// https://sandbox.api.myinfo.gov.sg/com/v4/person-sample/S9812381D
+			const queryComponents = {
+				client_id: 'STG2-MYINFO-SELF-TEST',
+				scope: 'uinfin name sex race nationality dob email mobileno regadd housingtype hdbtype marital edulevel noa-basic ownerprivate cpfcontributions cpfbalances',
+				purpose_id: 'demonstration',
+				code_challenge: code_challenge[0],
+				code_challenge_method: 'S256',
+				redirect_uri: 'http://localhost:3001/callback',
+			};
+			const authorizeUrl =
+				authApiUrl +
+				'?' +
+				Object.entries(queryComponents)
+					.map(([k, v]) => `${k}=${v}`)
+					.join('&');
+			// Example output:
+			// "https://test.api.myinfo.gov.sg/com/v4/authorize?client_id=STG2-MYINFO-SELF-TEST&scope=uinfin name sex race nationality dob email mobileno regadd housingtype hdbtype marital edulevel noa-basic ownerprivate cpfcontributions cpfbalances&purpose_id=demonstration&code_challenge=MITPE6RARV4Xg0RGxJMsObnY5TGagjwg7-FF92h4UYM&code_challenge_method=S256&redirect_uri=http://localhost:3001/callback";
+			window.location = authorizeUrl;
+			// console.log(authorizeUrl);
+		}
 	}
 
 	return (
