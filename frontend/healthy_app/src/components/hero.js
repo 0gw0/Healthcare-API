@@ -6,8 +6,8 @@ import Container from './container';
 const Hero = ({ title, description, heroImg }) => {
 	return (
 		<>
-			<Container>
-				<div className="flex items-center justify-center gap-6 lg:gap-28 xl:gap-36">
+			<Container className="pb-0">
+				<div className="flex items-center justify-start gap-6 lg:gap-28 xl:gap-36">
 					<div className="max-w-2xl">
 						<h1 className="text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-5xl xl:leading-tight dark:text-white">
 							{title}
@@ -17,7 +17,7 @@ const Hero = ({ title, description, heroImg }) => {
 						</p>
 					</div>
 					<div className="flex items-center justify-center">
-						<div className="w-60">
+						<div className="w-40">
 							<Image
 								src={heroImg == 'doc' ? doctorImg : timeImg}
 								alt="Hero Illustration"
@@ -27,7 +27,7 @@ const Hero = ({ title, description, heroImg }) => {
 					</div>
 				</div>
 			</Container>
-			<hr className="w-9/12 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+			<hr className="w-9/12 h-1 ms-5 my-1 bg-gray-100 border-0 rounded md:my-5 dark:bg-gray-700" />
 		</>
 	);
 };
