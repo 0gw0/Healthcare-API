@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "2b093f8b-eac2-46ee-baf5-a592979c6cb9",
+		"_postman_id": "68a5d7a5-f6a5-470f-9e77-e0b8dbb8a907",
 		"name": "IS213 G3T8 delivery_order_microservice",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "32110674"
+		"_exporter_id": "26201401"
 	},
 	"item": [
 		{
@@ -33,7 +33,7 @@
 					},
 					"response": [
 						{
-							"name": "Database Reset - Wrong URL FAIL",
+							"name": "400 - Database Reset - Wrong URL FAIL",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -112,7 +112,7 @@
 					},
 					"response": [
 						{
-							"name": "Database Reset - Empty",
+							"name": "205 - Database Reset - Empty",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -191,7 +191,7 @@
 					},
 					"response": [
 						{
-							"name": "Database Reset - With Dataset",
+							"name": "205 - Database Reset - With Dataset",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
