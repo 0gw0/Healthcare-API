@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "d7d32e46-21aa-4836-a3ac-263acfabca1a",
+		"_postman_id": "f926b3ab-127e-4e84-9716-4cb69f4f3c45",
 		"name": "IS213 G3T8 timeslot_microservice",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "32110674"
+		"_exporter_id": "26201401"
 	},
 	"item": [
 		{
@@ -24,14 +24,69 @@
 								"1"
 							],
 							"port": "5002",
-							"path": [o
+							"path": [
 								"timeslot",
 								"reset",
 								"obviously_wrong"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - Database Reset - Wrong URL FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/reset/obviously_wrong",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"reset",
+										"obviously_wrong"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:46:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Database was not reset. Invalid Dataset: obviously_wrong\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Database Reset - Empty",
@@ -55,7 +110,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "205 - Database Reset - Empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/reset/empty",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"reset",
+										"empty"
+									]
+								}
+							},
+							"status": "RESET CONTENT",
+							"code": 205,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:45:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 205,\n    \"message\": \"Database reset! No Dataset was used\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Get Timeslots History - Empty FAIL",
@@ -90,7 +200,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "404 - Get Timeslots History - Empty FAIL",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/history",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"history"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:46:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No timeslots found\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Database Reset - With Dataset",
@@ -114,7 +279,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "205 - Database Reset - With Dataset",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/reset/dataset1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"reset",
+										"dataset1"
+									]
+								}
+							},
+							"status": "RESET CONTENT",
+							"code": 205,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:46:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4389"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 205,\n    \"data_created\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 2,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:01:00\",\n            \"timeslot_datetime\": \"2024-03-03 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 3,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:02:00\",\n            \"timeslot_datetime\": \"2024-03-03 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 4,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:03:00\",\n            \"timeslot_datetime\": \"2024-03-03 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 6,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:05:00\",\n            \"timeslot_datetime\": \"2024-03-03 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 7,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:06:00\",\n            \"timeslot_datetime\": \"2024-03-03 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 8,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:07:00\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 9,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:08:00\",\n            \"timeslot_datetime\": \"2024-03-03 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 11,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:10:00\",\n            \"timeslot_datetime\": \"2024-03-03 18:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 13,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:12:00\",\n            \"timeslot_datetime\": \"2024-03-06 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 14,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:13:00\",\n            \"timeslot_datetime\": \"2024-03-06 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 15,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:14:00\",\n            \"timeslot_datetime\": \"2024-03-06 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 17,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:16:00\",\n            \"timeslot_datetime\": \"2024-03-06 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 18,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:17:00\",\n            \"timeslot_datetime\": \"2024-03-07 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 20,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:19:00\",\n            \"timeslot_datetime\": \"2024-03-07 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 22,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:21:00\",\n            \"timeslot_datetime\": \"2024-03-07 18:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "Get Timeslots History",
@@ -149,7 +369,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - Get Timeslots History",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/history",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"history"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:47:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4381"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 2,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:01:00\",\n            \"timeslot_datetime\": \"2024-03-03 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 3,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:02:00\",\n            \"timeslot_datetime\": \"2024-03-03 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 4,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:03:00\",\n            \"timeslot_datetime\": \"2024-03-03 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 6,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:05:00\",\n            \"timeslot_datetime\": \"2024-03-03 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 7,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:06:00\",\n            \"timeslot_datetime\": \"2024-03-03 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 8,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:07:00\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 9,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:08:00\",\n            \"timeslot_datetime\": \"2024-03-03 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 11,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:10:00\",\n            \"timeslot_datetime\": \"2024-03-03 18:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 13,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:12:00\",\n            \"timeslot_datetime\": \"2024-03-06 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 14,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:13:00\",\n            \"timeslot_datetime\": \"2024-03-06 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 15,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:14:00\",\n            \"timeslot_datetime\": \"2024-03-06 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 17,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:16:00\",\n            \"timeslot_datetime\": \"2024-03-06 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 18,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:17:00\",\n            \"timeslot_datetime\": \"2024-03-07 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 20,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:19:00\",\n            \"timeslot_datetime\": \"2024-03-07 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 22,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:21:00\",\n            \"timeslot_datetime\": \"2024-03-07 18:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				}
 			]
 		},
@@ -190,7 +465,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET all available time slots",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"isAccepted\": 0\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:47:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2815"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 14,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 2,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:01:00\",\n            \"timeslot_datetime\": \"2024-03-03 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 3,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:02:00\",\n            \"timeslot_datetime\": \"2024-03-03 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 4,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:03:00\",\n            \"timeslot_datetime\": \"2024-03-03 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 6,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:05:00\",\n            \"timeslot_datetime\": \"2024-03-03 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 7,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:06:00\",\n            \"timeslot_datetime\": \"2024-03-03 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 9,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:08:00\",\n            \"timeslot_datetime\": \"2024-03-03 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 11,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:10:00\",\n            \"timeslot_datetime\": \"2024-03-03 18:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 13,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:12:00\",\n            \"timeslot_datetime\": \"2024-03-06 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 14,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:13:00\",\n            \"timeslot_datetime\": \"2024-03-06 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 15,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:14:00\",\n            \"timeslot_datetime\": \"2024-03-06 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 17,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:16:00\",\n            \"timeslot_datetime\": \"2024-03-06 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 18,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:17:00\",\n            \"timeslot_datetime\": \"2024-03-07 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 20,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:19:00\",\n            \"timeslot_datetime\": \"2024-03-07 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 22,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:21:00\",\n            \"timeslot_datetime\": \"2024-03-07 18:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET all available time slots by doctor",
@@ -226,7 +565,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET all available time slots by doctor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"doctor_id\": 1,\r\n        \"isAccepted\": 0\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:47:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2815"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 14,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 2,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:01:00\",\n            \"timeslot_datetime\": \"2024-03-03 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 3,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:02:00\",\n            \"timeslot_datetime\": \"2024-03-03 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 4,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:03:00\",\n            \"timeslot_datetime\": \"2024-03-03 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 6,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:05:00\",\n            \"timeslot_datetime\": \"2024-03-03 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 7,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:06:00\",\n            \"timeslot_datetime\": \"2024-03-03 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 9,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:08:00\",\n            \"timeslot_datetime\": \"2024-03-03 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 11,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:10:00\",\n            \"timeslot_datetime\": \"2024-03-03 18:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 13,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:12:00\",\n            \"timeslot_datetime\": \"2024-03-06 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 14,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:13:00\",\n            \"timeslot_datetime\": \"2024-03-06 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 15,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:14:00\",\n            \"timeslot_datetime\": \"2024-03-06 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 17,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:16:00\",\n            \"timeslot_datetime\": \"2024-03-06 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 18,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:17:00\",\n            \"timeslot_datetime\": \"2024-03-07 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 20,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:19:00\",\n            \"timeslot_datetime\": \"2024-03-07 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 22,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:21:00\",\n            \"timeslot_datetime\": \"2024-03-07 18:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET all time slots by doctor",
@@ -262,7 +665,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "201 - GET all time slots by doctor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"isAccepted\": 1\r\n    },\r\n    \"start_date\": \"2024-03-06\",\r\n    \"end_date\": \"2024-03-06\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:58:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "444"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 2,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "CREATE time slot",
@@ -294,7 +761,70 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "201 - CREATE time slot",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"timeslot_datetime\": \"2024-10-27 08:00:00\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"create"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:49:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "266"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 23,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-03-21 15:49:25\",\n            \"timeslot_datetime\": \"2024-10-27 08:00:00\"\n        }\n    ],\n    \"message\": \"Time slot created\"\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE time slot status - 0",
@@ -327,7 +857,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - UPDATE time slot status - 0",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"isAccepted\": 0\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/update/23",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"update",
+										"23"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:49:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "282"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 23,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-03-21 15:49:25\",\n            \"timeslot_datetime\": \"2024-10-27 08:00:00\"\n        }\n    ],\n    \"message\": \"Time slot isAccepted updated to 0\"\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE time slot status - 1",
@@ -360,7 +954,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - UPDATE time slot status - 1",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"isAccepted\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/update/23",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"update",
+										"23"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:50:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "282"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 23,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-03-21 15:49:25\",\n            \"timeslot_datetime\": \"2024-10-27 08:00:00\"\n        }\n    ],\n    \"message\": \"Time slot isAccepted updated to 1\"\n}"
+						}
+					]
 				},
 				{
 					"name": "DELETE time slot",
@@ -393,7 +1051,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - DELETE time slot",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/delete/23",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"delete",
+										"23"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:50:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "269"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"deleted\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 23,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-03-21 15:49:25\",\n            \"timeslot_datetime\": \"2024-10-27 08:00:00\"\n        }\n    ],\n    \"message\": \"Time slot deleted\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -434,7 +1156,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET All Timeslots",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:50:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4396"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 22,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 2,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:01:00\",\n            \"timeslot_datetime\": \"2024-03-03 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 3,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:02:00\",\n            \"timeslot_datetime\": \"2024-03-03 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 4,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:03:00\",\n            \"timeslot_datetime\": \"2024-03-03 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 6,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:05:00\",\n            \"timeslot_datetime\": \"2024-03-03 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 7,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:06:00\",\n            \"timeslot_datetime\": \"2024-03-03 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 8,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:07:00\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 9,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:08:00\",\n            \"timeslot_datetime\": \"2024-03-03 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 11,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:10:00\",\n            \"timeslot_datetime\": \"2024-03-03 18:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 13,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:12:00\",\n            \"timeslot_datetime\": \"2024-03-06 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 14,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:13:00\",\n            \"timeslot_datetime\": \"2024-03-06 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 15,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:14:00\",\n            \"timeslot_datetime\": \"2024-03-06 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 17,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:16:00\",\n            \"timeslot_datetime\": \"2024-03-06 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 18,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:17:00\",\n            \"timeslot_datetime\": \"2024-03-07 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 20,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:19:00\",\n            \"timeslot_datetime\": \"2024-03-07 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 22,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:21:00\",\n            \"timeslot_datetime\": \"2024-03-07 18:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET Incorrect Format will get ALL",
@@ -470,7 +1256,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET Incorrect Format will get ALL",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"obviously wrong\":{\r\n        \"doctor_id\": 2\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:58:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4396"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 22,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 2,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:01:00\",\n            \"timeslot_datetime\": \"2024-03-03 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 3,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:02:00\",\n            \"timeslot_datetime\": \"2024-03-03 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 4,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:03:00\",\n            \"timeslot_datetime\": \"2024-03-03 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 6,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:05:00\",\n            \"timeslot_datetime\": \"2024-03-03 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 7,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:06:00\",\n            \"timeslot_datetime\": \"2024-03-03 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 8,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:07:00\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 9,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:08:00\",\n            \"timeslot_datetime\": \"2024-03-03 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 11,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:10:00\",\n            \"timeslot_datetime\": \"2024-03-03 18:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 13,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:12:00\",\n            \"timeslot_datetime\": \"2024-03-06 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 14,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:13:00\",\n            \"timeslot_datetime\": \"2024-03-06 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 15,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:14:00\",\n            \"timeslot_datetime\": \"2024-03-06 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 17,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:16:00\",\n            \"timeslot_datetime\": \"2024-03-06 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 18,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:17:00\",\n            \"timeslot_datetime\": \"2024-03-07 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 20,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:19:00\",\n            \"timeslot_datetime\": \"2024-03-07 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 22,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:21:00\",\n            \"timeslot_datetime\": \"2024-03-07 18:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET all available time slots",
@@ -506,7 +1356,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET all available time slots",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"isAccepted\": 0\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:59:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2815"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 14,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 2,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:01:00\",\n            \"timeslot_datetime\": \"2024-03-03 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 3,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:02:00\",\n            \"timeslot_datetime\": \"2024-03-03 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 4,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:03:00\",\n            \"timeslot_datetime\": \"2024-03-03 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 6,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:05:00\",\n            \"timeslot_datetime\": \"2024-03-03 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 7,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:06:00\",\n            \"timeslot_datetime\": \"2024-03-03 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 9,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:08:00\",\n            \"timeslot_datetime\": \"2024-03-03 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 11,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:10:00\",\n            \"timeslot_datetime\": \"2024-03-03 18:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 13,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:12:00\",\n            \"timeslot_datetime\": \"2024-03-06 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 14,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:13:00\",\n            \"timeslot_datetime\": \"2024-03-06 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 15,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:14:00\",\n            \"timeslot_datetime\": \"2024-03-06 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 17,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:16:00\",\n            \"timeslot_datetime\": \"2024-03-06 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 18,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:17:00\",\n            \"timeslot_datetime\": \"2024-03-07 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 20,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:19:00\",\n            \"timeslot_datetime\": \"2024-03-07 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 22,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:21:00\",\n            \"timeslot_datetime\": \"2024-03-07 18:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET all accepted time slots",
@@ -542,7 +1456,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET all accepted time slots",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"isAccepted\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:59:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1629"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 8,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 8,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:07:00\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET all available time slots by doctor",
@@ -578,7 +1556,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET all available time slots by doctor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"doctor_id\": 1,\r\n        \"isAccepted\": 0\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 07:59:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2815"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 14,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 2,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:01:00\",\n            \"timeslot_datetime\": \"2024-03-03 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 3,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:02:00\",\n            \"timeslot_datetime\": \"2024-03-03 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 4,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:03:00\",\n            \"timeslot_datetime\": \"2024-03-03 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 6,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:05:00\",\n            \"timeslot_datetime\": \"2024-03-03 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 7,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:06:00\",\n            \"timeslot_datetime\": \"2024-03-03 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 9,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:08:00\",\n            \"timeslot_datetime\": \"2024-03-03 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 11,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:10:00\",\n            \"timeslot_datetime\": \"2024-03-03 18:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 13,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:12:00\",\n            \"timeslot_datetime\": \"2024-03-06 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 14,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:13:00\",\n            \"timeslot_datetime\": \"2024-03-06 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 15,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:14:00\",\n            \"timeslot_datetime\": \"2024-03-06 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 17,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:16:00\",\n            \"timeslot_datetime\": \"2024-03-06 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 18,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:17:00\",\n            \"timeslot_datetime\": \"2024-03-07 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 20,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:19:00\",\n            \"timeslot_datetime\": \"2024-03-07 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 22,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:21:00\",\n            \"timeslot_datetime\": \"2024-03-07 18:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET No Timeslot Found",
@@ -614,7 +1656,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "404 - GET No Timeslot Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"doctor_id\": 9999999999\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:00:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No timeslots found\"\n}"
+						}
+					]
 				},
 				{
 					"name": "GET With end date range inclusive",
@@ -650,7 +1756,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET With end date range inclusive",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"end_date\": \"2024-03-04\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:00:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2218"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 11,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 1,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:00:00\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 2,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:01:00\",\n            \"timeslot_datetime\": \"2024-03-03 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 3,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:02:00\",\n            \"timeslot_datetime\": \"2024-03-03 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 4,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:03:00\",\n            \"timeslot_datetime\": \"2024-03-03 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 5,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:04:00\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 6,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:05:00\",\n            \"timeslot_datetime\": \"2024-03-03 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 7,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:06:00\",\n            \"timeslot_datetime\": \"2024-03-03 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 8,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:07:00\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 9,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:08:00\",\n            \"timeslot_datetime\": \"2024-03-03 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 10,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:09:00\",\n            \"timeslot_datetime\": \"2024-03-03 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 11,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:10:00\",\n            \"timeslot_datetime\": \"2024-03-03 18:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET With date range inclusive",
@@ -686,7 +1856,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET With date range inclusive",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"start_date\": \"2024-03-06\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:00:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2227"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 11,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 13,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:12:00\",\n            \"timeslot_datetime\": \"2024-03-06 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 14,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:13:00\",\n            \"timeslot_datetime\": \"2024-03-06 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 15,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:14:00\",\n            \"timeslot_datetime\": \"2024-03-06 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 17,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:16:00\",\n            \"timeslot_datetime\": \"2024-03-06 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 18,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:17:00\",\n            \"timeslot_datetime\": \"2024-03-07 14:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 19,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:18:00\",\n            \"timeslot_datetime\": \"2024-03-07 15:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 20,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:19:00\",\n            \"timeslot_datetime\": \"2024-03-07 16:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 21,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:20:00\",\n            \"timeslot_datetime\": \"2024-03-07 17:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 22,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-02-28 13:21:00\",\n            \"timeslot_datetime\": \"2024-03-07 18:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET Multiple data V1",
@@ -722,7 +1956,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET Multiple data V1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"isAccepted\": 1,\r\n        \"timeslot_datetime\": \"2024-03-06\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:01:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "444"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 2,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "GET Multiple data V2",
@@ -758,7 +2056,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - GET Multiple data V2",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"isAccepted\": 1\r\n    },\r\n    \"start_date\": \"2024-03-06\",\r\n    \"end_date\": \"2024-03-06\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:01:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "444"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 2,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 12,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:11:00\",\n            \"timeslot_datetime\": \"2024-03-06 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 16,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-02-28 13:15:00\",\n            \"timeslot_datetime\": \"2024-03-06 12:30:00\"\n        }\n    ]\n}"
+						}
+					]
 				}
 			]
 		},
@@ -795,7 +2157,70 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "201 - CREATE time slot",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"timeslot_datetime\": \"2024-10-27 08:00:00\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"create"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:01:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "266"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 23,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-03-21 16:01:36\",\n            \"timeslot_datetime\": \"2024-10-27 08:00:00\"\n        }\n    ],\n    \"message\": \"Time slot created\"\n}"
+						}
+					]
 				},
 				{
 					"name": "CREATE invalid query FAIL",
@@ -827,7 +2252,70 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - CREATE invalid query FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"obviously_wrong\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"create"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:01:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid POST payload\"\n}"
+						}
+					]
 				},
 				{
 					"name": "CREATE invalid datetime FAIL",
@@ -859,7 +2347,70 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - CREATE invalid datetime FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"timeslot_datetime\": \"08:00:00 27-10-2024\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"create"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:02:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "89"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid datetime format. Must be 'YYYY-MM-DD HH:MM:SS'\"\n}"
+						}
+					]
 				},
 				{
 					"name": "CREATE doctor time slot exists FAIL",
@@ -891,7 +2442,70 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - CREATE doctor time slot exists FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"timeslot_datetime\": \"2024-03-03 08:30:00\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"create"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:02:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "77"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Time slot already exist for this doctor_id\"\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE time slot status - 0",
@@ -924,7 +2538,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - UPDATE time slot status - 0",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"isAccepted\": 0\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/update/23",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"update",
+										"23"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:02:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "282"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 23,\n            \"isAccepted\": 0,\n            \"time_created\": \"2024-03-21 16:01:36\",\n            \"timeslot_datetime\": \"2024-10-27 08:00:00\"\n        }\n    ],\n    \"message\": \"Time slot isAccepted updated to 0\"\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE time slot status - 1",
@@ -957,7 +2635,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - UPDATE time slot status - 1",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"isAccepted\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/update/23",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"update",
+										"23"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:02:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "282"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 23,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-03-21 16:01:36\",\n            \"timeslot_datetime\": \"2024-10-27 08:00:00\"\n        }\n    ],\n    \"message\": \"Time slot isAccepted updated to 1\"\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE time slot status - Invalid payload FAIL",
@@ -990,7 +2732,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - UPDATE time slot status - Invalid payload FAIL",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"obviously_wrong\": {\r\n        \"isAccepted\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/update/23",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"update",
+										"23"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:03:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid POST payload\"\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE time slot status - Invalid status FAIL",
@@ -1023,7 +2829,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - UPDATE time slot status - Invalid status FAIL",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"isAccepted\": \"obviously_wrong\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/update/23",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"update",
+										"23"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:03:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid isAccepted Value. Must be 0 or 1\"\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE time slot status - No time slot found FAIL",
@@ -1056,7 +2926,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "404 - UPDATE time slot status - No time slot found FAIL",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"data\": {\r\n        \"isAccepted\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/update/99999",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"update",
+										"99999"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:03:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No time slot found\"\n}"
+						}
+					]
 				},
 				{
 					"name": "DELETE time slot",
@@ -1089,7 +3023,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - DELETE time slot",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/delete/23",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"delete",
+										"23"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:03:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "269"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"deleted\": [\n        {\n            \"doctor_id\": 1,\n            \"duration_minutes\": 30,\n            \"id\": 23,\n            \"isAccepted\": 1,\n            \"time_created\": \"2024-03-21 16:01:36\",\n            \"timeslot_datetime\": \"2024-10-27 08:00:00\"\n        }\n    ],\n    \"message\": \"Time slot deleted\"\n}"
+						}
+					]
 				},
 				{
 					"name": "DELETE No time slot found FAIL",
@@ -1122,7 +3120,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "404 - DELETE No time slot found FAIL",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5002/timeslot/delete/99999",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5002",
+									"path": [
+										"timeslot",
+										"delete",
+										"99999"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:04:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No time slot found\"\n}"
+						}
+					]
 				}
 			]
 		}
