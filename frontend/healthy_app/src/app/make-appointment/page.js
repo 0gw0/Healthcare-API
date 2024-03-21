@@ -9,6 +9,17 @@ import DatePickerComponent from '@/components/DatePickerComponent';
 
 import React, { useState } from 'react';
 
+const timeslots = [
+	'09:00 - 10:00',
+	'10:00 - 11:00',
+	'11:00 - 12:00',
+	'13:00 - 14:00',
+	'14:00 - 15:00',
+	'15:00 - 16:00',
+	'16:00 - 17:00',
+	'17:00 - 18:00',
+];
+
 export default function Page() {
 	return (
 		<>
@@ -39,7 +50,7 @@ export default function Page() {
 						</div>
 					</div>
 					<Container className="basis-7/12">
-						<h1 className="text-xl  leading-snug tracking-tight text-gray-800 lg:text-xl lg:leading-tight xl:text-xl xl:leading-tight dark:text-white">
+						<h1 className="text-xl font-bold mb-2 leading-snug tracking-tight text-gray-800 lg:leading-tight xl:leading-tight dark:text-white">
 							Appointment slots available for selected date:
 						</h1>
 
