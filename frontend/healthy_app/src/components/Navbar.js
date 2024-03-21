@@ -5,9 +5,11 @@ import logo from '../app/favicon.ico';
 const Navbar = () => {
 	var navigation = ['Homepage', 'Make Appointment', 'History'];
 	//  change to API call
-	const role = 'doctor';
+	const role = 'nurse';
 	if (role === 'doctor') {
 		navigation = ['Homepage', 'My Slots', 'History'];
+	}else if (role === 'nurse'){
+		navigation = ['Homepage', 'Inventory'];
 	}
 
 	function spinalCase(str) {
