@@ -1,53 +1,67 @@
 # Database Connection
 from database.db_config import connect_db
 
-# Create Timeslot for testing
-def create_timeslot_test(data):
+# Create Item for testing
+def create_item_test(data):
     # (1) Database Connection
     conn = connect_db()
     c = conn.cursor()
 
-    # (2) Create Timeslot
+    # (2) Create Item
     # print(data)
-    c.execute("""INSERT INTO timeslots VALUES (
+    c.execute("""INSERT INTO inventory VALUES (
               NULL,
-              :doctor_id,
-              :time_created,
-              :timeslot_datetime,
-              :duration_minutes,
-              :isAccepted
+              :name,
+              :quantity
             )""", data)
 
     # (3) Commit and Close
     conn.commit()
     conn.close()
 
-# Get All Timeslots
-def get_all_timeslots():
+# Get All Items
+def get_all_items():
     # (1) Database Connection
     conn = connect_db()
     c = conn.cursor()
 
     # (2) Retrieve results
-    c.execute("SELECT * FROM timeslots")
+    c.execute("SELECT * FROM inventory")
     results = c.fetchall()
 
     # (3) Close Connection
     conn.close()
     return results
 
-# Get exact Timeslot
-def get_exact_timeslot(data):
+#Update Item Quantity
+def update_item(data):
+    # (1) Database Connection
+    conn = connect_db()
+    c = conn.cursor()
+    
+    #(2) Update Item Quantity
+    c.execute("""UPDATE inventory
+              SET quantity = 
+              WHERE id = :id"""
+            , data)
+    
+    
+    # (3) Close Connection
+    conn.commit()
+    conn.close()
+    
+# Get exact Item
+def get_exact_item(data):
     # (1) Database Connection
     conn = connect_db()
     c = conn.cursor()
 
     # (2) Retrieve results
-    c.execute("""SELECT * FROM timeslots
-              WHERE doctor_id=:doctor_id
-              AND timeslot_datetime=:timeslot_datetime"""
+    c.execute("""SELECT * FROM inventory
+              WHERE name=:name"""
             , data)
-    results = c.fetchall()
+    # fetches a list of items
+    results = c.fetchall() 
 
     # (3) Close Connection
     conn.close()
@@ -93,51 +107,51 @@ def get_exact_timeslot(data):
 #     return results
 
 # Create time slot
-def create_timeslot(data):
-    # (1) Database Connection
-    conn = connect_db()
-    c = conn.cursor()
+# def create_timeslot(data):
+#     # (1) Database Connection
+#     conn = connect_db()
+#     c = conn.cursor()
 
-    # (2) Create Timeslot
-    c.execute("""INSERT INTO timeslots VALUES (
-              NULL,
-              :doctor_id,
-              :time_created,
-              :timeslot_datetime,
-              30,
-              0
-            )""", data)
+#     # (2) Create Timeslot
+#     c.execute("""INSERT INTO timeslots VALUES (
+#               NULL,
+#               :doctor_id,
+#               :time_created,
+#               :timeslot_datetime,
+#               30,
+#               0
+#             )""", data)
 
-    # (3) Commit and Close
-    conn.commit()
-    conn.close()
+#     # (3) Commit and Close
+#     conn.commit()
+#     conn.close()
 
-# Update time slot isAccepted by id
-def update_timeslot_isAccepted(data):
-    # (1) Database Connection
-    conn = connect_db()
-    c = conn.cursor()
+# # Update time slot isAccepted by id
+# def update_timeslot_isAccepted(data):
+#     # (1) Database Connection
+#     conn = connect_db()
+#     c = conn.cursor()
 
-    # (2) Update Timeslot
-    c.execute("""UPDATE timeslots
-              SET isAccepted=:isAccepted
-              WHERE id=:id"""
-            , data)
+#     # (2) Update Timeslot
+#     c.execute("""UPDATE timeslots
+#               SET isAccepted=:isAccepted
+#               WHERE id=:id"""
+#             , data)
 
-    # (3) Commit and Close
-    conn.commit()
-    conn.close()
+#     # (3) Commit and Close
+#     conn.commit()
+#     conn.close()
 
-# Delete time slot by id
-def delete_timeslot_by_id(data):
-    # (1) Database Connection
-    conn = connect_db()
-    c = conn.cursor()
+# # Delete time slot by id
+# def delete_timeslot_by_id(data):
+#     # (1) Database Connection
+#     conn = connect_db()
+#     c = conn.cursor()
 
-    # (2) Delete Timeslot
-    c.execute("""DELETE FROM timeslots
-              WHERE id=:id"""
-            , data)
+#     # (2) Delete Timeslot
+#     c.execute("""DELETE FROM timeslots
+#               WHERE id=:id"""
+#             , data)
 
     # (3) Commit and Close
     conn.commit()

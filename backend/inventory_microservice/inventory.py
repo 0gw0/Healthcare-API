@@ -9,61 +9,72 @@ import json
 import datetime
 
 # import database actions
-# from database.db_timeslot import request_reset_db
-# from database.db_timeslot import get_all_timeslots
-# from database.db_timeslot_actions import create_timeslot
-# from database.db_timeslot_actions import get_timeslot_by_data
-# from database.db_timeslot_actions import update_timeslot_isAccepted
-# from database.db_timeslot_actions import delete_timeslot_by_id
+from database.db_inventory import request_reset_db
+from database.db_inventory_actions import create_item
+
 
 app = Flask(__name__)
 CORS(app)  
 
-# # Reset Database
-# @app.route("/timeslot/reset/<string:dataset>", methods=['POST'])
-# def reset_db(dataset):
-#     """
-#     Reset Database
-#     - Reset the database to its original state
-#     - If a dataset is provided, reset the database with the dataset
+# Reset Database
+@app.route("/inventory/reset/<string:dataset>", methods=['POST'])
+def reset_db(dataset):
+    """
+    Reset Database
+    - Reset the database to its original state
+    - If a dataset is provided, reset the database with the dataset
 
-#     Returns:
-#     - 205: Database reset
-#     - 400: Invalid Dataset
+    Returns:
+    - 205: Database reset
+    - 400: Invalid Dataset
 
-#     Valid Datasets:
-#     - "empty": No dataset
-#     - "dataset1": Dataset 1
+    Valid Datasets:
+    - "empty": No dataset
+    - "dataset1": Dataset 1
 
-#     Example Response:
-#     - {"code": 205, "message": "Database reset! No Dataset was used"}
-#     - {"code": 205, "data_created": [[...], [...], [...]]}
-#     - {"code": 400, "message": "Database was not reset. Invalid Dataset: ..."}
-#     """
-#     # (1) Reset Database
-#     response = request_reset_db(dataset)
+    Example Response:
+    - {"code": 205, "message": "Database reset! No Dataset was used"}
+    - {"code": 205, "data_created": [[...], [...], [...]]}
+    - {"code": 400, "message": "Database was not reset. Invalid Dataset: ..."}
+    """
+    # (1) Reset Database
+    response = request_reset_db(dataset)
 
-#     # (2) Check Response
-#     code = response[0]
-#     data = response[1]
+    # (2) Check Response
+    code = response[0]
+    data = response[1]
 
-#     # (3) Return Response
-#     # - If data is a string, return a message
-#     if type(data) == str:
-#         return jsonify(
-#             {
-#                 "code": code,
-#                 "message": data
-#             }
-#         ), code
+    # (3) Return Response
+    # - If data is a string, return a message
+    if type(data) == str:
+        return jsonify(
+            {
+                "code": code,
+                "message": data
+            }
+        ), code
     
-#     # - If data is a list, return a list of users
-#     return jsonify(
-#         {
-#             "code": code,
-#             "data_created": data
-#         }
-#     ), code
+    # - If data is a list, return a list of users
+    return jsonify(
+        {
+            "code": code,
+            "data_created": data
+        }
+    ), code
+    
+@app.route("/inventory/get/all", methods=['GET'])
+def get_all_items():
+    
+    
+    
+
+# @app.route("/inventory/update/", methods=['PUT'])
+# def update_item_quantity():
+    
+    
+
+
+    
 
 # # Get Timeslots history
 # @app.route("/timeslot/get/history", methods=['GET'])
@@ -344,5 +355,5 @@ CORS(app)
 #     ), 200
 
 if __name__ == '__main__':
-    print("This is flask for " + os.path.basename(__file__) + ": inventory timeslots ...")
+    print("This is flask for " + os.path.basename(__file__) + ": inventory management ...")
     app.run(host='0.0.0.0', port=5005, debug=True)

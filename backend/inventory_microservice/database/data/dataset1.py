@@ -1,39 +1,25 @@
 # Class Imports
-from backend.inventory_microservice.database.data.model.inventory import Timeslot
+from backend.inventory_microservice.database.data.model.inventory import Item
 
 # Example data - Can delete
 def example():
-    timeslot = Timeslot(1, '2024-02-28 13:00:00', '2024-03-03 08:30:00')
-    print(timeslot.getInfo)
+    item = Item()
+    print(item.getInfo)
 
 # Dataset 1
 def dataset1():
     dataset = [
-            Timeslot(1, '2024-02-28 13:00:00', '2024-03-03 08:30:00', isAccepted=1),
-            Timeslot(1, '2024-02-28 13:01:00', '2024-03-03 09:30:00'),
-            Timeslot(1, '2024-02-28 13:02:00', '2024-03-03 10:30:00'),
-            Timeslot(1, '2024-02-28 13:03:00', '2024-03-03 11:30:00'),
-            Timeslot(1, '2024-02-28 13:04:00', '2024-03-03 12:30:00', isAccepted=1),
-            Timeslot(1, '2024-02-28 13:05:00', '2024-03-03 13:30:00'),
-            Timeslot(1, '2024-02-28 13:06:00', '2024-03-03 14:30:00'),
-            Timeslot(1, '2024-02-28 13:07:00', '2024-03-03 15:30:00', isAccepted=1),
-            Timeslot(1, '2024-02-28 13:08:00', '2024-03-03 16:30:00'),
-            Timeslot(1, '2024-02-28 13:09:00', '2024-03-03 17:30:00', isAccepted=1),
-            Timeslot(1, '2024-02-28 13:10:00', '2024-03-03 18:30:00'),
-            
-            Timeslot(1, '2024-02-28 13:11:00', '2024-03-06 08:30:00', isAccepted=1),
-            Timeslot(1, '2024-02-28 13:12:00', '2024-03-06 09:30:00'),
-            Timeslot(1, '2024-02-28 13:13:00', '2024-03-06 10:30:00'),
-            Timeslot(1, '2024-02-28 13:14:00', '2024-03-06 11:30:00'),
-            Timeslot(1, '2024-02-28 13:15:00', '2024-03-06 12:30:00', isAccepted=1),
-            Timeslot(1, '2024-02-28 13:16:00', '2024-03-06 13:30:00'),
-
-            Timeslot(1, '2024-02-28 13:17:00', '2024-03-07 14:30:00'),
-            Timeslot(1, '2024-02-28 13:18:00', '2024-03-07 15:30:00', isAccepted=1),
-            Timeslot(1, '2024-02-28 13:19:00', '2024-03-07 16:30:00'),
-            Timeslot(1, '2024-02-28 13:20:00', '2024-03-07 17:30:00', isAccepted=1),
-            Timeslot(1, '2024-02-28 13:21:00', '2024-03-07 18:30:00')
+            Item('Paracetamol',30),
+            Item('Hydrocodone',29),
+            Item('Metformin',16),
+            Item('Losartan',19),
+            Item('Antibiotics',12),
+            Item('Albuterol',37),
+            Item('Antihistamine',23),
+            Item('Gabapentin',25),
+            Item('Atorvastatin',20),
+            Item('Levothyroxine',27),
+            Item('Omeprazole',46),
         ]
-    
     return dataset
 

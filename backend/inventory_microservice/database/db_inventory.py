@@ -5,7 +5,7 @@ from database.data.dataset1 import dataset1
 from database.db_config import connect_db
 
 # Database Actions
-from database.db_inventory_actions import create_timeslot_test, get_all_timeslots, get_exact_timeslot
+from database.db_inventory_actions import create_item_test, get_all_items, get_exact_item
 
 # Get Tables Names
 def get_tables():
@@ -28,13 +28,10 @@ def create_db():
     c = conn.cursor()
 
     # (2) Create Table
-    c.execute("""CREATE TABLE IF NOT EXISTS timeslots (
+    c.execute("""CREATE TABLE IF NOT EXISTS inventory (
               id INTEGER PRIMARY KEY,
-              doctor_id INTEGER,
-              time_created TIMESTAMP,
-              timeslot_datetime TIMESTAMP,
-              duration_minutes INTEGER DEFAULT 30,
-              isAccepted INTEGER DEFAULT 0
+              name TEXT,
+              quantity INTEGER
             )""")
 
     # (3) Commit and Close
@@ -48,7 +45,7 @@ def delete_db():
     c = conn.cursor()
 
     # (2) Drop Table
-    c.execute("DROP TABLE IF EXISTS timeslots")
+    c.execute("DROP TABLE IF EXISTS inventory")
 
     # (3) Commit and Close
     conn.commit()
@@ -58,17 +55,17 @@ def delete_db():
 def add_dataset(dataset):
     # (1) Create Data
     if dataset == "dataset1":
-        timeslots = dataset1()
+        items = dataset1()
 
     # (2) Insert Data
-    for timeslot in timeslots:
-        check_and_insert_timeslot(timeslot.getInfo)
+    for item in items:
+        check_and_insert_item(item.getInfo)
 
 # Check if doctor_id and timeslot_datetime Exists, then Insert User
-def check_and_insert_timeslot(data):
-    if len(get_exact_timeslot(data)) > 0:
-        return "Timeslot Already Exists"
-    create_timeslot_test(data)
+def check_and_insert_item(data):
+    if len(get_exact_item(data)) > 0:
+        return "Item Already Exists"
+    create_item_test(data)
 
 # Reset Database Tables
 def reset_db():
@@ -88,7 +85,7 @@ def request_reset_db(dataset="empty"):
         add_dataset(dataset)
         print("Dataset 1 Added!")
 
-        data = get_all_timeslots()
+        data = get_all_items()
         print("Current Database:", data)
         return (205, data)
     elif dataset != "empty":
