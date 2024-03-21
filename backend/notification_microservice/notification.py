@@ -27,7 +27,7 @@ CORS(app)
 TEAM_MEMBER_ACCOUNT = "Terris Tan Wei Jun"
 TEAM_MEMBER_EMAIL = "terristanwei@gmail.com"
 TEAM_MEMBER_PHONE = "+6596867171"
-API_ENABLED = True # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$
+API_ENABLED = False # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$
 
 ###### MailTrap configuration (Email API) START ####################################################################################
 MAILTRAP_TOKEN = "24e53d222"+"761fba31630c"+"8896608b09b"
@@ -408,7 +408,7 @@ def update_notification_to_completed_api(session_id):
         return jsonify(
             {
                 "code": 200,
-                "message": f"Notification updated to completed! {result[0] if API_ENABLED else ''}",
+                "message": f"Notification updated to completed! {result[0] if API_ENABLED else 'Email and SMS API is currently disabled, to enable please modify API_ENABLED'}",
                 "updated_data": updated_data
             }
         ), 200

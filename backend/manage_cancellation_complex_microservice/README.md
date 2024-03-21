@@ -9,7 +9,7 @@ To manage both timeslot and appointment cancellation requests, and making notifi
     2. Calls `timeslot` microservice to get affected time slots
     3. Calls `appointment` microservice to get affected appointments
     4. Calls `notification` microservice to create notifications for all affected timeslots and appointments, ignoring duplicates
-2. Makes cancellation (Nurse)
+2. Make a cancellation (Nurse)
     1. Nurse confirms doctor's cancellation one-by-one
     2. Calls `timeslot` microservice to delete
     3. Calls `appointment` microservice to delete
@@ -32,6 +32,7 @@ Helpful Documentations
 5. [Express.js req.body undefined](https://stackoverflow.com/questions/9177049/express-js-req-body-undefined)
 6. [ExpressJs(NodeJs) Fire & Forget](https://stackoverflow.com/questions/34716335/expressjsnodejs-fire-forget)
 7. [Using async/await with a forEach loop](https://stackoverflow.com/questions/37576685/using-async-await-with-a-foreach-loop)
+8. [Docker with Express](https://www.geeksforgeeks.org/how-to-dockerize-an-expressjs-app/)
 
 #### Before running the code:
 
@@ -48,7 +49,7 @@ Ensure that microservices for `timeslot`, `appointment` and `notification` is al
 
 ```BASH
     docker build -t yata/manage_cancellation:1.0 ./
-    docker run -p 5102:5002 --name manage_cancellation_microservice yata/manage_cancellation:1.0
+    docker run -p 5102:5102 --name manage_cancellation_microservice yata/manage_cancellation:1.0
 ```
 
 ### Postman Testing
