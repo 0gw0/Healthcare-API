@@ -34,22 +34,25 @@ def make_appointment(timeslot_id):
     - {"code": 400/404, "message": "fail", "error_message": "..."}
     """
     try:
-        # (1) Update timeslot isAccepted by id
+        # (1.1) Update timeslot isAccepted by id
         print()
         print("-- (1) Calling timeslot microservice --")
         print(f"Updating timeslot with timeslot_id={str(timeslot_id)} to isAccepted=1 ...")
         response = invoke_http(f"{timeslot_URL}/update/{str(timeslot_id)}",
                     method="PUT", json={"data": {"isAccepted": 1}})
+        
+        # (1.2) Return error response, if any
+        if response["code"] != 200:
+            print(f"Update failed!")
+            print(f"Error: {response['message']}")
+            return jsonify({"code": response["code"], "message": "fail",
+                            "error_message": response["message"]})
+        
         print(f"Update completed!")
         print(f"Response: {response}")
         print()
         
-        # (2) Return error response, if any
-        if response["code"] != 200:
-            return jsonify({"code": response["code"], "message": "fail",
-                            "error_message": response["message"]})
-
-        # (3) Format the json_payload
+        # (2) Format the json_payload
         print()
         print("-- (2) Formatting json_payload --")
         patient_id = request.get_json()["patient_id"]
@@ -59,17 +62,25 @@ def make_appointment(timeslot_id):
         print(f"Formatted json_payload: {json_payload}")
         print()
         
-        # (4) Create an appointment
+        # (3.1) Create an appointment
         print()
         print("-- (3) Calling appointment microservice --")
         print(f"Creating an appointment with current timeslot details ...")
         response = invoke_http(f"{appointment_URL}/create",
                     method="POST", json=json_payload)
+        
+        # (3.2) Return error response, if any
+        if response["code"] != 200:
+            print(f"Creation failed!")
+            print(f"Error: {response['message']}")
+            return jsonify({"code": response["code"], "message": "Failed. However, timeslot is updated to isAccepted=1. Please reset the demo dataset1.",
+                            "error_message": response["message"]})
+        
         print(f"Creation completed!")
         print(f"Response: {response}")
         print()
         
-        # (5) Return the response
+        # (4) Return the response
         if response["code"] == 201:
             return jsonify({"code": 200, "message": "success"})
         else:
