@@ -41,7 +41,7 @@ export default function Page() {
 						</Container>
 					</div>
 					<Container className="basis-7/12">
-						<h1 className="text-xl mb-2 leading-snug tracking-tight text-gray-800 lg:text-xl lg:leading-tight xl:text-xl xl:leading-tight dark:text-white">
+						<h1 className="text-xl mb-2 leading-snug tracking-tight text-gray-800 lg:leading-tight xl:leading-tight dark:text-white">
 							Remove unavailable time slots below:
 						</h1>
 
