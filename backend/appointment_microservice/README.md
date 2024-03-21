@@ -55,8 +55,8 @@ Helpful Documentations
 #### (DOCKER) Run the code in docker:
 
 ```BASH
-    docker build -t yata/timeslot:1.0 ./
-    docker run -p 5003:5003 --name appointment_microservice yata/timeslot:1.0
+    docker build -t yata/appointment:1.0 ./
+    docker run -p 5003:5003 --name appointment_microservice yata/appointment:1.0
 ```
 
 ### Postman Testing
