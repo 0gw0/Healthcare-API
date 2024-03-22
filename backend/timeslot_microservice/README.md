@@ -56,7 +56,7 @@ Helpful Documentations
 
 ```BASH
     docker build -t yata/timeslot:1.0 ./
-    docker run -p 5002:5002 --name timeslot_microservice yata/timeslot:1.0
+    docker run --rm -p 5002:5002 --name timeslot_microservice yata/timeslot:1.0
 ```
 
 ### Postman Testing

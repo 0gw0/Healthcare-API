@@ -1,0 +1,23 @@
+{
+	"sources": null,
+	"path_handling": "v0",
+	"protocols": ["http", "https"],
+	"hosts": null,
+	"updated_at": 1711073177,
+	"strip_path": true,
+	"service": { "id": "a5545bda-b320-49a3-adbd-2d5e655858f7" },
+	"request_buffering": true,
+	"response_buffering": true,
+	"paths": ["/api/v1/cancel_appointment"],
+	"snis": null,
+	"methods": ["PUT"],
+	"https_redirect_status_code": 426,
+	"preserve_host": false,
+	"id": "b88c444f-6d61-4979-bdaa-6e303ba94a54",
+	"name": "DELETE",
+	"tags": null,
+	"destinations": null,
+	"headers": null,
+	"created_at": 1711073136,
+	"regex_priority": 0
+}
