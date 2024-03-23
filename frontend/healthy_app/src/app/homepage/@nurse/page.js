@@ -8,25 +8,26 @@ import TodayAppt from '@/components/TodayAppt';
 
 import React, { useState } from 'react';
 import SlotsTable from '@/components/SlotsTable';
+import RequestsTable from '@/components/RequestsTable';
 
 export default function Page() {
-	const medicationLogData = [
+	const DoctorRequestData = [
 		{
-			id: 1,
-			date: '2024-03-01',
-			time: '01:00 PM',
-			ptName: 'Dr Peter Lam',
-			appType: 'Consult',
+			docid: 1,
+			doctor_name: "John",
+			start_date: "2024-03-07",
+			end_date: "2024-03-07",
 		},
 		{
-			id: 2,
-			date: '2024-03-09',
-			time: '05:00 PM',
-			ptName: 'Dr Alice Tan',
-			medicinePrescribed: 'Paracetamol',
-			appType: 'Consult',
-		},
+			docid: 2,
+			doctor_name: "Shau",
+			start_date: "2024-03-07",
+			end_date: "2024-03-07",
+		}
+		
 	];
+
+	
 	return (
 		<>
 			<Navbar />
@@ -36,6 +37,7 @@ export default function Page() {
 				heroImg="doc"
 			/>
 			{/* User Homepage items */}
+
 			<Container>
 				<div className="flex flex-row">
 					<div className="basis-8/12">
@@ -44,7 +46,7 @@ export default function Page() {
 								View All Requests
 							</h1>
 							<div className="mx-4">
-								<SlotsTable data={medicationLogData} />
+								<RequestsTable data={DoctorRequestData} />
 							</div>
 						</Container>
 
