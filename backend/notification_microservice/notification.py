@@ -2,6 +2,7 @@
 # The above shebang (#!) operator tells Unix-like environments
 # to run this file as a python3 script
 
+
 import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -23,10 +24,49 @@ from database.db_notification_actions import get_all_completed_notifications_by_
 app = Flask(__name__)
 CORS(app)  
 
+
+#start amqp
+import amqp_connection 
+import json
+import pika
+#end amqp
+
+
+a_queue_name = 'Notif_Log'
+
+def receiveOrderLog(channel):
+    try:
+        # set up a consumer and start to wait for coming messages
+        channel.basic_consume(queue=a_queue_name, on_message_callback=callback, auto_ack=True)
+        print('activity_log: Consuming from queue:', a_queue_name)
+        channel.start_consuming()  # an implicit loop waiting to receive messages;
+             #it doesn't exit by default. Use Ctrl+C in the command window to terminate it.
+    
+    except pika.exceptions.AMQPError as e:
+        print(f"activity_log: Failed to connect: {e}") # might encounter error if the exchange or the queue is not created
+
+    except KeyboardInterrupt:
+        print("activity_log: Program interrupted by user.") 
+    except json.decoder.JSONDecodeError:
+        print("activity_log: Received an empty or invalid JSON message")
+
+
+def callback(channel, method, properties, body): # required signature for the callback; no return
+    print("\nactivity_log: Received an order log by " + __file__)
+    processOrderLog(json.loads(body))
+    print()
+
+def processOrderLog(order):
+    print("activity_log: Recording an order log:")
+    print(order)
+
+#end
+
 # Please no DDOS me - I lazy configure environment variable
 TEAM_MEMBER_ACCOUNT = "Terris Tan Wei Jun"
 TEAM_MEMBER_EMAIL = "terristanwei@gmail.com"
 TEAM_MEMBER_PHONE = "+6596867171"
+
 API_ENABLED = False # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$
 
 ###### MailTrap configuration (Email API) START ####################################################################################
@@ -475,4 +515,10 @@ def update_completed_to_received_api(patient_id):
 
 if __name__ == '__main__':
     print("This is flask for " + os.path.basename(__file__) + ": manage notifications ...")
+    # print("activity_log: Getting Connection")
+    # connection = amqp_connection.create_connection() #get the connection to the broker
+    # print("activity_log: Connection established successfully")
+    # channel = connection.channel()
+    # receiveOrderLog(channel)
     app.run(host='0.0.0.0', port=5004, debug=True)
+
