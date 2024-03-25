@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "6a7cd8f8-6084-42b1-9989-d8e5bd4467c3",
+		"name": "IS213 G3T8 medical_certificate_microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32110674"
+	},
+	"item": [
+		{
+			"name": "Create MC",
+			"item": [
+				{
+					"name": "CREATE Test MC",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5008/medical_certificate/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5008",
+							"path": [
+								"medical_certificate",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE MC w/ data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"appointment_id\": 999,\r\n        \"timeslot_datetime\": \"2025-10-25 15:30:00\",\r\n        \"duration_minutes\": 30,\r\n        \"mc_start_datetime\": \"2025-10-25\",\r\n        \"mc_days\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5008/medical_certificate/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5008",
+							"path": [
+								"medical_certificate",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

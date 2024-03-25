@@ -7,10 +7,43 @@ from flask import Flask, make_response, request, jsonify
 from flask_cors import CORS
 import json
 
+from datetime import date
+
+import base64
+from pathlib import Path
+
+# Email API
+import mailtrap as mt
+
+# Please no DDOS me - I lazy configure environment variable
+TEAM_MEMBER_ACCOUNT = "Terris Tan Wei Jun"
+TEAM_MEMBER_EMAIL = "terristanwei@gmail.com"
+API_ENABLED = True # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$
+
+###### MailTrap configuration (Email API) START ####################################################################################
+MAILTRAP_TOKEN = "24e53d222"+"761fba31630c"+"8896608b09b"
+Mailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)
+
+MAILTRAP_SENDER_EMAIL = "mailtrap@demomailtrap.com"
+MAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name="Mailtrap Test")
+MAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL
+MAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]
+MAILTRAP_CATEGORY = "Integration Test"
+
+# To use MailTrap, send an email using the send method
+# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,
+#         subject="You are awesome!",
+#         text="Congrats for sending test email with Mailtrap!"
+#     )
+# Mailtrap_client.send(mail)
+
+####### MailTrap configuration (Email API) END #####################################################################################
+
+
+# ReportLab is a Python library that allows you to create PDFs
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
-from datetime import date
 
 app = Flask(__name__)
 CORS(app)  
@@ -24,26 +57,30 @@ def generate_certificate():
     Generate Certificate
 
     Example Payload:
-    - { "data": { 
-            "appointment_id": 1, 
-            "timeslot_datetime": "2024-03-03 15:30:00", 
-            "duration_minutes": 30,
-            "mc_start_datetime": "2024-03-03",
-            "mc_days": 1
-        } 
+    - { "data": {
+        "appointment_id": 999,
+        "timeslot_datetime": "2025-10-25 15:30:00",
+        "duration_minutes": 30,
+        "mc_start_datetime": "2025-10-25",
+        "mc_days": 1
+        }
     }
 
     Returns:
     - 201: MC created
+    - 500: Error creating MC
 
     Constraints:
     - Data is always correct
 
     Example Response:
     - Actual PDF file
+    - {"code": 500, "message": "Failed to send email using Mailtrap!", "error": ...}
     """
     # (1) Get the data from the JSON request body
     data = json.loads(request.data)
+    if "data" in data:
+        data = data["data"]
 
     # (2) Extract ONLY relevant data
     # - Convert the string, if necessary
@@ -61,33 +98,39 @@ def generate_certificate():
     # - Default values are used for testing
     # - Defaults: patient_name, 
     PATIENT_NRIC = "T0193742D"
-    PATIENT_NAME = "Mr. Dwight Schrute"
+    PATIENT_NAME = "Dwight Schrute"
 
     DIAGNOSIS = "UNFIT FOR DUTY"
     
     DOCTOR_NRIC = "M982420A"
     DOCTOR_NAME ="Dr. Michael Scott"
 
-    # Create a digital PDF document
-    RESOURCE_PATH = f"./medical_pdf/mc_{PATIENT_NRIC}_{PATIENT_NAME}.pdf".replace(". ", " ").replace(" ", "")
+    # (4) Create directory if not exists
+    PDF_DIR = "medical_pdf"
+    if not os.path.exists(PDF_DIR):
+        os.makedirs(PDF_DIR)
+
+    # (5) Create a digital PDF document
+    FILE_NAME = f"mc_{PATIENT_NRIC}_{PATIENT_NAME}.pdf".replace(". ", " ").replace(" ", "")
+    RESOURCE_PATH = f"./{PDF_DIR}/{FILE_NAME}"
     doc = SimpleDocTemplate(RESOURCE_PATH, pagesize=letter)
 
-    # Define the elements to be added to the PDF
+    # (6.1) Define the elements to be added to the PDF
     elements = []
 
-    # Add a title
+    # (6.2) Add a title
     title = Paragraph("Medical Certificate", styles["Heading1"])
     elements.append(title)
     elements.append(Spacer(1, 12))
 
-    # Add appointment information
+    # (6.3) Add appointment information
     appointment_info = Paragraph(
         f"Appointment id: {APPOINTMENT_ID}", styles["BodyText"]
     )
     elements.append(appointment_info)
     elements.append(Spacer(1, 12))
 
-    # Add patient information
+    # (6.4) Add patient information
     patient_info = [
         Paragraph(f"Patient Name: {PATIENT_NAME}", styles["BodyText"]),
         Paragraph(f"NRIC: {PATIENT_NRIC}", styles["BodyText"]),
@@ -95,7 +138,7 @@ def generate_certificate():
     elements.extend(patient_info)
     elements.append(Spacer(1, 24))
 
-    # Add certificate details
+    # (6.5) Add certificate details
     certificate_details = [
         Paragraph(
             f"This is to certify that {PATIENT_NAME} ({PATIENT_NRIC}) is {DIAGNOSIS} for {MC_DAYS} day(s) from {MC_START_DATETIME} inclusive.",
@@ -103,7 +146,7 @@ def generate_certificate():
         ),
         Spacer(1, 12),
         Paragraph(f"Issued on: {TIMESLOT_DATETIME}", styles["BodyText"]),
-        Paragraph(f"Duration: {DURATION_MINUTES} minutes", styles["BodyText"]),
+        Paragraph(f"Session duration: {DURATION_MINUTES} minutes", styles["BodyText"]),
         Spacer(1, 12),
         Paragraph(DOCTOR_NAME, styles["BodyText"]),
         Paragraph(f"NRIC: {DOCTOR_NRIC}", styles["BodyText"]),
@@ -116,17 +159,45 @@ def generate_certificate():
     ]
     elements.extend(certificate_details)
 
-    # Build the PDF document
+    # (6.6) Build the PDF document
     doc.build(elements)
-
-    # Return the PDF as a response
+    
+    # (7) Send the PDF as an email attachment
+    if API_ENABLED:
+        try:
+            pdf_attachment = Path(__file__).parent.joinpath(RESOURCE_PATH).read_bytes()
+            # Send email with the PDF
+            mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,
+                subject="Medical Certificate",
+                text="Please find the attached medical certificate.",
+                attachments=[
+                    mt.Attachment(
+                        content=base64.b64encode(pdf_attachment),
+                        filename=FILE_NAME,
+                        disposition=mt.Disposition.INLINE,
+                        mimetype="application/pdf",
+                        content_id=FILE_NAME,
+                    )
+                ],
+            )
+            Mailtrap_client.send(mail)
+        except Exception as e:
+            print(e)
+            return jsonify(
+                {
+                    "code": 500,
+                    "message": "Failed to send email using Mailtrap!",
+                    "error": e,
+                }
+            ), 500
+        
+    # (8) Return the PDF as a response
     response = make_response(open(RESOURCE_PATH, "rb").read())
     response.headers.set("Content-Type", "application/pdf")
     response.headers.set(
         "Content-Disposition", "attachment", filename=RESOURCE_PATH
     )
-
-    print(response)
+    # print(response)
 
     return response
 
