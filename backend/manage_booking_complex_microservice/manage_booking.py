@@ -75,7 +75,6 @@ def make_appointment(timeslot_id):
         json_payload = {"data": response}
         print(f"Formatted json_payload: {json_payload}")
         print()
-
         # (3.1) Create an appointment
         print()
         print("-- (3) Calling appointment microservice --")

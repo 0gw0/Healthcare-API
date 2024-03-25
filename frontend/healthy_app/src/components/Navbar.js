@@ -21,11 +21,11 @@ const Navbar = () => {
 
 	return (
 		<div className="w-full">
-			<nav className="container-fluid relative flex flex-wrap items-center justify-between p-6 mx-auto lg:justify-between xl:px-8 bg-blue-950">
+			<nav className="relative flex flex-wrap items-center justify-between p-6 mx-auto container-fluid lg:justify-between xl:px-8 bg-blue-950">
 				{/* Logo  */}
 				<div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
 					<Link href="/">
-						<span className="flex items-center space-x-2 text-2xl font-medium  text-white dark:text-gray-100">
+						<span className="flex items-center space-x-2 text-2xl font-medium text-white dark:text-gray-100">
 							<span>
 								<Image
 									src={logo}
@@ -59,7 +59,7 @@ const Navbar = () => {
 				<div className="hidden mr-3 space-x-4 lg:flex nav__item">
 					<Link
 						href="/"
-						className="px-6 py-2 text-blue-950 bg-white rounded-3xl md:ml-5"
+						className="px-6 py-2 bg-white text-blue-950 rounded-3xl md:ml-5"
 					>
 						Log Out
 					</Link>
