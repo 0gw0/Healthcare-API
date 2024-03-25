@@ -27,10 +27,71 @@ const timeslot_URL = "http://localhost:5002/timeslot";
 const appointment_URL = "http://localhost:5003/appointment";
 const notification_URL = "http://localhost:5004/notification";
 
+// amqp added
+const amqp = require("amqplib");
+var channel, connection;
+
+const exchange_name = "order_topic";
+const exchange_type = "topic";
+
+// amqp stop
+
 // For testing
 app.get("/", (req, res) => {
     // res.send("Manage Cancellation Complex Microservice");
-    res.send({ Title: "Manage Cancellation Complex Microservice" });
+    //res.send({ Title: "Manage Cancellation Complex Microservice" });
+
+    // const message = "hello";
+
+    // sendMessageToQueue(message)
+
+    console.log("Message sent to the exchange");
+    async function publishMessage() {
+        try {
+            // Connect to RabbitMQ server
+            const connection = await amqp.connect("amqp://localhost:5672");
+            const channel = await connection.createChannel();
+
+            // Define exchange and topic
+            const exchangeName = "order_topic";
+            const topic = "created"; // Example topic
+
+            // Declare the exchange if not exists
+            await channel.assertExchange(exchangeName, "topic", {
+                durable: true,
+            });
+
+            // Define message
+            const message = {
+                userId: 123,
+                username: "john_doe",
+                email: "john@example.com",
+            };
+
+            // Convert message to JSON
+            const messageBuffer = Buffer.from(JSON.stringify(message));
+
+            // Publish message to the exchange with the specified topic
+            await channel.publish(exchangeName, topic, messageBuffer);
+
+            console.log(`Message published with topic '${topic}':`, message);
+
+            // Close connection
+            await channel.close();
+            await connection.close();
+
+
+            
+        } catch (error) {
+            console.error("Error publishing message:", error);
+        }
+    }
+    publishMessage();
+
+    // await channel.close();
+    // await connection.close();
+
+    res.send("Message Sent");
 });
 
 /**
@@ -251,11 +312,56 @@ app.post("/make_cancellation_request", async (req, res) => {
 
     // (7) Send response to client, success
     res.status(200).send({ message: "Request received" });
+
+    // amqp added
+    // if (res.statusCode == 200) {
+    //     console.log("AMQP: Message sent to the exchange when statuscode 200");
+    //     async function publishMessage() {
+    //         try {
+    //             // Connect to RabbitMQ server
+    //             const connection = await amqp.connect("amqp://localhost:5672");
+    //             const channel = await connection.createChannel();
+
+    //             // Define exchange and topic
+    //             const exchangeName = "order_topic";
+    //             const topic = "created";
+
+    //             // Declare the exchange if not exists
+    //             await channel.assertExchange(exchangeName, "topic", {
+    //                 durable: true,
+    //             });
+
+    //             // Define message
+    //             const message = {
+    //                 userId: 123,
+    //                 username: "john_doe",
+    //                 email: "john@example.com",
+    //             };
+
+    //             // Convert message to JSON
+    //             const messageBuffer = Buffer.from(JSON.stringify(message));
+
+    //             // Publish message to the exchange with the specified topic
+    //             await channel.publish(exchangeName, topic, messageBuffer);
+
+    //             console.log(
+    //                 `Message published with topic '${topic}':`,
+    //                 message
+    //             );
+
+    //             // Close connection
+    //             await channel.close();
+    //             await connection.close();
+    //         } catch (error) {
+    //             console.error("Error publishing message:", error);
+    //         }
+    //     }
+    //     publishMessage();
+    // }
+    // amqp stop
+
     return;
 });
-
-// Makes cancellation
-// [POST] /booking/make_cancellation/{session_id}
 
 /**
  * Makes cancellation

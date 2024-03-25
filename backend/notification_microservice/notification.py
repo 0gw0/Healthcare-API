@@ -2,6 +2,7 @@
 # The above shebang (#!) operator tells Unix-like environments
 # to run this file as a python3 script
 
+
 import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -23,10 +24,49 @@ from database.db_notification_actions import get_all_completed_notifications_by_
 app = Flask(__name__)
 CORS(app)  
 
+
+#start amqp
+import amqp_connection 
+import json
+import pika
+#end amqp
+
+
+a_queue_name = 'Notification'
+
+# def receiveOrderLog(channel):
+#     try:
+#         # set up a consumer and start to wait for coming messages
+#         channel.basic_consume(queue=a_queue_name, on_message_callback=callback, auto_ack=True)
+#         print('activity_log: Consuming from queue:', a_queue_name)
+#         channel.start_consuming()  # an implicit loop waiting to receive messages;
+#              #it doesn't exit by default. Use Ctrl+C in the command window to terminate it.
+    
+#     except pika.exceptions.AMQPError as e:
+#         print(f"activity_log: Failed to connect: {e}") # might encounter error if the exchange or the queue is not created
+
+#     except KeyboardInterrupt:
+#         print("activity_log: Program interrupted by user.") 
+#     except json.decoder.JSONDecodeError:
+#         print("activity_log: Received an empty or invalid JSON message")
+
+
+# def callback(channel, method, properties, body): # required signature for the callback; no return
+#     print("\nactivity_log: Received an order log by " + __file__)
+#     processOrderLog(json.loads(body))
+#     print()
+
+# def processOrderLog(order):
+#     print("activity_log: Recording an order log:")
+#     print(order)
+
+#end
+
 # Please no DDOS me - I lazy configure environment variable
 TEAM_MEMBER_ACCOUNT = "Terris Tan Wei Jun"
 TEAM_MEMBER_EMAIL = "terristanwei@gmail.com"
 TEAM_MEMBER_PHONE = "+6596867171"
+
 API_ENABLED = False # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$
 
 ###### MailTrap configuration (Email API) START ####################################################################################
@@ -373,53 +413,81 @@ def update_notification_to_completed_api(session_id):
     - {"code": 400, "message": "Invalid request. Notification status must be 'new'"}
     - {"code": 404, "message": "No notification found"}
     """
-    # (1) Prepare data
-    payload = {
-        "status": "completed",
-        "session_id": session_id
-    }
+    # AMQP Start
+    print("Notification.py: Getting AMQP Connection")
+    connection = amqp_connection.create_connection() #get the connection to the broker
+    print("Notification.py: Connection established successfully")
+    channel = connection.channel()
 
-    # (2) Check if notification exists
-    data = get_exact_notification(payload)
-    if len(data):
-
-        # (3) Check if data status is 'new'
-        # - To prevent redundant updates
-        if data[0]["status"] != "new":
-            return jsonify(
-                {
-                    "code": 400,
-                    "message": "Invalid request. Notification status must be 'new'"
-                }
-            ), 400
-        
-        # (4) Update Notification
-        update_notification_status_by_session_id(payload)
-
-        # (5) Get updated data
-        updated_data = get_exact_notification(payload)[0]
-
-        # (6) Execute Email and SMS
-        # - Each email and SMS cost $$$
-        if API_ENABLED:
-            result = execute_email_and_sms(updated_data["timeslot_datetime"])
-
-        # (7) Return Response
-        return jsonify(
-            {
-                "code": 200,
-                "message": f"Notification updated to completed! {result[0] if API_ENABLED else 'Email and SMS API is currently disabled, to enable please modify API_ENABLED'}",
-                "updated_data": updated_data
-            }
-        ), 200
+    try:
+        # set up a consumer and start to wait for coming messages
+        channel.basic_consume(queue=a_queue_name, on_message_callback=callback, auto_ack=True)
+        print('Notification.py: Consuming from queue:', a_queue_name)
+        channel.start_consuming()  # an implicit loop waiting to receive messages;
+             #it doesn't exit by default. Use Ctrl+C in the command window to terminate it.
     
-    # (8) Return Error
-    return jsonify(
-        {
-            "code": 404,
-            "message": "No notification found"
-        }
-    ), 404
+    except pika.exceptions.AMQPError as e:
+        print(f"Notification.py: Failed to connect: {e}") # might encounter error if the exchange or the queue is not created
+
+    except KeyboardInterrupt:
+        print("Notification.py: Program interrupted by user.") 
+    except json.decoder.JSONDecodeError:
+        print("Notification.py: Received an empty or invalid JSON message")
+    # AMQP End
+
+def callback(channel, method, properties, body): # required signature for the callback; no return
+    print("\nactivity_log: Received an order log by " + __file__)
+    print()
+    print(body)
+    print(json.loads(body))
+    
+    # # (1) Prepare data
+    # payload = {
+    #     "status": "completed",
+    #     "session_id": session_id
+    # }
+
+    # # (2) Check if notification exists
+    # data = get_exact_notification(payload)
+    # if len(data):
+
+    #     # (3) Check if data status is 'new'
+    #     # - To prevent redundant updates
+    #     if data[0]["status"] != "new":
+    #         return jsonify(
+    #             {
+    #                 "code": 400,
+    #                 "message": "Invalid request. Notification status must be 'new'"
+    #             }
+    #         ), 400
+        
+    #     # (4) Update Notification
+    #     update_notification_status_by_session_id(payload)
+
+    #     # (5) Get updated data
+    #     updated_data = get_exact_notification(payload)[0]
+
+    #     # (6) Execute Email and SMS
+    #     # - Each email and SMS cost $$$
+    #     if API_ENABLED:
+    #         result = execute_email_and_sms(updated_data["timeslot_datetime"])
+
+    #     # (7) Return Response
+    #     return jsonify(
+    #         {
+    #             "code": 200,
+    #             "message": f"Notification updated to completed! {result[0] if API_ENABLED else 'Email and SMS API is currently disabled, to enable please modify API_ENABLED'}",
+    #             "updated_data": updated_data
+    #         }
+    #     ), 200
+    
+    # # (8) Return Error
+    # return jsonify(
+    #     {
+    #         "code": 404,
+    #         "message": "No notification found"
+    #     }
+    # ), 404
 
 # Update ‘completed’ to ‘received’ based on patient_id, then GET
 @app.route("/notification/update/completed/<int:patient_id>", methods=['PUT'])
@@ -474,5 +542,7 @@ def update_completed_to_received_api(patient_id):
     ), 404
 
 if __name__ == '__main__':
+    # Start Flask
     print("This is flask for " + os.path.basename(__file__) + ": manage notifications ...")
     app.run(host='0.0.0.0', port=5004, debug=True)
+
