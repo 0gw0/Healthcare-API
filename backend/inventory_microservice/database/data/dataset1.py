@@ -1,5 +1,5 @@
 # Class Imports
-from backend.inventory_microservice.database.data.model.inventory import Item
+from database.data.model.inventory import Item
 
 # Example data - Can delete
 def example():

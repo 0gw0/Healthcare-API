@@ -5,7 +5,7 @@ from database.data.dataset1 import dataset1
 from database.db_config import connect_db
 
 # Database Actions
-from database.db_inventory_actions import create_item_test, get_all_items, get_exact_item
+from database.db_inventory_actions import create_item, get_all_items, get_item_by_id, update_item_quantity
 
 # Get Tables Names
 def get_tables():
@@ -59,13 +59,13 @@ def add_dataset(dataset):
 
     # (2) Insert Data
     for item in items:
-        check_and_insert_item(item.getInfo)
+        create_item(item.getInfo)
 
-# Check if doctor_id and timeslot_datetime Exists, then Insert User
+# Check if item already exists, if no then insert item
 def check_and_insert_item(data):
-    if len(get_exact_item(data)) > 0:
+    if len(get_item_by_id(data)) > 0:
         return "Item Already Exists"
-    create_item_test(data)
+    create_item(data)
 
 # Reset Database Tables
 def reset_db():
