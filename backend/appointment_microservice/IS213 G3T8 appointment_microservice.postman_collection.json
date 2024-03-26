@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Datahase Reset",
+			"name": "Database Reset",
 			"item": [
 				{
 					"name": "Database Reset - Wrong URL FAIL",
