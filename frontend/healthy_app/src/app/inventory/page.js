@@ -83,8 +83,12 @@ export default function Page() {
               <h1 className="ml-4 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
                 Inventory Details
               </h1>
-
+              <div className="w-3/4">
               <Inventory data={InventoryData}></Inventory>
+              </div>
+
+
+              
             </Container>
 
 

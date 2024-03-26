@@ -26,7 +26,7 @@ const Inventory = ({data}) => {
 										</th>
 										<th
 											scope="col"
-											className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
+											className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider float-right"
 										>
 											Quantity
 										</th>
@@ -46,7 +46,7 @@ const Inventory = ({data}) => {
 											<td className="px-6 py-4 whitespace-nowrap text-left text-sm font-medium">
 												{item.name}
 											</td>
-											<td className="px-6 py-4 whitespace-nowrap text-left text-sm font-medium">
+											<td className="px-6 py-4 whitespace-nowrap text-left text-sm font-medium float-right">
 												{item.quantity}
 											</td>
 
