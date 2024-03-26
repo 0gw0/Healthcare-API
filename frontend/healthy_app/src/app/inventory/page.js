@@ -4,26 +4,67 @@ import Navbar from "@/components/Navbar";
 import Container from "@/components/container";
 import Hero from "@/components/hero";
 import Footer from "@/components/footer";
-import InventoryLog from "@/components/InventoryLog";
+import Inventory from "@/components/Inventory";
 
 import React, { useState } from "react";
-import CreateOrder from "@/components/CreateOrder";
 
 export default function Page() {
-  const InventoryLogData = [
+
+  const InventoryData = [
     {
       id: 1,
-      date: "2024-03-01",
       name: "Paracetamol",
-      quantity: "150",
-      manufacturer: "GSX",
+      quantity: "30",
     },
     {
       id: 2,
-      date: "2024-01-23",
-      name: "Amoxicillin",
-      quantity: "24",
-      manufacturer: "MSD",
+      name: "Hydrocodone",
+      quantity: "29",
+    },
+    {
+      id: 3,
+      name: "Metformin",
+      quantity: "16",
+    },
+    {
+      id: 4,
+      name: "Lorsartan",
+      quantity: "19",
+    },
+    {
+      id: 5,
+      name: "Antibiotics",
+      quantity: "120",
+    },
+    {
+      id: 6,
+      name: "Albuterol",
+      quantity: "37",
+    },
+    {
+      id: 7,
+      name: "Antihistamine",
+      quantity: "23",
+    },
+    {
+      id: 8,
+      name: "Gabapentin",
+      quantity: "25",
+    },
+    {
+      id: 9,
+      name: "Atorvastatin",
+      quantity: "20",
+    },
+    {
+      id: 10,
+      name: "Levothyroxine",
+      quantity: "27",
+    },
+    {
+      id: 11,
+      name: "Omeprazole",
+      quantity: "46",
     },
   ];
   return (
@@ -37,22 +78,16 @@ export default function Page() {
       {/* User Homepage items */}
       <Container>
         <div className="flex flex-row">
-          <div className="basis-5/12">
+
             <Container>
               <h1 className="ml-4 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
                 Inventory Details
               </h1>
 
-              <InventoryLog data={InventoryLogData}></InventoryLog>
+              <Inventory data={InventoryData}></Inventory>
             </Container>
-          </div>
-          <Container className="basis-7/12">
-            <h1 className="ml-4 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
-              Create Order
-            </h1>
 
-            <CreateOrder></CreateOrder>
-          </Container>
+
         </div>
       </Container>
 
