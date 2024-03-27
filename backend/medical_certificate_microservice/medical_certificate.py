@@ -167,9 +167,15 @@ def generate_certificate():
         try:
             pdf_attachment = Path(__file__).parent.joinpath(RESOURCE_PATH).read_bytes()
             # Send email with the PDF
-            mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,
-                subject="Medical Certificate",
-                text="Please find the attached medical certificate.",
+            mail = mt.MailFromTemplate(
+                sender=MAILTRAP_SENDER,
+                to=MAILTRAP_TO,
+
+                template_uuid="c5d86246-7b65-4706-aac9-64ae4c2a77d1",
+                template_variables={
+                    "datetime": "Test_Datetime"
+                },
+
                 attachments=[
                     mt.Attachment(
                         content=base64.b64encode(pdf_attachment),
