@@ -106,3 +106,18 @@ def get_all_completed_notifications_by_patient_id(data):
     # (3) Close Connection
     conn.close()
     return results
+
+# Delete Notification by session_id
+def delete_notification_by_session_id(data):
+    # (1) Database Connection
+    conn = connect_db()
+    c = conn.cursor()
+
+    # (2) Delete Notification
+    c.execute("""DELETE FROM notifications
+              WHERE session_id=:session_id
+            """, data)
+
+    # (3) Commit and Close
+    conn.commit()
+    conn.close()

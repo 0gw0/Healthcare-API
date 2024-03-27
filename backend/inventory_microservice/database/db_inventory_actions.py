@@ -63,10 +63,26 @@ def get_item_by_id(data):
 
     # fetches an item
     item = c.fetchone()
-    print(item)
+
     # (3) Close Connection
     conn.close()
-    if item:
-        return item
-    else:   
-        return None
+    return item
+    
+
+# Get Item Quantity by ID
+def get_item_quantity(data):
+    # (1) Database Connection
+    conn = connect_db()
+    c = conn.cursor()
+
+    # (2) Retrieve results
+    c.execute("""SELECT quantity FROM inventory
+              WHERE id=:id"""
+                , data)
+
+    # fetches an item
+    quantity = c.fetchone()["quantity"]
+
+    # (3) Close Connection
+    conn.close()
+    return quantity

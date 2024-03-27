@@ -7,7 +7,7 @@ const axios = require("axios");
 // CORS
 const cors = require("cors");
 // Hot-Reload w/ Nodemon
-const reload = require("reload");
+// const reload = require("reload");
 
 // Creating express app
 const port = 5102;
@@ -416,4 +416,4 @@ app.listen(port, () => {
     );
     console.log(`Server running on port ${port}`);
 });
-reload(app);
+// reload(app);

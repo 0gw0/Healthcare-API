@@ -19,6 +19,7 @@ from database.db_notification import get_all_notifications
 from database.db_notification_actions import create_notification
 from database.db_notification_actions import update_notification_status_by_session_id
 from database.db_notification_actions import get_all_completed_notifications_by_patient_id
+from database.db_notification_actions import delete_notification_by_session_id
 
 app = Flask(__name__)
 CORS(app)  
@@ -414,6 +415,51 @@ def update_notification_to_completed_api(session_id):
         ), 200
     
     # (8) Return Error
+    return jsonify(
+        {
+            "code": 404,
+            "message": "No notification found"
+        }
+    ), 404
+
+# Delete notification by session_id
+@app.route("/notification/delete/<int:session_id>", methods=['DELETE'])
+def delete_notification_by_session_id_api(session_id):
+    """
+    Delete notification by session_id
+
+    Constraints:
+    - session_id may be invalid
+
+    Returns:
+    - 200: Notification deleted
+    - 404: No notification found
+
+    Example Response:
+    - {"code": 200, "message": "Notification deleted!"}
+    - {"code": 404, "message": "No notification found"}
+    """
+    # (1) Prepare data
+    payload = {
+        "session_id": session_id
+    }
+
+    # (2) Check if notification exists
+    data = get_exact_notification(payload)
+    if len(data):
+
+        # (3) Delete Notification
+        delete_notification_by_session_id(payload)
+
+        # (4) Return Response
+        return jsonify(
+            {
+                "code": 200,
+                "message": "Notification deleted!"
+            }
+        ), 200
+    
+    # (5) Return Error
     return jsonify(
         {
             "code": 404,

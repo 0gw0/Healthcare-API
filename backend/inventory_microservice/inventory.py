@@ -12,6 +12,7 @@ import datetime
 from database.db_inventory import request_reset_db
 from database.db_inventory_actions import get_all_items
 from database.db_inventory_actions import get_item_by_id
+from database.db_inventory_actions import get_item_quantity
 from database.db_inventory_actions import update_item_quantity
 
 
@@ -75,6 +76,7 @@ def get_all():
         return jsonify(
             {
                 "code": 200,
+                "count": len(data),
                 "data": data
             }
         ), 200
@@ -90,19 +92,38 @@ def get_all():
  #Update item quantity by id   
 @app.route("/inventory/update/<int:id>", methods=['PUT'])
 def update_quantity(id):
+    """
+    Update item quantity by id
+    - Get a number
+    - Update quantity by that number
+
+    Returns:
+    - 200: Item updated
+    - 400: Invalid PUT payload
+
+    Example Payload:
+    - {"quantity_to_add": 5}
+
+    Example Response:
+    - {"code": 200, "message": "Inventory item quantity updated", "data": {...}}
+    - {"code": 400, "message": "Invalid PUT payload", "error": ...}
+    """
     # (1) Get PUT payload
     try:
         data = request.get_json()
+        quantity_to_add = data["quantity_to_add"]
     except Exception as e:
         return jsonify(
             {
                 "code": 400,
-                "message": "Invalid PUT payload"
+                "message": "Invalid PUT payload",
+                "error": str(e)
             }
         ), 400
 
     # (2) Update inventory item quantity by id
     data["id"] = id
+    data["quantity"] = get_item_quantity(data) + quantity_to_add
     update_item_quantity(data)
 
     # (3) Return Success
@@ -111,7 +132,8 @@ def update_quantity(id):
         {
             "code": 200,
             "message": f"Inventory item quantity updated",
-            "data": updated_item
+            "quantity_to_add": quantity_to_add,
+            "updated_data": updated_item
         }
     ), 200
 

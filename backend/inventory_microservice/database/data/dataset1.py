@@ -18,7 +18,6 @@ def dataset1():
             Item('Antihistamine',23),
             Item('Gabapentin',25),
             Item('Atorvastatin',20),
-            Item('Levothyroxine',27),
             Item('Omeprazole',46),
         ]
     return dataset

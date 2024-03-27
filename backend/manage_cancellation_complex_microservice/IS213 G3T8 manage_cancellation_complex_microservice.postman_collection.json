@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ac726e13-fa39-414e-92f8-9003a1174ad7",
+		"_postman_id": "1b9306b2-49e7-47b3-9405-f49c53fc166d",
 		"name": "IS213 G3T8 manage_cancellation_complex_microservice",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32110674"
@@ -388,15 +388,6 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1\r\n    },\r\n    \"start_date\": \"2024-03-07\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
 					"raw": "http://127.0.0.1:5102/make_cancellation/1",
 					"protocol": "http",
@@ -419,15 +410,6 @@
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1\r\n    },\r\n    \"start_date\": \"2024-03-07\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://127.0.0.1:5102/make_cancellation/1",
 							"protocol": "http",
@@ -489,15 +471,6 @@
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1\r\n    },\r\n    \"start_date\": \"2024-03-07\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://127.0.0.1:5102/make_cancellation/1",
 							"protocol": "http",
@@ -559,15 +532,6 @@
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1\r\n    },\r\n    \"start_date\": \"2024-03-07\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://127.0.0.1:5102/make_cancellation/1",
 							"protocol": "http",
@@ -629,15 +593,6 @@
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1\r\n    },\r\n    \"start_date\": \"2024-03-07\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://127.0.0.1:5102/make_cancellation/1",
 							"protocol": "http",
@@ -699,15 +654,6 @@
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1\r\n    },\r\n    \"start_date\": \"2024-03-07\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://127.0.0.1:5102/make_cancellation/1",
 							"protocol": "http",

@@ -1,5 +1,5 @@
 FROM node:slim
-WORKDIR /usr/src/app/manage_cancellation_complex_microservice
+WORKDIR /usr/src/app/manage_dataset_complex_microservice
 
 # Copy All Files
 COPY . .

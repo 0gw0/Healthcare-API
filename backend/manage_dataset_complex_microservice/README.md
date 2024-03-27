@@ -1,19 +1,11 @@
-# Manage Cancellation Complex Microservice
+# Manage Dataset Complex Microservice
 
-To manage both timeslot and appointment cancellation requests, and making notifications.
+To manage datasets of all microservices.
 
-### Functions
+### Functions (WIP)
 
-1. Make cancellation request (Doctor)
-    1. Doctor cancels his schedule for a specific time period
-    2. Calls `timeslot` microservice to get affected time slots
-    3. Calls `appointment` microservice to get affected appointments
-    4. Calls `notification` microservice to create notifications for all affected timeslots and appointments, ignoring duplicates
-2. Make a cancellation (Nurse)
-    1. Nurse confirms doctor's cancellation one-by-one
-    2. Calls `timeslot` microservice to delete
-    3. Calls `appointment` microservice to delete
-    4. Calls `notification` microservice to update status to'completed'
+1. Use a dataset
+    1. `dataset1`
 
 ### How to code
 
@@ -48,8 +40,8 @@ Ensure that microservices for `timeslot`, `appointment` and `notification` is al
 #### (DOCKER) Run the code in docker:
 
 ```BASH
-    docker build -t yata/manage_cancellation:1.0 ./
-    docker run -p 5102:5102 --name manage_cancellation_microservice yata/manage_cancellation:1.0
+    docker build -t yata/manage_dataset:1.0 ./
+    docker run -p 5109:5109 --name manage_dataset_microservice yata/manage_dataset_microservice:1.0
 ```
 
 ### Postman Testing
