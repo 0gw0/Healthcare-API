@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from './container';
+import Link from 'next/link';
 
 const SlotsTable = ({ data }) => {
 	return (
@@ -35,6 +36,12 @@ const SlotsTable = ({ data }) => {
 										>
 											Appointment Type
 										</th>
+										<th
+											scope="col"
+											className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
+										>
+											
+										</th>
 									</tr>
 								</thead>
 								<tbody className="bg-white divide-y divide-gray-200">
@@ -54,6 +61,13 @@ const SlotsTable = ({ data }) => {
 											</td>
 											<td className="px-6 py-4 whitespace-nowrap text-left text-sm font-medium">
 												{item.appType}
+											</td>
+											<td className="px-6 py-4 whitespace-nowrap text-left text-sm font-medium">
+												<button id='item.id' className='rounded-3xl bg-blue-500 text-white m-2 p-4 basis-1/4 text-lg hover:bg-blue-700'>
+													<Link href='/medical-certificate'
+													>Begin Consult
+													</Link>
+												</button>
 											</td>
 										</tr>
 									))}
