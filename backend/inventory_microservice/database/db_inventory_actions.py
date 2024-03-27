@@ -56,16 +56,17 @@ def get_item_by_id(data):
     c = conn.cursor()
 
     # (2) Retrieve results
+    print(data)
     c.execute("""SELECT * FROM inventory
               WHERE id=:id"""
                 , data)
 
     # fetches an item
     item = c.fetchone()
-
+    print(item)
     # (3) Close Connection
     conn.close()
     if item:
-        return {"id": item[0], "name": item[1], "quantity": item[2]}
+        return item
     else:   
         return None

@@ -106,7 +106,7 @@ def update_quantity(id):
     update_item_quantity(data)
 
     # (3) Return Success
-    updated_item = get_item_by_id(id)
+    updated_item = get_item_by_id(data)
     return jsonify(
         {
             "code": 200,
