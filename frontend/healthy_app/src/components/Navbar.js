@@ -5,7 +5,7 @@ import logo from '../app/favicon.ico';
 const Navbar = () => {
 	var navigation = ['Homepage', 'Make Appointment', 'History'];
 	//  change to API call
-	const role = 'nurse';
+	const role = 'doctor';
 	if (role === 'doctor') {
 		navigation = ['Homepage', 'My Slots', 'History'];
 	}else if (role === 'nurse'){
