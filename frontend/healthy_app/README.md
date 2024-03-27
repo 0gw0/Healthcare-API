@@ -38,3 +38,5 @@ CLI: `npm run dev`
 4. [How do I pass an href to an onClick function in nextjs?](https://stackoverflow.com/questions/65638840/how-do-i-pass-an-href-to-an-onclick-function-in-nextjs)
 
 5. [React hydration error](https://nextjs.org/docs/messages/react-hydration-error)
+
+6. [Enable certain dates in a datepicker](https://stackoverflow.com/questions/63230945/enable-certain-dates-in-a-datepicker)

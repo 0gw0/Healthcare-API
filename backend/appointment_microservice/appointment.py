@@ -174,7 +174,7 @@ def create_appointment_api():
     ), 201
 
 # Get All Appointments, with time range
-@app.route("/appointment/get/all", methods=['GET'])
+@app.route("/appointment/get/all", methods=['GET', 'POST'])
 def get_all_appointments_timerange():
     """
     Get All Appointments

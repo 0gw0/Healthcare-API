@@ -98,7 +98,7 @@ def get_all_timeslots_history():
     ), 404
 
 # Get All Timeslots, with time range
-@app.route("/timeslot/get/all", methods=['GET'])
+@app.route("/timeslot/get/all", methods=['GET', 'POST'])
 def get_all_timeslots_timerange():
     """
     Get All Timeslots

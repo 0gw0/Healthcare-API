@@ -15,16 +15,15 @@ export default function Home() {
     const searchParams = useSearchParams();
     const code = searchParams.get("code");
 
-    // User login - START
+    // Patient login - START
     if (code) {
         // Set user type as patient
-        setCookie("userType", "patient");
+        // - Will be after login
+        // - There is error if set here, hardcode for now
 
         // Get user data from user_microservice
-        axios.get("http://127.0.0.1:5001/user/get/patients/1").then((res) => {
-            // console.log(res.data.data);
-            setCookie("userData", res.data.data);
-        });
+        // - Will be after login
+        // - There is error if set here, hardcode for now
 
         // Redirect to homepage
         redirect("/homepage");
@@ -96,7 +95,7 @@ export default function Home() {
             // console.log(authorizeUrl);
         }
     }
-    // User login - END
+    // Patient login - END
 
     // Admin login - START
     function doctorLogin() {

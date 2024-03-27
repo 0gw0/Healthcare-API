@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "f926b3ab-127e-4e84-9716-4cb69f4f3c45",
+		"_postman_id": "e1c44add-3c3e-40c1-96c7-fe08db390f22",
 		"name": "IS213 G3T8 timeslot_microservice",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "26201401"
+		"_exporter_id": "32110674"
 	},
 	"item": [
 		{
@@ -503,11 +503,11 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "Werkzeug/3.0.1 Python/3.9.12"
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 21 Mar 2024 07:47:18 GMT"
+									"value": "Wed, 27 Mar 2024 15:30:06 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -1162,15 +1162,6 @@
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
 								"url": {
 									"raw": "http://127.0.0.1:5002/timeslot/get/all",
 									"protocol": "http",
