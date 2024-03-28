@@ -75,22 +75,6 @@ export default function Page() {
         }, 10000);
     }, []);
 
-    // Hardcoded data
-    // const DoctorRequestData = [
-    //     {
-    //         docid: 1,
-    //         doctor_name: "John",
-    //         start_date: "2024-03-07",
-    //         end_date: "2024-03-07",
-    //     },
-    //     {
-    //         docid: 2,
-    //         doctor_name: "Shau",
-    //         start_date: "2024-03-07",
-    //         end_date: "2024-03-07",
-    //     },
-    // ];
-
     return (
         <>
             <Navbar />
