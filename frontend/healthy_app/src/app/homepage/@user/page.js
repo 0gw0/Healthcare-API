@@ -87,19 +87,22 @@ export default function Page() {
 
                         {/* Personal Details */}
                         <Container className="basis-1/2">
-                            <h1 className="ml-4 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-2xl lg:leading-tight xl:leading-tight dark:text-white">
+                            <h1 className="ml-4 text-2xl font-bold leading-snug text-gray-800 lg:text-2xl lg:leading-tight xl:leading-tight dark:text-white">
                                 Personal Details:
                             </h1>
-                            <p className="ml-4 leading-snug tracking-tight text-gray-800 lg:leading-tight xl:leading-tight dark:text-white">
-                                Email: {patient.email}
+                            <div className="ml-4">
+                            <p className="leading-snug text-gray-800 lg:leading-tight xl:leading-tight dark:text-white">
+                                <span className="font-bold">Email:</span> {patient.email}
                             </p>
-                            <p className="ml-4 leading-snug tracking-tight text-gray-800 lg:leading-tight xl:leading-tight dark:text-white">
-                                Contact Number: {patient.contactNo}
+                            <p className="leading-snug text-gray-800 lg:leading-tight xl:leading-tight dark:text-white">
+                                <span className="font-bold">Contact Number:</span> {patient.contactNo}
                             </p>
-                            <p className="ml-4 leading-snug tracking-tight text-gray-800 lg:leading-tight xl:leading-tight dark:text-white">
-                                Age: {patient.age}
+                            <p className="leading-snug text-gray-800 lg:leading-tight xl:leading-tight dark:text-white">
+                                <span className="font-bold">Age:</span> {patient.age}
                             </p>
+                            </div>
                         </Container>
+
 
                         {/* Account Details */}
                         <Container className="basis-1/2">
@@ -107,7 +110,7 @@ export default function Page() {
                                 Account Details:
                             </h1>
                             <p className="ml-4 leading-snug tracking-tight text-gray-800 lg:leading-tight xl:leading-tight dark:text-white">
-                                username: {patient.username}
+                            <span className="font-bold">username: </span> {patient.username}
                             </p>
                         </Container>
                         {/* <Container className="basis-1/2">
