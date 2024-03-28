@@ -135,7 +135,7 @@ services:
             PYTHONUNBUFFERED: 1
 
     #######################################################
-    # Manage Cancellation: Manages cancellations and notifies patient
+    # Manage dataset: Manages dataset
     #######################################################
     manage_dataset_microservice:
         build:
