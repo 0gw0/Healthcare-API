@@ -1,6 +1,5 @@
 import React from 'react';
-import userOneImg from '../../public/doc1.jpeg';
-import Image from 'next/image';
+import Link from 'next/link';
 
 const TodayAppt = () => {
 	return (
@@ -45,7 +44,9 @@ function Avatar(props) {
 							type="button"
 							className="px-3 py-1 text-sm text-white focus:outline-none bg-blue-950 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 float-right  mx-6 " // Added styles for positioning
 						>
-							Start
+							<Link href='/medical-certificate'
+								>Begin Consult
+							</Link>
 						</button>
 					</div>
 				</div>
