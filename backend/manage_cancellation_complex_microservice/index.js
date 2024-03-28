@@ -23,9 +23,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Microservices URLs
-const timeslot_URL = "http://localhost:5002/timeslot";
-const appointment_URL = "http://localhost:5003/appointment";
-const notification_URL = "http://localhost:5004/notification";
+const timeslot_URL = 'http://host.docker.internal:5002/timeslot';
+const appointment_URL = 'http://host.docker.internal:5003/appointment';
+const notification_URL = 'http://host.docker.internal:5004/notification';
 
 // For testing
 app.get("/", (req, res) => {
