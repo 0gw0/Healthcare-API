@@ -27,7 +27,7 @@ services:
         environment:
             PYTHONUNBUFFERED: 1
 
-###################################
+    ###################################
     # Notification: The notification microservice
     ###################################
     notification_microservice:
@@ -41,7 +41,7 @@ services:
         environment:
             PYTHONUNBUFFERED: 1
 
-###################################
+    ###################################
     # Medical Certificate: The MC microservice
     ###################################
     medical_certificate_microservice:
