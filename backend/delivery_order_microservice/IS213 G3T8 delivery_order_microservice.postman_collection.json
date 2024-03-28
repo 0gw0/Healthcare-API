@@ -17,12 +17,7 @@
 						"url": {
 							"raw": "http://127.0.0.1:5006/delivery_order/reset/obviously_wrong",
 							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
+							"host": ["127", "0", "0", "1"],
 							"port": "5006",
 							"path": [
 								"delivery_order",
@@ -40,12 +35,7 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/reset/obviously_wrong",
 									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
+									"host": ["127", "0", "0", "1"],
 									"port": "5006",
 									"path": [
 										"delivery_order",
@@ -96,18 +86,9 @@
 						"url": {
 							"raw": "http://127.0.0.1:5006/delivery_order/reset/empty",
 							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
+							"host": ["127", "0", "0", "1"],
 							"port": "5006",
-							"path": [
-								"delivery_order",
-								"reset",
-								"empty"
-							]
+							"path": ["delivery_order", "reset", "empty"]
 						}
 					},
 					"response": [
@@ -119,18 +100,9 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/reset/empty",
 									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
+									"host": ["127", "0", "0", "1"],
 									"port": "5006",
-									"path": [
-										"delivery_order",
-										"reset",
-										"empty"
-									]
+									"path": ["delivery_order", "reset", "empty"]
 								}
 							},
 							"status": "RESET CONTENT",
@@ -175,18 +147,9 @@
 						"url": {
 							"raw": "http://127.0.0.1:5006/delivery_order/reset/dataset1",
 							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
+							"host": ["127", "0", "0", "1"],
 							"port": "5006",
-							"path": [
-								"delivery_order",
-								"reset",
-								"dataset1"
-							]
+							"path": ["delivery_order", "reset", "dataset1"]
 						}
 					},
 					"response": [
@@ -198,12 +161,7 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/reset/dataset1",
 									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
+									"host": ["127", "0", "0", "1"],
 									"port": "5006",
 									"path": [
 										"delivery_order",
@@ -257,9 +215,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"exec": [
-									""
-								],
+								"exec": [""],
 								"type": "text/javascript",
 								"packages": {}
 							}
@@ -269,20 +225,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5006/delivery_order/get/history",
+							"raw": "http://127.0.0.1:5006/delivery_order/get/all",
 							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
+							"host": ["127", "0", "0", "1"],
 							"port": "5006",
-							"path": [
-								"delivery_order",
-								"get",
-								"history"
-							]
+							"path": ["delivery_order", "get", "history"]
 						}
 					},
 					"response": [
@@ -294,18 +241,9 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/get/all",
 									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
+									"host": ["127", "0", "0", "1"],
 									"port": "5006",
-									"path": [
-										"delivery_order",
-										"get",
-										"all"
-									]
+									"path": ["delivery_order", "get", "all"]
 								}
 							},
 							"status": "NOT FOUND",
@@ -348,9 +286,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"exec": [
-									""
-								],
+								"exec": [""],
 								"type": "text/javascript",
 								"packages": {}
 							}
@@ -371,17 +307,9 @@
 						"url": {
 							"raw": "http://127.0.0.1:5006/delivery_order/create",
 							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
+							"host": ["127", "0", "0", "1"],
 							"port": "5006",
-							"path": [
-								"delivery_order",
-								"create"
-							]
+							"path": ["delivery_order", "create"]
 						}
 					},
 					"response": [
@@ -402,17 +330,9 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/create",
 									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
+									"host": ["127", "0", "0", "1"],
 									"port": "5006",
-									"path": [
-										"delivery_order",
-										"create"
-									]
+									"path": ["delivery_order", "create"]
 								}
 							},
 							"status": "CREATED",
@@ -455,17 +375,9 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/create",
 									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
+									"host": ["127", "0", "0", "1"],
 									"port": "5006",
-									"path": [
-										"delivery_order",
-										"create"
-									]
+									"path": ["delivery_order", "create"]
 								}
 							},
 							"status": "BAD REQUEST",
@@ -517,17 +429,9 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/create",
 									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
+									"host": ["127", "0", "0", "1"],
 									"port": "5006",
-									"path": [
-										"delivery_order",
-										"create"
-									]
+									"path": ["delivery_order", "create"]
 								}
 							},
 							"status": "BAD REQUEST",
@@ -579,17 +483,9 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/create",
 									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
+									"host": ["127", "0", "0", "1"],
 									"port": "5006",
-									"path": [
-										"delivery_order",
-										"create"
-									]
+									"path": ["delivery_order", "create"]
 								}
 							},
 							"status": "BAD REQUEST",
