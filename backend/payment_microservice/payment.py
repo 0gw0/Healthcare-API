@@ -6,6 +6,9 @@ import datetime
 import json
 import os
 
+from flask import Flask, jsonify, request
+from flask_cors import CORS
+
 # import database actions
 from database.db_payment import get_all_payments, request_reset_db
 from database.db_payment_actions import (
@@ -14,8 +17,6 @@ from database.db_payment_actions import (
     get_exact_payment,
     update_payment_isPaid,
 )
-from flask import Flask, jsonify, request
-from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
@@ -79,6 +80,34 @@ def get_all_payments_history():
     if len(data):
         return jsonify({"code": 200, "data": data}), 200
     return jsonify({"code": 404, "message": "No payments found"}), 404
+
+
+# Get Payment by ID
+@app.route("/payment/get/<int:id>", methods=["GET"])
+def get_specific_payment(id):
+    """
+    Get Payment by ID
+
+    Returns:
+    - 200: Exact Payment
+    - 404: No payment found
+
+    Example Response:
+    - {"code": 200, "message": "Exact Payment found"}
+    - {"code": 404, "message": "No payment found"}
+    """
+    # (1) Check Payment ID
+    # - If payment does not exist, return 404
+    payment = get_exact_payment({"id": id})
+    if not len(payment):
+        return jsonify({"code": 404, "message": "No payment found"}), 404
+
+    # (2) Get payment by ID
+    get_exact_payment({"id": id})
+    return (
+        jsonify({"code": 200, "message": "Exact Payment found", "payment": payment}),
+        200,
+    )
 
 
 # Create payment
@@ -202,7 +231,7 @@ def update_payment_isPaid_api(id):
     )
 
 
-# Delete time slot by id
+# Delete payment by id
 @app.route("/payment/delete/<int:id>", methods=["DELETE"])
 def delete_timeslot_api(id):
     """
@@ -216,13 +245,13 @@ def delete_timeslot_api(id):
     - {"code": 200, "message": "Payment deleted"}
     - {"code": 404, "message": "No payment found"}
     """
-    # (1) Check Time Slot ID
-    # - If time slot does not exist, return 404
+    # (1) Check Payment ID
+    # - If Payment does not exist, return 404
     deleted = get_exact_payment({"id": id})
     if not len(deleted):
         return jsonify({"code": 404, "message": "No payment found"}), 404
 
-    # (2) Delete time slot by id
+    # (2) Delete Payment by id
     delete_payment_by_id({"id": id})
     return (
         jsonify({"code": 200, "message": "Payment deleted", "deleted": deleted}),
