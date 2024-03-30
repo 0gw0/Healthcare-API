@@ -1,0 +1,834 @@
+{
+  "info": {
+    "_postman_id": "d7d32e46-21aa-4836-a3ac-263acfabca1a",
+    "name": "IS213 G3T8 payment_microservice",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32110674"
+  },
+  "item": [
+    {
+      "name": "Database Reset",
+      "item": [
+        {
+          "name": "Database Reset - Wrong URL FAIL",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5007/payment/reset/obviously_wrong",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5007",
+              "path": ["payment", "reset", "obviously_wrong"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Database Reset - Empty",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5007/payment/reset/empty",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5007",
+              "path": ["payment", "reset", "empty"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Payments History - Empty FAIL",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [""],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5007/payment/get/history",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5007",
+              "path": ["payment", "get", "history"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Database Reset - With Dataset",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5007/payment/reset/dataset1",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5007",
+              "path": ["payment", "reset", "dataset1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Payments History",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [""],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5007/payment/get/history",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5007",
+              "path": ["payment", "get", "history"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Technical Overview",
+      "item": [
+        {
+          "name": "GET all payments",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"data\":{\r\n        \"isPaid\": 0\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5007/payment/get/history",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5007",
+              "path": ["payment", "get", "history"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET all available time slots by doctor",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"data\":{\r\n        \"doctor_id\": 1,\r\n        \"isAccepted\": 0\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/get/all",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "get", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET all time slots by doctor",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"isAccepted\": 1\r\n    },\r\n    \"start_date\": \"2024-03-06\",\r\n    \"end_date\": \"2024-03-06\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/get/all",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "get", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CREATE time slot",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"timeslot_datetime\": \"2024-10-27 08:00:00\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/create",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "create"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UPDATE time slot status - 0",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"data\": {\r\n        \"isAccepted\": 0\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/update/23",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "update", "23"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UPDATE time slot status - 1",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"data\": {\r\n        \"isAccepted\": 1\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/update/23",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "update", "23"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE time slot",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/delete/23",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "delete", "23"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Get ALL Timeslots by command",
+      "item": [
+        {
+          "name": "GET All Timeslots",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/get/all",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "get", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET Incorrect Format will get ALL",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"obviously wrong\":{\r\n        \"doctor_id\": 2\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/get/all",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "get", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET all available time slots",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"data\":{\r\n        \"isAccepted\": 0\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/get/all",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "get", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET all accepted time slots",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"data\":{\r\n        \"isAccepted\": 1\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/get/all",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "get", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET all available time slots by doctor",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"data\":{\r\n        \"doctor_id\": 1,\r\n        \"isAccepted\": 0\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/get/all",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "get", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET No Timeslot Found",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"data\":{\r\n        \"doctor_id\": 9999999999\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/get/all",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "get", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET With end date range inclusive",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"end_date\": \"2024-03-04\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/get/all",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "get", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET With date range inclusive",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"start_date\": \"2024-03-06\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/get/all",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "get", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET Multiple data V1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"isAccepted\": 1,\r\n        \"timeslot_datetime\": \"2024-03-06\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/get/all",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "get", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET Multiple data V2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"isAccepted\": 1\r\n    },\r\n    \"start_date\": \"2024-03-06\",\r\n    \"end_date\": \"2024-03-06\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/get/all",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "get", "all"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Create/Update/Delete Timeslot",
+      "item": [
+        {
+          "name": "CREATE time slot",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"timeslot_datetime\": \"2024-10-27 08:00:00\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/create",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "create"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CREATE invalid query FAIL",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"data\": {\r\n        \"obviously_wrong\": 1\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/create",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "create"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CREATE invalid datetime FAIL",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"timeslot_datetime\": \"08:00:00 27-10-2024\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/create",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "create"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CREATE doctor time slot exists FAIL",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"timeslot_datetime\": \"2024-03-03 08:30:00\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/create",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "create"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UPDATE time slot status - 0",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"data\": {\r\n        \"isAccepted\": 0\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/update/23",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "update", "23"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UPDATE time slot status - 1",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"data\": {\r\n        \"isAccepted\": 1\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/update/23",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "update", "23"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UPDATE time slot status - Invalid payload FAIL",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"obviously_wrong\": {\r\n        \"isAccepted\": 1\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/update/23",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "update", "23"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UPDATE time slot status - Invalid status FAIL",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"data\": {\r\n        \"isAccepted\": \"obviously_wrong\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/update/23",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "update", "23"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UPDATE time slot status - No time slot found FAIL",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"data\": {\r\n        \"isAccepted\": 1\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/update/99999",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "update", "99999"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE time slot",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/delete/23",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "delete", "23"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE No time slot found FAIL",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5002/timeslot/delete/99999",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "5002",
+              "path": ["timeslot", "delete", "99999"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
