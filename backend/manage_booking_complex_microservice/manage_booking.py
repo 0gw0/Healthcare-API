@@ -138,5 +138,5 @@ def cancel_appointment(appointment_id):
                         "error_message": str(e)})
 
 if __name__ == '__main__':
-    print("This is flask for " + os.path.basename(__file__) + ": manage booking_complex ...")
+    print("This is flask for " + os.path.basename(__file__) + ": manage_booking_complex ...")
     app.run(host='0.0.0.0', port=5101, debug=True)
