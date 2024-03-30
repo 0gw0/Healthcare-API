@@ -1,75 +1,86 @@
-import React from 'react';
-import Link from 'next/link';
+import Link from "next/link";
+
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+// Hardcoded data, for demo purposes
+const patient_name = "Mr. Dwight Schrute";
 
 const TodayAppt = () => {
-	return (
-		<div className="lg:col-span-2 xl:col-auto bg-gray-200 dark:bg-gray-700 rounded-2xl py-8 px-2 flex flex-col items-center mt-6">
-			{/* first card */}
-			<div className="flex flex-col justify-between w-96 h-full bg-white px-5 rounded-2xl py-1 pb-10 dark:bg-trueGray-800 mb-10 mt-4">
-				<Avatar
-					name="Jessica Chan"
-					title="Meical History: None"
-					date="Tue, May 23"
-					time="11:30am"
-				/>
-			</div>
+    // Appointment data
+    const [appointmentData, setAppointmentData] = useState([]);
 
-			{/* second card */}
-			<div className="flex flex-col justify-between w-96 h-full bg-white px-5 rounded-2xl py-1 pb-10 dark:bg-trueGray-800 mb-10 mt-4">
-				<Avatar
-					name="Henry Lim"
-					title="Medical History: Asthma"
-					date="Tue, May 23"
-					time="11:30am"
-				/>
-			</div>
-		</div>
-	);
+    const [isRetrieved, setIsRetrieved] = useState(false);
+
+    // Prevents multiple API calls from rendering multiple times
+    useEffect(() => {
+        if (!isRetrieved) {
+            // Get all doctor appointment by API
+            // - Hardcode doctor_id to 1
+            // - Currently only one doctor
+            axios
+                .post("http://127.0.0.1:5003/appointment/get/all", {
+                    data: {
+                        doctor_id: 1,
+                        isCompleted: 0,
+                    },
+                })
+                .then((res) => {
+                    const data = res.data.data;
+                    console.log(data);
+
+                    setAppointmentData(data);
+                })
+                // Empty database
+                .catch((error) => {
+                    console.log(error);
+                });
+
+            setIsRetrieved(true);
+        }
+    }, []);
+
+    return (
+        <div className="flex flex-col items-center gap-5 px-5 py-5 bg-gray-200 lg:col-span-2 xl:col-auto dark:bg-gray-700 rounded-2xl">
+            {/* Display Avatar for each appointment */}
+            {appointmentData.map((appointment) => (
+                <div
+                    key={appointment.id}
+                    className="h-full p-5 bg-white rounded-2xl dark:bg-trueGray-800"
+                >
+                    <Avatar
+                        name={patient_name}
+                        datetime={appointment.timeslot_datetime}
+                    />
+                </div>
+            ))}
+        </div>
+    );
 };
 
 function Avatar(props) {
-	return (
-		<div className="flex items-center mt-8 space-x-3">
-			<div>
-				<div className="text-xl font-semibold">{props.name}</div>
-				<div className="text-gray-600 dark:text-gray-400 text-lg">
-					{props.title}
-				</div>
-				<div className="text-lg mt-1">
-					{' '}
-					{/* Added mt-1 for spacing */}
-					<div className="text-lg">
-						{props.date}, {props.time}
-						<button
-							type="button"
-							className="px-3 py-1 text-sm text-white focus:outline-none bg-blue-950 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 float-right  mx-6 " // Added styles for positioning
-						>
-							<Link href='/medical-certificate'
-								>Begin Consult
-							</Link>
-						</button>
-					</div>
-				</div>
-			</div>
-
-			{/* <button
-          type="button"
-          className="mx-8 p-3 text-sm text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 float-right"
-        >
-          Confirm Appointment
-        </button> */}
-
-			{/* <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
-                <Image
-                    src={props.image}
-                    width="100"
-                    height="100"
-                    alt="Avatar"
-                    placeholder="blur"
-                />
-            </div> */}
-		</div>
-	);
+    return (
+        <div className="flex flex-row items-center">
+            <div className="min-w-52">
+                <div className="text-xl font-semibold">{props.name}</div>
+                <div>{props.datetime}</div>
+            </div>
+            <div className="text-lg">
+                <div className="text-lg">
+                    <div>
+                        <button
+                            type="button"
+                            className="w-20 px-3 py-1 text-sm text-white border border-gray-200 rounded-lg focus:outline-none bg-blue-950 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 " // Added styles for positioning
+                        >
+                            <Link href="/medical-certificate">
+                                Begin Consult
+                            </Link>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default TodayAppt;

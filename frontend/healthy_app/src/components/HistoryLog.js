@@ -2,6 +2,7 @@ import React from "react";
 
 // Hardcoded data, for demo purposes
 const doctor_name = "Dr. Michael Scott";
+const patient_name = "Mr. Dwight Schrute";
 const mc_issued = "Yes";
 
 const HistoryLog = ({ data }) => {
@@ -53,6 +54,12 @@ const HistoryLog = ({ data }) => {
                                         scope="col"
                                         className="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase"
                                     >
+                                        Patient Name
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase"
+                                    >
                                         MC Issued
                                     </th>
                                     <th
@@ -74,6 +81,9 @@ const HistoryLog = ({ data }) => {
                                         </td>
                                         <td className="px-6 py-4 text-sm font-medium text-left whitespace-nowrap">
                                             {doctor_name}
+                                        </td>
+                                        <td className="px-6 py-4 text-sm font-medium text-left whitespace-nowrap">
+                                            {patient_name}
                                         </td>
                                         <td className="px-6 py-4 text-sm font-medium text-left whitespace-nowrap">
                                             {mc_issued}

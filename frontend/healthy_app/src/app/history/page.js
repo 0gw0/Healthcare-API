@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import HistoryLog from "@/components/HistoryLog";
 
 import React, { useState, useEffect } from "react";
+import { getCookie } from "cookies-next";
 import axios from "axios";
 
 export default function Page() {
@@ -17,14 +18,35 @@ export default function Page() {
     // Prevents multiple API calls from rendering multiple times
     useEffect(() => {
         if (!isRetrieved) {
+            // User type dynamic
+            // - If cookie userType is patient, get patient_id from cookie
+            // - If cookie userType is doctor, get doctor_id from cookie
+            const userType = getCookie("userType");
+            const userData = JSON.parse(getCookie("userData"));
+            // console.log(userType);
+            // console.log(userData);
+
+            // Prep payload
+            const payload =
+                userType === "doctor"
+                    ? {
+                          data: {
+                              doctor_id: userData.id,
+                              isCompleted: 1,
+                          },
+                      }
+                    : {
+                          data: {
+                              patient_id: userData.id,
+                              isCompleted: 1,
+                          },
+                      };
+
+            // console.log(payload);
+
             // Get all upcoming appointments by API
             axios
-                .post("http://127.0.0.1:5003/appointment/get/all", {
-                    data: {
-                        patient_id: 1,
-                        isCompleted: 1,
-                    },
-                })
+                .post("http://127.0.0.1:5003/appointment/get/all", payload)
                 .then((res) => {
                     const Appts = res.data.data;
 

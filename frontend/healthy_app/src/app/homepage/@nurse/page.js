@@ -7,7 +7,6 @@ import Footer from "@/components/footer";
 import TodayAppt from "@/components/TodayAppt";
 
 import React, { useState, useEffect } from "react";
-import SlotsTable from "@/components/SlotsTable";
 import RequestsTable from "@/components/RequestsTable";
 
 import axios from "axios";

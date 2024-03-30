@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "./container";
 
-const SlotsTable = ({ data }) => {
+const SlotsTable2 = ({ data }) => {
     return (
         <Container>
             <div className="flex flex-col">
@@ -21,13 +21,19 @@ const SlotsTable = ({ data }) => {
                                             scope="col"
                                             className="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase"
                                         >
-                                            Creation Date
+                                            Accepted Date
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase"
                                         >
                                             Duration
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            className="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase"
+                                        >
+                                            Patient Name
                                         </th>
                                         <th
                                             scope="col"
@@ -47,10 +53,13 @@ const SlotsTable = ({ data }) => {
                                                 {item.timeslot_datetime}
                                             </td>
                                             <td className="px-6 py-4 text-sm font-medium text-left whitespace-nowrap">
-                                                {item.time_created}
+                                                {item.time_accepted}
                                             </td>
                                             <td className="px-6 py-4 text-sm font-medium text-left whitespace-nowrap">
                                                 {item.duration_minutes}
+                                            </td>
+                                            <td className="px-6 py-4 text-sm font-medium text-left whitespace-nowrap">
+                                                Mr. Dwight Schrute
                                             </td>
                                             <td className="px-6 py-4 text-sm font-medium text-left whitespace-nowrap">
                                                 Teleconsult
@@ -67,4 +76,4 @@ const SlotsTable = ({ data }) => {
     );
 };
 
-export default SlotsTable;
+export default SlotsTable2;
