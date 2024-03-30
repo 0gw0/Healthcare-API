@@ -35,6 +35,7 @@ const SlotsTable = ({ data }) => {
 										>
 											Appointment Type
 										</th>
+
 									</tr>
 								</thead>
 								<tbody className="bg-white divide-y divide-gray-200">
@@ -55,6 +56,7 @@ const SlotsTable = ({ data }) => {
 											<td className="px-6 py-4 whitespace-nowrap text-left text-sm font-medium">
 												{item.appType}
 											</td>
+
 										</tr>
 									))}
 								</tbody>

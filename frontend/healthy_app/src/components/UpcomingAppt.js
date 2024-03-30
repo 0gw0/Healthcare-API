@@ -1,68 +1,121 @@
-import userOneImg from "../../public/doc1.jpeg";
-import Image from "next/image";
+import femaleDocImg from '../../public/doc1.jpeg';
+import maleDocImg from '../../public/doc2.jpeg';
+import Image from 'next/image';
+
+import { useState } from 'react';
+import axios from 'axios';
+
+// Hardcoded Doctor name
+const doctor_name = 'Dr. Michael Scott';
 
 const UpcomingAppt = () => {
-  return (
-    <div className="mt-6 lg:col-span-2 xl:col-auto bg-gray-200 dark:bg-gray-700 rounded-2xl py-8 px-2 flex flex-col items-center">
-      {/* first card */}
-      <div className="flex flex-col justify-between w-96 h-full bg-white px-5 rounded-2xl py-1 pb-10 dark:bg-trueGray-800 mb-10 mt-4">
-        <Avatar 
-		image={userOneImg} 
-		name="Dr. Mary Tan" 
-		title="Cardiologist"
-		date= "Tue, May 23"
-		time="11:30am"
-		 />
-        
-      </div>
+	const [upcomingAppts, setUpcomingAppts] = useState([]);
+	const [isRetrieved, setIsRetrieved] = useState(false);
 
-		{/* second card */}
-		<div className="flex flex-col justify-between w-96 h-full bg-white px-5 rounded-2xl py-1 pb-10 dark:bg-trueGray-800 mb-10 mt-4">
-        <Avatar 
-		image={userOneImg} 
-		name="Dr. Mary Tan" 
-		title="Cardiologist"
-		date= "Tue, May 23"
-		time="11:30am"
-		 />
-        
-      </div>
+	// Prevents multiple API calls from rendering multiple times
+	if (!isRetrieved) {
+		reloadTable();
+		setIsRetrieved(true);
+	}
 
-    </div>
-  );
+	function reloadTable() {
+		// Get all upcoming appointments by API
+		axios
+			.post('http://127.0.0.1:5003/appointment/get/all', {
+				data: {
+					patient_id: 1,
+					isCompleted: 0,
+				},
+			})
+			.then((res) => {
+				const Appts = res.data.data;
+				console.log(Appts);
+
+				setUpcomingAppts(Appts);
+			})
+			// Empty database
+			.catch((error) => {
+				setUpcomingAppts([]);
+			});
+	}
+
+	return (
+		<div className="flex flex-col items-center px-5 pb-5 bg-gray-200 lg:col-span-2 xl:col-auto dark:bg-gray-700 rounded-2xl">
+			{/* No appointment */}
+			{upcomingAppts.length === 0 && (
+				<div className="flex flex-col justify-between h-full px-5 py-5 mt-5 bg-white w-96 rounded-2xl dark:bg-trueGray-800">
+					<div className="text-xl font-semibold text-center">
+						No upcoming appointments
+					</div>
+				</div>
+			)}
+
+			{upcomingAppts.map((appt) => (
+				<div key={appt.id}>
+					<Avatar
+						id={appt.id}
+						image={maleDocImg}
+						name={doctor_name}
+						datetime={appt.timeslot_datetime}
+						duration_minutes={appt.duration_minutes}
+						reloadTable={reloadTable}
+					/>
+				</div>
+			))}
+		</div>
+	);
 };
 
 function Avatar(props) {
-    return (
-        <div className="flex items-center mt-8 space-x-3">
-            <div>
-                <div className="text-xl font-semibold">{props.name}</div>
-                <div className="text-gray-600 dark:text-gray-400 text-lg">
-                    {props.title}
-                </div>
-                <div className="text-lg mt-1"> {/* Added mt-1 for spacing */}
-                    
-                    <div className="text-lg">
-						{props.date}, {props.time}
-                        
-                    </div>
-					
-                </div>
-            </div>
+	const [isLoading, setIsLoading] = useState(false);
 
-            <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
-                <Image
-                    src={props.image}
-                    width="100"
-                    height="100"
-                    alt="Avatar"
-                    placeholder="blur"
-                />
-            </div>
+	async function handleCancel(id) {
+		setIsLoading(true);
+		// console.log(id);
 
-			
-        </div>
-    );
+		// Use API to cancel
+		await axios
+			.put(`http://127.0.0.1:5101/cancel_appointment/${id}`)
+			.then((res) => {
+				console.log(res.data);
+			});
+		props.reloadTable();
+
+		setIsLoading(false);
+	}
+	return (
+		<div className="flex flex-col justify-between h-full px-5 py-5 mt-5 bg-white w-96 rounded-2xl dark:bg-trueGray-800">
+			<div className="flex items-center space-x-3 justify-evenly">
+				<div>
+					<div className="text-xl font-semibold">{props.name}</div>
+					<div className="mt-1 text-lg">
+						{props.datetime.slice(0, -3)}
+					</div>
+					<div className="mt-1 text-lg">
+						Duration: {props.duration_minutes} minutes
+					</div>
+				</div>
+				<div className="flex flex-col justify-between h-full items-center">
+					<div className="flex-shrink-0 overflow-hidden rounded-full w-14">
+						<Image
+							src={props.image}
+							width="100"
+							height="100"
+							alt="Avatar"
+							placeholder="blur"
+						/>
+					</div>
+					<button
+						onClick={() => handleCancel(props.id)}
+						disabled={isLoading}
+						className="px-4 py-1 text-white bg-red-500 rounded-xl hover:bg-red-900 mt-1"
+					>
+						Cancel
+					</button>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default UpcomingAppt;

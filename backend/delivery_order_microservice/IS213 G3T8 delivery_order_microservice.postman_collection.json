@@ -1,0 +1,528 @@
+{
+	"info": {
+		"_postman_id": "68a5d7a5-f6a5-470f-9e77-e0b8dbb8a907",
+		"name": "IS213 G3T8 delivery_order_microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26201401"
+	},
+	"item": [
+		{
+			"name": "Database Reset",
+			"item": [
+				{
+					"name": "Database Reset - Wrong URL FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5006/delivery_order/reset/obviously_wrong",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "5006",
+							"path": [
+								"delivery_order",
+								"reset",
+								"obviously_wrong"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 - Database Reset - Wrong URL FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5006/delivery_order/reset/obviously_wrong",
+									"protocol": "http",
+									"host": ["127", "0", "0", "1"],
+									"port": "5006",
+									"path": [
+										"delivery_order",
+										"reset",
+										"obviously_wrong"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 06:16:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Database was not reset. Invalid Dataset: obviously_wrong\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Database Reset - Empty",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5006/delivery_order/reset/empty",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "5006",
+							"path": ["delivery_order", "reset", "empty"]
+						}
+					},
+					"response": [
+						{
+							"name": "205 - Database Reset - Empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5006/delivery_order/reset/empty",
+									"protocol": "http",
+									"host": ["127", "0", "0", "1"],
+									"port": "5006",
+									"path": ["delivery_order", "reset", "empty"]
+								}
+							},
+							"status": "RESET CONTENT",
+							"code": 205,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 06:16:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 205,\n    \"message\": \"Database reset! No Dataset was used\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Database Reset - With Dataset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5006/delivery_order/reset/dataset1",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "5006",
+							"path": ["delivery_order", "reset", "dataset1"]
+						}
+					},
+					"response": [
+						{
+							"name": "205 - Database Reset - With Dataset",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5006/delivery_order/reset/dataset1",
+									"protocol": "http",
+									"host": ["127", "0", "0", "1"],
+									"port": "5006",
+									"path": [
+										"delivery_order",
+										"reset",
+										"dataset1"
+									]
+								}
+							},
+							"status": "RESET CONTENT",
+							"code": 205,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 06:17:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 205,\n    \"data_created\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Get & Insert Delivery Order",
+			"item": [
+				{
+					"name": "GET All Delivery Order",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [""],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5006/delivery_order/get/all",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "5006",
+							"path": ["delivery_order", "get", "history"]
+						}
+					},
+					"response": [
+						{
+							"name": "404 - Empty database",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5006/delivery_order/get/all",
+									"protocol": "http",
+									"host": ["127", "0", "0", "1"],
+									"port": "5006",
+									"path": ["delivery_order", "get", "all"]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 06:19:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No delivery order found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CREATE Delivery Order",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [""],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"products\": {\r\n        \"Amoxicillin\": 5,\r\n        \"Levothyroxine\": 10\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5006/delivery_order/create",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "5006",
+							"path": ["delivery_order", "create"]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"products\": {\r\n        \"Amoxicillin\": 5,\r\n        \"Levothyroxine\": 10\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5006/delivery_order/create",
+									"protocol": "http",
+									"host": ["127", "0", "0", "1"],
+									"port": "5006",
+									"path": ["delivery_order", "create"]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 06:29:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"created_data\": {\n        \"id\": 1,\n        \"product_list\": \"Amoxicillin;Levothyroxine\",\n        \"quantity_list\": \"5;10\"\n    },\n    \"message\": \"Delivery order created\"\n}"
+						},
+						{
+							"name": "400 - Empty payload",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5006/delivery_order/create",
+									"protocol": "http",
+									"host": ["127", "0", "0", "1"],
+									"port": "5006",
+									"path": ["delivery_order", "create"]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 06:23:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid POST payload\"\n}"
+						},
+						{
+							"name": "400 - Invalid payload",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"obviously_wrong\": \"yea\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5006/delivery_order/create",
+									"protocol": "http",
+									"host": ["127", "0", "0", "1"],
+									"port": "5006",
+									"path": ["delivery_order", "create"]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 06:24:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid POST payload\"\n}"
+						},
+						{
+							"name": "400 - Delivery order ID already exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"products\": {\r\n        \"Amoxicillin\": 5,\r\n        \"Levothyroxine\": 10\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5006/delivery_order/create",
+									"protocol": "http",
+									"host": ["127", "0", "0", "1"],
+									"port": "5006",
+									"path": ["delivery_order", "create"]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 06:27:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "180"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"given_payload\": {\n        \"id\": 1,\n        \"product_list\": \"Amoxicillin;Levothyroxine\",\n        \"quantity_list\": \"5;10\"\n    },\n    \"message\": \"Delivery order already exists\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

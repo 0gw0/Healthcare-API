@@ -1,0 +1,3201 @@
+[
+    {
+        "label": "Appointment",
+        "importPath": "database.data.model.appointment",
+        "description": "database.data.model.appointment",
+        "isExtraImport": true,
+        "detail": "database.data.model.appointment",
+        "documentation": {}
+    },
+    {
+        "label": "dataset1",
+        "importPath": "database.data.dataset1",
+        "description": "database.data.dataset1",
+        "isExtraImport": true,
+        "detail": "database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "dataset1",
+        "importPath": "database.data.dataset1",
+        "description": "database.data.dataset1",
+        "isExtraImport": true,
+        "detail": "database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "dataset1",
+        "importPath": "database.data.dataset1",
+        "description": "database.data.dataset1",
+        "isExtraImport": true,
+        "detail": "database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "dataset1",
+        "importPath": "database.data.dataset1",
+        "description": "database.data.dataset1",
+        "isExtraImport": true,
+        "detail": "database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "dataset1",
+        "importPath": "database.data.dataset1",
+        "description": "database.data.dataset1",
+        "isExtraImport": true,
+        "detail": "database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "dataset1",
+        "importPath": "database.data.dataset1",
+        "description": "database.data.dataset1",
+        "isExtraImport": true,
+        "detail": "database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "importPath": "database.db_config",
+        "description": "database.db_config",
+        "isExtraImport": true,
+        "detail": "database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "importPath": "database.db_config",
+        "description": "database.db_config",
+        "isExtraImport": true,
+        "detail": "database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "importPath": "database.db_config",
+        "description": "database.db_config",
+        "isExtraImport": true,
+        "detail": "database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "importPath": "database.db_config",
+        "description": "database.db_config",
+        "isExtraImport": true,
+        "detail": "database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "importPath": "database.db_config",
+        "description": "database.db_config",
+        "isExtraImport": true,
+        "detail": "database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "importPath": "database.db_config",
+        "description": "database.db_config",
+        "isExtraImport": true,
+        "detail": "database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "importPath": "database.db_config",
+        "description": "database.db_config",
+        "isExtraImport": true,
+        "detail": "database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "importPath": "database.db_config",
+        "description": "database.db_config",
+        "isExtraImport": true,
+        "detail": "database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "importPath": "database.db_config",
+        "description": "database.db_config",
+        "isExtraImport": true,
+        "detail": "database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "importPath": "database.db_config",
+        "description": "database.db_config",
+        "isExtraImport": true,
+        "detail": "database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "importPath": "database.db_config",
+        "description": "database.db_config",
+        "isExtraImport": true,
+        "detail": "database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "importPath": "database.db_config",
+        "description": "database.db_config",
+        "isExtraImport": true,
+        "detail": "database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "create_appointment",
+        "importPath": "database.db_appointment_actions",
+        "description": "database.db_appointment_actions",
+        "isExtraImport": true,
+        "detail": "database.db_appointment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_appointments",
+        "importPath": "database.db_appointment_actions",
+        "description": "database.db_appointment_actions",
+        "isExtraImport": true,
+        "detail": "database.db_appointment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "create_appointment",
+        "importPath": "database.db_appointment_actions",
+        "description": "database.db_appointment_actions",
+        "isExtraImport": true,
+        "detail": "database.db_appointment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_appointment_by_data",
+        "importPath": "database.db_appointment_actions",
+        "description": "database.db_appointment_actions",
+        "isExtraImport": true,
+        "detail": "database.db_appointment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "update_appointment_isCompleted",
+        "importPath": "database.db_appointment_actions",
+        "description": "database.db_appointment_actions",
+        "isExtraImport": true,
+        "detail": "database.db_appointment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "delete_appointment_by_id",
+        "importPath": "database.db_appointment_actions",
+        "description": "database.db_appointment_actions",
+        "isExtraImport": true,
+        "detail": "database.db_appointment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "join",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "dirname",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "abspath",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "join",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "dirname",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "abspath",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "join",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "dirname",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "abspath",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "join",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "dirname",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "abspath",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "join",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "dirname",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "abspath",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "join",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "dirname",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "abspath",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "make_response",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "request_reset_db",
+        "importPath": "database.db_appointment",
+        "description": "database.db_appointment",
+        "isExtraImport": true,
+        "detail": "database.db_appointment",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_appointments",
+        "importPath": "database.db_appointment",
+        "description": "database.db_appointment",
+        "isExtraImport": true,
+        "detail": "database.db_appointment",
+        "documentation": {}
+    },
+    {
+        "label": "Delivery_Order",
+        "importPath": "database.data.model.delivery_order",
+        "description": "database.data.model.delivery_order",
+        "isExtraImport": true,
+        "detail": "database.data.model.delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "create_delivery_order",
+        "importPath": "database.db_delivery_order_actions",
+        "description": "database.db_delivery_order_actions",
+        "isExtraImport": true,
+        "detail": "database.db_delivery_order_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_delivery_order",
+        "importPath": "database.db_delivery_order_actions",
+        "description": "database.db_delivery_order_actions",
+        "isExtraImport": true,
+        "detail": "database.db_delivery_order_actions",
+        "documentation": {}
+    },
+    {
+        "label": "request_reset_db",
+        "importPath": "database.db_delivery_order",
+        "description": "database.db_delivery_order",
+        "isExtraImport": true,
+        "detail": "database.db_delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "create_delivery_order",
+        "importPath": "database.db_delivery_order",
+        "description": "database.db_delivery_order",
+        "isExtraImport": true,
+        "detail": "database.db_delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_delivery_order",
+        "importPath": "database.db_delivery_order",
+        "description": "database.db_delivery_order",
+        "isExtraImport": true,
+        "detail": "database.db_delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "importPath": "database.data.model.inventory",
+        "description": "database.data.model.inventory",
+        "isExtraImport": true,
+        "detail": "database.data.model.inventory",
+        "documentation": {}
+    },
+    {
+        "label": "create_item",
+        "importPath": "database.db_inventory_actions",
+        "description": "database.db_inventory_actions",
+        "isExtraImport": true,
+        "detail": "database.db_inventory_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_items",
+        "importPath": "database.db_inventory_actions",
+        "description": "database.db_inventory_actions",
+        "isExtraImport": true,
+        "detail": "database.db_inventory_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_item_by_id",
+        "importPath": "database.db_inventory_actions",
+        "description": "database.db_inventory_actions",
+        "isExtraImport": true,
+        "detail": "database.db_inventory_actions",
+        "documentation": {}
+    },
+    {
+        "label": "update_item_quantity",
+        "importPath": "database.db_inventory_actions",
+        "description": "database.db_inventory_actions",
+        "isExtraImport": true,
+        "detail": "database.db_inventory_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_items",
+        "importPath": "database.db_inventory_actions",
+        "description": "database.db_inventory_actions",
+        "isExtraImport": true,
+        "detail": "database.db_inventory_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_item_by_id",
+        "importPath": "database.db_inventory_actions",
+        "description": "database.db_inventory_actions",
+        "isExtraImport": true,
+        "detail": "database.db_inventory_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_item_quantity",
+        "importPath": "database.db_inventory_actions",
+        "description": "database.db_inventory_actions",
+        "isExtraImport": true,
+        "detail": "database.db_inventory_actions",
+        "documentation": {}
+    },
+    {
+        "label": "update_item_quantity",
+        "importPath": "database.db_inventory_actions",
+        "description": "database.db_inventory_actions",
+        "isExtraImport": true,
+        "detail": "database.db_inventory_actions",
+        "documentation": {}
+    },
+    {
+        "label": "request_reset_db",
+        "importPath": "database.db_inventory",
+        "description": "database.db_inventory",
+        "isExtraImport": true,
+        "detail": "database.db_inventory",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "invoke_http",
+        "importPath": "invokes",
+        "description": "invokes",
+        "isExtraImport": true,
+        "detail": "invokes",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "mailtrap",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mailtrap",
+        "description": "mailtrap",
+        "detail": "mailtrap",
+        "documentation": {}
+    },
+    {
+        "label": "letter",
+        "importPath": "reportlab.lib.pagesizes",
+        "description": "reportlab.lib.pagesizes",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.pagesizes",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleDocTemplate",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "Paragraph",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "Spacer",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "getSampleStyleSheet",
+        "importPath": "reportlab.lib.styles",
+        "description": "reportlab.lib.styles",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.styles",
+        "documentation": {}
+    },
+    {
+        "label": "Notification",
+        "importPath": "database.data.model.notification",
+        "description": "database.data.model.notification",
+        "isExtraImport": true,
+        "detail": "database.data.model.notification",
+        "documentation": {}
+    },
+    {
+        "label": "get_exact_notification",
+        "importPath": "database.db_notification_actions",
+        "description": "database.db_notification_actions",
+        "isExtraImport": true,
+        "detail": "database.db_notification_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_notifications",
+        "importPath": "database.db_notification_actions",
+        "description": "database.db_notification_actions",
+        "isExtraImport": true,
+        "detail": "database.db_notification_actions",
+        "documentation": {}
+    },
+    {
+        "label": "create_notification_test",
+        "importPath": "database.db_notification_actions",
+        "description": "database.db_notification_actions",
+        "isExtraImport": true,
+        "detail": "database.db_notification_actions",
+        "documentation": {}
+    },
+    {
+        "label": "create_notification",
+        "importPath": "database.db_notification_actions",
+        "description": "database.db_notification_actions",
+        "isExtraImport": true,
+        "detail": "database.db_notification_actions",
+        "documentation": {}
+    },
+    {
+        "label": "update_notification_status_by_session_id",
+        "importPath": "database.db_notification_actions",
+        "description": "database.db_notification_actions",
+        "isExtraImport": true,
+        "detail": "database.db_notification_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_completed_notifications_by_patient_id",
+        "importPath": "database.db_notification_actions",
+        "description": "database.db_notification_actions",
+        "isExtraImport": true,
+        "detail": "database.db_notification_actions",
+        "documentation": {}
+    },
+    {
+        "label": "delete_notification_by_session_id",
+        "importPath": "database.db_notification_actions",
+        "description": "database.db_notification_actions",
+        "isExtraImport": true,
+        "detail": "database.db_notification_actions",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "twilio.rest",
+        "description": "twilio.rest",
+        "isExtraImport": true,
+        "detail": "twilio.rest",
+        "documentation": {}
+    },
+    {
+        "label": "request_reset_db",
+        "importPath": "database.db_notification",
+        "description": "database.db_notification",
+        "isExtraImport": true,
+        "detail": "database.db_notification",
+        "documentation": {}
+    },
+    {
+        "label": "get_exact_notification",
+        "importPath": "database.db_notification",
+        "description": "database.db_notification",
+        "isExtraImport": true,
+        "detail": "database.db_notification",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_notifications",
+        "importPath": "database.db_notification",
+        "description": "database.db_notification",
+        "isExtraImport": true,
+        "detail": "database.db_notification",
+        "documentation": {}
+    },
+    {
+        "label": "Timeslot",
+        "importPath": "database.data.model.timeslot",
+        "description": "database.data.model.timeslot",
+        "isExtraImport": true,
+        "detail": "database.data.model.timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "create_timeslot_test",
+        "importPath": "database.db_timeslot_actions",
+        "description": "database.db_timeslot_actions",
+        "isExtraImport": true,
+        "detail": "database.db_timeslot_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_timeslots",
+        "importPath": "database.db_timeslot_actions",
+        "description": "database.db_timeslot_actions",
+        "isExtraImport": true,
+        "detail": "database.db_timeslot_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_exact_timeslot",
+        "importPath": "database.db_timeslot_actions",
+        "description": "database.db_timeslot_actions",
+        "isExtraImport": true,
+        "detail": "database.db_timeslot_actions",
+        "documentation": {}
+    },
+    {
+        "label": "create_timeslot",
+        "importPath": "database.db_timeslot_actions",
+        "description": "database.db_timeslot_actions",
+        "isExtraImport": true,
+        "detail": "database.db_timeslot_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_timeslot_by_data",
+        "importPath": "database.db_timeslot_actions",
+        "description": "database.db_timeslot_actions",
+        "isExtraImport": true,
+        "detail": "database.db_timeslot_actions",
+        "documentation": {}
+    },
+    {
+        "label": "update_timeslot_isAccepted",
+        "importPath": "database.db_timeslot_actions",
+        "description": "database.db_timeslot_actions",
+        "isExtraImport": true,
+        "detail": "database.db_timeslot_actions",
+        "documentation": {}
+    },
+    {
+        "label": "delete_timeslot_by_id",
+        "importPath": "database.db_timeslot_actions",
+        "description": "database.db_timeslot_actions",
+        "isExtraImport": true,
+        "detail": "database.db_timeslot_actions",
+        "documentation": {}
+    },
+    {
+        "label": "request_reset_db",
+        "importPath": "database.db_timeslot",
+        "description": "database.db_timeslot",
+        "isExtraImport": true,
+        "detail": "database.db_timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_timeslots",
+        "importPath": "database.db_timeslot",
+        "description": "database.db_timeslot",
+        "isExtraImport": true,
+        "detail": "database.db_timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "Patient",
+        "importPath": "database.data.model.patient",
+        "description": "database.data.model.patient",
+        "isExtraImport": true,
+        "detail": "database.data.model.patient",
+        "documentation": {}
+    },
+    {
+        "label": "Doctor",
+        "importPath": "database.data.model.doctor",
+        "description": "database.data.model.doctor",
+        "isExtraImport": true,
+        "detail": "database.data.model.doctor",
+        "documentation": {}
+    },
+    {
+        "label": "Nurse",
+        "importPath": "database.data.model.nurse",
+        "description": "database.data.model.nurse",
+        "isExtraImport": true,
+        "detail": "database.data.model.nurse",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_user",
+        "importPath": "database.db_user_actions",
+        "description": "database.db_user_actions",
+        "isExtraImport": true,
+        "detail": "database.db_user_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_by_id",
+        "importPath": "database.db_user_actions",
+        "description": "database.db_user_actions",
+        "isExtraImport": true,
+        "detail": "database.db_user_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_by_username",
+        "importPath": "database.db_user_actions",
+        "description": "database.db_user_actions",
+        "isExtraImport": true,
+        "detail": "database.db_user_actions",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "importPath": "database.db_user_actions",
+        "description": "database.db_user_actions",
+        "isExtraImport": true,
+        "detail": "database.db_user_actions",
+        "documentation": {}
+    },
+    {
+        "label": "create_user",
+        "importPath": "database.db_user_actions",
+        "description": "database.db_user_actions",
+        "isExtraImport": true,
+        "detail": "database.db_user_actions",
+        "documentation": {}
+    },
+    {
+        "label": "request_reset_db",
+        "importPath": "database.db_user",
+        "description": "database.db_user",
+        "isExtraImport": true,
+        "detail": "database.db_user",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_user",
+        "importPath": "database.db_user",
+        "description": "database.db_user",
+        "isExtraImport": true,
+        "detail": "database.db_user",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_by_id",
+        "importPath": "database.db_user",
+        "description": "database.db_user",
+        "isExtraImport": true,
+        "detail": "database.db_user",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_by_username",
+        "importPath": "database.db_user",
+        "description": "database.db_user",
+        "isExtraImport": true,
+        "detail": "database.db_user",
+        "documentation": {}
+    },
+    {
+        "label": "create_user",
+        "importPath": "database.db_user",
+        "description": "database.db_user",
+        "isExtraImport": true,
+        "detail": "database.db_user",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "importPath": "database.db_user",
+        "description": "database.db_user",
+        "isExtraImport": true,
+        "detail": "database.db_user",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "importPath": "flatted",
+        "description": "flatted",
+        "isExtraImport": true,
+        "detail": "flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "importPath": "flatted",
+        "description": "flatted",
+        "isExtraImport": true,
+        "detail": "flatted",
+        "documentation": {}
+    },
+    {
+        "label": "Appointment",
+        "kind": 6,
+        "importPath": "backend.appointment_microservice.database.data.model.appointment",
+        "description": "backend.appointment_microservice.database.data.model.appointment",
+        "peekOfCode": "class Appointment:\n    def __init__(self, id, doctor_id, time_created, timeslot_datetime, duration_minutes, patient_id, time_accepted, isCompleted=0):\n        self.id = id\n        self.doctor_id = doctor_id\n        self.time_created = time_created\n        self.timeslot_datetime = timeslot_datetime\n        self.duration_minutes = duration_minutes\n        self.patient_id = patient_id\n        self.time_accepted = time_accepted\n        self.isCompleted = isCompleted",
+        "detail": "backend.appointment_microservice.database.data.model.appointment",
+        "documentation": {}
+    },
+    {
+        "label": "example",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.data.dataset1",
+        "description": "backend.appointment_microservice.database.data.dataset1",
+        "peekOfCode": "def example():\n    Appointment(\n            1,                      # id\n            1,                      # doctor_id\n            '2024-02-28 13:00:00',  # time_created\n            '2024-03-03 08:30:00',  # timeslot_datetime\n            30,                     # duration_minutes\n            1,                      # patient_id\n            '2024-02-28 19:00:00',  # time_accepted\n            1                       # isCompleted - Default=0",
+        "detail": "backend.appointment_microservice.database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "dataset1",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.data.dataset1",
+        "description": "backend.appointment_microservice.database.data.dataset1",
+        "peekOfCode": "def dataset1():\n    dataset = [\n            # Appointments for 2024-03-03\n            Appointment(1, 1, '2024-02-28 13:00:00', '2024-03-03 08:30:00', 30, 1, '2024-02-28 19:00:00'),\n            Appointment(5, 1, '2024-02-28 13:04:00', '2024-03-03 12:30:00', 30, 1, '2024-02-28 19:04:00'),\n            Appointment(8, 1, '2024-02-28 13:07:00', '2024-03-03 15:30:00', 30, 1, '2024-02-28 19:07:00', 1),\n            Appointment(10, 1, '2024-02-28 13:09:00', '2024-03-03 17:30:00', 30, 1, '2024-02-28 19:09:00'),\n            # Appointments for 2024-03-06\n            Appointment(12, 1, '2024-02-28 13:11:00', '2024-03-06 08:30:00', 30, 1, '2024-03-4 10:11:00'),\n            Appointment(16, 1, '2024-02-28 13:15:00', '2024-03-06 12:30:00', 30, 1, '2024-03-4 10:15:00', 1),",
+        "detail": "backend.appointment_microservice.database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "get_tables",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.db_appointment",
+        "description": "backend.appointment_microservice.database.db_appointment",
+        "peekOfCode": "def get_tables():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"SELECT name FROM sqlite_schema\")\n    table_names = c.fetchall()\n    # (3) Close Connection\n    conn.close()\n    return table_names",
+        "detail": "backend.appointment_microservice.database.db_appointment",
+        "documentation": {}
+    },
+    {
+        "label": "create_db",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.db_appointment",
+        "description": "backend.appointment_microservice.database.db_appointment",
+        "peekOfCode": "def create_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Table\n    c.execute(\"\"\"CREATE TABLE IF NOT EXISTS appointments (\n              id INTEGER PRIMARY KEY,\n              doctor_id INTEGER,\n              time_created TIMESTAMP,\n              timeslot_datetime TIMESTAMP,",
+        "detail": "backend.appointment_microservice.database.db_appointment",
+        "documentation": {}
+    },
+    {
+        "label": "delete_db",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.db_appointment",
+        "description": "backend.appointment_microservice.database.db_appointment",
+        "peekOfCode": "def delete_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Drop Table\n    c.execute(\"DROP TABLE IF EXISTS appointments\")\n    # (3) Commit and Close\n    conn.commit()\n    conn.close()\n# Add Dataset ",
+        "detail": "backend.appointment_microservice.database.db_appointment",
+        "documentation": {}
+    },
+    {
+        "label": "add_dataset",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.db_appointment",
+        "description": "backend.appointment_microservice.database.db_appointment",
+        "peekOfCode": "def add_dataset(dataset):\n    # (1) Create Data\n    if dataset == \"dataset1\":\n        appointments = dataset1()\n    # (2) Insert Data\n    for appointment in appointments:\n        create_appointment(appointment.getInfo)\n# Reset Database Tables\ndef reset_db():\n    print(\"Resetting Database ...\")",
+        "detail": "backend.appointment_microservice.database.db_appointment",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.db_appointment",
+        "description": "backend.appointment_microservice.database.db_appointment",
+        "peekOfCode": "def reset_db():\n    print(\"Resetting Database ...\")\n    delete_db()\n    create_db()\n    print(\"Database Reset Complete!\")\n    print(\"Current Tables:\", get_tables())\n# Reset Database Tables\ndef request_reset_db(dataset=\"empty\"):\n    if dataset == \"dataset1\":\n    # if type in [\"dataset1\", \"dataset2\"]:",
+        "detail": "backend.appointment_microservice.database.db_appointment",
+        "documentation": {}
+    },
+    {
+        "label": "request_reset_db",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.db_appointment",
+        "description": "backend.appointment_microservice.database.db_appointment",
+        "peekOfCode": "def request_reset_db(dataset=\"empty\"):\n    if dataset == \"dataset1\":\n    # if type in [\"dataset1\", \"dataset2\"]:\n        reset_db()\n        print(\"\\nAdding Dataset 1 ...\")\n        add_dataset(dataset)\n        print(\"Dataset 1 Added!\")\n        data = get_all_appointments()\n        print(\"Current Database:\", data)\n        return (205, data)",
+        "detail": "backend.appointment_microservice.database.db_appointment",
+        "documentation": {}
+    },
+    {
+        "label": "create_appointment",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.db_appointment_actions",
+        "description": "backend.appointment_microservice.database.db_appointment_actions",
+        "peekOfCode": "def create_appointment(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Timeslot\n    # print(data)\n    c.execute(\"\"\"INSERT INTO appointments VALUES (\n              :id,\n              :doctor_id,\n              :time_created,",
+        "detail": "backend.appointment_microservice.database.db_appointment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_appointments",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.db_appointment_actions",
+        "description": "backend.appointment_microservice.database.db_appointment_actions",
+        "peekOfCode": "def get_all_appointments():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"SELECT * FROM appointments\")\n    results = c.fetchall()\n    # (3) Close Connection\n    conn.close()\n    return results",
+        "detail": "backend.appointment_microservice.database.db_appointment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_appointment_by_data",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.db_appointment_actions",
+        "description": "backend.appointment_microservice.database.db_appointment_actions",
+        "peekOfCode": "def get_appointment_by_data(data, start_date=None, end_date=None):\n    # print(data, start_date, end_date)\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    keys = [\"id\", \"doctor_id\", \"time_created\", \"timeslot_datetime\", \"duration_minutes\", \"patient_id\", \"isCompleted\"]\n    query = \"SELECT * FROM appointments WHERE \"\n    for key in keys:\n        if key in data:",
+        "detail": "backend.appointment_microservice.database.db_appointment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "delete_appointment_by_id",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.db_appointment_actions",
+        "description": "backend.appointment_microservice.database.db_appointment_actions",
+        "peekOfCode": "def delete_appointment_by_id(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Delete Timeslot\n    c.execute(\"\"\"DELETE FROM appointments\n              WHERE id=:id\"\"\"\n            , data)\n    # (3) Commit and Close\n    conn.commit()",
+        "detail": "backend.appointment_microservice.database.db_appointment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "update_appointment_isCompleted",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.db_appointment_actions",
+        "description": "backend.appointment_microservice.database.db_appointment_actions",
+        "peekOfCode": "def update_appointment_isCompleted(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Update Timeslot\n    c.execute(\"\"\"UPDATE appointments\n              SET isCompleted=:isCompleted\n              WHERE id=:id\"\"\"\n            , data)\n    # (3) Commit and Close",
+        "detail": "backend.appointment_microservice.database.db_appointment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.db_config",
+        "description": "backend.appointment_microservice.database.db_config",
+        "peekOfCode": "def connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):\n        d[col[0]] = row[idx]\n    return d",
+        "detail": "backend.appointment_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "dict_factory",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.database.db_config",
+        "description": "backend.appointment_microservice.database.db_config",
+        "peekOfCode": "def dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):\n        d[col[0]] = row[idx]\n    return d",
+        "detail": "backend.appointment_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "db_name",
+        "kind": 5,
+        "importPath": "backend.appointment_microservice.database.db_config",
+        "description": "backend.appointment_microservice.database.db_config",
+        "peekOfCode": "db_name = 'appointments.db'\npath = dirname(abspath(__file__))\nfull_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):",
+        "detail": "backend.appointment_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "backend.appointment_microservice.database.db_config",
+        "description": "backend.appointment_microservice.database.db_config",
+        "peekOfCode": "path = dirname(abspath(__file__))\nfull_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}",
+        "detail": "backend.appointment_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "full_path",
+        "kind": 5,
+        "importPath": "backend.appointment_microservice.database.db_config",
+        "description": "backend.appointment_microservice.database.db_config",
+        "peekOfCode": "full_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):",
+        "detail": "backend.appointment_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.appointment",
+        "description": "backend.appointment_microservice.appointment",
+        "peekOfCode": "def reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:\n    - 205: Database reset\n    - 400: Invalid Dataset\n    Valid Datasets:\n    - \"empty\": No dataset",
+        "detail": "backend.appointment_microservice.appointment",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_appointments_history",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.appointment",
+        "description": "backend.appointment_microservice.appointment",
+        "peekOfCode": "def get_all_appointments_history():\n    \"\"\"\n    Get Appointments history\n    Returns:\n    - 200: All appointments\n    - 404: No appointments found\n    Example Response:\n    - {\"code\": 200, \"data\": [[...], [...], [...]]}\n    - {\"code\": 404, \"message\": \"No appointments found\"}\n    \"\"\"",
+        "detail": "backend.appointment_microservice.appointment",
+        "documentation": {}
+    },
+    {
+        "label": "create_appointment_api",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.appointment",
+        "description": "backend.appointment_microservice.appointment",
+        "peekOfCode": "def create_appointment_api():\n    \"\"\"\n    Create Appointment\n    Constraints:\n    - Given timeslot_datetime will always be in the format 'YYYY-MM-DD HH:MM:SS'\n    - There will never be an API call with an existing id\n    Returns:\n    - 201: Appointment created\n    - 400: Invalid POST payload\n    - 400: Existing id",
+        "detail": "backend.appointment_microservice.appointment",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_appointments_timerange",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.appointment",
+        "description": "backend.appointment_microservice.appointment",
+        "peekOfCode": "def get_all_appointments_timerange():\n    \"\"\"\n    Get All Appointments\n    Returns:\n    - 200: All appointments\n    - 404: No appointments found\n    Example Request Payload:\n    - { \"data\": {...}, \"start_date\": \"2024-03-01\", \"end_date\": \"2024-03-31\"}\n    - {\"start_date\": \"2024-03-01\", \"end_date\": \"2024-03-31\"}\n    Example Response:",
+        "detail": "backend.appointment_microservice.appointment",
+        "documentation": {}
+    },
+    {
+        "label": "delete_appointment_api",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.appointment",
+        "description": "backend.appointment_microservice.appointment",
+        "peekOfCode": "def delete_appointment_api(id):\n    \"\"\"\n    Delete appointment by id\n    Returns:\n    - 200: Appointment deleted\n    - 404: No appointment found\n    Example Response:\n    - {\"code\": 200, \"message\": \"Appointment deleted\"}\n    - {\"code\": 404, \"message\": \"No appointment found\"}\n    \"\"\"",
+        "detail": "backend.appointment_microservice.appointment",
+        "documentation": {}
+    },
+    {
+        "label": "update_appointment_isCompleted_api",
+        "kind": 2,
+        "importPath": "backend.appointment_microservice.appointment",
+        "description": "backend.appointment_microservice.appointment",
+        "peekOfCode": "def update_appointment_isCompleted_api(id):\n    \"\"\"\n    Update appointment isCompleted by id\n    Returns:\n    - 200: Appointment isCompleted updated to 1\n    - 200: Appointment isCompleted updated to 0\n    - 400: Invalid POST payload\n    - 400: Invalid isCompleted Value\n    - 404: No appointment found\n    Example Response:",
+        "detail": "backend.appointment_microservice.appointment",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.appointment_microservice.appointment",
+        "description": "backend.appointment_microservice.appointment",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)  \n# Reset Database\n@app.route(\"/appointment/reset/<string:dataset>\", methods=['POST'])\ndef reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:",
+        "detail": "backend.appointment_microservice.appointment",
+        "documentation": {}
+    },
+    {
+        "label": "Delivery_Order",
+        "kind": 6,
+        "importPath": "backend.delivery_order_microservice.database.data.model.delivery_order",
+        "description": "backend.delivery_order_microservice.database.data.model.delivery_order",
+        "peekOfCode": "class Delivery_Order:\n    def __init__(self, id, product_list, quantity_list):\n        self.id = id\n        self.product_list = product_list # String concatenated with semicolon\n        self.quantity_list = quantity_list # String concatenated with semicolon\n    @property\n    def getInfo(self):\n        return self.__dict__",
+        "detail": "backend.delivery_order_microservice.database.data.model.delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "example",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.database.data.dataset1",
+        "description": "backend.delivery_order_microservice.database.data.dataset1",
+        "peekOfCode": "def example():\n    # Timeslot cancelled\n    delivery_order1 = Delivery_Order(1, \"Amoxicillin;Levothyroxine\", \"5;10\")\n    # Appointment cancelled\n    delivery_order1 = Delivery_Order(8, \"Amoxicillin;Levothyroxine\", \"1;3\")\n    print(delivery_order1.getInfo)\n    print(delivery_order1.getInfo)\n# Dataset 1\n# - Must be synced with payment dataset\n#   - Payment must be made before delivery",
+        "detail": "backend.delivery_order_microservice.database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "dataset1",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.database.data.dataset1",
+        "description": "backend.delivery_order_microservice.database.data.dataset1",
+        "peekOfCode": "def dataset1():\n    # Empty Dataset\n    dataset = {}\n    return dataset",
+        "detail": "backend.delivery_order_microservice.database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.database.db_config",
+        "description": "backend.delivery_order_microservice.database.db_config",
+        "peekOfCode": "def connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):\n        d[col[0]] = row[idx]\n    return d",
+        "detail": "backend.delivery_order_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "dict_factory",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.database.db_config",
+        "description": "backend.delivery_order_microservice.database.db_config",
+        "peekOfCode": "def dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):\n        d[col[0]] = row[idx]\n    return d\n# Create Database Tables\ndef create_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()",
+        "detail": "backend.delivery_order_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "create_db",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.database.db_config",
+        "description": "backend.delivery_order_microservice.database.db_config",
+        "peekOfCode": "def create_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Table\n    c.execute(\"\"\"CREATE TABLE IF NOT EXISTS delivery_order (\n              id INTEGER PRIMARY KEY,\n              product_list TEXT,\n              quantity_list INTEGER\n            )\"\"\")",
+        "detail": "backend.delivery_order_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "db_name",
+        "kind": 5,
+        "importPath": "backend.delivery_order_microservice.database.db_config",
+        "description": "backend.delivery_order_microservice.database.db_config",
+        "peekOfCode": "db_name = 'delivery_order.db'\npath = dirname(abspath(__file__))\nfull_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):",
+        "detail": "backend.delivery_order_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "backend.delivery_order_microservice.database.db_config",
+        "description": "backend.delivery_order_microservice.database.db_config",
+        "peekOfCode": "path = dirname(abspath(__file__))\nfull_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}",
+        "detail": "backend.delivery_order_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "full_path",
+        "kind": 5,
+        "importPath": "backend.delivery_order_microservice.database.db_config",
+        "description": "backend.delivery_order_microservice.database.db_config",
+        "peekOfCode": "full_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):",
+        "detail": "backend.delivery_order_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "get_tables",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.database.db_delivery_order",
+        "description": "backend.delivery_order_microservice.database.db_delivery_order",
+        "peekOfCode": "def get_tables():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"SELECT name FROM sqlite_schema\")\n    table_names = c.fetchall()\n    # (3) Close Connection\n    conn.close()\n    return table_names",
+        "detail": "backend.delivery_order_microservice.database.db_delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "create_db",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.database.db_delivery_order",
+        "description": "backend.delivery_order_microservice.database.db_delivery_order",
+        "peekOfCode": "def create_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Table\n    c.execute(\"\"\"CREATE TABLE IF NOT EXISTS delivery_order (\n              id INTEGER PRIMARY KEY,\n              product_list TEXT,\n              quantity_list INTEGER\n            )\"\"\")",
+        "detail": "backend.delivery_order_microservice.database.db_delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "delete_db",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.database.db_delivery_order",
+        "description": "backend.delivery_order_microservice.database.db_delivery_order",
+        "peekOfCode": "def delete_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Drop Table\n    c.execute(\"DROP TABLE IF EXISTS delivery_order\")\n    # (3) Commit and Close\n    conn.commit()\n    conn.close()\n# Add Dataset ",
+        "detail": "backend.delivery_order_microservice.database.db_delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "add_dataset",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.database.db_delivery_order",
+        "description": "backend.delivery_order_microservice.database.db_delivery_order",
+        "peekOfCode": "def add_dataset(dataset):\n    # (1) Create Data\n    if dataset == \"dataset1\":\n        delivery_orders = dataset1()\n    # (2) Insert Data\n    for delivery_order in delivery_orders:\n        create_delivery_order(delivery_order.getInfo)\n# Reset Database Tables\ndef reset_db():\n    print(\"Resetting Database ...\")",
+        "detail": "backend.delivery_order_microservice.database.db_delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.database.db_delivery_order",
+        "description": "backend.delivery_order_microservice.database.db_delivery_order",
+        "peekOfCode": "def reset_db():\n    print(\"Resetting Database ...\")\n    delete_db()\n    create_db()\n    print(\"Database Reset Complete!\")\n    print(\"Current Tables:\", get_tables())\n# Reset Database Tables\ndef request_reset_db(dataset=\"empty\"):\n    if dataset == \"dataset1\":\n    # if type in [\"dataset1\", \"dataset2\"]:",
+        "detail": "backend.delivery_order_microservice.database.db_delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "request_reset_db",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.database.db_delivery_order",
+        "description": "backend.delivery_order_microservice.database.db_delivery_order",
+        "peekOfCode": "def request_reset_db(dataset=\"empty\"):\n    if dataset == \"dataset1\":\n    # if type in [\"dataset1\", \"dataset2\"]:\n        reset_db()\n        print(\"\\nAdding Dataset 1 ...\")\n        add_dataset(dataset)\n        print(\"Dataset 1 Added!\")\n        data = get_all_delivery_order()\n        print(\"Current Database:\", data)\n        return (205, data)",
+        "detail": "backend.delivery_order_microservice.database.db_delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "create_delivery_order",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.database.db_delivery_order_actions",
+        "description": "backend.delivery_order_microservice.database.db_delivery_order_actions",
+        "peekOfCode": "def create_delivery_order(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Delivery order\n    # print(data)\n    c.execute(\"\"\"\n    INSERT INTO delivery_order \n    (id, product_list, quantity_list) \n    VALUES (:id, :product_list, :quantity_list)",
+        "detail": "backend.delivery_order_microservice.database.db_delivery_order_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_delivery_order",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.database.db_delivery_order_actions",
+        "description": "backend.delivery_order_microservice.database.db_delivery_order_actions",
+        "peekOfCode": "def get_all_delivery_order():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"SELECT * FROM delivery_order\")\n    results = c.fetchall()\n    # (3) Close Connection\n    conn.close()\n    return results",
+        "detail": "backend.delivery_order_microservice.database.db_delivery_order_actions",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.delivery_order",
+        "description": "backend.delivery_order_microservice.delivery_order",
+        "peekOfCode": "def reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:\n    - 205: Database reset\n    - 400: Invalid Dataset\n    Valid Datasets:\n    - \"empty\": No dataset",
+        "detail": "backend.delivery_order_microservice.delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_delivery_orders_api",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.delivery_order",
+        "description": "backend.delivery_order_microservice.delivery_order",
+        "peekOfCode": "def get_all_delivery_orders_api():\n    \"\"\"\n    Get All delivery order\n    Returns:\n    - 200: All delivery order\n    - 404: No delivery order found\n    Example Response:\n    - {\"code\": 200, \"data\": [[...], [...], [...]]}\n    - {\"code\": 404, \"message\": \"No delivery order found\"}\n    \"\"\"",
+        "detail": "backend.delivery_order_microservice.delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "create_delivery_order_api",
+        "kind": 2,
+        "importPath": "backend.delivery_order_microservice.delivery_order",
+        "description": "backend.delivery_order_microservice.delivery_order",
+        "peekOfCode": "def create_delivery_order_api():\n    \"\"\"\n    Create delivery order\n    Returns:\n    - 201: Delivery order created\n    - 400: Invalid POST payload\n    - 400: Data already exists\n    Constraints:\n    - Data format will always be correct\n    - id is appointment_id AND appointment_id will always exists",
+        "detail": "backend.delivery_order_microservice.delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.delivery_order_microservice.delivery_order",
+        "description": "backend.delivery_order_microservice.delivery_order",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)  \n# Reset Database\n@app.route(\"/delivery_order/reset/<string:dataset>\", methods=['POST'])\ndef reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:",
+        "detail": "backend.delivery_order_microservice.delivery_order",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "kind": 6,
+        "importPath": "backend.inventory_microservice.database.data.model.inventory",
+        "description": "backend.inventory_microservice.database.data.model.inventory",
+        "peekOfCode": "class Item:\n    def __init__(self,name,quantity):\n        self.name = name\n        self.quantity = quantity\n    @property\n    def getInfo(self):\n        return self.__dict__",
+        "detail": "backend.inventory_microservice.database.data.model.inventory",
+        "documentation": {}
+    },
+    {
+        "label": "example",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.data.dataset1",
+        "description": "backend.inventory_microservice.database.data.dataset1",
+        "peekOfCode": "def example():\n    item = Item()\n    print(item.getInfo)\n# Dataset 1\ndef dataset1():\n    dataset = [\n            Item('Paracetamol',30),\n            Item('Hydrocodone',29),\n            Item('Metformin',16),\n            Item('Losartan',19),",
+        "detail": "backend.inventory_microservice.database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "dataset1",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.data.dataset1",
+        "description": "backend.inventory_microservice.database.data.dataset1",
+        "peekOfCode": "def dataset1():\n    dataset = [\n            Item('Paracetamol',30),\n            Item('Hydrocodone',29),\n            Item('Metformin',16),\n            Item('Losartan',19),\n            Item('Antibiotics',12),\n            Item('Albuterol',37),\n            Item('Antihistamine',23),\n            Item('Gabapentin',25),",
+        "detail": "backend.inventory_microservice.database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.db_config",
+        "description": "backend.inventory_microservice.database.db_config",
+        "peekOfCode": "def connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):\n        d[col[0]] = row[idx]\n    return d",
+        "detail": "backend.inventory_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "dict_factory",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.db_config",
+        "description": "backend.inventory_microservice.database.db_config",
+        "peekOfCode": "def dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):\n        d[col[0]] = row[idx]\n    return d",
+        "detail": "backend.inventory_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "db_name",
+        "kind": 5,
+        "importPath": "backend.inventory_microservice.database.db_config",
+        "description": "backend.inventory_microservice.database.db_config",
+        "peekOfCode": "db_name = 'inventory.db'\npath = dirname(abspath(__file__))\nfull_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):",
+        "detail": "backend.inventory_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "backend.inventory_microservice.database.db_config",
+        "description": "backend.inventory_microservice.database.db_config",
+        "peekOfCode": "path = dirname(abspath(__file__))\nfull_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}",
+        "detail": "backend.inventory_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "full_path",
+        "kind": 5,
+        "importPath": "backend.inventory_microservice.database.db_config",
+        "description": "backend.inventory_microservice.database.db_config",
+        "peekOfCode": "full_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):",
+        "detail": "backend.inventory_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "get_tables",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.db_inventory",
+        "description": "backend.inventory_microservice.database.db_inventory",
+        "peekOfCode": "def get_tables():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"SELECT name FROM sqlite_schema\")\n    table_names = c.fetchall()\n    # (3) Close Connection\n    conn.close()\n    return table_names",
+        "detail": "backend.inventory_microservice.database.db_inventory",
+        "documentation": {}
+    },
+    {
+        "label": "create_db",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.db_inventory",
+        "description": "backend.inventory_microservice.database.db_inventory",
+        "peekOfCode": "def create_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Table\n    c.execute(\"\"\"CREATE TABLE IF NOT EXISTS inventory (\n              id INTEGER PRIMARY KEY,\n              name TEXT,\n              quantity INTEGER\n            )\"\"\")",
+        "detail": "backend.inventory_microservice.database.db_inventory",
+        "documentation": {}
+    },
+    {
+        "label": "delete_db",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.db_inventory",
+        "description": "backend.inventory_microservice.database.db_inventory",
+        "peekOfCode": "def delete_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Drop Table\n    c.execute(\"DROP TABLE IF EXISTS inventory\")\n    # (3) Commit and Close\n    conn.commit()\n    conn.close()\n# Add Dataset ",
+        "detail": "backend.inventory_microservice.database.db_inventory",
+        "documentation": {}
+    },
+    {
+        "label": "add_dataset",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.db_inventory",
+        "description": "backend.inventory_microservice.database.db_inventory",
+        "peekOfCode": "def add_dataset(dataset):\n    # (1) Create Data\n    if dataset == \"dataset1\":\n        items = dataset1()\n    # (2) Insert Data\n    for item in items:\n        create_item(item.getInfo)\n# Check if item already exists, if no then insert item\ndef check_and_insert_item(data):\n    if len(get_item_by_id(data)) > 0:",
+        "detail": "backend.inventory_microservice.database.db_inventory",
+        "documentation": {}
+    },
+    {
+        "label": "check_and_insert_item",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.db_inventory",
+        "description": "backend.inventory_microservice.database.db_inventory",
+        "peekOfCode": "def check_and_insert_item(data):\n    if len(get_item_by_id(data)) > 0:\n        return \"Item Already Exists\"\n    create_item(data)\n# Reset Database Tables\ndef reset_db():\n    print(\"Resetting Database ...\")\n    delete_db()\n    create_db()\n    print(\"Database Reset Complete!\")",
+        "detail": "backend.inventory_microservice.database.db_inventory",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.db_inventory",
+        "description": "backend.inventory_microservice.database.db_inventory",
+        "peekOfCode": "def reset_db():\n    print(\"Resetting Database ...\")\n    delete_db()\n    create_db()\n    print(\"Database Reset Complete!\")\n    print(\"Current Tables:\", get_tables())\n# Reset Database Tables\ndef request_reset_db(dataset=\"empty\"):\n    if dataset == \"dataset1\":\n    # if type in [\"dataset1\", \"dataset2\"]:",
+        "detail": "backend.inventory_microservice.database.db_inventory",
+        "documentation": {}
+    },
+    {
+        "label": "request_reset_db",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.db_inventory",
+        "description": "backend.inventory_microservice.database.db_inventory",
+        "peekOfCode": "def request_reset_db(dataset=\"empty\"):\n    if dataset == \"dataset1\":\n    # if type in [\"dataset1\", \"dataset2\"]:\n        reset_db()\n        print(\"\\nAdding Dataset 1 ...\")\n        add_dataset(dataset)\n        print(\"Dataset 1 Added!\")\n        data = get_all_items()\n        print(\"Current Database:\", data)\n        return (205, data)",
+        "detail": "backend.inventory_microservice.database.db_inventory",
+        "documentation": {}
+    },
+    {
+        "label": "create_item",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.db_inventory_actions",
+        "description": "backend.inventory_microservice.database.db_inventory_actions",
+        "peekOfCode": "def create_item(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Item\n    # print(data)\n    c.execute(\"\"\"INSERT INTO inventory VALUES (\n              NULL,\n              :name,\n              :quantity",
+        "detail": "backend.inventory_microservice.database.db_inventory_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_items",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.db_inventory_actions",
+        "description": "backend.inventory_microservice.database.db_inventory_actions",
+        "peekOfCode": "def get_all_items():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"SELECT * FROM inventory\")\n    results = c.fetchall()\n    # (3) Close Connection\n    conn.close()\n    return results",
+        "detail": "backend.inventory_microservice.database.db_inventory_actions",
+        "documentation": {}
+    },
+    {
+        "label": "update_item_quantity",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.db_inventory_actions",
+        "description": "backend.inventory_microservice.database.db_inventory_actions",
+        "peekOfCode": "def update_item_quantity(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    #(2) Update Item Quantity\n    c.execute(\"\"\"UPDATE inventory\n              SET quantity = :quantity\n              WHERE id = :id\"\"\"\n            , data)\n    # (3) Close Connection",
+        "detail": "backend.inventory_microservice.database.db_inventory_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_item_by_id",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.db_inventory_actions",
+        "description": "backend.inventory_microservice.database.db_inventory_actions",
+        "peekOfCode": "def get_item_by_id(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    print(data)\n    c.execute(\"\"\"SELECT * FROM inventory\n              WHERE id=:id\"\"\"\n                , data)\n    # fetches an item",
+        "detail": "backend.inventory_microservice.database.db_inventory_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_item_quantity",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.database.db_inventory_actions",
+        "description": "backend.inventory_microservice.database.db_inventory_actions",
+        "peekOfCode": "def get_item_quantity(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"\"\"SELECT quantity FROM inventory\n              WHERE id=:id\"\"\"\n                , data)\n    # fetches an item\n    quantity = c.fetchone()[\"quantity\"]",
+        "detail": "backend.inventory_microservice.database.db_inventory_actions",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.inventory",
+        "description": "backend.inventory_microservice.inventory",
+        "peekOfCode": "def reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:\n    - 205: Database reset\n    - 400: Invalid Dataset\n    Valid Datasets:\n    - \"empty\": No dataset",
+        "detail": "backend.inventory_microservice.inventory",
+        "documentation": {}
+    },
+    {
+        "label": "get_all",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.inventory",
+        "description": "backend.inventory_microservice.inventory",
+        "peekOfCode": "def get_all():\n    data = get_all_items()\n    if len(data):\n        return jsonify(\n            {\n                \"code\": 200,\n                \"count\": len(data),\n                \"data\": data\n            }\n        ), 200",
+        "detail": "backend.inventory_microservice.inventory",
+        "documentation": {}
+    },
+    {
+        "label": "update_quantity",
+        "kind": 2,
+        "importPath": "backend.inventory_microservice.inventory",
+        "description": "backend.inventory_microservice.inventory",
+        "peekOfCode": "def update_quantity(id):\n    \"\"\"\n    Update item quantity by id\n    - Get a number\n    - Update quantity by that number\n    Returns:\n    - 200: Item updated\n    - 400: Invalid PUT payload\n    Example Payload:\n    - {\"quantity_to_add\": 5}",
+        "detail": "backend.inventory_microservice.inventory",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.inventory_microservice.inventory",
+        "description": "backend.inventory_microservice.inventory",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)  \n# Reset Database\n@app.route(\"/inventory/reset/<string:dataset>\", methods=['POST'])\ndef reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:",
+        "detail": "backend.inventory_microservice.inventory",
+        "documentation": {}
+    },
+    {
+        "label": "invoke_http",
+        "kind": 2,
+        "importPath": "backend.manage_booking_complex_microservice.invokes",
+        "description": "backend.manage_booking_complex_microservice.invokes",
+        "peekOfCode": "def invoke_http(url, method, json=None, **kwargs):\n    \"\"\"A simple wrapper for requests methods.\n    url: the url of the http service;\n    method: the http method;\n    data: the JSON input when needed by the http method;\n    return: the JSON reply content from the http service if the call succeeds;\n    otherwise, return a JSON object with a \"code\" name-value pair.\n    \"\"\"\n    code = 200\n    result = {}",
+        "detail": "backend.manage_booking_complex_microservice.invokes",
+        "documentation": {}
+    },
+    {
+        "label": "SUPPORTED_HTTP_METHODS",
+        "kind": 5,
+        "importPath": "backend.manage_booking_complex_microservice.invokes",
+        "description": "backend.manage_booking_complex_microservice.invokes",
+        "peekOfCode": "SUPPORTED_HTTP_METHODS = set(\n    [\"GET\", \"OPTIONS\", \"HEAD\", \"POST\", \"PUT\", \"PATCH\", \"DELETE\"]\n)\ndef invoke_http(url, method, json=None, **kwargs):\n    \"\"\"A simple wrapper for requests methods.\n    url: the url of the http service;\n    method: the http method;\n    data: the JSON input when needed by the http method;\n    return: the JSON reply content from the http service if the call succeeds;\n    otherwise, return a JSON object with a \"code\" name-value pair.",
+        "detail": "backend.manage_booking_complex_microservice.invokes",
+        "documentation": {}
+    },
+    {
+        "label": "make_appointment",
+        "kind": 2,
+        "importPath": "backend.manage_booking_complex_microservice.manage_booking",
+        "description": "backend.manage_booking_complex_microservice.manage_booking",
+        "peekOfCode": "def make_appointment(timeslot_id):\n    \"\"\"\n    Make an appointment by timeslot_id\n    Constraints:\n    - timeslot_id will always exist\n    - timeslot_id will always be a timeslot with isAccepted=0\n    - patient_id will always exist\n    Returns:\n    - 200: Successful\n    - 400/404: Unsuccessful",
+        "detail": "backend.manage_booking_complex_microservice.manage_booking",
+        "documentation": {}
+    },
+    {
+        "label": "cancel_appointment",
+        "kind": 2,
+        "importPath": "backend.manage_booking_complex_microservice.manage_booking",
+        "description": "backend.manage_booking_complex_microservice.manage_booking",
+        "peekOfCode": "def cancel_appointment(appointment_id):\n    \"\"\"\n    Cancel an appointment by appointment_id\n    Constraints:\n    - appointment_id will always exist\n    - appointment_id will always have a timeslot with timeslot_id=appointment_id and isAccepted=1\n    Returns:\n    - 200: Successful\n    - 400/404: Unsuccessful\n    Example Response:",
+        "detail": "backend.manage_booking_complex_microservice.manage_booking",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.manage_booking_complex_microservice.manage_booking",
+        "description": "backend.manage_booking_complex_microservice.manage_booking",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)\ntimeslot_URL = \"http://host.docker.internal:5002/timeslot\"\nappointment_URL = \"http://host.docker.internal:5003/appointment\"\n# Make an appointment by timeslot_id\n@app.route(\"/make_appointment/<int:timeslot_id>\", methods=[\"POST\"])\ndef make_appointment(timeslot_id):\n    \"\"\"\n    Make an appointment by timeslot_id\n    Constraints:",
+        "detail": "backend.manage_booking_complex_microservice.manage_booking",
+        "documentation": {}
+    },
+    {
+        "label": "timeslot_URL",
+        "kind": 5,
+        "importPath": "backend.manage_booking_complex_microservice.manage_booking",
+        "description": "backend.manage_booking_complex_microservice.manage_booking",
+        "peekOfCode": "timeslot_URL = \"http://host.docker.internal:5002/timeslot\"\nappointment_URL = \"http://host.docker.internal:5003/appointment\"\n# Make an appointment by timeslot_id\n@app.route(\"/make_appointment/<int:timeslot_id>\", methods=[\"POST\"])\ndef make_appointment(timeslot_id):\n    \"\"\"\n    Make an appointment by timeslot_id\n    Constraints:\n    - timeslot_id will always exist\n    - timeslot_id will always be a timeslot with isAccepted=0",
+        "detail": "backend.manage_booking_complex_microservice.manage_booking",
+        "documentation": {}
+    },
+    {
+        "label": "appointment_URL",
+        "kind": 5,
+        "importPath": "backend.manage_booking_complex_microservice.manage_booking",
+        "description": "backend.manage_booking_complex_microservice.manage_booking",
+        "peekOfCode": "appointment_URL = \"http://host.docker.internal:5003/appointment\"\n# Make an appointment by timeslot_id\n@app.route(\"/make_appointment/<int:timeslot_id>\", methods=[\"POST\"])\ndef make_appointment(timeslot_id):\n    \"\"\"\n    Make an appointment by timeslot_id\n    Constraints:\n    - timeslot_id will always exist\n    - timeslot_id will always be a timeslot with isAccepted=0\n    - patient_id will always exist",
+        "detail": "backend.manage_booking_complex_microservice.manage_booking",
+        "documentation": {}
+    },
+    {
+        "label": "generate_certificate",
+        "kind": 2,
+        "importPath": "backend.medical_certificate_microservice.medical_certificate",
+        "description": "backend.medical_certificate_microservice.medical_certificate",
+        "peekOfCode": "def generate_certificate():\n    \"\"\"\n    Generate Certificate\n    Example Payload:\n    - { \"data\": {\n        \"appointment_id\": 999,\n        \"timeslot_datetime\": \"2025-10-25 15:30:00\",\n        \"duration_minutes\": 30,\n        \"mc_start_datetime\": \"2025-10-25\",\n        \"mc_days\": 1",
+        "detail": "backend.medical_certificate_microservice.medical_certificate",
+        "documentation": {}
+    },
+    {
+        "label": "TEAM_MEMBER_ACCOUNT",
+        "kind": 5,
+        "importPath": "backend.medical_certificate_microservice.medical_certificate",
+        "description": "backend.medical_certificate_microservice.medical_certificate",
+        "peekOfCode": "TEAM_MEMBER_ACCOUNT = \"Terris Tan Wei Jun\"\nTEAM_MEMBER_EMAIL = \"terristanwei@gmail.com\"\nAPI_ENABLED = True # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]",
+        "detail": "backend.medical_certificate_microservice.medical_certificate",
+        "documentation": {}
+    },
+    {
+        "label": "TEAM_MEMBER_EMAIL",
+        "kind": 5,
+        "importPath": "backend.medical_certificate_microservice.medical_certificate",
+        "description": "backend.medical_certificate_microservice.medical_certificate",
+        "peekOfCode": "TEAM_MEMBER_EMAIL = \"terristanwei@gmail.com\"\nAPI_ENABLED = True # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"",
+        "detail": "backend.medical_certificate_microservice.medical_certificate",
+        "documentation": {}
+    },
+    {
+        "label": "API_ENABLED",
+        "kind": 5,
+        "importPath": "backend.medical_certificate_microservice.medical_certificate",
+        "description": "backend.medical_certificate_microservice.medical_certificate",
+        "peekOfCode": "API_ENABLED = True # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method",
+        "detail": "backend.medical_certificate_microservice.medical_certificate",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_TOKEN",
+        "kind": 5,
+        "importPath": "backend.medical_certificate_microservice.medical_certificate",
+        "description": "backend.medical_certificate_microservice.medical_certificate",
+        "peekOfCode": "MAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",",
+        "detail": "backend.medical_certificate_microservice.medical_certificate",
+        "documentation": {}
+    },
+    {
+        "label": "Mailtrap_client",
+        "kind": 5,
+        "importPath": "backend.medical_certificate_microservice.medical_certificate",
+        "description": "backend.medical_certificate_microservice.medical_certificate",
+        "peekOfCode": "Mailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"",
+        "detail": "backend.medical_certificate_microservice.medical_certificate",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_SENDER_EMAIL",
+        "kind": 5,
+        "importPath": "backend.medical_certificate_microservice.medical_certificate",
+        "description": "backend.medical_certificate_microservice.medical_certificate",
+        "peekOfCode": "MAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )",
+        "detail": "backend.medical_certificate_microservice.medical_certificate",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_SENDER",
+        "kind": 5,
+        "importPath": "backend.medical_certificate_microservice.medical_certificate",
+        "description": "backend.medical_certificate_microservice.medical_certificate",
+        "peekOfCode": "MAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )\n# Mailtrap_client.send(mail)",
+        "detail": "backend.medical_certificate_microservice.medical_certificate",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_TO_EMAIL",
+        "kind": 5,
+        "importPath": "backend.medical_certificate_microservice.medical_certificate",
+        "description": "backend.medical_certificate_microservice.medical_certificate",
+        "peekOfCode": "MAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )\n# Mailtrap_client.send(mail)\n####### MailTrap configuration (Email API) END #####################################################################################",
+        "detail": "backend.medical_certificate_microservice.medical_certificate",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_TO",
+        "kind": 5,
+        "importPath": "backend.medical_certificate_microservice.medical_certificate",
+        "description": "backend.medical_certificate_microservice.medical_certificate",
+        "peekOfCode": "MAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )\n# Mailtrap_client.send(mail)\n####### MailTrap configuration (Email API) END #####################################################################################\n# ReportLab is a Python library that allows you to create PDFs",
+        "detail": "backend.medical_certificate_microservice.medical_certificate",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_CATEGORY",
+        "kind": 5,
+        "importPath": "backend.medical_certificate_microservice.medical_certificate",
+        "description": "backend.medical_certificate_microservice.medical_certificate",
+        "peekOfCode": "MAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )\n# Mailtrap_client.send(mail)\n####### MailTrap configuration (Email API) END #####################################################################################\n# ReportLab is a Python library that allows you to create PDFs\nfrom reportlab.lib.pagesizes import letter",
+        "detail": "backend.medical_certificate_microservice.medical_certificate",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.medical_certificate_microservice.medical_certificate",
+        "description": "backend.medical_certificate_microservice.medical_certificate",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)  \ntoday = date.today().strftime(\"%d %B, %Y\")\nstyles = getSampleStyleSheet()\n@app.route(\"/medical_certificate/create\", methods=[\"POST\"])\ndef generate_certificate():\n    \"\"\"\n    Generate Certificate\n    Example Payload:\n    - { \"data\": {",
+        "detail": "backend.medical_certificate_microservice.medical_certificate",
+        "documentation": {}
+    },
+    {
+        "label": "today",
+        "kind": 5,
+        "importPath": "backend.medical_certificate_microservice.medical_certificate",
+        "description": "backend.medical_certificate_microservice.medical_certificate",
+        "peekOfCode": "today = date.today().strftime(\"%d %B, %Y\")\nstyles = getSampleStyleSheet()\n@app.route(\"/medical_certificate/create\", methods=[\"POST\"])\ndef generate_certificate():\n    \"\"\"\n    Generate Certificate\n    Example Payload:\n    - { \"data\": {\n        \"appointment_id\": 999,\n        \"timeslot_datetime\": \"2025-10-25 15:30:00\",",
+        "detail": "backend.medical_certificate_microservice.medical_certificate",
+        "documentation": {}
+    },
+    {
+        "label": "styles",
+        "kind": 5,
+        "importPath": "backend.medical_certificate_microservice.medical_certificate",
+        "description": "backend.medical_certificate_microservice.medical_certificate",
+        "peekOfCode": "styles = getSampleStyleSheet()\n@app.route(\"/medical_certificate/create\", methods=[\"POST\"])\ndef generate_certificate():\n    \"\"\"\n    Generate Certificate\n    Example Payload:\n    - { \"data\": {\n        \"appointment_id\": 999,\n        \"timeslot_datetime\": \"2025-10-25 15:30:00\",\n        \"duration_minutes\": 30,",
+        "detail": "backend.medical_certificate_microservice.medical_certificate",
+        "documentation": {}
+    },
+    {
+        "label": "Notification",
+        "kind": 6,
+        "importPath": "backend.notification_microservice.database.data.model.notification",
+        "description": "backend.notification_microservice.database.data.model.notification",
+        "peekOfCode": "class Notification:\n    def __init__(self, session_id, timeslot_datetime, doctor_id, status, patient_id=None):\n        self.session_id = session_id\n        self.timeslot_datetime = timeslot_datetime\n        self.doctor_id = doctor_id\n        self.status = status # new, completed, received\n        self.patient_id = patient_id # Only for when session_id belongs to appointment_id\n    @property\n    def getInfo(self):\n        return self.__dict__",
+        "detail": "backend.notification_microservice.database.data.model.notification",
+        "documentation": {}
+    },
+    {
+        "label": "example",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.data.dataset1",
+        "description": "backend.notification_microservice.database.data.dataset1",
+        "peekOfCode": "def example():\n    # Timeslot cancelled\n    notification1 = Notification(1, \"2024-03-03 08:30:00\", 1, \"new\", 1)\n    # Appointment cancelled\n    notification2 = Notification(2, \"2024-03-03 08:30:00\", 1, \"new\")\n    print(notification1.getInfo)\n    print(notification2.getInfo)\n# Dataset 1\n# - Must be synced with timeslot dataset\n# - Must be synced with appointment dataset",
+        "detail": "backend.notification_microservice.database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "dataset1",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.data.dataset1",
+        "description": "backend.notification_microservice.database.data.dataset1",
+        "peekOfCode": "def dataset1():\n    dataset = {\n        Notification(1, \"2024-03-03 08:30:00\", 1, \"new\", 1),\n        Notification(2, \"2024-03-03 09:30:00\", 1, \"new\"),\n        Notification(3, \"2024-03-03 10:30:00\", 1, \"new\"),\n        Notification(4, \"2024-03-03 11:30:00\", 1, \"new\"),\n        Notification(8, \"2024-03-03 15:30:00\", 1, \"new\", 1)\n    }\n    return dataset",
+        "detail": "backend.notification_microservice.database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_config",
+        "description": "backend.notification_microservice.database.db_config",
+        "peekOfCode": "def connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):\n        d[col[0]] = row[idx]\n    return d",
+        "detail": "backend.notification_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "dict_factory",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_config",
+        "description": "backend.notification_microservice.database.db_config",
+        "peekOfCode": "def dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):\n        d[col[0]] = row[idx]\n    return d",
+        "detail": "backend.notification_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "db_name",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.database.db_config",
+        "description": "backend.notification_microservice.database.db_config",
+        "peekOfCode": "db_name = 'notification.db'\npath = dirname(abspath(__file__))\nfull_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):",
+        "detail": "backend.notification_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.database.db_config",
+        "description": "backend.notification_microservice.database.db_config",
+        "peekOfCode": "path = dirname(abspath(__file__))\nfull_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}",
+        "detail": "backend.notification_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "full_path",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.database.db_config",
+        "description": "backend.notification_microservice.database.db_config",
+        "peekOfCode": "full_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):",
+        "detail": "backend.notification_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "get_tables",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_notification",
+        "description": "backend.notification_microservice.database.db_notification",
+        "peekOfCode": "def get_tables():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"SELECT name FROM sqlite_schema\")\n    table_names = c.fetchall()\n    # (3) Close Connection\n    conn.close()\n    return table_names",
+        "detail": "backend.notification_microservice.database.db_notification",
+        "documentation": {}
+    },
+    {
+        "label": "create_db",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_notification",
+        "description": "backend.notification_microservice.database.db_notification",
+        "peekOfCode": "def create_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Table\n    c.execute(\"\"\"CREATE TABLE IF NOT EXISTS notifications (\n                session_id INTEGER PRIMARY KEY,\n                timeslot_datetime TEXT,\n                doctor_id INTEGER,\n                status TEXT,",
+        "detail": "backend.notification_microservice.database.db_notification",
+        "documentation": {}
+    },
+    {
+        "label": "delete_db",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_notification",
+        "description": "backend.notification_microservice.database.db_notification",
+        "peekOfCode": "def delete_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Drop Table\n    c.execute(\"DROP TABLE IF EXISTS notifications\")\n    # (3) Commit and Close\n    conn.commit()\n    conn.close()\n# Add Dataset ",
+        "detail": "backend.notification_microservice.database.db_notification",
+        "documentation": {}
+    },
+    {
+        "label": "add_dataset",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_notification",
+        "description": "backend.notification_microservice.database.db_notification",
+        "peekOfCode": "def add_dataset(dataset):\n    # (1) Create Data\n    if dataset == \"dataset1\":\n        notifications = dataset1()\n    # (2) Insert Data\n    for notification in notifications:\n        check_and_insert_notification(notification.getInfo)\n# Check if session_id Exists, then Insert notification\ndef check_and_insert_notification(data):\n    if len(get_exact_notification(data)) > 0:",
+        "detail": "backend.notification_microservice.database.db_notification",
+        "documentation": {}
+    },
+    {
+        "label": "check_and_insert_notification",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_notification",
+        "description": "backend.notification_microservice.database.db_notification",
+        "peekOfCode": "def check_and_insert_notification(data):\n    if len(get_exact_notification(data)) > 0:\n        return \"Notification Already Exists\"\n    create_notification_test(data)\n# Reset Database Tables\ndef reset_db():\n    print(\"Resetting Database ...\")\n    delete_db()\n    create_db()\n    print(\"Database Reset Complete!\")",
+        "detail": "backend.notification_microservice.database.db_notification",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_notification",
+        "description": "backend.notification_microservice.database.db_notification",
+        "peekOfCode": "def reset_db():\n    print(\"Resetting Database ...\")\n    delete_db()\n    create_db()\n    print(\"Database Reset Complete!\")\n    print(\"Current Tables:\", get_tables())\n# Reset Database Tables\ndef request_reset_db(dataset=\"empty\"):\n    if dataset == \"dataset1\":\n    # if type in [\"dataset1\", \"dataset2\"]:",
+        "detail": "backend.notification_microservice.database.db_notification",
+        "documentation": {}
+    },
+    {
+        "label": "request_reset_db",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_notification",
+        "description": "backend.notification_microservice.database.db_notification",
+        "peekOfCode": "def request_reset_db(dataset=\"empty\"):\n    if dataset == \"dataset1\":\n    # if type in [\"dataset1\", \"dataset2\"]:\n        reset_db()\n        print(\"\\nAdding Dataset 1 ...\")\n        add_dataset(dataset)\n        print(\"Dataset 1 Added!\")\n        data = get_all_notifications()\n        print(\"Current Database:\", data)\n        return (205, data)",
+        "detail": "backend.notification_microservice.database.db_notification",
+        "documentation": {}
+    },
+    {
+        "label": "get_exact_notification",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_notification_actions",
+        "description": "backend.notification_microservice.database.db_notification_actions",
+        "peekOfCode": "def get_exact_notification(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"\"\"SELECT * FROM notifications\n              WHERE session_id=:session_id\"\"\"\n            , data)\n    results = c.fetchall()\n    # (3) Close Connection",
+        "detail": "backend.notification_microservice.database.db_notification_actions",
+        "documentation": {}
+    },
+    {
+        "label": "create_notification_test",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_notification_actions",
+        "description": "backend.notification_microservice.database.db_notification_actions",
+        "peekOfCode": "def create_notification_test(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Notification\n    c.execute(\"\"\"INSERT INTO notifications VALUES (\n                :session_id,\n                :timeslot_datetime,\n                :doctor_id,\n                :status,",
+        "detail": "backend.notification_microservice.database.db_notification_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_notifications",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_notification_actions",
+        "description": "backend.notification_microservice.database.db_notification_actions",
+        "peekOfCode": "def get_all_notifications(status=None):\n    # status: new, completed, received\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    if status is None:\n        c.execute(\"SELECT * FROM notifications\")\n    else:\n        c.execute(f\"SELECT * FROM notifications WHERE status=:status\",",
+        "detail": "backend.notification_microservice.database.db_notification_actions",
+        "documentation": {}
+    },
+    {
+        "label": "create_notification",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_notification_actions",
+        "description": "backend.notification_microservice.database.db_notification_actions",
+        "peekOfCode": "def create_notification(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Notification\n    c.execute(\"\"\"INSERT INTO notifications VALUES (\n                :session_id,\n                :timeslot_datetime,\n                :doctor_id,\n                :status,",
+        "detail": "backend.notification_microservice.database.db_notification_actions",
+        "documentation": {}
+    },
+    {
+        "label": "update_notification_status_by_session_id",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_notification_actions",
+        "description": "backend.notification_microservice.database.db_notification_actions",
+        "peekOfCode": "def update_notification_status_by_session_id(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Update Notification\n    c.execute(\"\"\"UPDATE notifications\n              SET status=:status\n              WHERE session_id=:session_id\n            \"\"\", data)\n    # (3) Commit and Close",
+        "detail": "backend.notification_microservice.database.db_notification_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_completed_notifications_by_patient_id",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_notification_actions",
+        "description": "backend.notification_microservice.database.db_notification_actions",
+        "peekOfCode": "def get_all_completed_notifications_by_patient_id(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"\"\"SELECT * FROM notifications\n              WHERE status='completed' AND patient_id=:patient_id\n            \"\"\", data)\n    results = c.fetchall()\n    # (3) Close Connection",
+        "detail": "backend.notification_microservice.database.db_notification_actions",
+        "documentation": {}
+    },
+    {
+        "label": "delete_notification_by_session_id",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.database.db_notification_actions",
+        "description": "backend.notification_microservice.database.db_notification_actions",
+        "peekOfCode": "def delete_notification_by_session_id(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Delete Notification\n    c.execute(\"\"\"DELETE FROM notifications\n              WHERE session_id=:session_id\n            \"\"\", data)\n    # (3) Commit and Close\n    conn.commit()",
+        "detail": "backend.notification_microservice.database.db_notification_actions",
+        "documentation": {}
+    },
+    {
+        "label": "test_mailtrap",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "def test_mailtrap():\n    try:\n        mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n                subject=\"You are awesome!\",\n                text=\"Congrats for sending test email with Mailtrap!\"\n            )\n        Mailtrap_client.send(mail)\n        return jsonify(\n            {\n                \"code\": 200,",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "test_twilio",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "def test_twilio():\n    try:\n        TWILIO_BODY = 'Message from Twilio. Hi!'\n        message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)\n        # print(message.sid)\n        return jsonify(\n            {\n                \"code\": 200,\n                \"message\": \"Successfully sent SMS using Twilio! Each SMS cost $$$!\",\n                \"data\": {",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "execute_email_and_sms",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "def execute_email_and_sms(affected_datetime):\n    # Email and SMS sent status\n    email_sent=False\n    sms_sent=False\n    # Send email using Mailtrap\n    print(\"\\n\")\n    try:\n        mail = mt.MailFromTemplate(sender=MAILTRAP_SENDER, to=MAILTRAP_TO,\n            template_uuid=\"e35a6117-813b-4040-b4a3-31b62102fac2\",\n            template_variables={ \"datetime\": affected_datetime }",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "def reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:\n    - 205: Database reset\n    - 400: Invalid Dataset\n    Valid Datasets:\n    - \"empty\": No dataset",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_notifications_history",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "def get_all_notifications_history():\n    \"\"\"\n    Get Notification history\n    Returns:\n    - 200: All notifications\n    - 404: No notifications found\n    Example Response:\n    - {\"code\": 200, \"data\": [[...], [...], [...]]}\n    - {\"code\": 404, \"message\": \"No notifications found\"}\n    \"\"\"",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "create_notification_api",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "def create_notification_api():\n    \"\"\"\n    Create notification\n    Constraints:\n    - The payload will always be formatted correctly\n    - status must be 'new' or 'completed' or 'received'\n    - patient_id is optional\n    Payload:\n    - { data: { doctor_id, session_id, timeslot_datetime, status, patient_id(Optional) } }\n    Returns:",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_new_notifications_api",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "def get_all_new_notifications_api():\n    \"\"\"\n    Get all 'new' notifications\n    Returns:\n    - 200: All 'new' notifications\n    - 404: No 'new' notifications found\n    Example Response:\n    - {\"code\": 200, \"count\": ..., \"data\": [[...], [...], [...]]}\n    - {\"code\": 404, \"message\": \"No 'new' notifications found\"}\n    \"\"\"",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "update_notification_to_completed_api",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "def update_notification_to_completed_api(session_id):\n    \"\"\"\n    Update notification to ‘completed’\n    Constraints:\n    - session_id may be invalid\n    - status of session_id is always initially 'new'\n    Returns:\n    - 200: Notification updated to completed\n    - 400: Invalid request\n    - 404: No notification found",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "delete_notification_by_session_id_api",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "def delete_notification_by_session_id_api(session_id):\n    \"\"\"\n    Delete notification by session_id\n    Constraints:\n    - session_id may be invalid\n    Returns:\n    - 200: Notification deleted\n    - 404: No notification found\n    Example Response:\n    - {\"code\": 200, \"message\": \"Notification deleted!\"}",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "update_completed_to_received_api",
+        "kind": 2,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "def update_completed_to_received_api(patient_id):\n    \"\"\"\n    Get & update 'completed' to 'received' based on patient_id\n    Constraints:\n    - patient_id may be invalid\n    Returns:\n    - 200: Notification updated to received!\n    - 404: No notification found\n    Example Response:\n    - {\"code\": 200, \"message\": \"Notification updated to received!\", \"updated_data\": [...]}",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)  \n# Please no DDOS me - I lazy configure environment variable\nTEAM_MEMBER_ACCOUNT = \"Terris Tan Wei Jun\"\nTEAM_MEMBER_EMAIL = \"terristanwei@gmail.com\"\nTEAM_MEMBER_PHONE = \"+6596867171\"\nAPI_ENABLED = False # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "TEAM_MEMBER_ACCOUNT",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "TEAM_MEMBER_ACCOUNT = \"Terris Tan Wei Jun\"\nTEAM_MEMBER_EMAIL = \"terristanwei@gmail.com\"\nTEAM_MEMBER_PHONE = \"+6596867171\"\nAPI_ENABLED = False # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "TEAM_MEMBER_EMAIL",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "TEAM_MEMBER_EMAIL = \"terristanwei@gmail.com\"\nTEAM_MEMBER_PHONE = \"+6596867171\"\nAPI_ENABLED = False # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "TEAM_MEMBER_PHONE",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "TEAM_MEMBER_PHONE = \"+6596867171\"\nAPI_ENABLED = False # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "API_ENABLED",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "API_ENABLED = False # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_TOKEN",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "MAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "Mailtrap_client",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "Mailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_SENDER_EMAIL",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "MAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_SENDER",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "MAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )\n# Mailtrap_client.send(mail)",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_TO_EMAIL",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "MAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )\n# Mailtrap_client.send(mail)\n####### MailTrap configuration (Email API) END #####################################################################################",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_TO",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "MAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )\n# Mailtrap_client.send(mail)\n####### MailTrap configuration (Email API) END #####################################################################################\n###### Twilio configuration (SMS API) START ########################################################################################",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_CATEGORY",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "MAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )\n# Mailtrap_client.send(mail)\n####### MailTrap configuration (Email API) END #####################################################################################\n###### Twilio configuration (SMS API) START ########################################################################################\nTWILIO_ACCOUNT_SID_1 = 'AC11fe7a'",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_ACCOUNT_SID_1",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "TWILIO_ACCOUNT_SID_1 = 'AC11fe7a'\nTWILIO_ACCOUNT_SID_2 = '0d60d8906e79'\nTWILIO_ACCOUNT_SID_3 = '2c540b0488669d'\nTWILIO_ACCOUNT_SID = TWILIO_ACCOUNT_SID_1+TWILIO_ACCOUNT_SID_2+TWILIO_ACCOUNT_SID_3\nTWILIO_AUTH_TOKEN_1 = 'cd8c1e2c0'\nTWILIO_AUTH_TOKEN_2 = '7bc3c7788307'\nTWILIO_AUTH_TOKEN_3 = '67e010d9721'\nTWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_ACCOUNT_SID_2",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "TWILIO_ACCOUNT_SID_2 = '0d60d8906e79'\nTWILIO_ACCOUNT_SID_3 = '2c540b0488669d'\nTWILIO_ACCOUNT_SID = TWILIO_ACCOUNT_SID_1+TWILIO_ACCOUNT_SID_2+TWILIO_ACCOUNT_SID_3\nTWILIO_AUTH_TOKEN_1 = 'cd8c1e2c0'\nTWILIO_AUTH_TOKEN_2 = '7bc3c7788307'\nTWILIO_AUTH_TOKEN_3 = '67e010d9721'\nTWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_ACCOUNT_SID_3",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "TWILIO_ACCOUNT_SID_3 = '2c540b0488669d'\nTWILIO_ACCOUNT_SID = TWILIO_ACCOUNT_SID_1+TWILIO_ACCOUNT_SID_2+TWILIO_ACCOUNT_SID_3\nTWILIO_AUTH_TOKEN_1 = 'cd8c1e2c0'\nTWILIO_AUTH_TOKEN_2 = '7bc3c7788307'\nTWILIO_AUTH_TOKEN_3 = '67e010d9721'\nTWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_ACCOUNT_SID",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "TWILIO_ACCOUNT_SID = TWILIO_ACCOUNT_SID_1+TWILIO_ACCOUNT_SID_2+TWILIO_ACCOUNT_SID_3\nTWILIO_AUTH_TOKEN_1 = 'cd8c1e2c0'\nTWILIO_AUTH_TOKEN_2 = '7bc3c7788307'\nTWILIO_AUTH_TOKEN_3 = '67e010d9721'\nTWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_AUTH_TOKEN_1",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "TWILIO_AUTH_TOKEN_1 = 'cd8c1e2c0'\nTWILIO_AUTH_TOKEN_2 = '7bc3c7788307'\nTWILIO_AUTH_TOKEN_3 = '67e010d9721'\nTWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'\n# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_AUTH_TOKEN_2",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "TWILIO_AUTH_TOKEN_2 = '7bc3c7788307'\nTWILIO_AUTH_TOKEN_3 = '67e010d9721'\nTWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'\n# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)\n# print(message.sid)",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_AUTH_TOKEN_3",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "TWILIO_AUTH_TOKEN_3 = '67e010d9721'\nTWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'\n# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)\n# print(message.sid)\n####### Twilio configuration (SMS API) END #########################################################################################",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_AUTH_TOKEN",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "TWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'\n# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)\n# print(message.sid)\n####### Twilio configuration (SMS API) END #########################################################################################\n# Test mailtrap email",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "Twilio_client",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "Twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'\n# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)\n# print(message.sid)\n####### Twilio configuration (SMS API) END #########################################################################################\n# Test mailtrap email\n@app.route(\"/notification/mailtrap/test\", methods=['POST'])",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_FROM",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "TWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'\n# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)\n# print(message.sid)\n####### Twilio configuration (SMS API) END #########################################################################################\n# Test mailtrap email\n@app.route(\"/notification/mailtrap/test\", methods=['POST'])\ndef test_mailtrap():",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_TO",
+        "kind": 5,
+        "importPath": "backend.notification_microservice.notification",
+        "description": "backend.notification_microservice.notification",
+        "peekOfCode": "TWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'\n# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)\n# print(message.sid)\n####### Twilio configuration (SMS API) END #########################################################################################\n# Test mailtrap email\n@app.route(\"/notification/mailtrap/test\", methods=['POST'])\ndef test_mailtrap():\n    try:",
+        "detail": "backend.notification_microservice.notification",
+        "documentation": {}
+    },
+    {
+        "label": "Timeslot",
+        "kind": 6,
+        "importPath": "backend.timeslot_microservice.database.data.model.timeslot",
+        "description": "backend.timeslot_microservice.database.data.model.timeslot",
+        "peekOfCode": "class Timeslot:\n    def __init__(self, doctor_id, time_created, timeslot_datetime, duration_minutes=30, isAccepted=0):\n        self.doctor_id = doctor_id\n        self.time_created = time_created\n        self.timeslot_datetime = timeslot_datetime\n        self.duration_minutes = duration_minutes\n        self.isAccepted = isAccepted\n    @property\n    def getInfo(self):\n        return self.__dict__",
+        "detail": "backend.timeslot_microservice.database.data.model.timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "example",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.data.dataset1",
+        "description": "backend.timeslot_microservice.database.data.dataset1",
+        "peekOfCode": "def example():\n    timeslot = Timeslot(1, '2024-02-28 13:00:00', '2024-03-03 08:30:00')\n    print(timeslot.getInfo)\n# Dataset 1\ndef dataset1():\n    dataset = [\n            Timeslot(1, '2024-02-28 13:00:00', '2024-03-03 08:30:00', isAccepted=1),\n            Timeslot(1, '2024-02-28 13:01:00', '2024-03-03 09:30:00'),\n            Timeslot(1, '2024-02-28 13:02:00', '2024-03-03 10:30:00'),\n            Timeslot(1, '2024-02-28 13:03:00', '2024-03-03 11:30:00'),",
+        "detail": "backend.timeslot_microservice.database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "dataset1",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.data.dataset1",
+        "description": "backend.timeslot_microservice.database.data.dataset1",
+        "peekOfCode": "def dataset1():\n    dataset = [\n            Timeslot(1, '2024-02-28 13:00:00', '2024-03-03 08:30:00', isAccepted=1),\n            Timeslot(1, '2024-02-28 13:01:00', '2024-03-03 09:30:00'),\n            Timeslot(1, '2024-02-28 13:02:00', '2024-03-03 10:30:00'),\n            Timeslot(1, '2024-02-28 13:03:00', '2024-03-03 11:30:00'),\n            Timeslot(1, '2024-02-28 13:04:00', '2024-03-03 12:30:00', isAccepted=1),\n            Timeslot(1, '2024-02-28 13:05:00', '2024-03-03 13:30:00'),\n            Timeslot(1, '2024-02-28 13:06:00', '2024-03-03 14:30:00'),\n            Timeslot(1, '2024-02-28 13:07:00', '2024-03-03 15:30:00', isAccepted=1),",
+        "detail": "backend.timeslot_microservice.database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_config",
+        "description": "backend.timeslot_microservice.database.db_config",
+        "peekOfCode": "def connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):\n        d[col[0]] = row[idx]\n    return d",
+        "detail": "backend.timeslot_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "dict_factory",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_config",
+        "description": "backend.timeslot_microservice.database.db_config",
+        "peekOfCode": "def dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):\n        d[col[0]] = row[idx]\n    return d",
+        "detail": "backend.timeslot_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "db_name",
+        "kind": 5,
+        "importPath": "backend.timeslot_microservice.database.db_config",
+        "description": "backend.timeslot_microservice.database.db_config",
+        "peekOfCode": "db_name = 'timeslot.db'\npath = dirname(abspath(__file__))\nfull_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):",
+        "detail": "backend.timeslot_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "backend.timeslot_microservice.database.db_config",
+        "description": "backend.timeslot_microservice.database.db_config",
+        "peekOfCode": "path = dirname(abspath(__file__))\nfull_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}",
+        "detail": "backend.timeslot_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "full_path",
+        "kind": 5,
+        "importPath": "backend.timeslot_microservice.database.db_config",
+        "description": "backend.timeslot_microservice.database.db_config",
+        "peekOfCode": "full_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):",
+        "detail": "backend.timeslot_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "get_tables",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_timeslot",
+        "description": "backend.timeslot_microservice.database.db_timeslot",
+        "peekOfCode": "def get_tables():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"SELECT name FROM sqlite_schema\")\n    table_names = c.fetchall()\n    # (3) Close Connection\n    conn.close()\n    return table_names",
+        "detail": "backend.timeslot_microservice.database.db_timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "create_db",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_timeslot",
+        "description": "backend.timeslot_microservice.database.db_timeslot",
+        "peekOfCode": "def create_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Table\n    c.execute(\"\"\"CREATE TABLE IF NOT EXISTS timeslots (\n              id INTEGER PRIMARY KEY,\n              doctor_id INTEGER,\n              time_created TIMESTAMP,\n              timeslot_datetime TIMESTAMP,",
+        "detail": "backend.timeslot_microservice.database.db_timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "delete_db",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_timeslot",
+        "description": "backend.timeslot_microservice.database.db_timeslot",
+        "peekOfCode": "def delete_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Drop Table\n    c.execute(\"DROP TABLE IF EXISTS timeslots\")\n    # (3) Commit and Close\n    conn.commit()\n    conn.close()\n# Add Dataset ",
+        "detail": "backend.timeslot_microservice.database.db_timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "add_dataset",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_timeslot",
+        "description": "backend.timeslot_microservice.database.db_timeslot",
+        "peekOfCode": "def add_dataset(dataset):\n    # (1) Create Data\n    if dataset == \"dataset1\":\n        timeslots = dataset1()\n    # (2) Insert Data\n    for timeslot in timeslots:\n        check_and_insert_timeslot(timeslot.getInfo)\n# Check if doctor_id and timeslot_datetime Exists, then Insert User\ndef check_and_insert_timeslot(data):\n    if len(get_exact_timeslot(data)) > 0:",
+        "detail": "backend.timeslot_microservice.database.db_timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "check_and_insert_timeslot",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_timeslot",
+        "description": "backend.timeslot_microservice.database.db_timeslot",
+        "peekOfCode": "def check_and_insert_timeslot(data):\n    if len(get_exact_timeslot(data)) > 0:\n        return \"Timeslot Already Exists\"\n    create_timeslot_test(data)\n# Reset Database Tables\ndef reset_db():\n    print(\"Resetting Database ...\")\n    delete_db()\n    create_db()\n    print(\"Database Reset Complete!\")",
+        "detail": "backend.timeslot_microservice.database.db_timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_timeslot",
+        "description": "backend.timeslot_microservice.database.db_timeslot",
+        "peekOfCode": "def reset_db():\n    print(\"Resetting Database ...\")\n    delete_db()\n    create_db()\n    print(\"Database Reset Complete!\")\n    print(\"Current Tables:\", get_tables())\n# Reset Database Tables\ndef request_reset_db(dataset=\"empty\"):\n    if dataset == \"dataset1\":\n    # if type in [\"dataset1\", \"dataset2\"]:",
+        "detail": "backend.timeslot_microservice.database.db_timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "request_reset_db",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_timeslot",
+        "description": "backend.timeslot_microservice.database.db_timeslot",
+        "peekOfCode": "def request_reset_db(dataset=\"empty\"):\n    if dataset == \"dataset1\":\n    # if type in [\"dataset1\", \"dataset2\"]:\n        reset_db()\n        print(\"\\nAdding Dataset 1 ...\")\n        add_dataset(dataset)\n        print(\"Dataset 1 Added!\")\n        data = get_all_timeslots()\n        print(\"Current Database:\", data)\n        return (205, data)",
+        "detail": "backend.timeslot_microservice.database.db_timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "create_timeslot_test",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "description": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "peekOfCode": "def create_timeslot_test(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Timeslot\n    # print(data)\n    c.execute(\"\"\"INSERT INTO timeslots VALUES (\n              NULL,\n              :doctor_id,\n              :time_created,",
+        "detail": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_timeslots",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "description": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "peekOfCode": "def get_all_timeslots():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"SELECT * FROM timeslots\")\n    results = c.fetchall()\n    # (3) Close Connection\n    conn.close()\n    return results",
+        "detail": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_exact_timeslot",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "description": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "peekOfCode": "def get_exact_timeslot(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"\"\"SELECT * FROM timeslots\n              WHERE doctor_id=:doctor_id\n              AND timeslot_datetime=:timeslot_datetime\"\"\"\n            , data)\n    results = c.fetchall()",
+        "detail": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_timeslot_by_data",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "description": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "peekOfCode": "def get_timeslot_by_data(data, start_date=None, end_date=None):\n    # print(data, start_date, end_date)\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    keys = [\"id\", \"doctor_id\", \"timeslot_datetime\", \"isAccepted\"]\n    query = \"SELECT * FROM timeslots WHERE \"\n    for key in keys:\n        if key in data:",
+        "detail": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "documentation": {}
+    },
+    {
+        "label": "create_timeslot",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "description": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "peekOfCode": "def create_timeslot(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Timeslot\n    c.execute(\"\"\"INSERT INTO timeslots VALUES (\n              NULL,\n              :doctor_id,\n              :time_created,\n              :timeslot_datetime,",
+        "detail": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "documentation": {}
+    },
+    {
+        "label": "update_timeslot_isAccepted",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "description": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "peekOfCode": "def update_timeslot_isAccepted(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Update Timeslot\n    c.execute(\"\"\"UPDATE timeslots\n              SET isAccepted=:isAccepted\n              WHERE id=:id\"\"\"\n            , data)\n    # (3) Commit and Close",
+        "detail": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "documentation": {}
+    },
+    {
+        "label": "delete_timeslot_by_id",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "description": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "peekOfCode": "def delete_timeslot_by_id(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Delete Timeslot\n    c.execute(\"\"\"DELETE FROM timeslots\n              WHERE id=:id\"\"\"\n            , data)\n    # (3) Commit and Close\n    conn.commit()",
+        "detail": "backend.timeslot_microservice.database.db_timeslot_actions",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.timeslot",
+        "description": "backend.timeslot_microservice.timeslot",
+        "peekOfCode": "def reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:\n    - 205: Database reset\n    - 400: Invalid Dataset\n    Valid Datasets:\n    - \"empty\": No dataset",
+        "detail": "backend.timeslot_microservice.timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_timeslots_history",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.timeslot",
+        "description": "backend.timeslot_microservice.timeslot",
+        "peekOfCode": "def get_all_timeslots_history():\n    \"\"\"\n    Get Timeslots history\n    Returns:\n    - 200: All timeslots\n    - 404: No timeslots found\n    Example Response:\n    - {\"code\": 200, \"data\": [[...], [...], [...]]}\n    - {\"code\": 404, \"message\": \"No timeslots found\"}\n    \"\"\"",
+        "detail": "backend.timeslot_microservice.timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_timeslots_timerange",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.timeslot",
+        "description": "backend.timeslot_microservice.timeslot",
+        "peekOfCode": "def get_all_timeslots_timerange():\n    \"\"\"\n    Get All Timeslots\n    Returns:\n    - 200: All timeslots\n    - 404: No timeslots found\n    Example Request Payload:\n    - { \"data\": {...}, \"start_date\": \"2024-03-01\", \"end_date\": \"2024-03-31\"}\n    - {\"start_date\": \"2024-03-01\", \"end_date\": \"2024-03-31\"}\n    Example Response:",
+        "detail": "backend.timeslot_microservice.timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "create_timeslot_api",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.timeslot",
+        "description": "backend.timeslot_microservice.timeslot",
+        "peekOfCode": "def create_timeslot_api():\n    \"\"\"\n    Create time slot\n    Returns:\n    - 201: Time slot created\n    - 400: Invalid POST payload\n    - 400: Invalid datetime format\n    - 400: Time slot already exist for this doctor_id\n    Example Request Payload:\n    - { \"data\": { \"doctor_id\": 1, \"timeslot_datetime\": \"2024-10-27 08:00:00\"} }",
+        "detail": "backend.timeslot_microservice.timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "update_timeslot_isAccepted_api",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.timeslot",
+        "description": "backend.timeslot_microservice.timeslot",
+        "peekOfCode": "def update_timeslot_isAccepted_api(id):\n    \"\"\"\n    Update time slot isAccepted by id\n    Returns:\n    - 200: Time slot isAccepted updated to 1\n    - 200: Time slot isAccepted updated to 0\n    - 400: Invalid POST payload\n    - 400: Invalid isAccepted Value\n    - 404: No time slot found\n    Example Response:",
+        "detail": "backend.timeslot_microservice.timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "delete_timeslot_api",
+        "kind": 2,
+        "importPath": "backend.timeslot_microservice.timeslot",
+        "description": "backend.timeslot_microservice.timeslot",
+        "peekOfCode": "def delete_timeslot_api(id):\n    \"\"\"\n    Delete time slot by id\n    Returns:\n    - 200: Time slot deleted\n    - 404: No time slot found\n    Example Response:\n    - {\"code\": 200, \"message\": \"Time slot deleted\"}\n    - {\"code\": 404, \"message\": \"No time slot found\"}\n    \"\"\"",
+        "detail": "backend.timeslot_microservice.timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.timeslot_microservice.timeslot",
+        "description": "backend.timeslot_microservice.timeslot",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)  \n# Reset Database\n@app.route(\"/timeslot/reset/<string:dataset>\", methods=['POST'])\ndef reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:",
+        "detail": "backend.timeslot_microservice.timeslot",
+        "documentation": {}
+    },
+    {
+        "label": "Doctor",
+        "kind": 6,
+        "importPath": "backend.user_microservice.database.data.model.doctor",
+        "description": "backend.user_microservice.database.data.model.doctor",
+        "peekOfCode": "class Doctor:\n    def __init__(self, username, password, fname, lname, gender, position, salary, email, contactNo):\n        self.username = username\n        self.password = password\n        self.fname = fname\n        self.lname = lname\n        self.gender = gender\n        self.salutation = 'Dr.'\n        self.position = position\n        self.salary = salary",
+        "detail": "backend.user_microservice.database.data.model.doctor",
+        "documentation": {}
+    },
+    {
+        "label": "Nurse",
+        "kind": 6,
+        "importPath": "backend.user_microservice.database.data.model.nurse",
+        "description": "backend.user_microservice.database.data.model.nurse",
+        "peekOfCode": "class Nurse:\n    def __init__(self, username, password, fname, lname, gender, salutation, position, salary, email, contactNo):\n        self.username = username\n        self.password = password\n        self.fname = fname\n        self.lname = lname\n        self.gender = gender\n        self.salutation = salutation\n        self.position = position\n        self.salary = salary",
+        "detail": "backend.user_microservice.database.data.model.nurse",
+        "documentation": {}
+    },
+    {
+        "label": "Patient",
+        "kind": 6,
+        "importPath": "backend.user_microservice.database.data.model.patient",
+        "description": "backend.user_microservice.database.data.model.patient",
+        "peekOfCode": "class Patient:\n    def __init__(self, username, password, fname, lname, age, gender, salutation, email, contactNo):\n        self.username = username\n        self.password = password\n        self.fname = fname\n        self.lname = lname\n        self.age = age\n        self.gender = gender\n        self.salutation = salutation\n        self.email = email",
+        "detail": "backend.user_microservice.database.data.model.patient",
+        "documentation": {}
+    },
+    {
+        "label": "example",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.data.dataset1",
+        "description": "backend.user_microservice.database.data.dataset1",
+        "peekOfCode": "def example():\n    patient = Patient('pat1', 'pass123', 'Dwight', 'Schrute', 38, 'M', 'Mr', 'Pdwight.schrute@gmail.com', '9425 6214')\n    nurse = Nurse('nur1', 'pass123', 'Pam', 'Beesly', 'F', 'Ms', 'Intern', 1200, 'pam.beasly@yata.com', '8555 7555')\n    doc = Doctor('doc1', 'pass123', 'Michael', 'Scott', 'M', 'Senior Doctor', 10000, 'micheal.scott@yata.com', '8323 5123')\n    print(patient.getInfo)\n    print(nurse.getInfo)\n    print(doc.getInfo)\n# Dataset 1\ndef dataset1(type):\n    dataset = {",
+        "detail": "backend.user_microservice.database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "dataset1",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.data.dataset1",
+        "description": "backend.user_microservice.database.data.dataset1",
+        "peekOfCode": "def dataset1(type):\n    dataset = {\n        \"patients\": [Patient('pat1', 'pass123', 'Dwight', 'Schrute', 38, 'M', 'Mr', 'Pdwight.schrute@gmail.com', '9425 6214')],\n        \"nurses\": [Nurse('nur1', 'pass123', 'Pam', 'Beesly', 'F', 'Ms', 'Intern', 1200, 'pam.beasly@yata.com', '8555 7555')],\n        \"doctors\": [Doctor('doc1', 'pass123', 'Michael', 'Scott', 'M', 'Senior Doctor', 10000, 'micheal.scott@yata.com', '8323 5123')]\n    }\n    return dataset[type]",
+        "detail": "backend.user_microservice.database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_config",
+        "description": "backend.user_microservice.database.db_config",
+        "peekOfCode": "def connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):\n        d[col[0]] = row[idx]\n    return d",
+        "detail": "backend.user_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "dict_factory",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_config",
+        "description": "backend.user_microservice.database.db_config",
+        "peekOfCode": "def dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):\n        d[col[0]] = row[idx]\n    return d",
+        "detail": "backend.user_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "db_name",
+        "kind": 5,
+        "importPath": "backend.user_microservice.database.db_config",
+        "description": "backend.user_microservice.database.db_config",
+        "peekOfCode": "db_name = 'user.db'\npath = dirname(abspath(__file__))\nfull_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):",
+        "detail": "backend.user_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "backend.user_microservice.database.db_config",
+        "description": "backend.user_microservice.database.db_config",
+        "peekOfCode": "path = dirname(abspath(__file__))\nfull_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}",
+        "detail": "backend.user_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "full_path",
+        "kind": 5,
+        "importPath": "backend.user_microservice.database.db_config",
+        "description": "backend.user_microservice.database.db_config",
+        "peekOfCode": "full_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):",
+        "detail": "backend.user_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "get_tables",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_user",
+        "description": "backend.user_microservice.database.db_user",
+        "peekOfCode": "def get_tables():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"SELECT name FROM sqlite_schema\")\n    table_names = c.fetchall()\n    # (3) Close Connection\n    conn.close()\n    return table_names",
+        "detail": "backend.user_microservice.database.db_user",
+        "documentation": {}
+    },
+    {
+        "label": "create_db",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_user",
+        "description": "backend.user_microservice.database.db_user",
+        "peekOfCode": "def create_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Table\n    c.execute(\"\"\"CREATE TABLE IF NOT EXISTS patients (\n              id INTEGER PRIMARY KEY,\n              username TEXT,\n              password TEXT,\n              fname TEXT,",
+        "detail": "backend.user_microservice.database.db_user",
+        "documentation": {}
+    },
+    {
+        "label": "delete_db",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_user",
+        "description": "backend.user_microservice.database.db_user",
+        "peekOfCode": "def delete_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Drop Table\n    c.execute(\"DROP TABLE IF EXISTS patients\")\n    c.execute(\"DROP TABLE IF EXISTS nurses\")\n    c.execute(\"DROP TABLE IF EXISTS doctors\")\n    # (3) Commit and Close\n    conn.commit()",
+        "detail": "backend.user_microservice.database.db_user",
+        "documentation": {}
+    },
+    {
+        "label": "add_dataset",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_user",
+        "description": "backend.user_microservice.database.db_user",
+        "peekOfCode": "def add_dataset(dataset):\n    # (1) Create Data\n    if dataset == \"dataset1\":\n        patients = dataset1(\"patients\")\n        nurses = dataset1(\"nurses\")\n        doctors = dataset1(\"doctors\")\n    # (2) Insert Data\n    for patient in patients:\n        check_and_insert_user(\"patients\", patient.getInfo)\n    for nurse in nurses:",
+        "detail": "backend.user_microservice.database.db_user",
+        "documentation": {}
+    },
+    {
+        "label": "check_and_insert_user",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_user",
+        "description": "backend.user_microservice.database.db_user",
+        "peekOfCode": "def check_and_insert_user(type, data):\n    if get_user_by_username(type, data[\"username\"]):\n        return \"User Already Exists\"\n    create_user(type, data)\n# Reset Database Tables\ndef reset_db():\n    print(\"Resetting Database ...\")\n    delete_db()\n    create_db()\n    print(\"Database Reset Complete!\")",
+        "detail": "backend.user_microservice.database.db_user",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_user",
+        "description": "backend.user_microservice.database.db_user",
+        "peekOfCode": "def reset_db():\n    print(\"Resetting Database ...\")\n    delete_db()\n    create_db()\n    print(\"Database Reset Complete!\")\n    print(\"Current Tables:\", get_tables())\n# Reset Database Tables\ndef request_reset_db(dataset=\"empty\"):\n    if dataset == \"dataset1\":\n    # if type in [\"dataset1\", \"dataset2\"]:",
+        "detail": "backend.user_microservice.database.db_user",
+        "documentation": {}
+    },
+    {
+        "label": "request_reset_db",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_user",
+        "description": "backend.user_microservice.database.db_user",
+        "peekOfCode": "def request_reset_db(dataset=\"empty\"):\n    if dataset == \"dataset1\":\n    # if type in [\"dataset1\", \"dataset2\"]:\n        reset_db()\n        print(\"\\nAdding Dataset 1 ...\")\n        add_dataset(dataset)\n        print(\"Dataset 1 Added!\")\n        data = get_all_user()[1]\n        print(\"Current Database:\", data)\n        return (205, data)",
+        "detail": "backend.user_microservice.database.db_user",
+        "documentation": {}
+    },
+    {
+        "label": "test_cases",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_user",
+        "description": "backend.user_microservice.database.db_user",
+        "peekOfCode": "def test_cases():\n    request_reset_db() # Returns 'Database reset! No Dataset was used'\n    request_reset_db(\"dataset1\")\n    request_reset_db(\"dataset2\") # Database was not reset. Invalid Dataset: {dataset}\n    request_reset_db(\"yo\") # Database was not reset. Invalid Dataset: {dataset}\n    # db_user_actions.py\n    print(get_all_user())\n    print(get_all_user(\"patients\"))\n    print(get_all_user(\"nurses\"))\n    print(get_all_user(\"doctors\"))",
+        "detail": "backend.user_microservice.database.db_user",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_user",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_user_actions",
+        "description": "backend.user_microservice.database.db_user_actions",
+        "peekOfCode": "def get_all_user(type=\"all\"):\n    if type in [\"patients\", \"nurses\", \"doctors\"]:\n        # (1) Database Connection\n        conn = connect_db()\n        c = conn.cursor()\n        # (2) Retrieve results\n        c.execute(f\"SELECT * FROM {type}\")\n        results = c.fetchall()\n        # (3) Commit and Close\n        conn.commit()",
+        "detail": "backend.user_microservice.database.db_user_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_by_id",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_user_actions",
+        "description": "backend.user_microservice.database.db_user_actions",
+        "peekOfCode": "def get_user_by_id(type, id):\n    if type in [\"patients\", \"nurses\", \"doctors\"]:\n        # (1) Database Connection\n        conn = connect_db()\n        c = conn.cursor()\n        # (2) Retrieve results\n        c.execute(f\"SELECT * FROM {type} WHERE id=:id\",\n                   {\"id\": id})\n        results = c.fetchone()\n        # (3) Commit and Close",
+        "detail": "backend.user_microservice.database.db_user_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_by_username",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_user_actions",
+        "description": "backend.user_microservice.database.db_user_actions",
+        "peekOfCode": "def get_user_by_username(type, username):\n    if type in [\"patients\", \"nurses\", \"doctors\"]:\n        # (1) Database Connection\n        conn = connect_db()\n        c = conn.cursor()\n        # (2) Retrieve results\n        c.execute(f\"SELECT * FROM {type} WHERE username=:username\",\n                   {\"username\": username})\n        results = c.fetchone()\n        # (3) Commit and Close",
+        "detail": "backend.user_microservice.database.db_user_actions",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_user_actions",
+        "description": "backend.user_microservice.database.db_user_actions",
+        "peekOfCode": "def login_user(type, username, password):\n    if type in [\"patients\", \"nurses\", \"doctors\"]:\n        # (1) Database Connection\n        conn = connect_db()\n        c = conn.cursor()\n        # (2) Retrieve results\n        c.execute(f\"SELECT id FROM {type} WHERE username=:username AND password=:password\",\n                   {\"username\": username, \"password\": password})\n        results = c.fetchone()\n        # (3) Commit and Close",
+        "detail": "backend.user_microservice.database.db_user_actions",
+        "documentation": {}
+    },
+    {
+        "label": "create_user",
+        "kind": 2,
+        "importPath": "backend.user_microservice.database.db_user_actions",
+        "description": "backend.user_microservice.database.db_user_actions",
+        "peekOfCode": "def create_user(type, data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create User\n    if type == \"patients\":\n        c.execute(\"\"\"INSERT INTO patients VALUES (\n                    NULL,\n                    :username,\n                    :password,",
+        "detail": "backend.user_microservice.database.db_user_actions",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "backend.user_microservice.user",
+        "description": "backend.user_microservice.user",
+        "peekOfCode": "def reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:\n    - 205: Database reset\n    - 400: Invalid Dataset\n    Valid Datasets:\n    - \"empty\": No dataset",
+        "detail": "backend.user_microservice.user",
+        "documentation": {}
+    },
+    {
+        "label": "get_all",
+        "kind": 2,
+        "importPath": "backend.user_microservice.user",
+        "description": "backend.user_microservice.user",
+        "peekOfCode": "def get_all(usertype):\n    \"\"\"\n    Get All Users\n    Returns:\n    - 200: All users\n    - 200: Patients, Nurses, or Doctors\n    - 400: Invalid User Type\n    - 404: No users found\n    Valid UserTypes:\n    - \"all\"",
+        "detail": "backend.user_microservice.user",
+        "documentation": {}
+    },
+    {
+        "label": "get_by_id",
+        "kind": 2,
+        "importPath": "backend.user_microservice.user",
+        "description": "backend.user_microservice.user",
+        "peekOfCode": "def get_by_id(usertype, id):\n    \"\"\"\n    Get User by ID\n    Returns:\n    - 200: User found\n    - 400: Invalid User Type\n    - 404: No user found\n    Valid UserTypes:\n    - \"patients\"\n    - \"nurses\"",
+        "detail": "backend.user_microservice.user",
+        "documentation": {}
+    },
+    {
+        "label": "insert",
+        "kind": 2,
+        "importPath": "backend.user_microservice.user",
+        "description": "backend.user_microservice.user",
+        "peekOfCode": "def insert(usertype):\n    \"\"\"\n    Insert User\n    Returns:\n    - 201: User created\n    - 400: Invalid User Type\n    - 500: An error occurred while creating the user\n    Valid UserTypes:\n    - \"patients\"\n    - \"nurses\"",
+        "detail": "backend.user_microservice.user",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "backend.user_microservice.user",
+        "description": "backend.user_microservice.user",
+        "peekOfCode": "def login(usertype):\n    \"\"\"\n    Login User\n    Returns:\n    - 200: User logged in\n    - 400: Invalid User Type\n    - 400: Invalid Credentials\n    Valid UserTypes:\n    - \"patients\"\n    - \"nurses\"",
+        "detail": "backend.user_microservice.user",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.user_microservice.user",
+        "description": "backend.user_microservice.user",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)  \n# Reset Database\n@app.route(\"/user/reset/<string:dataset>\", methods=['POST'])\ndef reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:",
+        "detail": "backend.user_microservice.user",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.flatted",
+        "description": "frontend.healthy_app.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.flatted",
+        "description": "frontend.healthy_app.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0\n    for _ in value:\n        keys.append(i)\n        i += 1\n    return keys",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.flatted",
+        "description": "frontend.healthy_app.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.flatted",
+        "description": "frontend.healthy_app.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "def stringify(value):\n    return _stringify(value, separators=(',', ':'))\nassert stringify([None, None]) == '[[null,null]]'\na = []\no = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "a = []\no = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o",
+        "kind": 5,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "o = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['o']",
+        "kind": 5,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "o['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)\na.append('two')\na.append(True)\no['one'] = 1\no['two'] = 'two'",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "b = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)\na.append('two')\na.append(True)\no['one'] = 1\no['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['one']",
+        "kind": 5,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "o['one'] = 1\no['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['two']",
+        "kind": 5,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "o['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['three']",
+        "kind": 5,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "o['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])\no['test'] = {'test': 'OK'}",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['a']",
+        "kind": 5,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "o['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])\no['test'] = {'test': 'OK'}\no['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['test']",
+        "kind": 5,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "o['test'] = {'test': 'OK'}\no['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['array']",
+        "kind": 5,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "o['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "a2",
+        "kind": 5,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "a2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o2",
+        "kind": 5,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "o2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "str",
+        "kind": 5,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "str = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "oo",
+        "kind": 5,
+        "importPath": "frontend.healthy_app.node_modules.flatted.python.test",
+        "description": "frontend.healthy_app.node_modules.flatted.python.test",
+        "peekOfCode": "oo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "frontend.healthy_app.node_modules.flatted.python.test",
+        "documentation": {}
+    }
+]

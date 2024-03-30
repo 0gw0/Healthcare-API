@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "54e5d438-a74f-45f6-87c9-1d781f9d1542",
+		"_postman_id": "e2134401-755f-406b-a1e3-a225ad0dc199",
 		"name": "IS213 G3T8 manage_booking_complex_microservice",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "32110674"
+		"_exporter_id": "19296040"
 	},
 	"item": [
 		{
@@ -21,22 +21,68 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5101/make_appointment/2",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
+					"raw": "localhost:5101/make_appointment/2",
+					"host": ["localhost"],
 					"port": "5101",
-					"path": [
-						"make_appointment",
-						"2"
-					]
+					"path": ["make_appointment", "2"]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "200 - Make an appointment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patient_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5101/make_appointment/2",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "5101",
+							"path": ["make_appointment", "2"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Mar 2024 09:25:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"success\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Cancel an appointment",
@@ -46,20 +92,339 @@
 				"url": {
 					"raw": "http://127.0.0.1:5101/cancel_appointment/2",
 					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
+					"host": ["127", "0", "0", "1"],
 					"port": "5101",
-					"path": [
-						"cancel_appointment",
-						"2"
-					]
+					"path": ["cancel_appointment", "2"]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "200 - Cancel an appointment",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5101/cancel_appointment/2",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "5101",
+							"path": ["cancel_appointment", "2"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Mar 2024 09:26:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Kong make appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"patient_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/make_appointment/2",
+					"host": ["localhost"],
+					"port": "8000",
+					"path": ["api", "v1", "make_appointment", "2"]
+				}
+			},
+			"response": [
+				{
+					"name": "200 - make appointment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patient_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/make_appointment/6",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "make_appointment", "6"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.12.2"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Mar 2024 02:00:45 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "30"
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "3"
+						},
+						{
+							"key": "Via",
+							"value": "kong/3.2.2.5-enterprise-edition"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"success\"\n}"
+				},
+				{
+					"name": "400 - Appointment exists",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patient_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/make_appointment/2",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "make_appointment", "2"]
+						}
+					},
+					"status": "NOT IMPLEMENTED",
+					"code": 501,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.12.2"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Mar 2024 02:01:27 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "48"
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "10"
+						},
+						{
+							"key": "Via",
+							"value": "kong/3.2.2.5-enterprise-edition"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"error_message\": \"Existing id. Note: There will never be an API call with an existing id.\",\n    \"message\": \"Failed. However, timeslot is updated to isAccepted=1. Please reset the demo dataset1.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Kong cancel appointment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/cancel_appointment/2",
+					"host": ["localhost"],
+					"port": "8000",
+					"path": ["api", "v1", "cancel_appointment", "2"]
+				}
+			},
+			"response": [
+				{
+					"name": "200 - cancel appointment",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/v1/cancel_appointment/2",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "cancel_appointment", "2"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.12.2"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Mar 2024 02:06:49 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "44"
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "8"
+						},
+						{
+							"key": "Via",
+							"value": "kong/3.2.2.5-enterprise-edition"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"success\"\n}"
+				},
+				{
+					"name": "404 - No appointment found",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/v1/cancel_appointment/2",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "cancel_appointment", "2"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.12.2"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Mar 2024 02:07:26 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "46"
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "7"
+						},
+						{
+							"key": "Via",
+							"value": "kong/3.2.2.5-enterprise-edition"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 404,\n    \"error_message\": \"No appointment found\",\n    \"message\": \"fail\"\n}"
+				}
+			]
 		}
 	]
 }

@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "41912905-ba51-4e4d-8977-89d5a64dcad3",
+		"_postman_id": "7a56dbb9-255a-43d7-8ba3-d6d71e00d899",
 		"name": "IS213 G3T8 user_microservice",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "32110674"
+		"_exporter_id": "26201401"
 	},
 	"item": [
 		{
@@ -31,7 +31,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - Database Reset - Wrong URL FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/reset/obviously_wrong",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"reset",
+										"obviously_wrong"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:05:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Database was not reset. Invalid Dataset: obviously_wrong\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Database Reset - Empty",
@@ -55,7 +110,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "205 - Database Reset - Empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/reset/empty",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"reset",
+										"empty"
+									]
+								}
+							},
+							"status": "RESET CONTENT",
+							"code": 205,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:05:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 205,\n    \"message\": \"Database reset! No Dataset was used\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Get ALL User - Empty FAIL",
@@ -90,7 +200,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "404 - Get ALL User - Empty FAIL",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/users/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"users",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:06:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No users found\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Database Reset - With Dataset",
@@ -114,7 +279,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "205 - Database Reset - With Dataset",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/reset/dataset1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"reset",
+										"dataset1"
+									]
+								}
+							},
+							"status": "RESET CONTENT",
+							"code": 205,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:06:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "926"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 205,\n    \"data_created\": [\n        {\n            \"age\": 38,\n            \"contactNo\": \"9425 6214\",\n            \"email\": \"Pdwight.schrute@gmail.com\",\n            \"fname\": \"Dwight\",\n            \"gender\": \"M\",\n            \"id\": 1,\n            \"lname\": \"Schrute\",\n            \"password\": \"pass123\",\n            \"salutation\": \"Mr\",\n            \"username\": \"pat1\"\n        },\n        {\n            \"contactNo\": \"8555 7555\",\n            \"email\": \"pam.beasly@yata.com\",\n            \"fname\": \"Pam\",\n            \"gender\": \"F\",\n            \"id\": 1,\n            \"lname\": \"Beesly\",\n            \"password\": \"pass123\",\n            \"position\": \"Intern\",\n            \"salary\": 1200,\n            \"salutation\": \"Ms\",\n            \"username\": \"nur1\"\n        },\n        {\n            \"contactNo\": \"8323 5123\",\n            \"email\": \"micheal.scott@yata.com\",\n            \"fname\": \"Michael\",\n            \"gender\": \"M\",\n            \"id\": 1,\n            \"lname\": \"Scott\",\n            \"password\": \"pass123\",\n            \"position\": \"Senior Doctor\",\n            \"salary\": 10000,\n            \"salutation\": \"Dr.\",\n            \"username\": \"doc1\"\n        }\n    ]\n}"
+						}
+					]
 				}
 			]
 		},
@@ -143,7 +363,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - Get ALL User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/users/get/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"users",
+										"get",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:07:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "918"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"age\": 38,\n            \"contactNo\": \"9425 6214\",\n            \"email\": \"Pdwight.schrute@gmail.com\",\n            \"fname\": \"Dwight\",\n            \"gender\": \"M\",\n            \"id\": 1,\n            \"lname\": \"Schrute\",\n            \"password\": \"pass123\",\n            \"salutation\": \"Mr\",\n            \"username\": \"pat1\"\n        },\n        {\n            \"contactNo\": \"8555 7555\",\n            \"email\": \"pam.beasly@yata.com\",\n            \"fname\": \"Pam\",\n            \"gender\": \"F\",\n            \"id\": 1,\n            \"lname\": \"Beesly\",\n            \"password\": \"pass123\",\n            \"position\": \"Intern\",\n            \"salary\": 1200,\n            \"salutation\": \"Ms\",\n            \"username\": \"nur1\"\n        },\n        {\n            \"contactNo\": \"8323 5123\",\n            \"email\": \"micheal.scott@yata.com\",\n            \"fname\": \"Michael\",\n            \"gender\": \"M\",\n            \"id\": 1,\n            \"lname\": \"Scott\",\n            \"password\": \"pass123\",\n            \"position\": \"Senior Doctor\",\n            \"salary\": 10000,\n            \"salutation\": \"Dr.\",\n            \"username\": \"doc1\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "Get ALL User - Patients",
@@ -167,7 +442,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - Get ALL User - Patients",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/users/get/patients",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"users",
+										"get",
+										"patients"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:08:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "307"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"age\": 38,\n            \"contactNo\": \"9425 6214\",\n            \"email\": \"Pdwight.schrute@gmail.com\",\n            \"fname\": \"Dwight\",\n            \"gender\": \"M\",\n            \"id\": 1,\n            \"lname\": \"Schrute\",\n            \"password\": \"pass123\",\n            \"salutation\": \"Mr\",\n            \"username\": \"pat1\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "Get ALL User - Nurses",
@@ -191,7 +521,62 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - Get ALL User - Nurses",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/users/get/nurses",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"users",
+										"get",
+										"nurses"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:08:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "332"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"contactNo\": \"8555 7555\",\n            \"email\": \"pam.beasly@yata.com\",\n            \"fname\": \"Pam\",\n            \"gender\": \"F\",\n            \"id\": 1,\n            \"lname\": \"Beesly\",\n            \"password\": \"pass123\",\n            \"position\": \"Intern\",\n            \"salary\": 1200,\n            \"salutation\": \"Ms\",\n            \"username\": \"nur1\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "Get ALL User - Doctors",
@@ -215,10 +600,65 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - Get ALL User - Doctors",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/users/get/doctors",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"users",
+										"get",
+										"doctors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:09:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "347"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"contactNo\": \"8323 5123\",\n            \"email\": \"micheal.scott@yata.com\",\n            \"fname\": \"Michael\",\n            \"gender\": \"M\",\n            \"id\": 1,\n            \"lname\": \"Scott\",\n            \"password\": \"pass123\",\n            \"position\": \"Senior Doctor\",\n            \"salary\": 10000,\n            \"salutation\": \"Dr.\",\n            \"username\": \"doc1\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
-					"name": "Get ALL User - FAIL",
+					"name": "400 - Get ALL User - FAIL",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -269,7 +709,63 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - Get a User by ID - Patient",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/get/patients/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"get",
+										"patients",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:09:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "275"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"age\": 38,\n        \"contactNo\": \"9425 6214\",\n        \"email\": \"Pdwight.schrute@gmail.com\",\n        \"fname\": \"Dwight\",\n        \"gender\": \"M\",\n        \"id\": 1,\n        \"lname\": \"Schrute\",\n        \"password\": \"pass123\",\n        \"salutation\": \"Mr\",\n        \"username\": \"pat1\"\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Get a User by ID - Nurse",
@@ -294,7 +790,63 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - Get a User by ID - Nurse",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/get/nurses/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"get",
+										"nurses",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:10:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "298"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"contactNo\": \"8555 7555\",\n        \"email\": \"pam.beasly@yata.com\",\n        \"fname\": \"Pam\",\n        \"gender\": \"F\",\n        \"id\": 1,\n        \"lname\": \"Beesly\",\n        \"password\": \"pass123\",\n        \"position\": \"Intern\",\n        \"salary\": 1200,\n        \"salutation\": \"Ms\",\n        \"username\": \"nur1\"\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Get a User by ID - Doctor",
@@ -319,7 +871,63 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - Get a User by ID - Doctor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/get/doctors/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"get",
+										"doctors",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:10:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "313"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"contactNo\": \"8323 5123\",\n        \"email\": \"micheal.scott@yata.com\",\n        \"fname\": \"Michael\",\n        \"gender\": \"M\",\n        \"id\": 1,\n        \"lname\": \"Scott\",\n        \"password\": \"pass123\",\n        \"position\": \"Senior Doctor\",\n        \"salary\": 10000,\n        \"salutation\": \"Dr.\",\n        \"username\": \"doc1\"\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Get a User by ID - User Not Found",
@@ -344,7 +952,63 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "404 - Get a User by ID - User Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/get/doctors/999999",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"get",
+										"doctors",
+										"999999"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:11:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "48"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No user found\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Get a User by ID - Wrong URL FAIL",
@@ -369,7 +1033,63 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - Get a User by ID - Wrong URL FAIL",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/get/obviouslt_wrong/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"get",
+										"obviouslt_wrong",
+										"1"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:11:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid User Type\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -407,7 +1127,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "201 - Create User - Patient",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"bigbaby\",\r\n    \"password\": \"pass123\",\r\n    \"fname\": \"Finn\",\r\n    \"lname\": \"Mertens\",\r\n    \"age\": \"16\",\r\n    \"gender\": \"M\",\r\n    \"salutation\": \"Mr\",\r\n    \"email\": \"finn.mertens@gmail.com\",\r\n    \"contactNo\": \"9123 5123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/create/patients",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"create",
+										"patients"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:12:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "302"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"data\": {\n        \"age\": 16,\n        \"contactNo\": \"9123 5123\",\n        \"email\": \"finn.mertens@gmail.com\",\n        \"fname\": \"Finn\",\n        \"gender\": \"M\",\n        \"id\": 2,\n        \"lname\": \"Mertens\",\n        \"password\": \"pass123\",\n        \"salutation\": \"Mr\",\n        \"username\": \"bigbaby\"\n    },\n    \"message\": \"User created\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Create User - Patient User Exists FAIL",
@@ -440,7 +1224,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - Create User - Patient User Exists FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"pat1\",\r\n    \"password\": \"pass123\",\r\n    \"fname\": \"Finn\",\r\n    \"lname\": \"Mertens\",\r\n    \"age\": \"16\",\r\n    \"gender\": \"M\",\r\n    \"salutation\": \"Mr\",\r\n    \"email\": \"finn.mertens@gmail.com\",\r\n    \"contactNo\": \"9123 5123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/create/patients",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"create",
+										"patients"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:12:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Username is taken\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Create User - Nurse",
@@ -473,7 +1321,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "201 - Create User - Nurse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"pancakes\",\r\n    \"password\": \"pass123\",\r\n    \"fname\": \"Jake\",\r\n    \"lname\": \"Doge\",\r\n    \"gender\": \"M\",\r\n    \"salutation\": \"Mr\",\r\n    \"position\": \"Senior Nurse\",\r\n    \"salary\": 4000,\r\n    \"email\": \"jake.doge@yata.com\",\r\n    \"contactNo\": \"8460 2732\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/create/nurses",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"create",
+										"nurses"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:12:55 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "335"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"data\": {\n        \"contactNo\": \"8460 2732\",\n        \"email\": \"jake.doge@yata.com\",\n        \"fname\": \"Jake\",\n        \"gender\": \"M\",\n        \"id\": 2,\n        \"lname\": \"Doge\",\n        \"password\": \"pass123\",\n        \"position\": \"Senior Nurse\",\n        \"salary\": 4000,\n        \"salutation\": \"Mr\",\n        \"username\": \"pancakes\"\n    },\n    \"message\": \"User created\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Create User - Nurse User Exists FAIL",
@@ -506,7 +1418,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - Create User - Nurse User Exists FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"nur1\",\r\n    \"password\": \"pass123\",\r\n    \"fname\": \"Jake\",\r\n    \"lname\": \"Doge\",\r\n    \"gender\": \"M\",\r\n    \"salutation\": \"Mr\",\r\n    \"position\": \"Senior Nurse\",\r\n    \"salary\": 4000,\r\n    \"email\": \"jake.doge@yata.com\",\r\n    \"contactNo\": \"8460 2732\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/create/nurses",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"create",
+										"nurses"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:13:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Username is taken\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Create User - Doctor",
@@ -539,7 +1515,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "201 - Create User - Doctor",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"princess\",\r\n    \"password\": \"pass123\",\r\n    \"fname\": \"Bonnibel\",\r\n    \"lname\": \"Bubblegum\",\r\n    \"gender\": \"F\",\r\n    \"salutation\": \"Dr\",\r\n    \"position\": \"Junior Doctor\",\r\n    \"salary\": 7000,\r\n    \"email\": \"bonnibel@yata.com\",\r\n    \"contactNo\": \"8000 2153\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/create/doctors",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"create",
+										"doctors"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:13:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "344"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"data\": {\n        \"contactNo\": \"8000 2153\",\n        \"email\": \"bonnibel@yata.com\",\n        \"fname\": \"Bonnibel\",\n        \"gender\": \"F\",\n        \"id\": 2,\n        \"lname\": \"Bubblegum\",\n        \"password\": \"pass123\",\n        \"position\": \"Junior Doctor\",\n        \"salary\": 7000,\n        \"salutation\": \"Dr\",\n        \"username\": \"princess\"\n    },\n    \"message\": \"User created\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Create User - Doctor User Exists FAIL",
@@ -572,7 +1612,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - Create User - Doctor User Exists FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"doc1\",\r\n    \"password\": \"pass123\",\r\n    \"fname\": \"Bonnibel\",\r\n    \"lname\": \"Bubblegum\",\r\n    \"gender\": \"F\",\r\n    \"salutation\": \"Dr\",\r\n    \"position\": \"Junior Doctor\",\r\n    \"salary\": 7000,\r\n    \"email\": \"bonnibel@yata.com\",\r\n    \"contactNo\": \"8000 2153\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/create/doctors",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"create",
+										"doctors"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:14:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Username is taken\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Create User - Invalid Payload FAIL",
@@ -605,7 +1709,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - Create User - Invalid Payload FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"SickMan\",\r\n    \"fname\": \"Martin\",\r\n    \"lname\": \"Mertens\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/create/patients",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"create",
+										"patients"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:14:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid POST payload.\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Create User - Invalid Usertype FAIL",
@@ -638,7 +1806,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - Create User - Invalid Usertype FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"Doctorasd\",\r\n    \"password\": \"pass123\",\r\n    \"fname\": \"Bonnibel\",\r\n    \"lname\": \"Bubblegum\",\r\n    \"gender\": \"F\",\r\n    \"salutation\": \"Dr\",\r\n    \"position\": \"Junior Doctor\",\r\n    \"salary\": 7000,\r\n    \"email\": \"bonnibel@yata.com\",\r\n    \"contactNo\": \"8000 2153\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/create/obviously_wrong",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"create",
+										"obviously_wrong"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:14:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid User Type\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -676,7 +1908,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - Login - Patient",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"pat1\",\r\n    \"password\": \"pass123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/login/patients",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"login",
+										"patients"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:15:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "93"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"id\": 1\n    },\n    \"message\": \"Patient Credentials are Valid\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Login - Patients FAIL",
@@ -709,7 +2005,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - Login - Patients FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"obviously_wrong\",\r\n    \"password\": \"pass123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/login/patients",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"login",
+										"patients"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:15:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid Credentials\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Login - Nurse",
@@ -742,7 +2102,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - Login - Nurse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"nur1\",\r\n    \"password\": \"pass123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/login/nurses",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"login",
+										"nurses"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:16:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"id\": 1\n    },\n    \"message\": \"Nurse Credentials are Valid\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Login - Nurse FAIL",
@@ -775,7 +2199,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - Login - Nurse FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"obviously_wrong\",\r\n    \"password\": \"pass123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/login/nurses",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"login",
+										"nurses"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:16:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid Credentials\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Login - Doctor",
@@ -808,7 +2296,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 - Login - Doctor",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"doc1\",\r\n    \"password\": \"pass123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/login/doctors",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"login",
+										"doctors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:16:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"id\": 1\n    },\n    \"message\": \"Doctor Credentials are Valid\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Login - Doctor FAIL",
@@ -841,7 +2393,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - Login - Doctor FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"obviously_wrong\",\r\n    \"password\": \"pass123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/login/doctors",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"login",
+										"doctors"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:17:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid Credentials\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Login - Usertype FAIL",
@@ -874,7 +2490,71 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "400 - Login - Usertype FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"Doctorasd\",\r\n    \"password\": \"pass123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/user/login/obviously_wrong",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"user",
+										"login",
+										"obviously_wrong"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 09:17:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid User Type\"\n}"
+						}
+					]
 				}
 			]
 		}

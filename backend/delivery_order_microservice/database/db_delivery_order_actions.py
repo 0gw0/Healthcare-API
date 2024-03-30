@@ -1,7 +1,7 @@
 # Database Connection
 from database.db_config import connect_db
 
-# Create Delivery order for testing
+# Create Delivery order
 def create_delivery_order(data):
     # (1) Database Connection
     conn = connect_db()

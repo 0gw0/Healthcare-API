@@ -1,0 +1,157 @@
+services:
+    #######################################################
+    # User: The user microservice
+    #######################################################
+    user_microservice:
+        build:
+            context: ./user_microservice
+            dockerfile: Dockerfile
+        image: yata/user:1.0
+        restart: always
+        ports:
+            - '5001:5001'
+        environment:
+            PYTHONUNBUFFERED: 1
+
+    #######################################################
+    # Timeslot: The time slot microservice
+    #######################################################
+    timeslot_microservice:
+        build:
+            context: ./timeslot_microservice
+            dockerfile: Dockerfile
+        image: yata/timeslot:1.0
+        restart: always
+        ports:
+            - '5002:5002'
+        environment:
+            PYTHONUNBUFFERED: 1
+
+    ###################################
+    # Appointment: The appointment microservice
+    ###################################
+    appointment_microservice:
+        build:
+            context: ./appointment_microservice
+            dockerfile: Dockerfile
+        image: yata/appointment:1.0
+        restart: always
+        ports:
+            - '5003:5003'
+        environment:
+            PYTHONUNBUFFERED: 1
+
+    ###################################
+    # Notification: The notification microservice
+    ###################################
+    notification_microservice:
+        build:
+            context: ./notification_microservice
+            dockerfile: Dockerfile
+        image: yata/notification:1.0
+        restart: always
+        ports:
+            - '5004:5004'
+        environment:
+            PYTHONUNBUFFERED: 1
+
+    ###################################
+    # Inventory: The inventory microservice
+    ###################################
+    inventory_microservice:
+        build:
+            context: ./inventory_microservice
+            dockerfile: Dockerfile
+        image: yata/inventory:1.0
+        restart: always
+        ports:
+            - '5005:5005'
+        environment:
+            PYTHONUNBUFFERED: 1
+
+    #######################################################
+    # Delivery Order: Manages deliveries
+    #######################################################
+    delivery_order_microservice:
+        build:
+            context: ./delivery_order_microservice
+            dockerfile: Dockerfile
+        image: yata/delivery_order:1.0
+        restart: always
+        ports:
+            - '5006:5006'
+        environment:
+            PYTHONUNBUFFERED: 1
+
+    ###################################
+    # Medical Certificate: The MC microservice
+    ###################################
+    medical_certificate_microservice:
+        build:
+            context: ./medical_certificate_microservice
+            dockerfile: Dockerfile
+        image: yata/medical_certificate:1.0
+        restart: always
+        ports:
+            - '5008:5008'
+        environment:
+            PYTHONUNBUFFERED: 1
+
+    ################## COMPLEX MICROSERVICES BELOW ##################
+
+    #######################################################
+    # Manage Booking: Manages timelsot and appointment microservice
+    #######################################################
+    manage_booking_microservice:
+        build:
+            context: ./manage_booking_complex_microservice
+            dockerfile: Dockerfile
+        image: yata/manage_booking:1.0
+        restart: always
+        ports:
+            - '5101:5101'
+        depends_on:
+            - timeslot_microservice
+            - appointment_microservice
+        environment:
+            PYTHONUNBUFFERED: 1
+
+    #######################################################
+    # Manage Cancellation: Manages cancellations and notifies patient
+    #######################################################
+    manage_cancellation_microservice:
+        build:
+            context: ./manage_cancellation_complex_microservice
+            dockerfile: Dockerfile
+        image: yata/manage_cancellation:1.0
+        restart: always
+        ports:
+            - '5102:5102'
+        depends_on:
+            - timeslot_microservice
+            - appointment_microservice
+            - notification_microservice
+        environment:
+            PYTHONUNBUFFERED: 1
+
+    #######################################################
+    # Manage dataset: Manages dataset
+    #######################################################
+    manage_dataset_microservice:
+        build:
+            context: ./manage_dataset_complex_microservice
+            dockerfile: Dockerfile
+        image: yata/manage_dataset_microservice:1.0
+        restart: always
+        ports:
+            - '5109:5109'
+        depends_on:
+            - user_microservice
+            - timeslot_microservice
+            - appointment_microservice
+            - notification_microservice
+            - inventory_microservice
+            - delivery_order_microservice
+            - medical_certificate_microservice
+        environment:
+            PYTHONUNBUFFERED: 1

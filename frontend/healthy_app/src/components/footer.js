@@ -19,15 +19,16 @@ export default function Footer() {
 								href="/"
 								className="flex items-center space-x-2 text-2xl font-medium text-blue-950 dark:text-gray-100"
 							>
-								<div className='bg-blue-950 rounded p-1'>
+								<div className="bg-blue-950 rounded p-1">
 									<Image
-									src={logo}
-									width="32"
-									height="32"
-									className="w-8"
-								/>
+										src={logo}
+										width="32"
+										height="32"
+										className="w-8"
+										alt="YATA"
+									/>
 								</div>
-								
+
 								<span>YATA</span>
 							</Link>
 						</div>

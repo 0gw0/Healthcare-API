@@ -98,7 +98,7 @@ def get_all_timeslots_history():
     ), 404
 
 # Get All Timeslots, with time range
-@app.route("/timeslot/get/all", methods=['GET'])
+@app.route("/timeslot/get/all", methods=['GET', 'POST'])
 def get_all_timeslots_timerange():
     """
     Get All Timeslots
@@ -121,7 +121,7 @@ def get_all_timeslots_timerange():
         # If payload is empty, make an error
         # Go to Except, to get all data
         payload = request.get_json()
-        # print(payload)
+        print(payload)
 
         # No data, set to empty
         data = payload["data"] if "data" in payload else {}

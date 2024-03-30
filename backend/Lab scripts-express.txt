@@ -1,0 +1,30 @@
+Starting existing workspace
+1. `npm install`
+2. `npm ls`
+2. `npm run start`
+
+
+Code snippets
+
+1. Create a new node environment
+- `npm init`
+
+2. Install the required dependencies
+- `npm install`
+
+3. Run Express project
+- `npm run start`
+
+
+Others
+
+1. View installed dependencies
+- `npm ls`
+
+2. Environment Variables
+Bash 
+- $env:<key> <value>
+- dir env:
+CMD
+- set <key> <value>
+- set <key>

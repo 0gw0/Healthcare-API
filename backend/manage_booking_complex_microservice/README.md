@@ -36,9 +36,14 @@ Ensure that microservices for `timeslot` and `appointment` is already running.
 
 ```BASH
     docker build -t yata/manage_booking:1.0 ./
-    docker run -p 5101:5001 --name manage_booking_microservice yata/manage_booking:1.0
+    docker run -p 5101:5101 --name manage_booking_microservice yata/manage_booking:1.0
 ```
 
 ### Postman Testing
 
 Import the Postman scripts and test using the correct environment and dataset
+
+### Steps After composing kong:
+
+-   Go to: http://localhost:8002/overview
+-   To stop: docker compose stop
