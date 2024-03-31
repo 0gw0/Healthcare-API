@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "263ffb1f-dfda-47e5-9551-d1322190f369",
+		"_postman_id": "b5c56df5-9e6b-4df0-a888-040088e6ec93",
 		"name": "IS213 G3T8 inventory_microservice",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32110674"
@@ -15,7 +15,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5001/user/reset/obviously_wrong",
+							"raw": "http://127.0.0.1:5005/inventory/reset/obviously_wrong",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -23,9 +23,9 @@
 								"0",
 								"1"
 							],
-							"port": "5001",
+							"port": "5005",
 							"path": [
-								"user",
+								"inventory",
 								"reset",
 								"obviously_wrong"
 							]
@@ -64,7 +64,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 27 Mar 2024 07:01:40 GMT"
+									"value": "Sun, 31 Mar 2024 18:58:07 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -94,7 +94,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5001/user/reset/empty",
+							"raw": "http://127.0.0.1:5005/inventory/reset/empty",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -102,9 +102,9 @@
 								"0",
 								"1"
 							],
-							"port": "5001",
+							"port": "5005",
 							"path": [
-								"user",
+								"inventory",
 								"reset",
 								"empty"
 							]
@@ -143,7 +143,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 27 Mar 2024 07:02:08 GMT"
+									"value": "Sun, 31 Mar 2024 18:58:34 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -173,7 +173,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5001/user/reset/dataset1",
+							"raw": "http://127.0.0.1:5005/inventory/reset/dataset1",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -181,9 +181,9 @@
 								"0",
 								"1"
 							],
-							"port": "5001",
+							"port": "5005",
 							"path": [
-								"user",
+								"inventory",
 								"reset",
 								"dataset1"
 							]
@@ -222,7 +222,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 27 Mar 2024 07:29:24 GMT"
+									"value": "Sun, 31 Mar 2024 18:58:58 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -272,7 +272,7 @@
 			},
 			"response": [
 				{
-					"name": "New Request",
+					"name": "200 - Get all items",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
@@ -303,7 +303,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 27 Mar 2024 07:04:30 GMT"
+							"value": "Sun, 31 Mar 2024 18:59:12 GMT"
 						},
 						{
 							"key": "Content-Type",
@@ -311,7 +311,7 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "905"
+							"value": "824"
 						},
 						{
 							"key": "Access-Control-Allow-Origin",
@@ -323,7 +323,61 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"code\": 200,\n    \"count\": 11,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Paracetamol\",\n            \"quantity\": 30\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Hydrocodone\",\n            \"quantity\": 29\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Metformin\",\n            \"quantity\": 16\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Losartan\",\n            \"quantity\": 19\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Antibiotics\",\n            \"quantity\": 12\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Albuterol\",\n            \"quantity\": 37\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Antihistamine\",\n            \"quantity\": 23\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Gabapentin\",\n            \"quantity\": 25\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Atorvastatin\",\n            \"quantity\": 20\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Levothyroxine\",\n            \"quantity\": 27\n        },\n        {\n            \"id\": 11,\n            \"name\": \"Omeprazole\",\n            \"quantity\": 46\n        }\n    ]\n}"
+					"body": "{\n    \"code\": 200,\n    \"count\": 10,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Paracetamol\",\n            \"quantity\": 30\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Hydrocodone\",\n            \"quantity\": 29\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Metformin\",\n            \"quantity\": 16\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Losartan\",\n            \"quantity\": 19\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Antibiotics\",\n            \"quantity\": 12\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Albuterol\",\n            \"quantity\": 37\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Antihistamine\",\n            \"quantity\": 23\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Gabapentin\",\n            \"quantity\": 25\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Atorvastatin\",\n            \"quantity\": 20\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Omeprazole\",\n            \"quantity\": 46\n        }\n    ]\n}"
+				},
+				{
+					"name": "404 - No items found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5005/inventory/get/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5005",
+							"path": [
+								"inventory",
+								"get",
+								"all"
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.11.8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 19:03:39 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 404,\n    \"message\": \"No items found\"\n}"
 				}
 			]
 		},
@@ -334,7 +388,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"quantity_to_add\": 5\r\n}",
+					"raw": "{\r\n    \"quantity_change\": 5\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -342,7 +396,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5005/inventory/update/1",
+					"raw": "http://127.0.0.1:5005/inventory/update/999",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -354,7 +408,7 @@
 					"path": [
 						"inventory",
 						"update",
-						"1"
+						"999"
 					]
 				}
 			},
@@ -363,17 +417,10 @@
 					"name": "200 - Minus quantity",
 					"originalRequest": {
 						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"quantity_to_add\": -5\r\n}",
+							"raw": "{\r\n    \"quantity_change\": -5\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -407,7 +454,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 27 Mar 2024 07:11:29 GMT"
+							"value": "Sun, 31 Mar 2024 19:00:12 GMT"
 						},
 						{
 							"key": "Content-Type",
@@ -427,7 +474,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"code\": 200,\n    \"message\": \"Inventory item quantity updated\",\n    \"quantity_to_add\": -5,\n    \"updated_data\": {\n        \"id\": 1,\n        \"name\": \"Paracetamol\",\n        \"quantity\": 25\n    }\n}"
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Inventory item quantity updated\",\n    \"quantity_change\": -5,\n    \"updated_data\": {\n        \"id\": 1,\n        \"name\": \"Paracetamol\",\n        \"quantity\": 25\n    }\n}"
 				},
 				{
 					"name": "200 - Plus quantity",
@@ -436,7 +483,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"quantity_to_add\": 5\r\n}",
+							"raw": "{\r\n    \"quantity_change\": 5\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -470,7 +517,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 27 Mar 2024 07:11:51 GMT"
+							"value": "Sun, 31 Mar 2024 19:00:33 GMT"
 						},
 						{
 							"key": "Content-Type",
@@ -490,23 +537,16 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"code\": 200,\n    \"message\": \"Inventory item quantity updated\",\n    \"quantity_to_add\": 5,\n    \"updated_data\": {\n        \"id\": 1,\n        \"name\": \"Paracetamol\",\n        \"quantity\": 30\n    }\n}"
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Inventory item quantity updated\",\n    \"quantity_change\": 5,\n    \"updated_data\": {\n        \"id\": 1,\n        \"name\": \"Paracetamol\",\n        \"quantity\": 30\n    }\n}"
 				},
 				{
-					"name": "400 - Invalid PUT payload",
+					"name": "400 - Insufficient stock",
 					"originalRequest": {
 						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"quantity_to_add\": 5\r\n}",
+							"raw": "{\r\n    \"quantity_change\": -31\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -540,7 +580,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 27 Mar 2024 07:05:41 GMT"
+							"value": "Sun, 31 Mar 2024 19:01:18 GMT"
 						},
 						{
 							"key": "Content-Type",
@@ -548,7 +588,7 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "191"
+							"value": "53"
 						},
 						{
 							"key": "Access-Control-Allow-Origin",
@@ -560,7 +600,70 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"code\": 400,\n    \"error\": \"415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.\",\n    \"message\": \"Invalid PUT payload\"\n}"
+					"body": "{\n    \"code\": 400,\n    \"message\": \"Insufficient stock\"\n}"
+				},
+				{
+					"name": "404 - Item not found",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity_change\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5005/inventory/update/999",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5005",
+							"path": [
+								"inventory",
+								"update",
+								"999"
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.11.8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 19:03:01 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 404,\n    \"message\": \"Item not found\"\n}"
 				}
 			]
 		}

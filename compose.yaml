@@ -164,6 +164,24 @@ services:
             PYTHONUNBUFFERED: 1
 
     #######################################################
+    # Manage Cancellation: Manages cancellations and notifies patient
+    #######################################################
+    create_delivery_microservice:
+        build:
+            context: ./backend/manage_cancellation_complex_microservice
+            dockerfile: Dockerfile
+        image: yata/manage_cancellation:1.0
+        restart: always
+        ports:
+            - '5103:5103'
+        depends_on:
+            - timeslot_microservice
+            - appointment_microservice
+            - notification_microservice
+        environment:
+            PYTHONUNBUFFERED: 1
+
+    #######################################################
     # Manage dataset: Manages dataset
     #######################################################
     manage_dataset_microservice:

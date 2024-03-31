@@ -87,8 +87,6 @@ def get_all():
         }
     ), 404
     
-    
-    
  #Update item quantity by id   
 @app.route("/inventory/update/<int:id>", methods=['PUT'])
 def update_quantity(id):
@@ -112,22 +110,22 @@ def update_quantity(id):
     try:
         data = request.get_json()
         quantity_change = data["quantity_change"]
+        
+        # If error here, item not found
         current_quantity = get_item_quantity({"id": id})
         
-        if current_quantity is None:
-            return jsonify({"code": 404, "message": "Item not found"}), 404
-        
-          # (2) Update inventory item quantity by id
+        # (2) Update inventory item quantity by id
         data["id"] = id
         data["quantity"] = current_quantity + quantity_change
+
         #IF quantity less than 0, return insufficient stock
         if data["quantity"] < 0:
                 return jsonify({"code": 400, "message": "Insufficient stock"}), 400
     
-    #sufficient stock, update quantity
+        #sufficient stock, update quantity
         update_item_quantity(data)
         
-      # (3) Return Success
+        # (3) Return Success
         updated_item = get_item_by_id(data)
         return jsonify(
             {
@@ -139,12 +137,7 @@ def update_quantity(id):
         ), 200
 
     except Exception as e:
-        return jsonify({"code": 500, "message": "Internal server error"}), 500
-
-
-    
-
-  
+        return jsonify({"code": 404, "message": "Item not found"}), 404
 
 if __name__ == '__main__':
     print("This is flask for " + os.path.basename(__file__) + ": inventory management ...")

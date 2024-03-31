@@ -21,7 +21,7 @@ const LowInventoryModal = ({ onClose, data }) => {
             // Call API to restock
             await axios
                 .put(`http://127.0.0.1:5005/inventory/update/${item.id}`, {
-                    quantity_to_add: amountToAdd,
+                    quantity_change: amountToAdd,
                 })
                 .then((res) => {
                     console.log(res);
