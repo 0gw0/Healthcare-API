@@ -12,8 +12,6 @@ const nextConfig = {
 	experimental: {
 		missingSuspenseWithCSRBailout: false,
 	},
-	plugins: [import('flowbite/plugin.js')],
-	content: ['./node_modules/flowbite/**/*.js'],
 };
 
 export default nextConfig;
