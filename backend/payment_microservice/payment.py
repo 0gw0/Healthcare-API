@@ -2,12 +2,15 @@
 # The above shebang (#!) operator tells Unix-like environments
 # to run this file as a python3 script
 
+import base64
 import datetime
 import json
 import os
 
-from flask import Flask, jsonify, request
-from flask_cors import CORS
+import jsons
+import requests
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import hashes
 
 # import database actions
 from database.db_payment import get_all_payments, request_reset_db
@@ -17,9 +20,121 @@ from database.db_payment_actions import (
     get_exact_payment,
     update_payment_isPaid,
 )
+from flask import Flask, jsonify, redirect, render_template, request
+from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
+
+
+# ****************************************************************
+# HELPER FUNCTIONS
+# ****************************************************************
+
+
+def calculate_sha256_string(input_string):
+    # Create a hash object using the SHA-256 algorithm
+    sha256 = hashes.Hash(hashes.SHA256(), backend=default_backend())
+    # Update hash with the encoded string
+    sha256.update(input_string.encode("utf-8"))
+    # Return the hexadecimal representation of the hash
+    return sha256.finalize().hex()
+
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+def base64_encode(input_dict):
+    # Convert the dictionary to a JSON string
+    json_data = jsons.dumps(input_dict)
+    # Encode the JSON string to bytes
+    data_bytes = json_data.encode("utf-8")
+    # Perform Base64 encoding and return the result as a string
+    return base64.b64encode(data_bytes).decode("utf-8")
+
+
+# ****************************************************************
+# END HELPER FUNCTIONS
+# ****************************************************************
+
+
+# Pay API with amount passed into URL (3000 means $30)
+@app.route("/payment/pay/<int:amount>", methods=["GET"])
+def pay(amount):
+    MAINPAYLOAD = {
+        "merchantId": "PGTESTPAYUAT",
+        "merchantTransactionId": "MT7850590068188104",
+        "merchantUserId": "MUID123",
+        "amount": amount,
+        "redirectUrl": "http://127.0.0.1:5007/payment/return-to-me",
+        "redirectMode": "POST",
+        "callbackUrl": "http://127.0.0.1:5007/payment/return-to-me",
+        "paymentInstrument": {"type": "PAY_PAGE"},
+    }
+
+    INDEX = "1"
+    ENDPOINT = "/pg/v1/pay"
+    SALTKEY = "099eb0cd-02cf-4e2a-8aca-3e6c6aff0399"
+
+    base64String = base64_encode(MAINPAYLOAD)
+    mainString = base64String + ENDPOINT + SALTKEY
+    sha256Val = calculate_sha256_string(mainString)
+    checkSum = sha256Val + "###" + INDEX
+
+    # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    # Payload Send
+    # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    headers = {
+        "Content-Type": "application/json",
+        "X-VERIFY": checkSum,
+        "accept": "application/json",
+    }
+    json_data = {
+        "request": base64String,
+    }
+    response = requests.post(
+        "https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay",
+        headers=headers,
+        json=json_data,
+    )
+    responseData = response.json()
+    create_payment()
+    # return responseData
+    return redirect(responseData["data"]["instrumentResponse"]["redirectInfo"]["url"])
+
+
+# Return to this page after payment
+@app.route("/payment/return-to-me", methods=["GET", "POST"])
+def payment_return():
+
+    INDEX = "1"
+    SALTKEY = "099eb0cd-02cf-4e2a-8aca-3e6c6aff0399"
+    form_data = request.form
+    form_data_dict = dict(form_data)
+    # respond_json_data = jsonify(form_data_dict)
+    # ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    # 1.In the live please match the amount you get byamount you send also so that hacker can't pass static value.
+    # 2.Don't take Marchent ID directly validate it with yoir Marchent ID
+    # ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    if request.form.get("transactionId"):
+        request_url = (
+            "https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/status/PGTESTPAYUAT/"
+            + request.form.get("transactionId")
+        )
+        sha256_Pay_load_String = (
+            "/pg/v1/status/PGTESTPAYUAT/" + request.form.get("transactionId") + SALTKEY
+        )
+        sha256_val = calculate_sha256_string(sha256_Pay_load_String)
+        checksum = sha256_val + "###" + INDEX
+        # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        # Payload Send
+        # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        headers = {
+            "Content-Type": "application/json",
+            "X-VERIFY": checksum,
+            "X-MERCHANT-ID": request.form.get("transactionId"),
+            "accept": "application/json",
+        }
+        response = requests.get(request_url, headers=headers)
+    return response.json()
 
 
 # Reset Database
