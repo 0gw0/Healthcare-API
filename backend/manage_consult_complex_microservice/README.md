@@ -1,11 +1,14 @@
-# Manage Dataset Complex Microservice
+# Manage Consult Complex Microservice
 
-To manage datasets of all microservices.
+To manage appointment, medical certificates, and create delivery.
 
-### Functions (WIP)
+### Functions
 
-1. Use a dataset
-    1. `dataset1`
+1. Complete consult request (Doctor)
+    1. Doctor 'Issues MC', and the microservice starts
+    2. Calls `appointment` microservice to update appointment `isCompleted`
+    3. Calls `medical_certificate` microservice to create and send MC to patient
+    4. Calls `create_delivery_complex` microservice to update inventory and create delivery
 
 ### How to code
 
@@ -28,7 +31,7 @@ Helpful Documentations
 
 #### Before running the code:
 
-Ensure that microservices for `timeslot`, `appointment` and `notification` is already running.
+Ensure that microservices for `appointment`, `medical_certificate` and `create_delivery_complex` is already running.
 
 #### (WINDOWS) Run the code in this directory:
 
@@ -40,8 +43,8 @@ Ensure that microservices for `timeslot`, `appointment` and `notification` is al
 #### (DOCKER) Run the code in docker:
 
 ```BASH
-    docker build -t yata/manage_dataset:1.0 ./
-    docker run -p 5109:5109 --name manage_dataset_microservice yata/manage_dataset_complex_microservice:1.0
+    docker build -t yata/manage_consult:1.0 ./
+    docker run -p 5102:5102 --name manage_consult_microservice yata/manage_consult_complex:1.0
 ```
 
 ### Postman Testing

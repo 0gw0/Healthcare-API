@@ -29,6 +29,12 @@ export default function Page() {
     // - Number of days of MC. Default is 0
     const [day, setDay] = useState(0);
 
+    // - Items to be included in MC
+    const [payloadItems, setPayloadItems] = useState([]);
+
+    // Consult Fee
+    const consultFee = 3000;
+
     const handleZoomMeeting = async () => {
         // Start Zoom meeting with API
         await axios
@@ -50,9 +56,71 @@ export default function Page() {
     };
 
     const handleIssueMC = () => {
-        // Clear form fields
-        setStartDate("");
-        setDay(0);
+        // Send payment link via API
+        // axios
+        //     .post(`http://127.0.0.1:5007/payment/send_payment/${consultFee}`)
+        //     .then((res) => {
+        //         console.log(res);
+        //     })
+        //     .catch((error) => {
+        //         console.log(error);
+        //     });
+
+        // Prepare payload for MC
+        // E.g.
+        // {
+        //     "data": {
+        //         "appointment_id": 1,
+        //         "timeslot_datetime": "2024-04-04 08:30:00",
+        //         "duration_minutes": 30,
+        //         "mc_start_datetime": "2024-04-04",
+        //         "mc_days": "1",
+        //         "items": [
+        //             {
+        //                 "name": "Paracetamol",
+        //                 "quantity": 5,
+        //                 "id": 1
+        //             },
+        //             {
+        //                 "name": "Antihistamine",
+        //                 "quantity": 9,
+        //                 "id": 7
+        //             },
+        //             {
+        //                 "name": "Hydrocodone",
+        //                 "quantity": 7,
+        //                 "id": 2
+        //             }
+        //         ]
+        //     }
+        // }
+        const payload = {
+            data: {
+                appointment_id: apptiID,
+                timeslot_datetime: "2024-04-04 08:30:00",
+                duration_minutes: 30,
+                mc_start_datetime: startDate,
+                mc_days: day,
+                items: payloadItems,
+            },
+        };
+        console.log(payload);
+
+        // Manage Consult via API
+        axios
+            .put("http://127.0.0.1:5104/complete_teleconsultation", payload)
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        // Alert that MC is issued
+        alert("Medical Certificate issued successfully!");
+
+        // Redirect to homepage
+        window.location.href = "/homepage";
     };
     return (
         <>
@@ -110,6 +178,7 @@ export default function Page() {
                                 id="dateReceived"
                                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
                                 value={startDate}
+                                min={startDate}
                                 onChange={(e) => {
                                     console.log(e.target.value);
                                     setStartDate(e.target.value);
@@ -139,7 +208,10 @@ export default function Page() {
                         <h2 className="mb-4 text-xl font-medium">
                             Select Medication
                         </h2>
-                        <MedicineList />
+                        <MedicineList
+                            payloadItems={payloadItems}
+                            setPayloadItems={setPayloadItems}
+                        />
                         <br />
                         {/* Confirm and Issue MC */}
                         <button

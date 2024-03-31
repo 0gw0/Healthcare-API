@@ -11,8 +11,8 @@ from invokes import invoke_http
 app = Flask(__name__)
 CORS(app)
 
-inventory_URL = "http://127.0.0.1:5005/inventory/"
-delivery_order_URL = "http://127.0.0.1:5006/delivery_order"
+inventory_URL = "http://host.docker.internal:5005/inventory"
+delivery_order_URL = "http://host.docker.internal:5006/delivery_order"
 
 
 #Create delivery complex microservice

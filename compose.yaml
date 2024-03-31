@@ -10,7 +10,7 @@ services:
             - ./frontend/healthy_app:/app
         command: npm run dev
         ports:
-            - '3001:3001'
+            - "3001:3001"
         environment:
             NODE_ENV: development
 
@@ -24,7 +24,7 @@ services:
         image: yata/user:1.0
         restart: always
         ports:
-            - '5001:5001'
+            - "5001:5001"
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -38,7 +38,7 @@ services:
         image: yata/timeslot:1.0
         restart: always
         ports:
-            - '5002:5002'
+            - "5002:5002"
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -52,7 +52,7 @@ services:
         image: yata/appointment:1.0
         restart: always
         ports:
-            - '5003:5003'
+            - "5003:5003"
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -66,7 +66,7 @@ services:
         image: yata/notification:1.0
         restart: always
         ports:
-            - '5004:5004'
+            - "5004:5004"
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -80,7 +80,7 @@ services:
         image: yata/inventory:1.0
         restart: always
         ports:
-            - '5005:5005'
+            - "5005:5005"
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -94,7 +94,21 @@ services:
         image: yata/delivery_order:1.0
         restart: always
         ports:
-            - '5006:5006'
+            - "5006:5006"
+        environment:
+            PYTHONUNBUFFERED: 1
+
+    ###################################
+    # Payment: The payment microservice
+    ###################################
+    payment_microservice:
+        build:
+            context: ./backend/payment_microservice
+            dockerfile: Dockerfile
+        image: yata/payment:1.0
+        restart: always
+        ports:
+            - "5007:5007"
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -108,7 +122,7 @@ services:
         image: yata/medical_certificate:1.0
         restart: always
         ports:
-            - '5008:5008'
+            - "5008:5008"
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -122,7 +136,7 @@ services:
         image: yata/zoom:1.0
         restart: always
         ports:
-            - '5009:5009'
+            - "5009:5009"
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -135,10 +149,10 @@ services:
         build:
             context: ./backend/manage_booking_complex_microservice
             dockerfile: Dockerfile
-        image: yata/manage_booking:1.0
+        image: yata/manage_booking_complex:1.0
         restart: always
         ports:
-            - '5101:5101'
+            - "5101:5101"
         depends_on:
             - timeslot_microservice
             - appointment_microservice
@@ -152,10 +166,10 @@ services:
         build:
             context: ./backend/manage_cancellation_complex_microservice
             dockerfile: Dockerfile
-        image: yata/manage_cancellation:1.0
+        image: yata/manage_cancellation_complex:1.0
         restart: always
         ports:
-            - '5102:5102'
+            - "5102:5102"
         depends_on:
             - timeslot_microservice
             - appointment_microservice
@@ -164,16 +178,33 @@ services:
             PYTHONUNBUFFERED: 1
 
     #######################################################
-    # Manage Cancellation: Manages cancellations and notifies patient
+    # Create Delivery: Updates inventory and creates delivery order
     #######################################################
     create_delivery_microservice:
         build:
-            context: ./backend/manage_cancellation_complex_microservice
+            context: ./backend/create_delivery_complex_microservice
             dockerfile: Dockerfile
-        image: yata/manage_cancellation:1.0
+        image: yata/create_delivery_complex:1.0
         restart: always
         ports:
-            - '5103:5103'
+            - "5103:5103"
+        depends_on:
+            - inventory_microservice
+            - delivery_order_microservice
+        environment:
+            PYTHONUNBUFFERED: 1
+
+    #######################################################
+    # Manage Consult: Manages consultation completion
+    #######################################################
+    manage_consult_microservice:
+        build:
+            context: ./backend/manage_consult_complex_microservice
+            dockerfile: Dockerfile
+        image: yata/manage_consult_complex:1.0
+        restart: always
+        ports:
+            - "5104:5104"
         depends_on:
             - timeslot_microservice
             - appointment_microservice
@@ -188,10 +219,10 @@ services:
         build:
             context: ./backend/manage_dataset_complex_microservice
             dockerfile: Dockerfile
-        image: yata/manage_dataset_microservice:1.0
+        image: yata/manage_dataset_complex:1.0
         restart: always
         ports:
-            - '5109:5109'
+            - "5109:5109"
         depends_on:
             - user_microservice
             - timeslot_microservice
@@ -199,6 +230,7 @@ services:
             - notification_microservice
             - inventory_microservice
             - delivery_order_microservice
+            - payment_microservice
             - medical_certificate_microservice
         environment:
             PYTHONUNBUFFERED: 1

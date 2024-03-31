@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const MedicineList = () => {
+const MedicineList = ({ payloadItems, setPayloadItems }) => {
     const [isRetrieved, setIsRetrieved] = useState(false);
     // Initialize medicineList as an empty array
     const [medicineList, setMedicineList] = useState([]);
@@ -33,6 +33,32 @@ const MedicineList = () => {
             setIsRetrieved(true);
         }
     }, [isRetrieved]);
+
+    const handleUpdate = (e) => {
+        const id = e.target.id.split("-")[2];
+        const name = e.target.id.split("-")[3];
+        const quantity = e.target.value;
+
+        // Add the selected medicine to the payloadItems array
+        setPayloadItems((prevItems) => {
+            const newItems = prevItems.filter(
+                (item) => item.id !== parseInt(id)
+            );
+            if (quantity > 0) {
+                newItems.push({
+                    id: parseInt(id),
+                    name: name,
+                    quantity: parseInt(quantity),
+                });
+            }
+            return newItems;
+        });
+
+        // Log the payloadItems array
+        // - Note: This will be the previous state of the payloadItems array
+        console.log(payloadItems);
+    };
+
     return (
         <div className="grid grid-cols-4 gap-4">
             {medicineList.map((medicine) => (
@@ -41,17 +67,19 @@ const MedicineList = () => {
                     <div className="relative flex items-center max-w-[8rem]">
                         <input
                             type="number"
-                            id={`quantity-input-${medicine.id}`}
+                            id={`quantity-input-${medicine.id}-${medicine.name}`}
                             min={0}
                             max={medicine.quantity}
                             aria-describedby={`helper-text-explanation-${medicine.id}`}
                             className="bg-gray-50 border-x-0 border-gray-300 h-11 text-center text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder="0"
+                            // Add the selected medicine to the payloadItems array
+                            onChange={handleUpdate}
                         />
                     </div>
                     <p
                         id={`helper-text-explanation-${medicine.id}`}
-                        className="mt-2 text-sm text-gray-500 text-red-600 dark:text-gray-400"
+                        className="mt-2 text-sm text-red-600 dark:text-gray-400"
                     >
                         * only {medicine.quantity} left
                     </p>

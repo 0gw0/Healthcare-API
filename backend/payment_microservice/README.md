@@ -39,20 +39,36 @@ Helpful Documentations
 
 9. [Docker Python app prints](https://stackoverflow.com/questions/29663459/why-doesnt-python-app-print-anything-when-run-in-a-detached-docker-container)
 
+API documentation
+
+1. [MailTrap](https://mailtrap.io/sending/)
+
+    - [mailTrap Doc](https://pypi.org/project/mailtrap/)
+    - [mailTrap Doc 2](https://mailtrap.io/blog/python-send-email/#How-to-send-emails-with-attachments)
+    - [MailTrap API Doc GitHub](https://github.com/railsware/mailtrap-python)
+
+2. [Twilio](https://console.twilio.com/)
+
+    - [twilio-python Doc](https://pypi.org/project/twilio/)
+    - [Twilio SMS API Video](https://www.youtube.com/watch?v=0BHsz-J3XSY)
+
+3. [PhonePe](https://www.youtube.com/watch?v=Vpl6-ba-LoM)
+    - [GitHub code](https://github.com/Code-180/PhonePe-Python-Integration/blob/main/phonePay.py)
+
 #### (WINDOWS) Run the code in this directory:
 
 ```BASH
     python3 -m venv .venv
     .venv\Scripts\activate
     pip install -r requirements.txt
-    python timeslot.py
+    python payment.py
 ```
 
 #### (DOCKER) Run the code in docker:
 
 ```BASH
-    docker build -t yata/timeslot:1.0 ./
-    docker run -p 5002:5002 --name timeslot_microservice yata/timeslot:1.0
+    docker build -t yata/payment:1.0 ./
+    docker run -p 5007:5007 --name payment_microservice yata/payment:1.0
 ```
 
 ### Postman Testing

@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "d9a94c4a-77df-47d6-8dda-7ef91c55fcbf",
+		"_postman_id": "ce758797-f943-44d9-a814-56702077c27e",
 		"name": "IS213 G3T8 create_delivery_complex_microservice",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "29991780"
+		"_exporter_id": "32110674"
 	},
 	"item": [
 		{
@@ -38,6 +38,69 @@
 				}
 			},
 			"response": [
+				{
+					"name": "200 - Valid inputs",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"Paracetamol\",\r\n      \"quantity\": 5,\r\n      \"id\": 1\r\n    },\r\n    {\r\n      \"name\": \"Antihistamine\",\r\n      \"quantity\": 9,\r\n      \"id\": 7\r\n    },\r\n    {\r\n      \"name\": \"Hydrocodone\",\r\n      \"quantity\": 7,\r\n      \"id\": 2\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5103/delivery/create/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5103",
+							"path": [
+								"delivery",
+								"create",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.12.1"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 18:03:09 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "64"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Delivery created successfully\"\n}"
+				},
 				{
 					"name": "400 - Duplicate delivery order id",
 					"originalRequest": {
@@ -114,69 +177,6 @@
 					"body": "{\n    \"code\": 400,\n    \"error_message\": \"Failed to create delivery order\",\n    \"message\": \"Failed. Delivery Order not created.\"\n}"
 				},
 				{
-					"name": "200 - Valid inputs",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"Paracetamol\",\r\n      \"quantity\": 5,\r\n      \"id\": 1\r\n    },\r\n    {\r\n      \"name\": \"Antihistamine\",\r\n      \"quantity\": 9,\r\n      \"id\": 7\r\n    },\r\n    {\r\n      \"name\": \"Hydrocodone\",\r\n      \"quantity\": 7,\r\n      \"id\": 2\r\n    }\r\n  ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:5103/delivery/create/4",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "5103",
-							"path": [
-								"delivery",
-								"create",
-								"4"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Server",
-							"value": "Werkzeug/3.0.1 Python/3.12.1"
-						},
-						{
-							"key": "Date",
-							"value": "Sun, 31 Mar 2024 18:03:09 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "64"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Connection",
-							"value": "close"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"code\": 200,\n    \"message\": \"Delivery created successfully\"\n}"
-				},
-				{
 					"name": "400- Insufficient stock",
 					"originalRequest": {
 						"method": "POST",
@@ -238,49 +238,71 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"code\": 400,\n    \"error_message\": \"Insufficient stock\",\n    \"message\": \"Failed to update inventory\"\n}"
+				},
+				{
+					"name": "404 - Item not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"Paracetamol\",\r\n      \"quantity\": 5,\r\n      \"id\": 1\r\n    },\r\n    {\r\n      \"name\": \"Antihistamine\",\r\n      \"quantity\": 9,\r\n      \"id\": 7\r\n    },\r\n    {\r\n      \"name\": \"Hydrocodone\",\r\n      \"quantity\": 7,\r\n      \"id\": 2\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5103/delivery/create/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5103",
+							"path": [
+								"delivery",
+								"create",
+								"4"
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.12.2"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 20:38:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "98"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 404,\n    \"error_message\": \"Item not found\",\n    \"message\": \"Failed to update inventory\"\n}"
 				}
 			]
-		},
-		{
-			"name": "Create Delivery -",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
-			"name": "http://127.0.0.1:5103/delivery/create/5",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"Paracetamol\",\r\n      \"quantity\": 5,\r\n      \"id\": 1\r\n    },\r\n    {\r\n      \"name\": \"Antihistamine\",\r\n      \"quantity\": 9,\r\n      \"id\": 7\r\n    },\r\n    {\r\n      \"name\": \"Hydrocodone\",\r\n      \"quantity\": 7,\r\n      \"id\": 2\r\n    }\r\n  ]\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://127.0.0.1:5103/delivery/create/5",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "5103",
-					"path": [
-						"delivery",
-						"create",
-						"5"
-					]
-				}
-			},
-			"response": []
 		}
 	]
 }

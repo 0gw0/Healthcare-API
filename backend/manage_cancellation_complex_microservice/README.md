@@ -49,7 +49,7 @@ Ensure that microservices for `timeslot`, `appointment` and `notification` is al
 
 ```BASH
     docker build -t yata/manage_cancellation:1.0 ./
-    docker run -p 5102:5102 --name manage_cancellation_microservice yata/manage_cancellation:1.0
+    docker run -p 5102:5102 --name manage_cancellation_microservice yata/manage_cancellation_complex:1.0
 ```
 
 ### Postman Testing

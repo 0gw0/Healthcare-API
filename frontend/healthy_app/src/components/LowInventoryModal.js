@@ -64,7 +64,7 @@ const LowInventoryModal = ({ onClose, data }) => {
                         onClick={handleRestock}
                         className="px-4 py-2 mt-4 text-white rounded-md bg-blue-950"
                     >
-                        Restock
+                        Restock to 30
                     </button>
                     <button
                         onClick={onClose}

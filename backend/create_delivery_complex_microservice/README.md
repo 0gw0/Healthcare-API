@@ -1,15 +1,12 @@
-# Manage Booking Complex Microservice
+# Create Delivery Complex Microservice
 
-To manage both timeslot and appointment bookings.
+To manage inventory and create delivery orders.
 
 ### Functions
 
-1. Make an appointment by timeslot_id
-    1. Calls `timeslot` microservice to update isAccepted=1 by id
-    2. Calls `appointment` microservice to create an appointment based on the updated timeslot
-2. Cancel an appointment by appointment_id
-    1. Calls `timeslot` microservice to update isAccepted=0 by id
-    2. Calls `appointment` microservice to delete an appointment based on appointment_id
+1. Create delivery with `appointment_id` and `items`
+    1. Calls `inventory` microservice to update affected items' quantity
+    2. Calls `delivery_order` microservice to create a delivery order based on `items`
 
 ### How to code
 
@@ -29,14 +26,14 @@ Ensure that microservices for `timeslot` and `appointment` is already running.
     python3 -m venv .venv
     .venv\Scripts\activate
     pip install -r requirements.txt
-    python manage_booking.py
+    python create_delivery.py
 ```
 
 #### (DOCKER) Run the code in docker:
 
 ```BASH
-    docker build -t yata/manage_booking:1.0 ./
-    docker run -p 5101:5101 --name manage_booking_microservice yata/manage_booking_complex:1.0
+    docker build -t yata/create_delivery:1.0 ./
+    docker run -p 5101:5101 --name create_delivery_microservice yata/create_delivery_complex:1.0
 ```
 
 ### Postman Testing

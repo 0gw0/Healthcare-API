@@ -55,6 +55,140 @@ def base64_encode(input_dict):
 # END HELPER FUNCTIONS
 # ****************************************************************
 
+# Email API
+import mailtrap as mt
+#  SMS API
+from twilio.rest import Client
+
+# Please no DDOS me - I lazy configure environment variable
+TEAM_MEMBER_ACCOUNT = "Terris Tan Wei Jun"
+TEAM_MEMBER_EMAIL = "terristanwei@gmail.com"
+TEAM_MEMBER_PHONE = "+6596867171"
+API_ENABLED = True # Set to True to enable API (SMS) - Each SMS cost $$$
+###### MailTrap configuration (Email API) START ####################################################################################
+MAILTRAP_TOKEN = "24e53d222"+"761fba31630c"+"8896608b09b"
+Mailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)
+
+MAILTRAP_SENDER_EMAIL = "mailtrap@demomailtrap.com"
+MAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name="Mailtrap Test")
+MAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL
+MAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]
+MAILTRAP_CATEGORY = "Integration Test"
+
+# To use MailTrap, send an email using the send method
+# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,
+#         subject="You are awesome!",
+#         text="Congrats for sending test email with Mailtrap!"
+#     )
+# Mailtrap_client.send(mail)
+
+####### MailTrap configuration (Email API) END #####################################################################################
+
+###### Twilio configuration (SMS API) START ########################################################################################
+TWILIO_ACCOUNT_SID_1 = 'AC11fe7a'
+TWILIO_ACCOUNT_SID_2 = '0d60d8906e79'
+TWILIO_ACCOUNT_SID_3 = '2c540b0488669d'
+TWILIO_ACCOUNT_SID = TWILIO_ACCOUNT_SID_1+TWILIO_ACCOUNT_SID_2+TWILIO_ACCOUNT_SID_3
+
+TWILIO_AUTH_TOKEN_1 = 'cd8c1e2c0'
+TWILIO_AUTH_TOKEN_2 = '7bc3c7788307'
+TWILIO_AUTH_TOKEN_3 = '67e010d9721'
+TWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3
+Twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
+
+TWILIO_FROM = '+15184994110'
+TWILIO_TO = TEAM_MEMBER_PHONE
+
+# To use Twilio, send an SMS using the send method
+# TWILIO_BODY = 'Message from Twilio. Hi!'
+# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)
+# print(message.sid)
+
+####### Twilio configuration (SMS API) END #########################################################################################
+
+def send_email(msg):
+    try:
+        mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,
+            subject = "YATA Teleconsultation Payment",
+            text = msg
+        )
+        Mailtrap_client.send(mail)
+        return True
+    except Exception as e:
+        return False
+    
+def send_sms(msg):
+    try:
+        TWILIO_BODY = msg
+        message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)
+        # print(message.sid)
+        return True
+    except Exception as e:
+        return False
+        
+
+@app.route("/payment/send_payment/<int:amount>", methods=["POST"])
+def send_payment(amount):
+    # Format amount
+    # E.g. 3000 means $30.00
+    amount = amount / 100
+    # Format amount to two decimal places
+    amount = "{:.2f}".format(amount)
+
+    payment_link = f"http://127.0.0.1:5007/payment/pay/{amount}"
+
+    msg = f"Thank you for choosing YATA!\n\nFor using our teleconsultation services, a payment amount of ${amount} is due."
+    msg += f"\n\nPlease use this link to do payment:\n{payment_link}" 
+    msg += "\n\nThank you!\n- YATA Teleconsultation Team"
+
+    if send_email(msg):
+        if send_sms(msg):
+            return jsonify(
+                {
+                    "code": 200,
+                    "message": "Successfully sent email using Mailtrap and SMS using Twilio Each email cost $$$!",
+                    "data": {
+                        "message_sent": msg,
+                        "payment_link": payment_link,
+
+                        "sender_email": MAILTRAP_SENDER_EMAIL,
+                        "recipient_email": MAILTRAP_TO_EMAIL,
+
+                        "sender_sms": TWILIO_FROM,
+                        "recipient_sms": TWILIO_TO,
+                        
+                        "team_member_account": TEAM_MEMBER_ACCOUNT
+                    }
+                }
+            ), 200
+        else:
+            return jsonify(
+                {
+                    "code": 400,
+                    "message": "Successfully sent email using Mailtrap but failed to send SMS using Twilio!",
+                    "error": "Failed to send SMS using Twilio!",
+                    "data": {
+                        "message_sent": msg,
+                        "payment_link": payment_link,
+
+                        "sender_email": MAILTRAP_SENDER_EMAIL,
+                        "recipient_email": MAILTRAP_TO_EMAIL,
+                        
+                        "sender_sms": "Failed to send",
+                        "recipient_sms": "Failed to send",
+
+                        "team_member_account": TEAM_MEMBER_ACCOUNT
+                    }
+                }
+            ), 400
+    else:
+        return jsonify(
+            {
+                "code": 400,
+                "message": "Failed to send email using Mailtrap! Unable to proceed with sending SMS using Twilio!",
+                "error": "Failed to send email using Mailtrap!",
+            }
+        ), 400
 
 # Pay API with amount passed into URL (3000 means $30)
 @app.route("/payment/pay/<int:amount>", methods=["GET"])
@@ -134,6 +268,15 @@ def payment_return():
             "accept": "application/json",
         }
         response = requests.get(request_url, headers=headers)
+
+
+    # Will always code:"PAYMENT_SUCCESS"
+    if response["code"] == "PAYMENT_SUCCESS":
+        # Proceed to manage_consult_complex_microservice
+        pass
+        # return response.json()
+        
+    # Payment failed - Which will never happen
     return response.json()
 
 

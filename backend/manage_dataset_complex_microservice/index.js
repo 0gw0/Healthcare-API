@@ -40,7 +40,7 @@ const URLsToReset = [
 	['notification_microservice', notification_URL],
 	['inventory_microservice', inventory_URL],
 	['delivery_order_microservice', delivery_order_URL],
-	// ["payment_microservice", payment_URL],
+	["payment_microservice", payment_URL],
 	// ["mc_microservice", mc_URL],
 ];
 

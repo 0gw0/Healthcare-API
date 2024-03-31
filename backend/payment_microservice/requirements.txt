@@ -3,3 +3,5 @@ Flask-Cors==4.0.0
 requests==2.31.0
 cryptography==42.0.5
 jsons==1.6.3
+mailtrap==2.0.1
+twilio==9.0.2
