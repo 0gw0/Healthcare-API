@@ -38,7 +38,7 @@ export default function Page() {
                     setHasRetrieved(true);
 
                      // Check for low inventory
-                const lowInventoryItems = data.filter(item => item.quantity < 13); // Adjust threshold as needed
+                const lowInventoryItems = data.filter(item => item.quantity < 20); // Adjust threshold as needed
                 if (lowInventoryItems.length > 0) {
                     setShowLowInventoryModal(true);
                 }
