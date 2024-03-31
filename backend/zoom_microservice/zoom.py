@@ -12,13 +12,20 @@ from datetime import date
 import base64
 from pathlib import Path
 
+# Zoom Settings
+ZOOM_INVITE = "https://smu-sg.zoom.us/j/6346697940?pwd=VDdLSllTV1RyOE5TVU8zeUhNRHlvdz09"
+ZOOM_OWNER = "https://smu-sg.zoom.us/meeting#/pmi/6346697940"
+
 # Email API
 import mailtrap as mt
+#  SMS API
+from twilio.rest import Client
 
 # Please no DDOS me - I lazy configure environment variable
 TEAM_MEMBER_ACCOUNT = "Terris Tan Wei Jun"
 TEAM_MEMBER_EMAIL = "terristanwei@gmail.com"
-API_ENABLED = True # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$
+TEAM_MEMBER_PHONE = "+6596867171"
+API_ENABLED = False # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$
 
 ###### MailTrap configuration (Email API) START ####################################################################################
 MAILTRAP_TOKEN = "24e53d222"+"761fba31630c"+"8896608b09b"
@@ -40,180 +47,98 @@ MAILTRAP_CATEGORY = "Integration Test"
 ####### MailTrap configuration (Email API) END #####################################################################################
 
 
-# ReportLab is a Python library that allows you to create PDFs
-from reportlab.lib.pagesizes import letter
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
-from reportlab.lib.styles import getSampleStyleSheet
+###### Twilio configuration (SMS API) START ########################################################################################
+TWILIO_ACCOUNT_SID_1 = 'AC11fe7a'
+TWILIO_ACCOUNT_SID_2 = '0d60d8906e79'
+TWILIO_ACCOUNT_SID_3 = '2c540b0488669d'
+TWILIO_ACCOUNT_SID = TWILIO_ACCOUNT_SID_1+TWILIO_ACCOUNT_SID_2+TWILIO_ACCOUNT_SID_3
+
+TWILIO_AUTH_TOKEN_1 = 'cd8c1e2c0'
+TWILIO_AUTH_TOKEN_2 = '7bc3c7788307'
+TWILIO_AUTH_TOKEN_3 = '67e010d9721'
+TWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3
+Twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
+
+TWILIO_FROM = '+15184994110'
+TWILIO_TO = TEAM_MEMBER_PHONE
+
+# To use Twilio, send an SMS using the send method
+# TWILIO_BODY = 'Message from Twilio. Hi!'
+# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)
+# print(message.sid)
+
+####### Twilio configuration (SMS API) END #########################################################################################
 
 app = Flask(__name__)
 CORS(app)  
 
-today = date.today().strftime("%d %B, %Y")
-styles = getSampleStyleSheet()
-
-@app.route("/medical_certificate/create", methods=["POST"])
-def generate_certificate():
-    """
-    Generate Certificate
-
-    Example Payload:
-    - { "data": {
-        "appointment_id": 999,
-        "timeslot_datetime": "2025-10-25 15:30:00",
-        "duration_minutes": 30,
-        "mc_start_datetime": "2025-10-25",
-        "mc_days": 1
-        }
-    }
-
-    Returns:
-    - 201: MC created
-    - 500: Error creating MC
-
-    Constraints:
-    - Data is always correct
-
-    Example Response:
-    - Actual PDF file
-    - {"code": 500, "message": "Failed to send email using Mailtrap!", "error": ...}
-    """
-    # (1) Get the data from the JSON request body
-    data = json.loads(request.data)
-    if "data" in data:
-        data = data["data"]
-
-    # (2) Extract ONLY relevant data
-    # - Convert the string, if necessary
-    APPOINTMENT_ID = str(data.get("appointment_id", "1"))
-    # PATIENT_ID = str(data.get("patient_id", "1"))
-    # DOCTOR_ID = str(data.get("doctor_id", "1"))
-
-    TIMESLOT_DATETIME = str(data.get("timeslot_datetime", today))
-    DURATION_MINUTES = str(data.get("duration_minutes", "30"))
-
-    MC_START_DATETIME = str(data.get("mc_start_datetime", today)) # Also the issue date
-    MC_DAYS = str(data.get("mc_days", "1"))
-
-    # (3) Then create default values
-    # - Default values are used for testing
-    # - Defaults: patient_name, 
-    PATIENT_NRIC = "T0193742D"
-    PATIENT_NAME = "Dwight Schrute"
-
-    DIAGNOSIS = "UNFIT FOR DUTY"
+DEFAULT_MSG = f"Thank you for choosing Yata!\n\nPlease join the Zoom meeting at:\n{ZOOM_INVITE}."
+def send_email():
+    try:
+        mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,
+            subject = "Teleconsult Zoom Meeting Link",
+            text = DEFAULT_MSG
+        )
+        Mailtrap_client.send(mail)
+        return True
+    except Exception as e:
+        return False
     
-    DOCTOR_NRIC = "M982420A"
-    DOCTOR_NAME ="Dr. Michael Scott"
+def send_sms():
+    try:
+        TWILIO_BODY = DEFAULT_MSG
+        message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)
+        # print(message.sid)
+        return True
+    except Exception as e:
+        return False
+        
 
-    # (4) Create directory if not exists
-    PDF_DIR = "medical_pdf"
-    if not os.path.exists(PDF_DIR):
-        os.makedirs(PDF_DIR)
 
-    # (5) Create a digital PDF document
-    FILE_NAME = f"mc_{PATIENT_NRIC}_{PATIENT_NAME}.pdf".replace(". ", " ").replace(" ", "")
-    RESOURCE_PATH = f"./{PDF_DIR}/{FILE_NAME}"
-    doc = SimpleDocTemplate(RESOURCE_PATH, pagesize=letter)
-
-    # (6.1) Define the elements to be added to the PDF
-    elements = []
-
-    # (6.2) Add a title
-    title = Paragraph("Medical Certificate", styles["Heading1"])
-    elements.append(title)
-    elements.append(Spacer(1, 12))
-
-    # (6.3) Add appointment information
-    appointment_info = Paragraph(
-        f"Appointment id: {APPOINTMENT_ID}", styles["BodyText"]
-    )
-    elements.append(appointment_info)
-    elements.append(Spacer(1, 12))
-
-    # (6.4) Add patient information
-    patient_info = [
-        Paragraph(f"Patient Name: {PATIENT_NAME}", styles["BodyText"]),
-        Paragraph(f"NRIC: {PATIENT_NRIC}", styles["BodyText"]),
-    ]
-    elements.extend(patient_info)
-    elements.append(Spacer(1, 24))
-
-    # (6.5) Add certificate details
-    certificate_details = [
-        Paragraph(
-            f"This is to certify that {PATIENT_NAME} ({PATIENT_NRIC}) is {DIAGNOSIS} for {MC_DAYS} day(s) from {MC_START_DATETIME} inclusive.",
-            styles["BodyText"],
-        ),
-        Spacer(1, 12),
-        Paragraph(f"Issued on: {TIMESLOT_DATETIME}", styles["BodyText"]),
-        Paragraph(f"Session duration: {DURATION_MINUTES} minutes", styles["BodyText"]),
-        Spacer(1, 12),
-        Paragraph(DOCTOR_NAME, styles["BodyText"]),
-        Paragraph(f"NRIC: {DOCTOR_NRIC}", styles["BodyText"]),
-        Spacer(1, 24),
-        Paragraph(f"Please Note:", styles["BodyText"]),
-        Paragraph(
-            "Not Valid for Absence from Court Attendance\nThis Certificate is electronically generated, no signature is required",
-            styles["BodyText"],
-        ),
-    ]
-    elements.extend(certificate_details)
-
-    # (6.6) Build the PDF document
-    doc.build(elements)
-    
-    # (7) Send the PDF as an email attachment
-    if API_ENABLED:
-        try:
-            pdf_attachment = Path(__file__).parent.joinpath(RESOURCE_PATH).read_bytes()
-            # Send email with the PDF
-            mail = mt.MailFromTemplate(
-                sender=MAILTRAP_SENDER,
-                to=MAILTRAP_TO,
-
-                template_uuid="c5d86246-7b65-4706-aac9-64ae4c2a77d1",
-                template_variables={
-                    "datetime": "Test_Datetime"
-                },
-
-                attachments=[
-                    mt.Attachment(
-                        content=base64.b64encode(pdf_attachment),
-                        filename=FILE_NAME,
-                        disposition=mt.Disposition.INLINE,
-                        mimetype="application/pdf",
-                        content_id=FILE_NAME,
-                    )
-                ],
-            )
-            Mailtrap_client.send(mail)
-        except Exception as e:
-            print(e)
+@app.route("/zoom/start", methods=["POST"])
+def zoom_api():
+    if send_email():
+        if send_sms():
             return jsonify(
                 {
-                    "code": 500,
-                    "message": "Failed to send email using Mailtrap!",
-                    "error": e,
+                    "code": 200,
+                    "message": "Successfully sent email using Mailtrap and SMS using Twilio Each email cost $$$!",
+                    "data": {
+                        "zoom_owner_link": ZOOM_OWNER,
+                        "zoom_invite_link": ZOOM_OWNER,
+
+                        "sender_email": MAILTRAP_SENDER_EMAIL,
+                        "recipient_email": MAILTRAP_TO_EMAIL,
+
+                        "sender_sms": TWILIO_FROM,
+                        "recipient_sms": TWILIO_TO,
+                        
+                        "team_member_account": TEAM_MEMBER_ACCOUNT
+                    }
                 }
-            ), 500
-        
-    # (8) Return the PDF as a response
-    response = make_response(open(RESOURCE_PATH, "rb").read())
-    response.headers.set("Content-Type", "application/pdf")
-    response.headers.set(
-        "Content-Disposition", "attachment", filename=RESOURCE_PATH
-    )
-    # print(response)
-
-    return response
-
-    # return jsonify(
-    #     {
-    #         "code": "test",
-    #     }
-    # ), 200
-
+            ), 200
+        else:
+            return jsonify(
+                {
+                    "code": 400,
+                    "message": "Successfully sent email using Mailtrap but failed to send SMS using Twilio!",
+                    "error": "Failed to send SMS using Twilio!",
+                    "data": {
+                        "sender_email": MAILTRAP_SENDER_EMAIL,
+                        "recipient_email": MAILTRAP_TO_EMAIL,
+                        "team_member_account": TEAM_MEMBER_ACCOUNT
+                    }
+                }
+            ), 400
+    else:
+        return jsonify(
+            {
+                "code": 400,
+                "message": "Failed to send email using Mailtrap! Unable to proceed with sending SMS using Twilio!",
+                "error": "Failed to send email using Mailtrap!",
+            }
+        ), 400
 
 if __name__ == "__main__":
-    print("This is flask for " + os.path.basename(__file__) + ": manage medical_certificates ...")
-    app.run(host='0.0.0.0', port=5008, debug=True)
+    print("This is flask for " + os.path.basename(__file__) + ": manage zoom ...")
+    app.run(host='0.0.0.0', port=5009, debug=True)

@@ -112,6 +112,20 @@ services:
         environment:
             PYTHONUNBUFFERED: 1
 
+    #######################################################
+    # Zoom: The Zoom microservice
+    #######################################################
+    zoom_microservice:
+        build:
+            context: ./backend/zoom_microservice
+            dockerfile: Dockerfile
+        image: yata/zoom:1.0
+        restart: always
+        ports:
+            - '5009:5009'
+        environment:
+            PYTHONUNBUFFERED: 1
+
     ################## COMPLEX MICROSERVICES BELOW ##################
 
     #######################################################
