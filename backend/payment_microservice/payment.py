@@ -96,7 +96,7 @@ def pay(amount):
         json=json_data,
     )
     responseData = response.json()
-    create_payment()
+    # create_payment()
     # return responseData
     return redirect(responseData["data"]["instrumentResponse"]["redirectInfo"]["url"])
 
@@ -174,11 +174,11 @@ def reset_db(dataset):
     return jsonify({"code": code, "data_created": data}), code
 
 
-# Get Payments history
-@app.route("/payment/get/history", methods=["GET"])
+# Get all Payments
+@app.route("/payment/all", methods=["GET"])
 def get_all_payments_history():
     """
-    Get Payments history
+    Get all Payments
 
     Returns:
     - 200: All payments
@@ -198,7 +198,7 @@ def get_all_payments_history():
 
 
 # Get Payment by ID
-@app.route("/payment/get/<int:id>", methods=["GET"])
+@app.route("/payment/<int:id>", methods=["GET"])
 def get_specific_payment(id):
     """
     Get Payment by ID
