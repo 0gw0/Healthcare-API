@@ -102,7 +102,7 @@ def update_quantity(id):
     - 400: Invalid PUT payload
 
     Example Payload:
-    - {"quantity_to_add": 5}
+    - {"quantity_change": 5}
 
     Example Response:
     - {"code": 200, "message": "Inventory item quantity updated", "data": {...}}
@@ -111,31 +111,40 @@ def update_quantity(id):
     # (1) Get PUT payload
     try:
         data = request.get_json()
-        quantity_to_add = data["quantity_to_add"]
-    except Exception as e:
+        quantity_change = data["quantity_change"]
+        current_quantity = get_item_quantity({"id": id})
+        
+        if current_quantity is None:
+            return jsonify({"code": 404, "message": "Item not found"}), 404
+        
+          # (2) Update inventory item quantity by id
+        data["id"] = id
+        data["quantity"] = current_quantity + quantity_change
+        #IF quantity less than 0, return insufficient stock
+        if data["quantity"] < 0:
+                return jsonify({"code": 400, "message": "Insufficient stock"}), 400
+    
+    #sufficient stock, update quantity
+        update_item_quantity(data)
+        
+      # (3) Return Success
+        updated_item = get_item_by_id(data)
         return jsonify(
             {
-                "code": 400,
-                "message": "Invalid PUT payload",
-                "error": str(e)
+                "code": 200,
+                "message": f"Inventory item quantity updated",
+                "quantity_change": quantity_change,
+                "updated_data": updated_item
             }
-        ), 400
+        ), 200
 
-    # (2) Update inventory item quantity by id
-    data["id"] = id
-    data["quantity"] = get_item_quantity(data) + quantity_to_add
-    update_item_quantity(data)
+    except Exception as e:
+        return jsonify({"code": 500, "message": "Internal server error"}), 500
 
-    # (3) Return Success
-    updated_item = get_item_by_id(data)
-    return jsonify(
-        {
-            "code": 200,
-            "message": f"Inventory item quantity updated",
-            "quantity_to_add": quantity_to_add,
-            "updated_data": updated_item
-        }
-    ), 200
+
+    
+
+  
 
 if __name__ == '__main__':
     print("This is flask for " + os.path.basename(__file__) + ": inventory management ...")

@@ -11,8 +11,8 @@ from invokes import invoke_http
 app = Flask(__name__)
 CORS(app)
 
-inventory_URL = "http://host.docker.internal:5005/inventory/"
-delivery_order_URL = "http://host.docker.internal:5006/delivery_order"
+inventory_URL = "http://127.0.0.1:5005/inventory/"
+delivery_order_URL = "http://127.0.0.1:5006/delivery_order"
 
 
 #Create delivery complex microservice
@@ -45,7 +45,7 @@ def create_delivery(appointment_id):
     except Exception as e:
         return jsonify({"code": 400, "message": "Invalid POST payload"}), 400
         
-        
+    
     # Reformatting data to match delivery_order service expected payload
     delivery_data = {
         #as mentioned, delivery_order id is appointment_id
@@ -53,17 +53,16 @@ def create_delivery(appointment_id):
         "items": {item["name"]: item["quantity"] for item in order_details["items"]}
     }    
     
-    #(2) Update inventory
+    #(1) Update inventory
     for item in order_details["items"]:
         inventory_response = invoke_http(
             f"{inventory_URL}/update/{item['id']}",
             method="PUT",
-            json={"quantity_to_add": -item['quantity']}
+            json={"quantity_change": -item['quantity']}
         )
         if inventory_response["code"] not in range(200, 300):
             # Handle error
             print(f"Update failed!")
-            print(f"Error: {inventory_response['message']}")
             return (
                 jsonify(
                     {
@@ -79,7 +78,7 @@ def create_delivery(appointment_id):
     print(f"Response: {inventory_response}")
     print() 
             
-#(3) Create delivery order
+    #(2) Create delivery order
     delivery_order_response = invoke_http(
         f"{delivery_order_URL}/create",
         method="POST",

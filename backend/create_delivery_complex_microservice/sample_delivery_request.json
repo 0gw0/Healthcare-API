@@ -1,14 +1,19 @@
 {
   "items": [
     {
-      "name": "Amoxicillin",
+      "name": "Paracetamol",
       "quantity": 5,
-      "id": 10
+      "id": 1
     },
     {
-      "name": "Levothyroxine",
-      "quantity": 10,
-      "id": 20
+      "name": "Antihistamine",
+      "quantity": 9,
+      "id": 7
+    },
+    {
+      "name": "Hydrocodone",
+      "quantity": 7,
+      "id": 2
     }
   ]
 }
