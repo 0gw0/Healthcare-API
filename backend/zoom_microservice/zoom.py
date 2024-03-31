@@ -105,7 +105,7 @@ def zoom_api():
                     "message": "Successfully sent email using Mailtrap and SMS using Twilio Each email cost $$$!",
                     "data": {
                         "zoom_owner_link": ZOOM_OWNER,
-                        "zoom_invite_link": ZOOM_OWNER,
+                        "zoom_invite_link": ZOOM_INVITE,
 
                         "sender_email": MAILTRAP_SENDER_EMAIL,
                         "recipient_email": MAILTRAP_TO_EMAIL,
@@ -124,8 +124,15 @@ def zoom_api():
                     "message": "Successfully sent email using Mailtrap but failed to send SMS using Twilio!",
                     "error": "Failed to send SMS using Twilio!",
                     "data": {
+                        "zoom_owner_link": ZOOM_OWNER,
+                        "zoom_invite_link": ZOOM_INVITE,
+
                         "sender_email": MAILTRAP_SENDER_EMAIL,
                         "recipient_email": MAILTRAP_TO_EMAIL,
+                        
+                        "sender_sms": "Failed to send",
+                        "recipient_sms": "Failed to send",
+
                         "team_member_account": TEAM_MEMBER_ACCOUNT
                     }
                 }
