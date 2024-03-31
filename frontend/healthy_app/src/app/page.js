@@ -10,7 +10,6 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { redirect } from 'next/navigation';
 import axios from 'axios';
-import 'flowbite';
 
 export default function Home() {
 	const searchParams = useSearchParams();
