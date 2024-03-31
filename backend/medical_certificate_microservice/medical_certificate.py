@@ -18,7 +18,7 @@ import mailtrap as mt
 # Please no DDOS me - I lazy configure environment variable
 TEAM_MEMBER_ACCOUNT = "Terris Tan Wei Jun"
 TEAM_MEMBER_EMAIL = "terristanwei@gmail.com"
-API_ENABLED = True # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$
+API_ENABLED = True # Set to True to enable API (Email) - Each email cost $$$
 
 ###### MailTrap configuration (Email API) START ####################################################################################
 MAILTRAP_TOKEN = "24e53d222"+"761fba31630c"+"8896608b09b"

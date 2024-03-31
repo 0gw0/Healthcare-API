@@ -297,7 +297,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 1,\r\n    \"products\": {\r\n        \"Amoxicillin\": 5,\r\n        \"Levothyroxine\": 10\r\n    }\r\n}",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"items\": {\r\n        \"Amoxicillin\": 5,\r\n        \"Levothyroxine\": 10\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -320,7 +320,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"id\": 1,\r\n    \"products\": {\r\n        \"Amoxicillin\": 5,\r\n        \"Levothyroxine\": 10\r\n    }\r\n}",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"items\": {\r\n        \"Amoxicillin\": 5,\r\n        \"Levothyroxine\": 10\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -365,7 +365,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"code\": 201,\n    \"created_data\": {\n        \"id\": 1,\n        \"product_list\": \"Amoxicillin;Levothyroxine\",\n        \"quantity_list\": \"5;10\"\n    },\n    \"message\": \"Delivery order created\"\n}"
+							"body": "{\n    \"code\": 201,\n    \"created_data\": {\n        \"id\": 1,\n        \"item_list\": \"Amoxicillin;Levothyroxine\",\n        \"quantity_list\": \"5;10\"\n    },\n    \"message\": \"Delivery order created\"\n}"
 						},
 						{
 							"name": "400 - Empty payload",
@@ -473,7 +473,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"id\": 1,\r\n    \"products\": {\r\n        \"Amoxicillin\": 5,\r\n        \"Levothyroxine\": 10\r\n    }\r\n}",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"items\": {\r\n        \"Amoxicillin\": 5,\r\n        \"Levothyroxine\": 10\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -518,7 +518,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"code\": 400,\n    \"given_payload\": {\n        \"id\": 1,\n        \"product_list\": \"Amoxicillin;Levothyroxine\",\n        \"quantity_list\": \"5;10\"\n    },\n    \"message\": \"Delivery order already exists\"\n}"
+							"body": "{\n    \"code\": 400,\n    \"given_payload\": {\n        \"id\": 1,\n        \"item_list\": \"Amoxicillin;Levothyroxine\",\n        \"quantity_list\": \"5;10\"\n    },\n    \"message\": \"Delivery order already exists\"\n}"
 						}
 					]
 				}

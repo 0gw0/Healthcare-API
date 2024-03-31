@@ -11,8 +11,8 @@ def create_delivery_order(data):
     # print(data)
     c.execute("""
     INSERT INTO delivery_order 
-    (id, product_list, quantity_list) 
-    VALUES (:id, :product_list, :quantity_list)
+    (id, item_list, quantity_list) 
+    VALUES (:id, :item_list, :quantity_list)
     """, data)
 
     # (3) Commit and Close

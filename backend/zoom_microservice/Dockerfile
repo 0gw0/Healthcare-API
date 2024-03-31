@@ -1,6 +1,6 @@
 FROM python:3-slim
-WORKDIR /usr/src/app/medical_certificate_microservice
+WORKDIR /usr/src/app/zoom_microservice
 COPY requirements.txt ./
 RUN python -m pip install --no-cache-dir -r requirements.txt
-COPY ["medical_certificate.py", "./"]
-CMD [ "python", "-u", "./medical_certificate.py" ]
+COPY ["zoom.py", "./"]
+CMD [ "python", "-u", "./zoom.py" ]

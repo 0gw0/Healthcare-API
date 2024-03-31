@@ -28,7 +28,7 @@ def create_db():
     # (2) Create Table
     c.execute("""CREATE TABLE IF NOT EXISTS delivery_order (
               id INTEGER PRIMARY KEY,
-              product_list TEXT,
+              item_list TEXT,
               quantity_list INTEGER
             )""")
 
