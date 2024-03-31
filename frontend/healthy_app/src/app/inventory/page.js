@@ -12,7 +12,6 @@ import axios from "axios";
 
 import LowInventoryModal from "@/components/LowInventoryModal"; // Import the modal component
 
-
 export default function Page() {
     // Use state for inventory data
     const [inventoryData, setInventoryData] = useState([]);
@@ -37,12 +36,13 @@ export default function Page() {
                     setInventoryData(data);
                     setHasRetrieved(true);
 
-                     // Check for low inventory
-                const lowInventoryItems = data.filter(item => item.quantity < 20); // Adjust threshold as needed
-                if (lowInventoryItems.length > 0) {
-                    setShowLowInventoryModal(true);
-                }
-
+                    // Check for low inventory
+                    const lowInventoryItems = data.filter(
+                        (item) => item.quantity < 20
+                    ); // Adjust threshold as needed
+                    if (lowInventoryItems.length > 0) {
+                        setShowLowInventoryModal(true);
+                    }
                 })
                 // Empty database
                 .catch((error) => {
@@ -73,7 +73,7 @@ export default function Page() {
             <Navbar />
             <Hero
                 title="Inventory"
-                description="Update mediciation inventory here."
+                description="Update medication inventory here."
                 heroImg="doc"
             />
             {/* User Homepage items */}
@@ -91,8 +91,12 @@ export default function Page() {
             </Container>
 
             {/* Low Inventory Modal */}
-            {showLowInventoryModal && <LowInventoryModal data={inventoryData} onClose={() => setShowLowInventoryModal(false)} />}
-
+            {showLowInventoryModal && (
+                <LowInventoryModal
+                    data={inventoryData}
+                    onClose={() => setShowLowInventoryModal(false)}
+                />
+            )}
 
             <div className="container flex justify-center p-4 mx-auto"></div>
 
