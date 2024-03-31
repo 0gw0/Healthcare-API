@@ -125,7 +125,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -133,7 +134,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5007/payment/get/history",
+							"raw": "http://127.0.0.1:5007/payment/all",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -144,8 +145,7 @@
 							"port": "5007",
 							"path": [
 								"payment",
-								"get",
-								"history"
+								"all"
 							]
 						}
 					},
@@ -174,7 +174,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5007/payment/get/history",
+							"raw": "http://127.0.0.1:5007/payment/all",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -185,8 +185,43 @@
 							"port": "5007",
 							"path": [
 								"payment",
-								"get",
-								"history"
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PhonePe API Actual Payment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"isPaid\": 0\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5007/payment/pay/3000",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5007",
+							"path": [
+								"payment",
+								"pay",
+								"3000"
 							]
 						}
 					},
@@ -202,7 +237,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1,\r\n        \"isAccepted\": 1\r\n    },\r\n    \"start_date\": \"2024-03-06\",\r\n    \"end_date\": \"2024-03-06\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -210,7 +245,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5002/timeslot/get/all",
+							"raw": "http://127.0.0.1:5007/payment/21",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -218,11 +253,10 @@
 								"0",
 								"1"
 							],
-							"port": "5002",
+							"port": "5007",
 							"path": [
-								"timeslot",
-								"get",
-								"all"
+								"payment",
+								"21"
 							]
 						}
 					},
@@ -267,7 +301,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \r\n    \"data\": {\r\n        \"isAccepted\": 0\r\n    }\r\n}",
+							"raw": "{ \r\n    \"data\": {\r\n        \"isPaid\": 0\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -275,7 +309,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5002/timeslot/update/23",
+							"raw": "http://127.0.0.1:5007/payment/update/999",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -283,11 +317,11 @@
 								"0",
 								"1"
 							],
-							"port": "5002",
+							"port": "5007",
 							"path": [
-								"timeslot",
+								"payment",
 								"update",
-								"23"
+								"999"
 							]
 						}
 					},

@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "name": "Amoxicillin",
+      "quantity": 5,
+      "id": 10
+    },
+    {
+      "name": "Levothyroxine",
+      "quantity": 10,
+      "id": 20
+    }
+  ]
+}

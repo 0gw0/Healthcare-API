@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "68a5d7a5-f6a5-470f-9e77-e0b8dbb8a907",
+		"_postman_id": "5706f7ea-5ce1-4989-ada7-2770c9bfa9a1",
 		"name": "IS213 G3T8 delivery_order_microservice",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "26201401"
+		"_exporter_id": "29991780"
 	},
 	"item": [
 		{
@@ -17,7 +17,12 @@
 						"url": {
 							"raw": "http://127.0.0.1:5006/delivery_order/reset/obviously_wrong",
 							"protocol": "http",
-							"host": ["127", "0", "0", "1"],
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
 							"port": "5006",
 							"path": [
 								"delivery_order",
@@ -35,7 +40,12 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/reset/obviously_wrong",
 									"protocol": "http",
-									"host": ["127", "0", "0", "1"],
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
 									"port": "5006",
 									"path": [
 										"delivery_order",
@@ -86,9 +96,18 @@
 						"url": {
 							"raw": "http://127.0.0.1:5006/delivery_order/reset/empty",
 							"protocol": "http",
-							"host": ["127", "0", "0", "1"],
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
 							"port": "5006",
-							"path": ["delivery_order", "reset", "empty"]
+							"path": [
+								"delivery_order",
+								"reset",
+								"empty"
+							]
 						}
 					},
 					"response": [
@@ -100,9 +119,18 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/reset/empty",
 									"protocol": "http",
-									"host": ["127", "0", "0", "1"],
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
 									"port": "5006",
-									"path": ["delivery_order", "reset", "empty"]
+									"path": [
+										"delivery_order",
+										"reset",
+										"empty"
+									]
 								}
 							},
 							"status": "RESET CONTENT",
@@ -147,9 +175,18 @@
 						"url": {
 							"raw": "http://127.0.0.1:5006/delivery_order/reset/dataset1",
 							"protocol": "http",
-							"host": ["127", "0", "0", "1"],
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
 							"port": "5006",
-							"path": ["delivery_order", "reset", "dataset1"]
+							"path": [
+								"delivery_order",
+								"reset",
+								"dataset1"
+							]
 						}
 					},
 					"response": [
@@ -161,7 +198,12 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/reset/dataset1",
 									"protocol": "http",
-									"host": ["127", "0", "0", "1"],
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
 									"port": "5006",
 									"path": [
 										"delivery_order",
@@ -215,7 +257,9 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"exec": [""],
+								"exec": [
+									""
+								],
 								"type": "text/javascript",
 								"packages": {}
 							}
@@ -225,11 +269,20 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5006/delivery_order/get/all",
+							"raw": "http://127.0.0.1:5006/delivery_order/get/history",
 							"protocol": "http",
-							"host": ["127", "0", "0", "1"],
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
 							"port": "5006",
-							"path": ["delivery_order", "get", "history"]
+							"path": [
+								"delivery_order",
+								"get",
+								"history"
+							]
 						}
 					},
 					"response": [
@@ -241,9 +294,18 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/get/all",
 									"protocol": "http",
-									"host": ["127", "0", "0", "1"],
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
 									"port": "5006",
-									"path": ["delivery_order", "get", "all"]
+									"path": [
+										"delivery_order",
+										"get",
+										"all"
+									]
 								}
 							},
 							"status": "NOT FOUND",
@@ -277,75 +339,40 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"code\": 404,\n    \"message\": \"No delivery order found\"\n}"
-						}
-					]
-				},
-				{
-					"name": "CREATE Delivery Order",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"exec": [""],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"id\": 1,\r\n    \"items\": {\r\n        \"Amoxicillin\": 5,\r\n        \"Levothyroxine\": 10\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
 						},
-						"url": {
-							"raw": "http://127.0.0.1:5006/delivery_order/create",
-							"protocol": "http",
-							"host": ["127", "0", "0", "1"],
-							"port": "5006",
-							"path": ["delivery_order", "create"]
-						}
-					},
-					"response": [
 						{
 							"name": "200 - Successful",
 							"originalRequest": {
-								"method": "POST",
+								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"id\": 1,\r\n    \"items\": {\r\n        \"Amoxicillin\": 5,\r\n        \"Levothyroxine\": 10\r\n    }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
 								"url": {
-									"raw": "http://127.0.0.1:5006/delivery_order/create",
+									"raw": "http://127.0.0.1:5006/delivery_order/get/all",
 									"protocol": "http",
-									"host": ["127", "0", "0", "1"],
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
 									"port": "5006",
-									"path": ["delivery_order", "create"]
+									"path": [
+										"delivery_order",
+										"get",
+										"all"
+									]
 								}
 							},
-							"status": "CREATED",
-							"code": 201,
+							"status": "OK",
+							"code": 200,
 							"_postman_previewlanguage": "json",
 							"header": [
 								{
 									"key": "Server",
-									"value": "Werkzeug/3.0.1 Python/3.11.8"
+									"value": "Werkzeug/3.0.1 Python/3.12.1"
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 21 Mar 2024 06:29:12 GMT"
+									"value": "Sun, 31 Mar 2024 09:09:45 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -353,7 +380,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "172"
+									"value": "560"
 								},
 								{
 									"key": "Access-Control-Allow-Origin",
@@ -365,8 +392,53 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"code\": 201,\n    \"created_data\": {\n        \"id\": 1,\n        \"item_list\": \"Amoxicillin;Levothyroxine\",\n        \"quantity_list\": \"5;10\"\n    },\n    \"message\": \"Delivery order created\"\n}"
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"item_list\": \"Amoxicillin;Levothyroxine\",\n            \"quantity_list\": \"5;10\"\n        },\n        {\n            \"id\": 2,\n            \"item_list\": \"Paracetamol;Amoxicillin\",\n            \"quantity_list\": \"12;14\"\n        },\n        {\n            \"id\": 3,\n            \"item_list\": \"Paracetamol;Amoxicillin\",\n            \"quantity_list\": \"12;14\"\n        },\n        {\n            \"id\": 4,\n            \"item_list\": \"Paracetamol;Amoxicillin\",\n            \"quantity_list\": \"12;14\"\n        },\n        {\n            \"id\": 5,\n            \"item_list\": \"Paracetamol;Amoxicillin\",\n            \"quantity_list\": \"12;14\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "CREATE Delivery Order",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"items\": {\r\n        \"Paracetamol\": 12,\r\n        \"Amoxicillin\": 14\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
+						"url": {
+							"raw": "http://127.0.0.1:5006/delivery_order/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5006",
+							"path": [
+								"delivery_order",
+								"create"
+							]
+						}
+					},
+					"response": [
 						{
 							"name": "400 - Empty payload",
 							"originalRequest": {
@@ -375,9 +447,17 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/create",
 									"protocol": "http",
-									"host": ["127", "0", "0", "1"],
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
 									"port": "5006",
-									"path": ["delivery_order", "create"]
+									"path": [
+										"delivery_order",
+										"create"
+									]
 								}
 							},
 							"status": "BAD REQUEST",
@@ -429,9 +509,17 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/create",
 									"protocol": "http",
-									"host": ["127", "0", "0", "1"],
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
 									"port": "5006",
-									"path": ["delivery_order", "create"]
+									"path": [
+										"delivery_order",
+										"create"
+									]
 								}
 							},
 							"status": "BAD REQUEST",
@@ -483,9 +571,17 @@
 								"url": {
 									"raw": "http://127.0.0.1:5006/delivery_order/create",
 									"protocol": "http",
-									"host": ["127", "0", "0", "1"],
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
 									"port": "5006",
-									"path": ["delivery_order", "create"]
+									"path": [
+										"delivery_order",
+										"create"
+									]
 								}
 							},
 							"status": "BAD REQUEST",
@@ -519,6 +615,68 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"code\": 400,\n    \"given_payload\": {\n        \"id\": 1,\n        \"item_list\": \"Amoxicillin;Levothyroxine\",\n        \"quantity_list\": \"5;10\"\n    },\n    \"message\": \"Delivery order already exists\"\n}"
+						},
+						{
+							"name": "200 - Successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"items\": {\r\n        \"Amoxicillin\": 5,\r\n        \"Levothyroxine\": 10\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5006/delivery_order/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5006",
+									"path": [
+										"delivery_order",
+										"create"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.12.1"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 09:06:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "169"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"created_data\": {\n        \"id\": 1,\n        \"item_list\": \"Amoxicillin;Levothyroxine\",\n        \"quantity_list\": \"5;10\"\n    },\n    \"message\": \"Delivery order created\"\n}"
 						}
 					]
 				}

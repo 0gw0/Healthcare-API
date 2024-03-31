@@ -23,7 +23,7 @@ delivery_order_URL = "http://host.docker.internal:5006/delivery_order"
     2. Create delivery order
 
     Assumptions:
-    - inventory_id will always exist
+    - items exist in inventory
     - delivery_id will always exist
 
     Returns:
@@ -38,25 +38,30 @@ delivery_order_URL = "http://host.docker.internal:5006/delivery_order"
     
 # Create delivery with appointment ID
 @app.route("/delivery/create/<int:appointment_id>", methods=["POST"])
-def create_delivery():
-    order_details = request.get_json()
-    items = order_details["items"]
+def create_delivery(appointment_id):
+    #(1) Check status of payload 
+    try:
+        order_details = request.get_json()
+    except Exception as e:
+        return jsonify({"code": 400, "message": "Invalid POST payload"}), 400
+        
+        
+    # Reformatting data to match delivery_order service expected payload
+    delivery_data = {
+        #as mentioned, delivery_order id is appointment_id
+        "id": appointment_id,
+        "items": {item["name"]: item["quantity"] for item in order_details["items"]}
+    }    
     
-    #(1) Update inventory
-    for item in items:
-        #If item quantity is negative, return error
-        if item['quantity'] < 0:
-            return jsonify({"code": 400, "message": "Negative quantity provided"}), 400
-        
-        
-        #Proceed to update inventory
+    #(2) Update inventory
+    for item in order_details["items"]:
         inventory_response = invoke_http(
             f"{inventory_URL}/update/{item['id']}",
             method="PUT",
-            json={"quantity_to_add": item['quantity']}
+            json={"quantity_to_add": -item['quantity']}
         )
         if inventory_response["code"] not in range(200, 300):
-            # Handle error (return error inventory_response)
+            # Handle error
             print(f"Update failed!")
             print(f"Error: {inventory_response['message']}")
             return (
@@ -66,19 +71,19 @@ def create_delivery():
                         "message": "Failed to update inventory",
                         "error_message": inventory_response["message"],
                     }
-                ),
-                400,
+                ), inventory_response["code"]
+                
             )
             
     print(f"Inventory Update completed!")
     print(f"Response: {inventory_response}")
     print() 
             
-#(2) Create delivery order
+#(3) Create delivery order
     delivery_order_response = invoke_http(
         f"{delivery_order_URL}/create",
         method="POST",
-        json=order_details
+        json=delivery_data
     )
     if delivery_order_response["code"] not in range(200, 300):
         # Handle error
@@ -92,7 +97,7 @@ def create_delivery():
                         "error_message": delivery_order_response["message"],
                     }
                 ),
-                501,
+                delivery_order_response,
             )
 
     print(f"Delivery Order Creation completed!")
