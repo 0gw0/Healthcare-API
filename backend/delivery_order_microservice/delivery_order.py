@@ -91,14 +91,14 @@ def create_delivery_order_api():
     Constraints:
     - Data format will always be correct
     - id is appointment_id AND appointment_id will always exists
-    - Product will always exists inventory_microservice database
+    - Item will always exists inventory_microservice database
     - Others:
         - Payment must be made before delivery
         - MC must be issued while creating delivery
         - Inventory data must be synced when delivery
 
     Example Request Payload:
-    - { "id": 1, "products": { "Amoxicillin": 5, "Levothyroxine": 10 } }
+    - { "id": 1, "items": { "Amoxicillin": 5, "Levothyroxine": 10 } }
 
     Example Response:
     - {"code": 201, "message": "Delivery order created", "created_data": [...]}
@@ -112,21 +112,21 @@ def create_delivery_order_api():
         return jsonify({"code": 400, "message": "Invalid POST payload"}), 400
 
     # (2) Invalid Post Payload
-    # - Missing products
-    if "products" not in data:
+    # - Missing items
+    if "items" not in data:
         return jsonify({"code": 400, "message": "Invalid POST payload"}), 400
 
     # (3) Reformat the data
-    # E.g. { "id": 1, "products": { "Amoxicillin": 5, "Levothyroxine":10 } }
-    # into { "id": 1, "product_list": "Amoxicillin;Levothyroxine", "quantity_list": "5;10" }
-    product_list = ""
+    # E.g. { "id": 1, "items": { "Amoxicillin": 5, "Levothyroxine":10 } }
+    # into { "id": 1, "item_list": "Amoxicillin;Levothyroxine", "quantity_list": "5;10" }
+    item_list = ""
     quantity_list = ""
-    for product, quantity in data["products"].items():
-        product_list += product + ";"
+    for item, quantity in data["items"].items():
+        item_list += item + ";"
         quantity_list += str(quantity) + ";"
-    data["product_list"] = product_list[:-1]
-    data["quantity_list"] = quantity_list[:-1]
-    del data["products"]
+    data["item_list"] = item_list[:-1]
+    data["quantity_list"] = quantity_list[:-1]  
+    del data["items"]
 
     # (4) Create Delivery Order
     try:
