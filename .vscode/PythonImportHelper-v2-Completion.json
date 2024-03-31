@@ -56,6 +56,30 @@
         "documentation": {}
     },
     {
+        "label": "dataset1",
+        "importPath": "database.data.dataset1",
+        "description": "database.data.dataset1",
+        "isExtraImport": true,
+        "detail": "database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "importPath": "database.db_config",
+        "description": "database.db_config",
+        "isExtraImport": true,
+        "detail": "database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "importPath": "database.db_config",
+        "description": "database.db_config",
+        "isExtraImport": true,
+        "detail": "database.db_config",
+        "documentation": {}
+    },
+    {
         "label": "connect_db",
         "importPath": "database.db_config",
         "description": "database.db_config",
@@ -296,6 +320,30 @@
         "documentation": {}
     },
     {
+        "label": "abspath",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "dirname",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "join",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
         "label": "join",
         "importPath": "os.path",
         "description": "os.path",
@@ -466,6 +514,30 @@
         "documentation": {}
     },
     {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "make_response",
         "importPath": "flask",
         "description": "flask",
@@ -522,6 +594,30 @@
         "documentation": {}
     },
     {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "request",
         "importPath": "flask",
         "description": "flask",
@@ -559,6 +655,62 @@
         "description": "flask",
         "isExtraImport": true,
         "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "make_response",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
         "documentation": {}
     },
     {
@@ -652,6 +804,14 @@
         "documentation": {}
     },
     {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "request_reset_db",
         "importPath": "database.db_appointment",
         "description": "database.db_appointment",
@@ -665,6 +825,31 @@
         "description": "database.db_appointment",
         "isExtraImport": true,
         "detail": "database.db_appointment",
+        "documentation": {}
+    },
+    {
+        "label": "invoke_http",
+        "importPath": "invokes",
+        "description": "invokes",
+        "isExtraImport": true,
+        "detail": "invokes",
+        "documentation": {}
+    },
+    {
+        "label": "invoke_http",
+        "importPath": "invokes",
+        "description": "invokes",
+        "isExtraImport": true,
+        "detail": "invokes",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
         "documentation": {}
     },
     {
@@ -796,29 +981,20 @@
         "documentation": {}
     },
     {
-        "label": "requests",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "requests",
-        "description": "requests",
-        "detail": "requests",
-        "documentation": {}
-    },
-    {
-        "label": "invoke_http",
-        "importPath": "invokes",
-        "description": "invokes",
-        "isExtraImport": true,
-        "detail": "invokes",
-        "documentation": {}
-    },
-    {
         "label": "base64",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "base64",
         "description": "base64",
         "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
         "documentation": {}
     },
     {
@@ -951,6 +1127,14 @@
         "documentation": {}
     },
     {
+        "label": "Client",
+        "importPath": "twilio.rest",
+        "description": "twilio.rest",
+        "isExtraImport": true,
+        "detail": "twilio.rest",
+        "documentation": {}
+    },
+    {
         "label": "request_reset_db",
         "importPath": "database.db_notification",
         "description": "database.db_notification",
@@ -972,6 +1156,86 @@
         "description": "database.db_notification",
         "isExtraImport": true,
         "detail": "database.db_notification",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "database.data.model.payment",
+        "description": "database.data.model.payment",
+        "isExtraImport": true,
+        "detail": "database.data.model.payment",
+        "documentation": {}
+    },
+    {
+        "label": "create_payment_test",
+        "importPath": "database.db_payment_actions",
+        "description": "database.db_payment_actions",
+        "isExtraImport": true,
+        "detail": "database.db_payment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_payments",
+        "importPath": "database.db_payment_actions",
+        "description": "database.db_payment_actions",
+        "isExtraImport": true,
+        "detail": "database.db_payment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_exact_payment",
+        "importPath": "database.db_payment_actions",
+        "description": "database.db_payment_actions",
+        "isExtraImport": true,
+        "detail": "database.db_payment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "create_payment",
+        "importPath": "database.db_payment_actions",
+        "description": "database.db_payment_actions",
+        "isExtraImport": true,
+        "detail": "database.db_payment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "delete_payment_by_id",
+        "importPath": "database.db_payment_actions",
+        "description": "database.db_payment_actions",
+        "isExtraImport": true,
+        "detail": "database.db_payment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_exact_payment",
+        "importPath": "database.db_payment_actions",
+        "description": "database.db_payment_actions",
+        "isExtraImport": true,
+        "detail": "database.db_payment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "update_payment_isPaid",
+        "importPath": "database.db_payment_actions",
+        "description": "database.db_payment_actions",
+        "isExtraImport": true,
+        "detail": "database.db_payment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_payments",
+        "importPath": "database.db_payment",
+        "description": "database.db_payment",
+        "isExtraImport": true,
+        "detail": "database.db_payment",
+        "documentation": {}
+    },
+    {
+        "label": "request_reset_db",
+        "importPath": "database.db_payment",
+        "description": "database.db_payment",
+        "isExtraImport": true,
+        "detail": "database.db_payment",
         "documentation": {}
     },
     {
@@ -1196,7 +1460,7 @@
         "kind": 2,
         "importPath": "backend.appointment_microservice.database.data.dataset1",
         "description": "backend.appointment_microservice.database.data.dataset1",
-        "peekOfCode": "def example():\n    Appointment(\n            1,                      # id\n            1,                      # doctor_id\n            '2024-02-28 13:00:00',  # time_created\n            '2024-03-03 08:30:00',  # timeslot_datetime\n            30,                     # duration_minutes\n            1,                      # patient_id\n            '2024-02-28 19:00:00',  # time_accepted\n            1                       # isCompleted - Default=0",
+        "peekOfCode": "def example():\n    Appointment(\n        1,  # id\n        1,  # doctor_id\n        \"2024-02-28 13:00:00\",  # time_created\n        \"2024-03-03 08:30:00\",  # timeslot_datetime\n        30,  # duration_minutes\n        1,  # patient_id\n        \"2024-02-28 19:00:00\",  # time_accepted\n        1,  # isCompleted - Default=0",
         "detail": "backend.appointment_microservice.database.data.dataset1",
         "documentation": {}
     },
@@ -1205,7 +1469,7 @@
         "kind": 2,
         "importPath": "backend.appointment_microservice.database.data.dataset1",
         "description": "backend.appointment_microservice.database.data.dataset1",
-        "peekOfCode": "def dataset1():\n    dataset = [\n            # Appointments for 2024-03-03\n            Appointment(1, 1, '2024-02-28 13:00:00', '2024-03-03 08:30:00', 30, 1, '2024-02-28 19:00:00'),\n            Appointment(5, 1, '2024-02-28 13:04:00', '2024-03-03 12:30:00', 30, 1, '2024-02-28 19:04:00'),\n            Appointment(8, 1, '2024-02-28 13:07:00', '2024-03-03 15:30:00', 30, 1, '2024-02-28 19:07:00', 1),\n            Appointment(10, 1, '2024-02-28 13:09:00', '2024-03-03 17:30:00', 30, 1, '2024-02-28 19:09:00'),\n            # Appointments for 2024-03-06\n            Appointment(12, 1, '2024-02-28 13:11:00', '2024-03-06 08:30:00', 30, 1, '2024-03-4 10:11:00'),\n            Appointment(16, 1, '2024-02-28 13:15:00', '2024-03-06 12:30:00', 30, 1, '2024-03-4 10:15:00', 1),",
+        "peekOfCode": "def dataset1():\n    dataset = [\n            # Appointments for 2024-04-04 (Thurs)\n            Appointment(1, 1, '2024-02-28 13:00:00', '2024-04-04 08:30:00', 30, 1, '2024-04-01 19:00:00'),\n            Appointment(5, 1, '2024-02-28 13:00:00', '2024-04-04 12:30:00', 30, 1, '2024-04-01 19:04:00'),\n            Appointment(8, 1, '2024-02-28 13:00:00', '2024-04-04 15:30:00', 30, 1, '2024-04-01 19:07:00', 1),\n            Appointment(10, 1, '2024-02-28 13:00:00', '2024-04-04 17:30:00', 30, 1, '2024-04-01 19:09:00'),\n            # Appointments for 2024-04-08 (Mon)\n            Appointment(11, 1, '2024-02-28 13:01:00', '2024-04-08 08:30:00', 30, 1, '2024-04-02 10:11:00'),\n            Appointment(15, 1, '2024-02-28 13:01:00', '2024-04-08 12:30:00', 30, 1, '2024-04-02 10:15:00', 1),",
         "detail": "backend.appointment_microservice.database.data.dataset1",
         "documentation": {}
     },
@@ -1417,6 +1681,60 @@
         "documentation": {}
     },
     {
+        "label": "create_delivery",
+        "kind": 2,
+        "importPath": "backend.create_delivery_complex_microservice.create_delivery",
+        "description": "backend.create_delivery_complex_microservice.create_delivery",
+        "peekOfCode": "def create_delivery():\n    order_details = request.get_json()\n    items = order_details[\"items\"]\n    #(1) Update inventory\n    for item in items:\n        #If item quantity is negative, return error\n        if item['quantity'] < 0:\n            return jsonify({\"code\": 400, \"message\": \"Negative quantity provided\"}), 400\n        #Proceed to update inventory\n        inventory_response = invoke_http(",
+        "detail": "backend.create_delivery_complex_microservice.create_delivery",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.create_delivery_complex_microservice.create_delivery",
+        "description": "backend.create_delivery_complex_microservice.create_delivery",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)\ninventory_URL = \"http://host.docker.internal:5005/inventory/\"\ndelivery_order_URL = \"http://host.docker.internal:5006/delivery_order\"\n#Create delivery complex microservice\n\"\"\"\n    Create delivery\n    1. Update inventory\n    2. Create delivery order\n    Assumptions:",
+        "detail": "backend.create_delivery_complex_microservice.create_delivery",
+        "documentation": {}
+    },
+    {
+        "label": "inventory_URL",
+        "kind": 5,
+        "importPath": "backend.create_delivery_complex_microservice.create_delivery",
+        "description": "backend.create_delivery_complex_microservice.create_delivery",
+        "peekOfCode": "inventory_URL = \"http://host.docker.internal:5005/inventory/\"\ndelivery_order_URL = \"http://host.docker.internal:5006/delivery_order\"\n#Create delivery complex microservice\n\"\"\"\n    Create delivery\n    1. Update inventory\n    2. Create delivery order\n    Assumptions:\n    - inventory_id will always exist\n    - delivery_id will always exist",
+        "detail": "backend.create_delivery_complex_microservice.create_delivery",
+        "documentation": {}
+    },
+    {
+        "label": "delivery_order_URL",
+        "kind": 5,
+        "importPath": "backend.create_delivery_complex_microservice.create_delivery",
+        "description": "backend.create_delivery_complex_microservice.create_delivery",
+        "peekOfCode": "delivery_order_URL = \"http://host.docker.internal:5006/delivery_order\"\n#Create delivery complex microservice\n\"\"\"\n    Create delivery\n    1. Update inventory\n    2. Create delivery order\n    Assumptions:\n    - inventory_id will always exist\n    - delivery_id will always exist\n    Returns:",
+        "detail": "backend.create_delivery_complex_microservice.create_delivery",
+        "documentation": {}
+    },
+    {
+        "label": "invoke_http",
+        "kind": 2,
+        "importPath": "backend.create_delivery_complex_microservice.invokes",
+        "description": "backend.create_delivery_complex_microservice.invokes",
+        "peekOfCode": "def invoke_http(url, method, json=None, **kwargs):\n    \"\"\"A simple wrapper for requests methods.\n    url: the url of the http service;\n    method: the http method;\n    data: the JSON input when needed by the http method;\n    return: the JSON reply content from the http service if the call succeeds;\n    otherwise, return a JSON object with a \"code\" name-value pair.\n    \"\"\"\n    code = 200\n    result = {}",
+        "detail": "backend.create_delivery_complex_microservice.invokes",
+        "documentation": {}
+    },
+    {
+        "label": "SUPPORTED_HTTP_METHODS",
+        "kind": 5,
+        "importPath": "backend.create_delivery_complex_microservice.invokes",
+        "description": "backend.create_delivery_complex_microservice.invokes",
+        "peekOfCode": "SUPPORTED_HTTP_METHODS = set(\n    [\"GET\", \"OPTIONS\", \"HEAD\", \"POST\", \"PUT\", \"PATCH\", \"DELETE\"]\n)\ndef invoke_http(url, method, json=None, **kwargs):\n    \"\"\"A simple wrapper for requests methods.\n    url: the url of the http service;\n    method: the http method;\n    data: the JSON input when needed by the http method;\n    return: the JSON reply content from the http service if the call succeeds;\n    otherwise, return a JSON object with a \"code\" name-value pair.",
+        "detail": "backend.create_delivery_complex_microservice.invokes",
+        "documentation": {}
+    },
+    {
         "label": "Delivery_Order",
         "kind": 6,
         "importPath": "backend.delivery_order_microservice.database.data.model.delivery_order",
@@ -1511,7 +1829,7 @@
         "kind": 2,
         "importPath": "backend.delivery_order_microservice.database.db_delivery_order",
         "description": "backend.delivery_order_microservice.database.db_delivery_order",
-        "peekOfCode": "def create_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Table\n    c.execute(\"\"\"CREATE TABLE IF NOT EXISTS delivery_order (\n              id INTEGER PRIMARY KEY,\n              product_list TEXT,\n              quantity_list INTEGER\n            )\"\"\")",
+        "peekOfCode": "def create_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Table\n    c.execute(\"\"\"CREATE TABLE IF NOT EXISTS delivery_order (\n              id INTEGER PRIMARY KEY,\n              item_list TEXT,\n              quantity_list INTEGER\n            )\"\"\")",
         "detail": "backend.delivery_order_microservice.database.db_delivery_order",
         "documentation": {}
     },
@@ -1556,7 +1874,7 @@
         "kind": 2,
         "importPath": "backend.delivery_order_microservice.database.db_delivery_order_actions",
         "description": "backend.delivery_order_microservice.database.db_delivery_order_actions",
-        "peekOfCode": "def create_delivery_order(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Delivery order\n    # print(data)\n    c.execute(\"\"\"\n    INSERT INTO delivery_order \n    (id, product_list, quantity_list) \n    VALUES (:id, :product_list, :quantity_list)",
+        "peekOfCode": "def create_delivery_order(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Delivery order\n    # print(data)\n    c.execute(\"\"\"\n    INSERT INTO delivery_order \n    (id, item_list, quantity_list) \n    VALUES (:id, :item_list, :quantity_list)",
         "detail": "backend.delivery_order_microservice.database.db_delivery_order_actions",
         "documentation": {}
     },
@@ -1601,7 +1919,7 @@
         "kind": 5,
         "importPath": "backend.delivery_order_microservice.delivery_order",
         "description": "backend.delivery_order_microservice.delivery_order",
-        "peekOfCode": "app = Flask(__name__)\nCORS(app)  \n# Reset Database\n@app.route(\"/delivery_order/reset/<string:dataset>\", methods=['POST'])\ndef reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)\n# Reset Database\n@app.route(\"/delivery_order/reset/<string:dataset>\", methods=[\"POST\"])\ndef reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:",
         "detail": "backend.delivery_order_microservice.delivery_order",
         "documentation": {}
     },
@@ -1898,7 +2216,7 @@
         "kind": 5,
         "importPath": "backend.medical_certificate_microservice.medical_certificate",
         "description": "backend.medical_certificate_microservice.medical_certificate",
-        "peekOfCode": "TEAM_MEMBER_ACCOUNT = \"Terris Tan Wei Jun\"\nTEAM_MEMBER_EMAIL = \"terristanwei@gmail.com\"\nAPI_ENABLED = True # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]",
+        "peekOfCode": "TEAM_MEMBER_ACCOUNT = \"Terris Tan Wei Jun\"\nTEAM_MEMBER_EMAIL = \"terristanwei@gmail.com\"\nAPI_ENABLED = True # Set to True to enable API (Email) - Each email cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]",
         "detail": "backend.medical_certificate_microservice.medical_certificate",
         "documentation": {}
     },
@@ -1907,7 +2225,7 @@
         "kind": 5,
         "importPath": "backend.medical_certificate_microservice.medical_certificate",
         "description": "backend.medical_certificate_microservice.medical_certificate",
-        "peekOfCode": "TEAM_MEMBER_EMAIL = \"terristanwei@gmail.com\"\nAPI_ENABLED = True # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"",
+        "peekOfCode": "TEAM_MEMBER_EMAIL = \"terristanwei@gmail.com\"\nAPI_ENABLED = True # Set to True to enable API (Email) - Each email cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"",
         "detail": "backend.medical_certificate_microservice.medical_certificate",
         "documentation": {}
     },
@@ -1916,7 +2234,7 @@
         "kind": 5,
         "importPath": "backend.medical_certificate_microservice.medical_certificate",
         "description": "backend.medical_certificate_microservice.medical_certificate",
-        "peekOfCode": "API_ENABLED = True # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method",
+        "peekOfCode": "API_ENABLED = True # Set to True to enable API (Email) - Each email cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method",
         "detail": "backend.medical_certificate_microservice.medical_certificate",
         "documentation": {}
     },
@@ -2033,7 +2351,7 @@
         "kind": 2,
         "importPath": "backend.notification_microservice.database.data.dataset1",
         "description": "backend.notification_microservice.database.data.dataset1",
-        "peekOfCode": "def dataset1():\n    dataset = {\n        Notification(1, \"2024-03-03 08:30:00\", 1, \"new\", 1),\n        Notification(2, \"2024-03-03 09:30:00\", 1, \"new\"),\n        Notification(3, \"2024-03-03 10:30:00\", 1, \"new\"),\n        Notification(4, \"2024-03-03 11:30:00\", 1, \"new\"),\n        Notification(8, \"2024-03-03 15:30:00\", 1, \"new\", 1)\n    }\n    return dataset",
+        "peekOfCode": "def dataset1():\n    dataset = {\n        Notification(1, \"2024-04-04 08:30:00\", 1, \"new\", 1),\n        Notification(2, \"2024-04-04 09:30:00\", 1, \"new\"),\n        Notification(3, \"2024-04-04 10:30:00\", 1, \"new\"),\n        Notification(4, \"2024-04-04 11:30:00\", 1, \"new\"),\n        Notification(5, \"2024-04-04 12:30:00\", 1, \"new\", 1),\n        Notification(6, \"2024-04-04 13:30:00\", 1, \"new\"),\n        Notification(7, \"2024-04-04 14:30:00\", 1, \"new\"),\n        Notification(8, \"2024-04-04 15:30:00\", 1, \"new\", 1),",
         "detail": "backend.notification_microservice.database.data.dataset1",
         "documentation": {}
     },
@@ -2506,6 +2824,258 @@
         "documentation": {}
     },
     {
+        "label": "Payment",
+        "kind": 6,
+        "importPath": "backend.payment_microservice.database.data.model.payment",
+        "description": "backend.payment_microservice.database.data.model.payment",
+        "peekOfCode": "class Payment:\n    def __init__(self, id, patient_id, doctor_id, price, isPaid=0):\n        self.id = id\n        self.patient_id = patient_id\n        self.doctor_id = doctor_id\n        self.price = price\n        self.isPaid = isPaid\n    @property\n    def getInfo(self):\n        return self.__dict__",
+        "detail": "backend.payment_microservice.database.data.model.payment",
+        "documentation": {}
+    },
+    {
+        "label": "example",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.data.dataset1",
+        "description": "backend.payment_microservice.database.data.dataset1",
+        "peekOfCode": "def example():\n    Payment(1, 1, 1, 20, 0),  # id, patient_id, doctor_id, price, isPaid\n    print(Payment.getInfo)\n# Dataset 1\n# - Must be synced with appointment dataset\n# isPaid by default is 0\ndef dataset1():\n    dataset = [\n        Payment(1, 1, 1, 20.0, 0),\n        Payment(5, 1, 1, 30.0, 0),",
+        "detail": "backend.payment_microservice.database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "dataset1",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.data.dataset1",
+        "description": "backend.payment_microservice.database.data.dataset1",
+        "peekOfCode": "def dataset1():\n    dataset = [\n        Payment(1, 1, 1, 20.0, 0),\n        Payment(5, 1, 1, 30.0, 0),\n        Payment(8, 1, 1, 19.5, 0),\n        Payment(10, 1, 1, 27.5, 0),\n        Payment(12, 1, 1, 58.3, 0),\n        Payment(16, 1, 1, 70.2, 0),\n        Payment(19, 1, 1, 48.6, 0),\n        Payment(21, 1, 1, 136.8, 0),",
+        "detail": "backend.payment_microservice.database.data.dataset1",
+        "documentation": {}
+    },
+    {
+        "label": "connect_db",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_config",
+        "description": "backend.payment_microservice.database.db_config",
+        "peekOfCode": "def connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):\n        d[col[0]] = row[idx]\n    return d",
+        "detail": "backend.payment_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "dict_factory",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_config",
+        "description": "backend.payment_microservice.database.db_config",
+        "peekOfCode": "def dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):\n        d[col[0]] = row[idx]\n    return d",
+        "detail": "backend.payment_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "db_name",
+        "kind": 5,
+        "importPath": "backend.payment_microservice.database.db_config",
+        "description": "backend.payment_microservice.database.db_config",
+        "peekOfCode": "db_name = \"payment.db\"\npath = dirname(abspath(__file__))\nfull_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):",
+        "detail": "backend.payment_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "backend.payment_microservice.database.db_config",
+        "description": "backend.payment_microservice.database.db_config",
+        "peekOfCode": "path = dirname(abspath(__file__))\nfull_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}",
+        "detail": "backend.payment_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "full_path",
+        "kind": 5,
+        "importPath": "backend.payment_microservice.database.db_config",
+        "description": "backend.payment_microservice.database.db_config",
+        "peekOfCode": "full_path = join(path, db_name)\n# Connect to Database\ndef connect_db():\n    conn = sqlite3.connect(full_path)\n    conn.row_factory = dict_factory\n    return conn\n# Set Row Factory\ndef dict_factory(cursor, row):\n    d = {}\n    for idx, col in enumerate(cursor.description):",
+        "detail": "backend.payment_microservice.database.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "get_tables",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_payment",
+        "description": "backend.payment_microservice.database.db_payment",
+        "peekOfCode": "def get_tables():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"SELECT name FROM sqlite_schema\")\n    table_names = c.fetchall()\n    # (3) Close Connection\n    conn.close()\n    return table_names",
+        "detail": "backend.payment_microservice.database.db_payment",
+        "documentation": {}
+    },
+    {
+        "label": "create_db",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_payment",
+        "description": "backend.payment_microservice.database.db_payment",
+        "peekOfCode": "def create_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Table\n    c.execute(\n        \"\"\"CREATE TABLE IF NOT EXISTS payments (\n              id INTEGER PRIMARY KEY,\n              patient_id INTEGER,\n              doctor_id INTEGER,",
+        "detail": "backend.payment_microservice.database.db_payment",
+        "documentation": {}
+    },
+    {
+        "label": "delete_db",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_payment",
+        "description": "backend.payment_microservice.database.db_payment",
+        "peekOfCode": "def delete_db():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Drop Table\n    c.execute(\"DROP TABLE IF EXISTS payments\")\n    # (3) Commit and Close\n    conn.commit()\n    conn.close()\n# Add Dataset",
+        "detail": "backend.payment_microservice.database.db_payment",
+        "documentation": {}
+    },
+    {
+        "label": "add_dataset",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_payment",
+        "description": "backend.payment_microservice.database.db_payment",
+        "peekOfCode": "def add_dataset(dataset):\n    # (1) Create Data\n    if dataset == \"dataset1\":\n        payments = dataset1()\n    # (2) Insert Data\n    for payment in payments:\n        check_and_insert_payment(payment.getInfo)\n# Check if doctor_id and timeslot_datetime Exists, then Insert User\ndef check_and_insert_payment(data):\n    if len(get_exact_payment(data)) > 0:",
+        "detail": "backend.payment_microservice.database.db_payment",
+        "documentation": {}
+    },
+    {
+        "label": "check_and_insert_payment",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_payment",
+        "description": "backend.payment_microservice.database.db_payment",
+        "peekOfCode": "def check_and_insert_payment(data):\n    if len(get_exact_payment(data)) > 0:\n        return \"Payment Already Exists\"\n    create_payment_test(data)\n# Reset Database Tables\ndef reset_db():\n    print(\"Resetting Database ...\")\n    delete_db()\n    create_db()\n    print(\"Database Reset Complete!\")",
+        "detail": "backend.payment_microservice.database.db_payment",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_payment",
+        "description": "backend.payment_microservice.database.db_payment",
+        "peekOfCode": "def reset_db():\n    print(\"Resetting Database ...\")\n    delete_db()\n    create_db()\n    print(\"Database Reset Complete!\")\n    print(\"Current Tables:\", get_tables())\n# Reset Database Tables\ndef request_reset_db(dataset=\"empty\"):\n    if dataset == \"dataset1\":\n        # if type in [\"dataset1\", \"dataset2\"]:",
+        "detail": "backend.payment_microservice.database.db_payment",
+        "documentation": {}
+    },
+    {
+        "label": "request_reset_db",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_payment",
+        "description": "backend.payment_microservice.database.db_payment",
+        "peekOfCode": "def request_reset_db(dataset=\"empty\"):\n    if dataset == \"dataset1\":\n        # if type in [\"dataset1\", \"dataset2\"]:\n        reset_db()\n        print(\"\\nAdding Dataset 1 ...\")\n        add_dataset(dataset)\n        print(\"Dataset 1 Added!\")\n        data = get_all_payments()\n        print(\"Current Database:\", data)\n        return (205, data)",
+        "detail": "backend.payment_microservice.database.db_payment",
+        "documentation": {}
+    },
+    {
+        "label": "create_payment_test",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_payment_actions",
+        "description": "backend.payment_microservice.database.db_payment_actions",
+        "peekOfCode": "def create_payment_test(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Timeslot\n    # print(data)\n    c.execute(\n        \"\"\"INSERT INTO payments VALUES (\n              :id,\n              :patient_id,",
+        "detail": "backend.payment_microservice.database.db_payment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_payments",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_payment_actions",
+        "description": "backend.payment_microservice.database.db_payment_actions",
+        "peekOfCode": "def get_all_payments():\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\"SELECT * FROM payments\")\n    results = c.fetchall()\n    # (3) Close Connection\n    conn.close()\n    return results",
+        "detail": "backend.payment_microservice.database.db_payment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "create_payment",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_payment_actions",
+        "description": "backend.payment_microservice.database.db_payment_actions",
+        "peekOfCode": "def create_payment(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Create Payment\n    c.execute(\n        \"\"\"INSERT INTO payments VALUES (\n              :id,\n              :patient_id,\n              :doctor_id,",
+        "detail": "backend.payment_microservice.database.db_payment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "get_exact_payment",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_payment_actions",
+        "description": "backend.payment_microservice.database.db_payment_actions",
+        "peekOfCode": "def get_exact_payment(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Retrieve results\n    c.execute(\n        \"\"\"SELECT * FROM payments\n              WHERE id=:id\"\"\",\n        data,\n    )",
+        "detail": "backend.payment_microservice.database.db_payment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "update_payment_isPaid",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_payment_actions",
+        "description": "backend.payment_microservice.database.db_payment_actions",
+        "peekOfCode": "def update_payment_isPaid(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Update Timeslot\n    c.execute(\n        \"\"\"UPDATE payments\n              SET isPaid=:isPaid\n              WHERE id=:id\"\"\",\n        data,",
+        "detail": "backend.payment_microservice.database.db_payment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "delete_payment_by_id",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.database.db_payment_actions",
+        "description": "backend.payment_microservice.database.db_payment_actions",
+        "peekOfCode": "def delete_payment_by_id(data):\n    # (1) Database Connection\n    conn = connect_db()\n    c = conn.cursor()\n    # (2) Delete Timeslot\n    c.execute(\n        \"\"\"DELETE FROM payments\n              WHERE id=:id\"\"\",\n        data,\n    )",
+        "detail": "backend.payment_microservice.database.db_payment_actions",
+        "documentation": {}
+    },
+    {
+        "label": "reset_db",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.payment",
+        "description": "backend.payment_microservice.payment",
+        "peekOfCode": "def reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:\n    - 205: Database reset\n    - 400: Invalid Dataset\n    Valid Datasets:\n    - \"empty\": No dataset",
+        "detail": "backend.payment_microservice.payment",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_payments_history",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.payment",
+        "description": "backend.payment_microservice.payment",
+        "peekOfCode": "def get_all_payments_history():\n    \"\"\"\n    Get Payments history\n    Returns:\n    - 200: All payments\n    - 404: No payments found\n    Example Response:\n    - {\"code\": 200, \"data\": [[...], [...], [...]]}\n    - {\"code\": 404, \"message\": \"No payments found\"}\n    \"\"\"",
+        "detail": "backend.payment_microservice.payment",
+        "documentation": {}
+    },
+    {
+        "label": "get_specific_payment",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.payment",
+        "description": "backend.payment_microservice.payment",
+        "peekOfCode": "def get_specific_payment(id):\n    \"\"\"\n    Get Payment by ID\n    Returns:\n    - 200: Exact Payment\n    - 404: No payment found\n    Example Response:\n    - {\"code\": 200, \"message\": \"Exact Payment found\"}\n    - {\"code\": 404, \"message\": \"No payment found\"}\n    \"\"\"",
+        "detail": "backend.payment_microservice.payment",
+        "documentation": {}
+    },
+    {
+        "label": "create_payment_api",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.payment",
+        "description": "backend.payment_microservice.payment",
+        "peekOfCode": "def create_payment_api():\n    \"\"\"\n    Create payment\n    Returns:\n    - 201: Payment created\n    - 400: Invalid POST payload\n    - 400: Existing id\n    Example Request Payload:\n    - { \"data\": { \"id\": 999, \"patient_id\": 1, \"doctor_id\": 1, \"price\": 67.4, \"isPaid\": 0} }\n    Example Response:",
+        "detail": "backend.payment_microservice.payment",
+        "documentation": {}
+    },
+    {
+        "label": "update_payment_isPaid_api",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.payment",
+        "description": "backend.payment_microservice.payment",
+        "peekOfCode": "def update_payment_isPaid_api(id):\n    \"\"\"\n    Update Payment isPaid by id\n    Returns:\n    - 200: Payment isPaid updated to 1\n    - 200: Payment isPaid updated to 0\n    - 400: Invalid POST payload\n    - 400: Invalid isPaid Value\n    - 404: No payment found\n    Example Response:",
+        "detail": "backend.payment_microservice.payment",
+        "documentation": {}
+    },
+    {
+        "label": "delete_timeslot_api",
+        "kind": 2,
+        "importPath": "backend.payment_microservice.payment",
+        "description": "backend.payment_microservice.payment",
+        "peekOfCode": "def delete_timeslot_api(id):\n    \"\"\"\n    Delete payment by id\n    Returns:\n    - 200: Payment deleted\n    - 404: No payment found\n    Example Response:\n    - {\"code\": 200, \"message\": \"Payment deleted\"}\n    - {\"code\": 404, \"message\": \"No payment found\"}\n    \"\"\"",
+        "detail": "backend.payment_microservice.payment",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.payment_microservice.payment",
+        "description": "backend.payment_microservice.payment",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)\n# Reset Database\n@app.route(\"/payment/reset/<string:dataset>\", methods=[\"POST\"])\ndef reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:",
+        "detail": "backend.payment_microservice.payment",
+        "documentation": {}
+    },
+    {
         "label": "Timeslot",
         "kind": 6,
         "importPath": "backend.timeslot_microservice.database.data.model.timeslot",
@@ -2519,7 +3089,7 @@
         "kind": 2,
         "importPath": "backend.timeslot_microservice.database.data.dataset1",
         "description": "backend.timeslot_microservice.database.data.dataset1",
-        "peekOfCode": "def example():\n    timeslot = Timeslot(1, '2024-02-28 13:00:00', '2024-03-03 08:30:00')\n    print(timeslot.getInfo)\n# Dataset 1\ndef dataset1():\n    dataset = [\n            Timeslot(1, '2024-02-28 13:00:00', '2024-03-03 08:30:00', isAccepted=1),\n            Timeslot(1, '2024-02-28 13:01:00', '2024-03-03 09:30:00'),\n            Timeslot(1, '2024-02-28 13:02:00', '2024-03-03 10:30:00'),\n            Timeslot(1, '2024-02-28 13:03:00', '2024-03-03 11:30:00'),",
+        "peekOfCode": "def example():\n    timeslot = Timeslot(1, '2024-02-28 13:00:00', '2024-03-03 08:30:00')\n    print(timeslot.getInfo)\n# Dataset 1\ndef dataset1():\n    dataset = [\n            #  2024-04-04 (Thurs)\n            Timeslot(1, '2024-02-28 13:00:00', '2024-04-04 08:30:00', isAccepted=1),\n            Timeslot(1, '2024-02-28 13:00:00', '2024-04-04 09:30:00'),\n            Timeslot(1, '2024-02-28 13:00:00', '2024-04-04 10:30:00'),",
         "detail": "backend.timeslot_microservice.database.data.dataset1",
         "documentation": {}
     },
@@ -2528,7 +3098,7 @@
         "kind": 2,
         "importPath": "backend.timeslot_microservice.database.data.dataset1",
         "description": "backend.timeslot_microservice.database.data.dataset1",
-        "peekOfCode": "def dataset1():\n    dataset = [\n            Timeslot(1, '2024-02-28 13:00:00', '2024-03-03 08:30:00', isAccepted=1),\n            Timeslot(1, '2024-02-28 13:01:00', '2024-03-03 09:30:00'),\n            Timeslot(1, '2024-02-28 13:02:00', '2024-03-03 10:30:00'),\n            Timeslot(1, '2024-02-28 13:03:00', '2024-03-03 11:30:00'),\n            Timeslot(1, '2024-02-28 13:04:00', '2024-03-03 12:30:00', isAccepted=1),\n            Timeslot(1, '2024-02-28 13:05:00', '2024-03-03 13:30:00'),\n            Timeslot(1, '2024-02-28 13:06:00', '2024-03-03 14:30:00'),\n            Timeslot(1, '2024-02-28 13:07:00', '2024-03-03 15:30:00', isAccepted=1),",
+        "peekOfCode": "def dataset1():\n    dataset = [\n            #  2024-04-04 (Thurs)\n            Timeslot(1, '2024-02-28 13:00:00', '2024-04-04 08:30:00', isAccepted=1),\n            Timeslot(1, '2024-02-28 13:00:00', '2024-04-04 09:30:00'),\n            Timeslot(1, '2024-02-28 13:00:00', '2024-04-04 10:30:00'),\n            Timeslot(1, '2024-02-28 13:00:00', '2024-04-04 11:30:00'),\n            Timeslot(1, '2024-02-28 13:00:00', '2024-04-04 12:30:00', isAccepted=1),\n            Timeslot(1, '2024-02-28 13:00:00', '2024-04-04 13:30:00'),\n            Timeslot(1, '2024-02-28 13:00:00', '2024-04-04 14:30:00'),",
         "detail": "backend.timeslot_microservice.database.data.dataset1",
         "documentation": {}
     },
@@ -3025,6 +3595,267 @@
         "description": "backend.user_microservice.user",
         "peekOfCode": "app = Flask(__name__)\nCORS(app)  \n# Reset Database\n@app.route(\"/user/reset/<string:dataset>\", methods=['POST'])\ndef reset_db(dataset):\n    \"\"\"\n    Reset Database\n    - Reset the database to its original state\n    - If a dataset is provided, reset the database with the dataset\n    Returns:",
         "detail": "backend.user_microservice.user",
+        "documentation": {}
+    },
+    {
+        "label": "send_email",
+        "kind": 2,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "def send_email():\n    try:\n        mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n            subject = \"Teleconsult Zoom Meeting Link\",\n            text = DEFAULT_MSG\n        )\n        Mailtrap_client.send(mail)\n        return True\n    except Exception as e:\n        return False",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "send_sms",
+        "kind": 2,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "def send_sms():\n    try:\n        TWILIO_BODY = DEFAULT_MSG\n        message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)\n        # print(message.sid)\n        return True\n    except Exception as e:\n        return False\n@app.route(\"/zoom/start\", methods=[\"POST\"])\ndef zoom_api():",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "zoom_api",
+        "kind": 2,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "def zoom_api():\n    if send_email():\n        if send_sms():\n            return jsonify(\n                {\n                    \"code\": 200,\n                    \"message\": \"Successfully sent email using Mailtrap and SMS using Twilio Each email cost $$$!\",\n                    \"data\": {\n                        \"zoom_owner_link\": ZOOM_OWNER,\n                        \"zoom_invite_link\": ZOOM_OWNER,",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "ZOOM_INVITE",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "ZOOM_INVITE = \"https://smu-sg.zoom.us/j/6346697940?pwd=VDdLSllTV1RyOE5TVU8zeUhNRHlvdz09\"\nZOOM_OWNER = \"https://smu-sg.zoom.us/meeting#/pmi/6346697940\"\n# Email API\nimport mailtrap as mt\n#  SMS API\nfrom twilio.rest import Client\n# Please no DDOS me - I lazy configure environment variable\nTEAM_MEMBER_ACCOUNT = \"Terris Tan Wei Jun\"\nTEAM_MEMBER_EMAIL = \"terristanwei@gmail.com\"\nTEAM_MEMBER_PHONE = \"+6596867171\"",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "ZOOM_OWNER",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "ZOOM_OWNER = \"https://smu-sg.zoom.us/meeting#/pmi/6346697940\"\n# Email API\nimport mailtrap as mt\n#  SMS API\nfrom twilio.rest import Client\n# Please no DDOS me - I lazy configure environment variable\nTEAM_MEMBER_ACCOUNT = \"Terris Tan Wei Jun\"\nTEAM_MEMBER_EMAIL = \"terristanwei@gmail.com\"\nTEAM_MEMBER_PHONE = \"+6596867171\"\nAPI_ENABLED = False # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "TEAM_MEMBER_ACCOUNT",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "TEAM_MEMBER_ACCOUNT = \"Terris Tan Wei Jun\"\nTEAM_MEMBER_EMAIL = \"terristanwei@gmail.com\"\nTEAM_MEMBER_PHONE = \"+6596867171\"\nAPI_ENABLED = False # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "TEAM_MEMBER_EMAIL",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "TEAM_MEMBER_EMAIL = \"terristanwei@gmail.com\"\nTEAM_MEMBER_PHONE = \"+6596867171\"\nAPI_ENABLED = False # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "TEAM_MEMBER_PHONE",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "TEAM_MEMBER_PHONE = \"+6596867171\"\nAPI_ENABLED = False # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "API_ENABLED",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "API_ENABLED = False # Set to True to enable API (Email and SMS) - Each email and SMS cost $$$\n###### MailTrap configuration (Email API) START ####################################################################################\nMAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_TOKEN",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "MAILTRAP_TOKEN = \"24e53d222\"+\"761fba31630c\"+\"8896608b09b\"\nMailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "Mailtrap_client",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "Mailtrap_client = mt.MailtrapClient(token=MAILTRAP_TOKEN)\nMAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_SENDER_EMAIL",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "MAILTRAP_SENDER_EMAIL = \"mailtrap@demomailtrap.com\"\nMAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_SENDER",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "MAILTRAP_SENDER = mt.Address(email=MAILTRAP_SENDER_EMAIL, name=\"Mailtrap Test\")\nMAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )\n# Mailtrap_client.send(mail)",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_TO_EMAIL",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "MAILTRAP_TO_EMAIL = TEAM_MEMBER_EMAIL\nMAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )\n# Mailtrap_client.send(mail)\n####### MailTrap configuration (Email API) END #####################################################################################",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_TO",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "MAILTRAP_TO = [mt.Address(email=MAILTRAP_TO_EMAIL)]\nMAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )\n# Mailtrap_client.send(mail)\n####### MailTrap configuration (Email API) END #####################################################################################\n###### Twilio configuration (SMS API) START ########################################################################################",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "MAILTRAP_CATEGORY",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "MAILTRAP_CATEGORY = \"Integration Test\"\n# To use MailTrap, send an email using the send method\n# mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n#         subject=\"You are awesome!\",\n#         text=\"Congrats for sending test email with Mailtrap!\"\n#     )\n# Mailtrap_client.send(mail)\n####### MailTrap configuration (Email API) END #####################################################################################\n###### Twilio configuration (SMS API) START ########################################################################################\nTWILIO_ACCOUNT_SID_1 = 'AC11fe7a'",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_ACCOUNT_SID_1",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "TWILIO_ACCOUNT_SID_1 = 'AC11fe7a'\nTWILIO_ACCOUNT_SID_2 = '0d60d8906e79'\nTWILIO_ACCOUNT_SID_3 = '2c540b0488669d'\nTWILIO_ACCOUNT_SID = TWILIO_ACCOUNT_SID_1+TWILIO_ACCOUNT_SID_2+TWILIO_ACCOUNT_SID_3\nTWILIO_AUTH_TOKEN_1 = 'cd8c1e2c0'\nTWILIO_AUTH_TOKEN_2 = '7bc3c7788307'\nTWILIO_AUTH_TOKEN_3 = '67e010d9721'\nTWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_ACCOUNT_SID_2",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "TWILIO_ACCOUNT_SID_2 = '0d60d8906e79'\nTWILIO_ACCOUNT_SID_3 = '2c540b0488669d'\nTWILIO_ACCOUNT_SID = TWILIO_ACCOUNT_SID_1+TWILIO_ACCOUNT_SID_2+TWILIO_ACCOUNT_SID_3\nTWILIO_AUTH_TOKEN_1 = 'cd8c1e2c0'\nTWILIO_AUTH_TOKEN_2 = '7bc3c7788307'\nTWILIO_AUTH_TOKEN_3 = '67e010d9721'\nTWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_ACCOUNT_SID_3",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "TWILIO_ACCOUNT_SID_3 = '2c540b0488669d'\nTWILIO_ACCOUNT_SID = TWILIO_ACCOUNT_SID_1+TWILIO_ACCOUNT_SID_2+TWILIO_ACCOUNT_SID_3\nTWILIO_AUTH_TOKEN_1 = 'cd8c1e2c0'\nTWILIO_AUTH_TOKEN_2 = '7bc3c7788307'\nTWILIO_AUTH_TOKEN_3 = '67e010d9721'\nTWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_ACCOUNT_SID",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "TWILIO_ACCOUNT_SID = TWILIO_ACCOUNT_SID_1+TWILIO_ACCOUNT_SID_2+TWILIO_ACCOUNT_SID_3\nTWILIO_AUTH_TOKEN_1 = 'cd8c1e2c0'\nTWILIO_AUTH_TOKEN_2 = '7bc3c7788307'\nTWILIO_AUTH_TOKEN_3 = '67e010d9721'\nTWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_AUTH_TOKEN_1",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "TWILIO_AUTH_TOKEN_1 = 'cd8c1e2c0'\nTWILIO_AUTH_TOKEN_2 = '7bc3c7788307'\nTWILIO_AUTH_TOKEN_3 = '67e010d9721'\nTWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'\n# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_AUTH_TOKEN_2",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "TWILIO_AUTH_TOKEN_2 = '7bc3c7788307'\nTWILIO_AUTH_TOKEN_3 = '67e010d9721'\nTWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'\n# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)\n# print(message.sid)",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_AUTH_TOKEN_3",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "TWILIO_AUTH_TOKEN_3 = '67e010d9721'\nTWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'\n# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)\n# print(message.sid)\n####### Twilio configuration (SMS API) END #########################################################################################",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_AUTH_TOKEN",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "TWILIO_AUTH_TOKEN = TWILIO_AUTH_TOKEN_1+TWILIO_AUTH_TOKEN_2+TWILIO_AUTH_TOKEN_3\nTwilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'\n# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)\n# print(message.sid)\n####### Twilio configuration (SMS API) END #########################################################################################\napp = Flask(__name__)",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "Twilio_client",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "Twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)\nTWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'\n# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)\n# print(message.sid)\n####### Twilio configuration (SMS API) END #########################################################################################\napp = Flask(__name__)\nCORS(app)  ",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_FROM",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "TWILIO_FROM = '+15184994110'\nTWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'\n# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)\n# print(message.sid)\n####### Twilio configuration (SMS API) END #########################################################################################\napp = Flask(__name__)\nCORS(app)  \nDEFAULT_MSG = f\"Thank you for choosing Yata!\\n\\nPlease join the Zoom meeting at:\\n{ZOOM_INVITE}.\"",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "TWILIO_TO",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "TWILIO_TO = TEAM_MEMBER_PHONE\n# To use Twilio, send an SMS using the send method\n# TWILIO_BODY = 'Message from Twilio. Hi!'\n# message = Twilio_client.messages.create(from_=TWILIO_FROM, body=TWILIO_BODY, to=TWILIO_TO)\n# print(message.sid)\n####### Twilio configuration (SMS API) END #########################################################################################\napp = Flask(__name__)\nCORS(app)  \nDEFAULT_MSG = f\"Thank you for choosing Yata!\\n\\nPlease join the Zoom meeting at:\\n{ZOOM_INVITE}.\"\ndef send_email():",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)  \nDEFAULT_MSG = f\"Thank you for choosing Yata!\\n\\nPlease join the Zoom meeting at:\\n{ZOOM_INVITE}.\"\ndef send_email():\n    try:\n        mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n            subject = \"Teleconsult Zoom Meeting Link\",\n            text = DEFAULT_MSG\n        )\n        Mailtrap_client.send(mail)",
+        "detail": "backend.zoom_microservice.zoom",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_MSG",
+        "kind": 5,
+        "importPath": "backend.zoom_microservice.zoom",
+        "description": "backend.zoom_microservice.zoom",
+        "peekOfCode": "DEFAULT_MSG = f\"Thank you for choosing Yata!\\n\\nPlease join the Zoom meeting at:\\n{ZOOM_INVITE}.\"\ndef send_email():\n    try:\n        mail = mt.Mail(sender=MAILTRAP_SENDER, to=MAILTRAP_TO, category=MAILTRAP_CATEGORY,\n            subject = \"Teleconsult Zoom Meeting Link\",\n            text = DEFAULT_MSG\n        )\n        Mailtrap_client.send(mail)\n        return True\n    except Exception as e:",
+        "detail": "backend.zoom_microservice.zoom",
         "documentation": {}
     },
     {

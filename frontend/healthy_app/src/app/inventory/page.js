@@ -10,12 +10,17 @@ import React, { useState, useEffect } from "react";
 
 import axios from "axios";
 
+import LowInventoryModal from "@/components/LowInventoryModal"; // Import the modal component
+
+
 export default function Page() {
     // Use state for inventory data
     const [inventoryData, setInventoryData] = useState([]);
 
     // Use state for data retrieval
     const [hasRetrieved, setHasRetrieved] = useState(false);
+
+    const [showLowInventoryModal, setShowLowInventoryModal] = useState(false);
 
     // After SSR
     useEffect(() => {
@@ -31,6 +36,13 @@ export default function Page() {
                     console.log(data);
                     setInventoryData(data);
                     setHasRetrieved(true);
+
+                     // Check for low inventory
+                const lowInventoryItems = data.filter(item => item.quantity < 13); // Adjust threshold as needed
+                if (lowInventoryItems.length > 0) {
+                    setShowLowInventoryModal(true);
+                }
+
                 })
                 // Empty database
                 .catch((error) => {
@@ -56,64 +68,6 @@ export default function Page() {
         }, 10000);
     }, []);
 
-    // Hardcode
-    // const inventoryData = [
-    //     {
-    //         id: 1,
-    //         name: "Paracetamol",
-    //         quantity: "30",
-    //     },
-    //     {
-    //         id: 2,
-    //         name: "Hydrocodone",
-    //         quantity: "29",
-    //     },
-    //     {
-    //         id: 3,
-    //         name: "Metformin",
-    //         quantity: "16",
-    //     },
-    //     {
-    //         id: 4,
-    //         name: "Lorsartan",
-    //         quantity: "19",
-    //     },
-    //     {
-    //         id: 5,
-    //         name: "Antibiotics",
-    //         quantity: "120",
-    //     },
-    //     {
-    //         id: 6,
-    //         name: "Albuterol",
-    //         quantity: "37",
-    //     },
-    //     {
-    //         id: 7,
-    //         name: "Antihistamine",
-    //         quantity: "23",
-    //     },
-    //     {
-    //         id: 8,
-    //         name: "Gabapentin",
-    //         quantity: "25",
-    //     },
-    //     {
-    //         id: 9,
-    //         name: "Atorvastatin",
-    //         quantity: "20",
-    //     },
-    //     {
-    //         id: 10,
-    //         name: "Levothyroxine",
-    //         quantity: "27",
-    //     },
-    //     {
-    //         id: 11,
-    //         name: "Omeprazole",
-    //         quantity: "46",
-    //     },
-    // ];
     return (
         <>
             <Navbar />
@@ -135,6 +89,10 @@ export default function Page() {
                     </Container>
                 </div>
             </Container>
+
+            {/* Low Inventory Modal */}
+            {showLowInventoryModal && <LowInventoryModal data={inventoryData} onClose={() => setShowLowInventoryModal(false)} />}
+
 
             <div className="container flex justify-center p-4 mx-auto"></div>
 
