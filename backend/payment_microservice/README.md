@@ -5,15 +5,11 @@ To create and manage payment information.
 ### Functions
 
 1. Create database with existing dataset template
-2. 1 class types - Timeslot
-3. GET ALL timeslots by command
-   - All timeslots
-   - `isAccepted` time slots
-   - Providing time range
-     - `timeslot_datetime`
-     - `start_date` and `end_date`
-4. INSERT/DELETE timeslot
-5. UPDATE timeslot `isAccepted` to 0/1
+2. 1 class types - Payment
+3. GET ALL payments by command
+4. GET payment by ID
+5. INSERT/DELETE payment
+6. UPDATE payment `isPaid` to 0/1
 
 ### How to code
 
