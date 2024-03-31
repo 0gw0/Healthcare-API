@@ -1,10 +1,25 @@
 services:
     #######################################################
+    # Frontend: Nextjs
+    #######################################################
+    web:
+        build:
+            context: ./frontend/healthy_app
+            target: runner
+        volumes:
+            - ./frontend/healthy_app:/app
+        command: npm run dev
+        ports:
+            - '3001:3001'
+        environment:
+            NODE_ENV: development
+
+    #######################################################
     # User: The user microservice
     #######################################################
     user_microservice:
         build:
-            context: ./user_microservice
+            context: ./backend/user_microservice
             dockerfile: Dockerfile
         image: yata/user:1.0
         restart: always
@@ -18,7 +33,7 @@ services:
     #######################################################
     timeslot_microservice:
         build:
-            context: ./timeslot_microservice
+            context: ./backend/timeslot_microservice
             dockerfile: Dockerfile
         image: yata/timeslot:1.0
         restart: always
@@ -32,7 +47,7 @@ services:
     ###################################
     appointment_microservice:
         build:
-            context: ./appointment_microservice
+            context: ./backend/appointment_microservice
             dockerfile: Dockerfile
         image: yata/appointment:1.0
         restart: always
@@ -46,7 +61,7 @@ services:
     ###################################
     notification_microservice:
         build:
-            context: ./notification_microservice
+            context: ./backend/notification_microservice
             dockerfile: Dockerfile
         image: yata/notification:1.0
         restart: always
@@ -60,7 +75,7 @@ services:
     ###################################
     inventory_microservice:
         build:
-            context: ./inventory_microservice
+            context: ./backend/inventory_microservice
             dockerfile: Dockerfile
         image: yata/inventory:1.0
         restart: always
@@ -74,7 +89,7 @@ services:
     #######################################################
     delivery_order_microservice:
         build:
-            context: ./delivery_order_microservice
+            context: ./backend/delivery_order_microservice
             dockerfile: Dockerfile
         image: yata/delivery_order:1.0
         restart: always
@@ -88,7 +103,7 @@ services:
     ###################################
     medical_certificate_microservice:
         build:
-            context: ./medical_certificate_microservice
+            context: ./backend/medical_certificate_microservice
             dockerfile: Dockerfile
         image: yata/medical_certificate:1.0
         restart: always
@@ -104,7 +119,7 @@ services:
     #######################################################
     manage_booking_microservice:
         build:
-            context: ./manage_booking_complex_microservice
+            context: ./backend/manage_booking_complex_microservice
             dockerfile: Dockerfile
         image: yata/manage_booking:1.0
         restart: always
@@ -121,7 +136,7 @@ services:
     #######################################################
     manage_cancellation_microservice:
         build:
-            context: ./manage_cancellation_complex_microservice
+            context: ./backend/manage_cancellation_complex_microservice
             dockerfile: Dockerfile
         image: yata/manage_cancellation:1.0
         restart: always
@@ -139,7 +154,7 @@ services:
     #######################################################
     manage_dataset_microservice:
         build:
-            context: ./manage_dataset_complex_microservice
+            context: ./backend/manage_dataset_complex_microservice
             dockerfile: Dockerfile
         image: yata/manage_dataset_microservice:1.0
         restart: always
