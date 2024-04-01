@@ -57,14 +57,14 @@ export default function Page() {
 
     const handleIssueMC = () => {
         // Send payment link via API
-        // axios
-        //     .post(`http://127.0.0.1:5007/payment/send_payment/${consultFee}`)
-        //     .then((res) => {
-        //         console.log(res);
-        //     })
-        //     .catch((error) => {
-        //         console.log(error);
-        //     });
+        axios
+            .post(`http://127.0.0.1:5007/payment/send_payment/${consultFee}`)
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
 
         // Prepare payload for MC
         // E.g.

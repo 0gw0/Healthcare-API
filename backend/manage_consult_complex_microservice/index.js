@@ -7,7 +7,9 @@ const axios = require("axios");
 // CORS
 const cors = require("cors");
 // Hot-Reload w/ Nodemon
-const reload = require("reload");
+// const reload = require("reload");
+// amqp added
+const amqp = require("amqplib");
 
 // Creating express app
 const port = 5104;
@@ -28,6 +30,8 @@ const medical_certificate_URL =
     "http://host.docker.internal:5008/medical_certificate";
 const create_delivery_complex_URL = "http://host.docker.internal:5103";
 
+const amqp_URL = "amqp://host.docker.internal:5672";
+
 // For testing
 app.get("/", (req, res) => {
     // res.send("Manage Cancellation Complex Microservice");
@@ -43,7 +47,7 @@ app.get("/", (req, res) => {
 app.put("/complete_teleconsultation", async (req, res) => {
     // (1) Get payload from request body
     const payload = req.body;
-    console.log(payload.data.appointment_id);
+    console.log(payload.data);
 
     // (2) Check payload format
     // - Must have data: { appointment_id, timeslot_datetime, duration_minutes, mc_start_datetime, mc_days, items }
@@ -52,7 +56,6 @@ app.put("/complete_teleconsultation", async (req, res) => {
         !payload.data.timeslot_datetime ||
         !payload.data.duration_minutes ||
         !payload.data.mc_start_datetime ||
-        !payload.data.mc_days ||
         !payload.data.items
     ) {
         console.log(
@@ -148,27 +151,53 @@ app.put("/complete_teleconsultation", async (req, res) => {
         },
     };
 
-    // (4.2) Create medical certificate
-    await axios
-        .post(url, mc_payload)
-        .then((response) => {
-            console.log(response);
-        })
-        // (4.3) If error, handle error and exit
-        .catch((error) => {
-            hasError = true;
-            message = `ERROR - The medical_certificate_microservice is down. ${url}`;
-            console.log(message);
-            res.status(500).send({
-                message,
-                used_payload: mc_payload,
-                error,
-            });
-            return;
-        });
+    // // (4.2) Create medical certificate
+    // await axios
+    //     .post(url, mc_payload)
+    //     .then((response) => {
+    //         console.log(response);
+    //     })
+    //     // (4.3) If error, handle error and exit
+    //     .catch((error) => {
+    //         hasError = true;
+    //         message = `ERROR - The medical_certificate_microservice is down. ${url}`;
+    //         console.log(message);
+    //         res.status(500).send({
+    //             message,
+    //             used_payload: mc_payload,
+    //             error,
+    //         });
+    //         return;
+    //     });
 
-    // (4.3) EXIT - Code stops here
-    if (hasError) return;
+    // // (4.3) EXIT - Code stops here
+    // if (hasError) return;
+
+    // (4.2) Create medical certificate - RabbitMQ
+    const exchangeName = "order_topic";
+    const topic = "created"; // Example topic
+
+    const queue = "medical_certificate";
+    const amqpMessage = Buffer.from(JSON.stringify(mc_payload));
+
+    // (4.2.1) Connect to RabbitMQ
+    const connection = await amqp.connect(amqp_URL);
+    const channel = await connection.createChannel();
+
+    // (4.2.2) Declare the exchange if not exists
+    await channel.assertExchange(exchangeName, "topic", { durable: true });
+
+    // Convert message to JSON
+    const messageBuffer = amqpMessage;
+
+    // Publish message to the exchange with the specified topic
+    await channel.publish(exchangeName, topic, messageBuffer);
+
+    console.log(`Message published with topic '${topic}':`, amqpMessage);
+
+    // Close connection
+    await channel.close();
+    await connection.close();
 
     // (5) Create delivery complex
     console.log(
@@ -594,4 +623,4 @@ app.listen(port, () => {
     );
     console.log(`Server running on port ${port}`);
 });
-reload(app);
+// reload(app);

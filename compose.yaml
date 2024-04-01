@@ -125,6 +125,8 @@ services:
             - "5008:5008"
         environment:
             PYTHONUNBUFFERED: 1
+        depends_on:
+            - rabbit_amqp
 
     #######################################################
     # Zoom: The Zoom microservice
@@ -206,9 +208,10 @@ services:
         ports:
             - "5104:5104"
         depends_on:
-            - timeslot_microservice
             - appointment_microservice
-            - notification_microservice
+            - medical_certificate_microservice
+            - create_delivery_microservice
+            - rabbit_amqp
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -234,3 +237,19 @@ services:
             - medical_certificate_microservice
         environment:
             PYTHONUNBUFFERED: 1
+
+    ################## AMQP BELOW ##################
+
+    #######################################################
+    # AMQP: RabbitMQ
+    #######################################################
+    rabbit_amqp:
+        image: rabbitmq:3-management
+        hostname: rabbit
+        restart: always
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+        # environment:
+        #     RABBITMQ_DEFAULT_USER: guest
+        #     RABBITMQ_DEFAULT_PASS: guest

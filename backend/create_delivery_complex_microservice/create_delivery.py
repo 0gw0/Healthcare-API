@@ -75,7 +75,7 @@ def create_delivery(appointment_id):
             )
             
     print(f"Inventory Update completed!")
-    print(f"Response: {inventory_response}")
+    # print(f"Response: {inventory_response}")
     print() 
             
     #(2) Create delivery order
