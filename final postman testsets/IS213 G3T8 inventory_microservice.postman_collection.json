@@ -1,0 +1,671 @@
+{
+	"info": {
+		"_postman_id": "b5c56df5-9e6b-4df0-a888-040088e6ec93",
+		"name": "IS213 G3T8 inventory_microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32110674"
+	},
+	"item": [
+		{
+			"name": "Datahase Reset",
+			"item": [
+				{
+					"name": "Database Reset - Wrong URL FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5005/inventory/reset/obviously_wrong",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5005",
+							"path": [
+								"inventory",
+								"reset",
+								"obviously_wrong"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Database Reset - Wrong URL FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5005/inventory/reset/obviously_wrong",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5005",
+									"path": [
+										"inventory",
+										"reset",
+										"obviously_wrong"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 18:58:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Database was not reset. Invalid Dataset: obviously_wrong\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Database Reset - Empty",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5005/inventory/reset/empty",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5005",
+							"path": [
+								"inventory",
+								"reset",
+								"empty"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Database Reset - Empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5005/inventory/reset/empty",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5005",
+									"path": [
+										"inventory",
+										"reset",
+										"empty"
+									]
+								}
+							},
+							"status": "RESET CONTENT",
+							"code": 205,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 18:58:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 205,\n    \"message\": \"Database reset! No Dataset was used\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Database Reset - With Dataset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5005/inventory/reset/dataset1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5005",
+							"path": [
+								"inventory",
+								"reset",
+								"dataset1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Database Reset - With Dataset",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5005/inventory/reset/dataset1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5005",
+									"path": [
+										"inventory",
+										"reset",
+										"dataset1"
+									]
+								}
+							},
+							"status": "RESET CONTENT",
+							"code": 205,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 18:58:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "817"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 205,\n    \"data_created\": [\n        {\n            \"id\": 1,\n            \"name\": \"Paracetamol\",\n            \"quantity\": 30\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Hydrocodone\",\n            \"quantity\": 29\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Metformin\",\n            \"quantity\": 16\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Losartan\",\n            \"quantity\": 19\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Antibiotics\",\n            \"quantity\": 12\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Albuterol\",\n            \"quantity\": 37\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Antihistamine\",\n            \"quantity\": 23\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Gabapentin\",\n            \"quantity\": 25\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Atorvastatin\",\n            \"quantity\": 20\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Omeprazole\",\n            \"quantity\": 46\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GET all inventory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5005/inventory/get/all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5005",
+					"path": [
+						"inventory",
+						"get",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 - Get all items",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5005/inventory/get/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5005",
+							"path": [
+								"inventory",
+								"get",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.11.8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 18:59:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "824"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"count\": 10,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Paracetamol\",\n            \"quantity\": 30\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Hydrocodone\",\n            \"quantity\": 29\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Metformin\",\n            \"quantity\": 16\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Losartan\",\n            \"quantity\": 19\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Antibiotics\",\n            \"quantity\": 12\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Albuterol\",\n            \"quantity\": 37\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Antihistamine\",\n            \"quantity\": 23\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Gabapentin\",\n            \"quantity\": 25\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Atorvastatin\",\n            \"quantity\": 20\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Omeprazole\",\n            \"quantity\": 46\n        }\n    ]\n}"
+				},
+				{
+					"name": "404 - No items found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5005/inventory/get/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5005",
+							"path": [
+								"inventory",
+								"get",
+								"all"
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.11.8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 19:03:39 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 404,\n    \"message\": \"No items found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "UPDATE quantity",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantity_change\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5005/inventory/update/999",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5005",
+					"path": [
+						"inventory",
+						"update",
+						"999"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 - Minus quantity",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity_change\": -5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5005/inventory/update/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5005",
+							"path": [
+								"inventory",
+								"update",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.11.8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 19:00:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "175"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Inventory item quantity updated\",\n    \"quantity_change\": -5,\n    \"updated_data\": {\n        \"id\": 1,\n        \"name\": \"Paracetamol\",\n        \"quantity\": 25\n    }\n}"
+				},
+				{
+					"name": "200 - Plus quantity",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity_change\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5005/inventory/update/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5005",
+							"path": [
+								"inventory",
+								"update",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.11.8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 19:00:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "174"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Inventory item quantity updated\",\n    \"quantity_change\": 5,\n    \"updated_data\": {\n        \"id\": 1,\n        \"name\": \"Paracetamol\",\n        \"quantity\": 30\n    }\n}"
+				},
+				{
+					"name": "400 - Insufficient stock",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity_change\": -31\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5005/inventory/update/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5005",
+							"path": [
+								"inventory",
+								"update",
+								"1"
+							]
+						}
+					},
+					"status": "BAD REQUEST",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.11.8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 19:01:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"message\": \"Insufficient stock\"\n}"
+				},
+				{
+					"name": "404 - Item not found",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity_change\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5005/inventory/update/999",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5005",
+							"path": [
+								"inventory",
+								"update",
+								"999"
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.11.8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 19:03:01 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 404,\n    \"message\": \"Item not found\"\n}"
+				}
+			]
+		}
+	]
+}

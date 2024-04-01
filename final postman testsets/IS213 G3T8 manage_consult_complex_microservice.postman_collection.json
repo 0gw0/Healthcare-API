@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "61c7a50b-e707-4546-a7c9-ad63350227f1",
+		"name": "IS213 G3T8 manage_consult_complex_microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32110674"
+	},
+	"item": [
+		{
+			"name": "Complete teleconsultation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"appointment_id\": 1,\r\n        \"timeslot_datetime\": \"2024-04-04 08:30:00\",\r\n        \"duration_minutes\": 30,\r\n        \"mc_start_datetime\": \"2024-04-04\",\r\n        \"mc_days\": \"1\",\r\n        \"items\": [\r\n            {\r\n                \"name\": \"Paracetamol\",\r\n                \"quantity\": 5,\r\n                \"id\": 1\r\n            },\r\n            {\r\n                \"name\": \"Antihistamine\",\r\n                \"quantity\": 9,\r\n                \"id\": 7\r\n            },\r\n            {\r\n                \"name\": \"Hydrocodone\",\r\n                \"quantity\": 7,\r\n                \"id\": 2\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5104/complete_teleconsultation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5104",
+					"path": [
+						"complete_teleconsultation"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 - Teleconsultation completed",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"appointment_id\": 1,\r\n        \"timeslot_datetime\": \"2024-04-04 08:30:00\",\r\n        \"duration_minutes\": 30,\r\n        \"mc_start_datetime\": \"2024-04-04\",\r\n        \"mc_days\": \"1\",\r\n        \"items\": [\r\n            {\r\n                \"name\": \"Paracetamol\",\r\n                \"quantity\": 5,\r\n                \"id\": 1\r\n            },\r\n            {\r\n                \"name\": \"Antihistamine\",\r\n                \"quantity\": 9,\r\n                \"id\": 7\r\n            },\r\n            {\r\n                \"name\": \"Hydrocodone\",\r\n                \"quantity\": 7,\r\n                \"id\": 2\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5104/complete_teleconsultation",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5104",
+							"path": [
+								"complete_teleconsultation"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-bvqeSu9UrcdExw1+UbW1ar7Qzx0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 21:13:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Teleconsultation completed\"\n}"
+				},
+				{
+					"name": "400 - Invalid payload format",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"appointment_id\": 1,\r\n        \"timeslot_datetime\": \"2024-04-04 08:30:00\",\r\n        \"duration_minutes\": 30,\r\n        \"mc_start_datetime\": \"\",\r\n        \"mc_days\": \"2024-04-04\",\r\n        \"items\": [\r\n            {\r\n                \"name\": \"Paracetamol\",\r\n                \"quantity\": 5,\r\n                \"id\": 1\r\n            },\r\n            {\r\n                \"name\": \"Antihistamine\",\r\n                \"quantity\": 9,\r\n                \"id\": 7\r\n            },\r\n            {\r\n                \"name\": \"Hydrocodone\",\r\n                \"quantity\": 7,\r\n                \"id\": 2\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5104/complete_teleconsultation",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5104",
+							"path": [
+								"complete_teleconsultation"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "157"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9d-ecJ4bJlyTWkp7LZEKMBLq6niqK0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 20:53:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Invalid payload format\",\n    \"must_contain\": [\n        \"data: { appointment_id }\",\n        \"timeslot_datetime\",\n        \"duration_minutes\",\n        \"mc_start_datetime\",\n        \"mc_days\",\n        \"items\"\n    ]\n}"
+				},
+				{
+					"name": "500 - Insufficient stock for certain items",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"appointment_id\": 1,\r\n        \"timeslot_datetime\": \"2024-04-04 08:30:00\",\r\n        \"duration_minutes\": 30,\r\n        \"mc_start_datetime\": \"2024-04-04\",\r\n        \"mc_days\": \"1\",\r\n        \"items\": [\r\n            {\r\n                \"name\": \"Paracetamol\",\r\n                \"quantity\": 5,\r\n                \"id\": 1\r\n            },\r\n            {\r\n                \"name\": \"Antihistamine\",\r\n                \"quantity\": 9,\r\n                \"id\": 7\r\n            },\r\n            {\r\n                \"name\": \"Hydrocodone\",\r\n                \"quantity\": 7,\r\n                \"id\": 2\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5104/complete_teleconsultation",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5104",
+							"path": [
+								"complete_teleconsultation"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "305"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"131-/S2XkcblgEnJQlOkOTcuFv3bEos\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 21:10:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Insufficient stock for certain items\",\n    \"used_payload\": {\n        \"items\": [\n            {\n                \"name\": \"Paracetamol\",\n                \"quantity\": 5,\n                \"id\": 1\n            },\n            {\n                \"name\": \"Antihistamine\",\n                \"quantity\": 9,\n                \"id\": 7\n            },\n            {\n                \"name\": \"Hydrocodone\",\n                \"quantity\": 7,\n                \"id\": 2\n            }\n        ]\n    },\n    \"error\": {\n        \"code\": 400,\n        \"error_message\": \"Insufficient stock\",\n        \"message\": \"Failed to update inventory\"\n    }\n}"
+				}
+			]
+		}
+	]
+}

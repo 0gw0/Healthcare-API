@@ -1,0 +1,2112 @@
+{
+	"info": {
+		"_postman_id": "92b1c6bf-e588-4278-abf3-2318e9575c8a",
+		"name": "IS213 G3T8 notification_microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32110674"
+	},
+	"item": [
+		{
+			"name": "Datahase Reset",
+			"item": [
+				{
+					"name": "Database Reset - Wrong URL FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/reset/obviously_wrong",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"reset",
+								"obviously_wrong"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 - Database Reset - Wrong URL FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/reset/obviously_wrong",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"reset",
+										"obviously_wrong"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:11:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Database was not reset. Invalid Dataset: obviously_wrong\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Database Reset - Empty",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/reset/empty",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"reset",
+								"empty"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "205 - Database Reset - Empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/reset/empty",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"reset",
+										"empty"
+									]
+								}
+							},
+							"status": "RESET CONTENT",
+							"code": 205,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:12:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 205,\n    \"message\": \"Database reset! No Dataset was used\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Appointment History - Empty FAIL",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/get/history",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"get",
+								"history"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "404 - Get Appointment History - Empty FAIL",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/get/history",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"get",
+										"history"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:12:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No notifications found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Database Reset - With Dataset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/reset/dataset1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"reset",
+								"dataset1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "205 - Database Reset - With Dataset",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/reset/dataset1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"reset",
+										"dataset1"
+									]
+								}
+							},
+							"status": "RESET CONTENT",
+							"code": 205,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:12:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "816"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 205,\n    \"data_created\": [\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": 1,\n            \"session_id\": 1,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": null,\n            \"session_id\": 2,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": null,\n            \"session_id\": 3,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": null,\n            \"session_id\": 4,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": 1,\n            \"session_id\": 8,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Appointment History",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/get/history",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"get",
+								"history"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Get Appointment History",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/get/history",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"get",
+										"history"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:13:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "808"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": 1,\n            \"session_id\": 1,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": null,\n            \"session_id\": 2,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": null,\n            \"session_id\": 3,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": null,\n            \"session_id\": 4,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": 1,\n            \"session_id\": 8,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Technical Overview",
+			"item": [
+				{
+					"name": "CREATE cancel timeslot (w/o patient)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"session_id\": 6,\r\n        \"timeslot_datetime\": \"2024-03-03 13:30:00\",\r\n        \"doctor_id\": 1,\r\n        \"status\": \"new\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 - CREATE cancel timeslot (w/o patient)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"session_id\": 6,\r\n        \"timeslot_datetime\": \"2024-03-03 13:30:00\",\r\n        \"doctor_id\": 1,\r\n        \"status\": \"new\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"create"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:13:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "234"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"message\": \"Notification created! (Timeslot Notification)\",\n    \"new_data\": {\n        \"doctor_id\": 1,\n        \"patient_id\": null,\n        \"session_id\": 6,\n        \"status\": \"new\",\n        \"timeslot_datetime\": \"2024-03-03 13:30:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "CREATE cancel appointment (w/ patient)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"session_id\": 5,\r\n        \"timeslot_datetime\": \"2024-03-03 12:30:00\",\r\n        \"doctor_id\": 1,\r\n        \"status\": \"new\",\r\n        \"patient_id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 - CREATE cancel appointment (w/ patient)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"session_id\": 5,\r\n        \"timeslot_datetime\": \"2024-03-03 12:30:00\",\r\n        \"doctor_id\": 1,\r\n        \"status\": \"new\",\r\n        \"patient_id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"create"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:15:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "234"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"message\": \"Notification created! (Appointment Notification)\",\n    \"new_data\": {\n        \"doctor_id\": 1,\n        \"patient_id\": 1,\n        \"session_id\": 5,\n        \"status\": \"new\",\n        \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GET all 'new' notifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/get/new/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"get",
+								"new",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - GET all 'new' notifications",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/get/new/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"get",
+										"new",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:16:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1131"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 7,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": 1,\n            \"session_id\": 1,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": null,\n            \"session_id\": 2,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": null,\n            \"session_id\": 3,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": null,\n            \"session_id\": 4,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": 1,\n            \"session_id\": 5,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": null,\n            \"session_id\": 6,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": 1,\n            \"session_id\": 8,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE notification to 'completed' - 1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/update/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - UPDATE notification to 'completed' - 1",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/update/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"update",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:16:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "307"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"Notification updated to completed! Email and SMS API is currently disabled, to enable please modify API_ENABLED\",\n    \"updated_data\": {\n        \"doctor_id\": 1,\n        \"patient_id\": 1,\n        \"session_id\": 1,\n        \"status\": \"completed\",\n        \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE notification to 'completed' - 5",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/update/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"update",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - UPDATE notification to 'completed' - 5",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/update/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"update",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:16:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "307"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"Notification updated to completed! Email and SMS API is currently disabled, to enable please modify API_ENABLED\",\n    \"updated_data\": {\n        \"doctor_id\": 1,\n        \"patient_id\": 1,\n        \"session_id\": 5,\n        \"status\": \"completed\",\n        \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE ‘completed’ to ‘received’ based on patient_id, then GET",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/update/completed/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"update",
+								"completed",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - UPDATE ‘completed’ to ‘received’ based on patient_id, then GET",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/update/completed/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"update",
+										"completed",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:16:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "422"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 2,\n    \"message\": \"Notification updated to received!\",\n    \"updated_data\": [\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": 1,\n            \"session_id\": 1,\n            \"status\": \"received\",\n            \"timeslot_datetime\": \"2024-03-03 08:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": 1,\n            \"session_id\": 5,\n            \"status\": \"received\",\n            \"timeslot_datetime\": \"2024-03-03 12:30:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE ‘completed’ to ‘received’ based on patient_id, then GET Copy 2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/delete/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Notification deleted",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/delete/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"delete",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Mar 2024 09:33:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"Notification deleted!\"\n}"
+						},
+						{
+							"name": "404 - No notification found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/delete/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"delete",
+										"1"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Mar 2024 09:33:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No notification found\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Email & SMS Exernal API",
+			"item": [
+				{
+					"name": "Test Twilio SMS - Limited free-tier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/twilio/test",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"twilio",
+								"test"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Test Twilio SMS - Limited free-tier",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/twilio/test",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"twilio",
+										"test"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:17:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "216"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"recipient\": \"+6596867171\",\n        \"sender\": \"+15184994110\",\n        \"team_member_account\": \"Terris Tan Wei Jun\"\n    },\n    \"message\": \"Successfully sent SMS using Twilio! Each SMS cost $$$!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "200 - Test MailTrap Email- Limited free-tier Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/mailtrap/test",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"mailtrap",
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create Cancellation Notification",
+			"item": [
+				{
+					"name": "CREATE cancel timeslot (w/o patient)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"session_id\": 6,\r\n        \"timeslot_datetime\": \"2024-03-03 13:30:00\",\r\n        \"doctor_id\": 1,\r\n        \"status\": \"new\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 - CREATE cancel timeslot (w/o patient)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"session_id\": 6,\r\n        \"timeslot_datetime\": \"2024-03-03 13:30:00\",\r\n        \"doctor_id\": 1,\r\n        \"status\": \"new\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"create"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:18:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Notification Already Exists\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CREATE cancel appointment (w/ patient)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"session_id\": 5,\r\n        \"timeslot_datetime\": \"2024-03-03 12:30:00\",\r\n        \"doctor_id\": 1,\r\n        \"status\": \"new\",\r\n        \"patient_id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 - CREATE cancel appointment (w/ patient)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"session_id\": 5,\r\n        \"timeslot_datetime\": \"2024-03-03 12:30:00\",\r\n        \"doctor_id\": 1,\r\n        \"status\": \"new\",\r\n        \"patient_id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"create"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:18:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Notification Already Exists\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CREATE session_id exists FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"session_id\": 4,\r\n        \"timeslot_datetime\": \"2024-03-03 11:30:00\",\r\n        \"doctor_id\": 1,\r\n        \"status\": \"new\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 - CREATE session_id exists FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"session_id\": 4,\r\n        \"timeslot_datetime\": \"2024-03-03 11:30:00\",\r\n        \"doctor_id\": 1,\r\n        \"status\": \"new\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"create"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:18:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Notification Already Exists\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CREATE missing value FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"session_id\": 5,\r\n        \"timeslot_datetime\": \"2024-03-03 12:30:00\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 - CREATE missing value FAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"session_id\": 5,\r\n        \"timeslot_datetime\": \"2024-03-03 12:30:00\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"create"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:18:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Notification Already Exists\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Get/Update/Delete Notification",
+			"item": [
+				{
+					"name": "GET all 'new' notifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/get/new/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"get",
+								"new",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - GET all 'new' notifications",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/get/new/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"get",
+										"new",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:19:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "825"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"count\": 5,\n    \"data\": [\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": null,\n            \"session_id\": 2,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 09:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": null,\n            \"session_id\": 3,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 10:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": null,\n            \"session_id\": 4,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 11:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": null,\n            \"session_id\": 6,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 13:30:00\"\n        },\n        {\n            \"doctor_id\": 1,\n            \"patient_id\": 1,\n            \"session_id\": 8,\n            \"status\": \"new\",\n            \"timeslot_datetime\": \"2024-03-03 15:30:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE notification to 'completed' - 1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/update/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 - UPDATE notification to 'completed' - 1",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/update/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"update",
+										"1"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:19:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid request. Notification status must be 'new'\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE notification to 'completed' - 5",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/update/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"update",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 - UPDATE notification to 'completed' - 5",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/update/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"update",
+										"5"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:20:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Invalid request. Notification status must be 'new'\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE to 'completed' - None found FAIL",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/update/9999999",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"update",
+								"9999999"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "404 - UPDATE to 'completed' - None found FAIL",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/update/9999999",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"update",
+										"9999999"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:20:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No notification found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE ‘completed’ to ‘received’ based on patient_id, then GET",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/update/completed/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"update",
+								"completed",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "404 - UPDATE ‘completed’ to ‘received’ based on patient_id, then GET",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/update/completed/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"update",
+										"completed",
+										"1"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.9.12"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 08:21:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No notification found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE ‘completed’ to ‘received’ based on patient_id, then GET Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5004/notification/delete/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5004",
+							"path": [
+								"notification",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Notification deleted",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/delete/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"delete",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Mar 2024 09:33:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"Notification deleted!\"\n}"
+						},
+						{
+							"name": "404 - No notification found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5004/notification/delete/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5004",
+									"path": [
+										"notification",
+										"delete",
+										"1"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.11.8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Mar 2024 09:33:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"No notification found\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

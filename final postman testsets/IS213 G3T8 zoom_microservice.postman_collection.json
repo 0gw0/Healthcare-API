@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "784e82f1-b62c-4285-bebc-896e40132359",
+		"name": "IS213 G3T8 zoom_microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32110674"
+	},
+	"item": [
+		{
+			"name": "Start Zoom",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5009/zoom/start",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5009",
+					"path": [
+						"zoom",
+						"start"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 - Start Zoom",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5009/zoom/start",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5009",
+							"path": [
+								"zoom",
+								"start"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.11.8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 12:17:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "521"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"recipient_email\": \"terristanwei@gmail.com\",\n        \"recipient_sms\": \"+6596867171\",\n        \"sender_email\": \"mailtrap@demomailtrap.com\",\n        \"sender_sms\": \"+15184994110\",\n        \"team_member_account\": \"Terris Tan Wei Jun\",\n        \"zoom_invite_link\": \"https://smu-sg.zoom.us/j/6346697940?pwd=VDdLSllTV1RyOE5TVU8zeUhNRHlvdz09\",\n        \"zoom_owner_link\": \"https://smu-sg.zoom.us/meeting#/pmi/6346697940\"\n    },\n    \"message\": \"Successfully sent email using Mailtrap and SMS using Twilio Each email cost $$$!\"\n}"
+				},
+				{
+					"name": "400 - Twilio API failed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5009/zoom/start",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5009",
+							"path": [
+								"zoom",
+								"start"
+							]
+						}
+					},
+					"status": "BAD REQUEST",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.11.8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 12:18:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "568"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"data\": {\n        \"recipient_email\": \"terristanwei@gmail.com\",\n        \"recipient_sms\": \"Failed to send\",\n        \"sender_email\": \"mailtrap@demomailtrap.com\",\n        \"sender_sms\": \"Failed to send\",\n        \"team_member_account\": \"Terris Tan Wei Jun\",\n        \"zoom_invite_link\": \"https://smu-sg.zoom.us/j/6346697940?pwd=VDdLSllTV1RyOE5TVU8zeUhNRHlvdz09\",\n        \"zoom_owner_link\": \"https://smu-sg.zoom.us/meeting#/pmi/6346697940\"\n    },\n    \"error\": \"Failed to send SMS using Twilio!\",\n    \"message\": \"Successfully sent email using Mailtrap but failed to send SMS using Twilio!\"\n}"
+				},
+				{
+					"name": "400 - Mailtrap API failed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5009/zoom/start",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5009",
+							"path": [
+								"zoom",
+								"start"
+							]
+						}
+					},
+					"status": "BAD REQUEST",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.11.8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 31 Mar 2024 08:40:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "171"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"error\": \"Failed to send email using Mailtrap!\",\n    \"message\": \"Failed to send email using Mailtrap! Unable to proceed with sending SMS using Twilio!\"\n}"
+				}
+			]
+		}
+	]
+}

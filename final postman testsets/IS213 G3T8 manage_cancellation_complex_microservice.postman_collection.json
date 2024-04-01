@@ -1,0 +1,716 @@
+{
+	"info": {
+		"_postman_id": "1b9306b2-49e7-47b3-9405-f49c53fc166d",
+		"name": "IS213 G3T8 manage_cancellation_complex_microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32110674"
+	},
+	"item": [
+		{
+			"name": "Makes cancellation request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1\r\n    },\r\n    \"start_date\": \"2024-03-07\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5102/make_cancellation_request",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5102",
+					"path": [
+						"make_cancellation_request"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 - Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1\r\n    },\r\n    \"start_date\": \"2024-03-07\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5102/make_cancellation_request",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5102",
+							"path": [
+								"make_cancellation_request"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e-L0soVjJPcFQO5MlVUtl2ti38i9Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Mar 2024 20:34:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Request received\"\n}"
+				},
+				{
+					"name": "404 - No timeslot found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1\r\n    },\r\n    \"start_date\": \"2024-03-07\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5102/make_cancellation_request",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5102",
+							"path": [
+								"make_cancellation_request"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1959"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7a7-8Dgs3tgpCInVIZpzrhfSk/o8DI4\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Mar 2024 20:37:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"No timeslots or appointments found\",\n    \"used_payload\": {\n        \"data\": {\n            \"doctor_id\": 1\n        },\n        \"start_date\": \"2024-03-07\",\n        \"end_date\": \"2024-03-07\"\n    },\n    \"error\": {\n        \"message\": \"Request failed with status code 404\",\n        \"name\": \"AxiosError\",\n        \"stack\": \"AxiosError: Request failed with status code 404\\n    at settle (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:1966:12)\\n    at IncomingMessage.handleStreamEnd (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3065:11)\\n    at IncomingMessage.emit (node:events:526:35)\\n    at endReadableNT (node:internal/streams/readable:1589:12)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\\n    at Axios.request (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3876:41)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\\n    at async C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\index.js:70:21\",\n        \"config\": {\n            \"transitional\": {\n                \"silentJSONParsing\": true,\n                \"forcedJSONParsing\": true,\n                \"clarifyTimeoutError\": false\n            },\n            \"adapter\": [\n                \"xhr\",\n                \"http\"\n            ],\n            \"transformRequest\": [\n                null\n            ],\n            \"transformResponse\": [\n                null\n            ],\n            \"timeout\": 0,\n            \"xsrfCookieName\": \"XSRF-TOKEN\",\n            \"xsrfHeaderName\": \"X-XSRF-TOKEN\",\n            \"maxContentLength\": -1,\n            \"maxBodyLength\": -1,\n            \"env\": {},\n            \"headers\": {\n                \"Accept\": \"application/json, text/plain, */*\",\n                \"Content-Type\": \"application/json\",\n                \"User-Agent\": \"axios/1.6.8\",\n                \"Content-Length\": \"74\",\n                \"Accept-Encoding\": \"gzip, compress, deflate, br\"\n            },\n            \"data\": \"{\\\"data\\\":{\\\"doctor_id\\\":1},\\\"start_date\\\":\\\"2024-03-07\\\",\\\"end_date\\\":\\\"2024-03-07\\\"}\",\n            \"method\": \"get\",\n            \"url\": \"http://localhost:5002/timeslot/get/all\"\n        },\n        \"code\": \"ERR_BAD_REQUEST\",\n        \"status\": 404\n    }\n}"
+				},
+				{
+					"name": "500 - timeslot_micro is down",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1\r\n    },\r\n    \"start_date\": \"2024-03-07\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5102/make_cancellation_request",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5102",
+							"path": [
+								"make_cancellation_request"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2361"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"939-RBvzfrhDhrZlgXFw1rTJnNU+ITI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Mar 2024 20:38:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ERROR - The timeslot_microservice is down. http://localhost:5002/timeslot/get/all\",\n    \"used_payload\": {\n        \"data\": {\n            \"doctor_id\": 1\n        },\n        \"start_date\": \"2024-03-07\",\n        \"end_date\": \"2024-03-07\"\n    },\n    \"error\": {\n        \"message\": \"\",\n        \"name\": \"AggregateError\",\n        \"stack\": \"AggregateError\\n    at AxiosError.from (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:836:14)\\n    at RedirectableRequest.handleRequestError (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3086:25)\\n    at RedirectableRequest.emit (node:events:514:28)\\n    at eventHandlers.<computed> (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\follow-redirects\\\\index.js:38:24)\\n    at ClientRequest.emit (node:events:514:28)\\n    at Socket.socketErrorListener (node:_http_client:495:9)\\n    at Socket.emit (node:events:514:28)\\n    at emitErrorNT (node:internal/streams/destroy:151:8)\\n    at emitErrorCloseNT (node:internal/streams/destroy:116:3)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\\n    at Axios.request (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3876:41)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\\n    at async C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\index.js:70:21\",\n        \"config\": {\n            \"transitional\": {\n                \"silentJSONParsing\": true,\n                \"forcedJSONParsing\": true,\n                \"clarifyTimeoutError\": false\n            },\n            \"adapter\": [\n                \"xhr\",\n                \"http\"\n            ],\n            \"transformRequest\": [\n                null\n            ],\n            \"transformResponse\": [\n                null\n            ],\n            \"timeout\": 0,\n            \"xsrfCookieName\": \"XSRF-TOKEN\",\n            \"xsrfHeaderName\": \"X-XSRF-TOKEN\",\n            \"maxContentLength\": -1,\n            \"maxBodyLength\": -1,\n            \"env\": {},\n            \"headers\": {\n                \"Accept\": \"application/json, text/plain, */*\",\n                \"Content-Type\": \"application/json\",\n                \"User-Agent\": \"axios/1.6.8\",\n                \"Content-Length\": \"74\",\n                \"Accept-Encoding\": \"gzip, compress, deflate, br\"\n            },\n            \"data\": \"{\\\"data\\\":{\\\"doctor_id\\\":1},\\\"start_date\\\":\\\"2024-03-07\\\",\\\"end_date\\\":\\\"2024-03-07\\\"}\",\n            \"method\": \"get\",\n            \"url\": \"http://localhost:5002/timeslot/get/all\"\n        },\n        \"code\": \"ECONNREFUSED\",\n        \"status\": null\n    }\n}"
+				},
+				{
+					"name": "500 - appointment_micro is down",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1\r\n    },\r\n    \"start_date\": \"2024-03-07\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5102/make_cancellation_request",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5102",
+							"path": [
+								"make_cancellation_request"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2371"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"943-Wj5jn3ECwVWaBHKUoOXA29jJmcY\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Mar 2024 20:36:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ERROR - The appointment_microservice is down. http://localhost:5003/appointment/get/all\",\n    \"used_payload\": {\n        \"data\": {\n            \"doctor_id\": 1\n        },\n        \"start_date\": \"2024-03-07\",\n        \"end_date\": \"2024-03-07\"\n    },\n    \"error\": {\n        \"message\": \"\",\n        \"name\": \"AggregateError\",\n        \"stack\": \"AggregateError\\n    at AxiosError.from (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:836:14)\\n    at RedirectableRequest.handleRequestError (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3086:25)\\n    at RedirectableRequest.emit (node:events:514:28)\\n    at eventHandlers.<computed> (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\follow-redirects\\\\index.js:38:24)\\n    at ClientRequest.emit (node:events:514:28)\\n    at Socket.socketErrorListener (node:_http_client:495:9)\\n    at Socket.emit (node:events:514:28)\\n    at emitErrorNT (node:internal/streams/destroy:151:8)\\n    at emitErrorCloseNT (node:internal/streams/destroy:116:3)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\\n    at Axios.request (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3876:41)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\\n    at async C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\index.js:113:26\",\n        \"config\": {\n            \"transitional\": {\n                \"silentJSONParsing\": true,\n                \"forcedJSONParsing\": true,\n                \"clarifyTimeoutError\": false\n            },\n            \"adapter\": [\n                \"xhr\",\n                \"http\"\n            ],\n            \"transformRequest\": [\n                null\n            ],\n            \"transformResponse\": [\n                null\n            ],\n            \"timeout\": 0,\n            \"xsrfCookieName\": \"XSRF-TOKEN\",\n            \"xsrfHeaderName\": \"X-XSRF-TOKEN\",\n            \"maxContentLength\": -1,\n            \"maxBodyLength\": -1,\n            \"env\": {},\n            \"headers\": {\n                \"Accept\": \"application/json, text/plain, */*\",\n                \"Content-Type\": \"application/json\",\n                \"User-Agent\": \"axios/1.6.8\",\n                \"Content-Length\": \"74\",\n                \"Accept-Encoding\": \"gzip, compress, deflate, br\"\n            },\n            \"data\": \"{\\\"data\\\":{\\\"doctor_id\\\":1},\\\"start_date\\\":\\\"2024-03-07\\\",\\\"end_date\\\":\\\"2024-03-07\\\"}\",\n            \"method\": \"get\",\n            \"url\": \"http://localhost:5003/appointment/get/all\"\n        },\n        \"code\": \"ECONNREFUSED\",\n        \"status\": null\n    }\n}"
+				},
+				{
+					"name": "500 - notification_micro is down",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"doctor_id\": 1\r\n    },\r\n    \"start_date\": \"2024-03-07\",\r\n    \"end_date\": \"2024-03-07\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5102/make_cancellation_request",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5102",
+							"path": [
+								"make_cancellation_request"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2549"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9f5-OGXEQ4NJ2TOEdcvegTVf9tazSoA\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Mar 2024 20:35:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ERROR - The notification_microservice is down. http://localhost:5004/notification/create\",\n    \"used_payload\": {\n        \"data\": {\n            \"doctor_id\": 1\n        },\n        \"start_date\": \"2024-03-07\",\n        \"end_date\": \"2024-03-07\"\n    },\n    \"error\": {\n        \"message\": \"\",\n        \"name\": \"AggregateError\",\n        \"stack\": \"AggregateError\\n    at AxiosError.from (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:836:14)\\n    at RedirectableRequest.handleRequestError (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3086:25)\\n    at RedirectableRequest.emit (node:events:514:28)\\n    at eventHandlers.<computed> (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\follow-redirects\\\\index.js:38:24)\\n    at ClientRequest.emit (node:events:514:28)\\n    at Socket.socketErrorListener (node:_http_client:495:9)\\n    at Socket.emit (node:events:514:28)\\n    at emitErrorNT (node:internal/streams/destroy:151:8)\\n    at emitErrorCloseNT (node:internal/streams/destroy:116:3)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\\n    at Axios.request (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3876:41)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\\n    at async C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\index.js:166:9\",\n        \"config\": {\n            \"transitional\": {\n                \"silentJSONParsing\": true,\n                \"forcedJSONParsing\": true,\n                \"clarifyTimeoutError\": false\n            },\n            \"adapter\": [\n                \"xhr\",\n                \"http\"\n            ],\n            \"transformRequest\": [\n                null\n            ],\n            \"transformResponse\": [\n                null\n            ],\n            \"timeout\": 0,\n            \"xsrfCookieName\": \"XSRF-TOKEN\",\n            \"xsrfHeaderName\": \"X-XSRF-TOKEN\",\n            \"maxContentLength\": -1,\n            \"maxBodyLength\": -1,\n            \"env\": {},\n            \"headers\": {\n                \"Accept\": \"application/json, text/plain, */*\",\n                \"Content-Type\": \"application/json\",\n                \"User-Agent\": \"axios/1.6.8\",\n                \"Content-Length\": \"232\",\n                \"Accept-Encoding\": \"gzip, compress, deflate, br\"\n            },\n            \"method\": \"post\",\n            \"url\": \"http://localhost:5004/notification/create\",\n            \"data\": \"{\\\"data\\\":{\\\"doctor_id\\\":1,\\\"duration_minutes\\\":30,\\\"id\\\":19,\\\"isCompleted\\\":0,\\\"patient_id\\\":1,\\\"time_accepted\\\":\\\"2024-03-4 10:18:00\\\",\\\"time_created\\\":\\\"2024-02-28 13:18:00\\\",\\\"timeslot_datetime\\\":\\\"2024-03-07 15:30:00\\\",\\\"session_id\\\":19,\\\"status\\\":\\\"new\\\"}}\"\n        },\n        \"code\": \"ECONNREFUSED\",\n        \"status\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Make one cancellation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5102/make_cancellation/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5102",
+					"path": [
+						"make_cancellation",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 - Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5102/make_cancellation/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5102",
+							"path": [
+								"make_cancellation",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-avMv7vR8Qnsy8ytR3IqCaU058Nc\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Mar 2024 04:09:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Cancellation successful\"\n}"
+				},
+				{
+					"name": "404 - No timeslots found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5102/make_cancellation/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5102",
+							"path": [
+								"make_cancellation",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1727"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6bf-8VLMAi30OCiIOCoKN5mgb4yp8/M\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Mar 2024 06:32:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"No timeslots was found. So none deleted\",\n    \"error\": {\n        \"message\": \"Request failed with status code 404\",\n        \"name\": \"AxiosError\",\n        \"stack\": \"AxiosError: Request failed with status code 404\\n    at settle (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:1966:12)\\n    at IncomingMessage.handleStreamEnd (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3065:11)\\n    at IncomingMessage.emit (node:events:526:35)\\n    at endReadableNT (node:internal/streams/readable:1589:12)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\\n    at Axios.request (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3876:41)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\\n    at async C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\index.js:274:21\",\n        \"config\": {\n            \"transitional\": {\n                \"silentJSONParsing\": true,\n                \"forcedJSONParsing\": true,\n                \"clarifyTimeoutError\": false\n            },\n            \"adapter\": [\n                \"xhr\",\n                \"http\"\n            ],\n            \"transformRequest\": [\n                null\n            ],\n            \"transformResponse\": [\n                null\n            ],\n            \"timeout\": 0,\n            \"xsrfCookieName\": \"XSRF-TOKEN\",\n            \"xsrfHeaderName\": \"X-XSRF-TOKEN\",\n            \"maxContentLength\": -1,\n            \"maxBodyLength\": -1,\n            \"env\": {},\n            \"headers\": {\n                \"Accept\": \"application/json, text/plain, */*\",\n                \"User-Agent\": \"axios/1.6.8\",\n                \"Accept-Encoding\": \"gzip, compress, deflate, br\"\n            },\n            \"method\": \"delete\",\n            \"url\": \"http://localhost:5002/timeslot/delete/1\"\n        },\n        \"code\": \"ERR_BAD_REQUEST\",\n        \"status\": 404\n    }\n}"
+				},
+				{
+					"name": "500 - timeslot_micro is down",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5102/make_cancellation/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5102",
+							"path": [
+								"make_cancellation",
+								"1"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2125"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"84d-C/MzXbfu6OJpy1mfNW2QrlXWSNo\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Mar 2024 06:23:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ERROR - The timeslot_microservice is down. http://localhost:5002/timeslot/delete/1\",\n    \"error\": {\n        \"message\": \"\",\n        \"name\": \"AggregateError\",\n        \"stack\": \"AggregateError\\n    at AxiosError.from (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:836:14)\\n    at RedirectableRequest.handleRequestError (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3086:25)\\n    at RedirectableRequest.emit (node:events:514:28)\\n    at eventHandlers.<computed> (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\follow-redirects\\\\index.js:38:24)\\n    at ClientRequest.emit (node:events:514:28)\\n    at Socket.socketErrorListener (node:_http_client:495:9)\\n    at Socket.emit (node:events:514:28)\\n    at emitErrorNT (node:internal/streams/destroy:151:8)\\n    at emitErrorCloseNT (node:internal/streams/destroy:116:3)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\\n    at Axios.request (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3876:41)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\\n    at async C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\index.js:274:21\",\n        \"config\": {\n            \"transitional\": {\n                \"silentJSONParsing\": true,\n                \"forcedJSONParsing\": true,\n                \"clarifyTimeoutError\": false\n            },\n            \"adapter\": [\n                \"xhr\",\n                \"http\"\n            ],\n            \"transformRequest\": [\n                null\n            ],\n            \"transformResponse\": [\n                null\n            ],\n            \"timeout\": 0,\n            \"xsrfCookieName\": \"XSRF-TOKEN\",\n            \"xsrfHeaderName\": \"X-XSRF-TOKEN\",\n            \"maxContentLength\": -1,\n            \"maxBodyLength\": -1,\n            \"env\": {},\n            \"headers\": {\n                \"Accept\": \"application/json, text/plain, */*\",\n                \"User-Agent\": \"axios/1.6.8\",\n                \"Accept-Encoding\": \"gzip, compress, deflate, br\"\n            },\n            \"method\": \"delete\",\n            \"url\": \"http://localhost:5002/timeslot/delete/1\"\n        },\n        \"code\": \"ECONNREFUSED\",\n        \"status\": null\n    }\n}"
+				},
+				{
+					"name": "500 - appointment_micro is down",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5102/make_cancellation/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5102",
+							"path": [
+								"make_cancellation",
+								"1"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2303"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8ff-cDXNMoegq8TJgrjjC8bt1tCSLig\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Mar 2024 07:14:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ERROR - The appointment_microservice is down but time slot was already deleted... Please reset the database, ensure all microservice is running, and retest again. If not, there will be unexpected results.Down site: http://localhost:5003/appointment/delete/1\",\n    \"error\": {\n        \"message\": \"\",\n        \"name\": \"AggregateError\",\n        \"stack\": \"AggregateError\\n    at AxiosError.from (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:836:14)\\n    at RedirectableRequest.handleRequestError (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3086:25)\\n    at RedirectableRequest.emit (node:events:514:28)\\n    at eventHandlers.<computed> (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\follow-redirects\\\\index.js:38:24)\\n    at ClientRequest.emit (node:events:514:28)\\n    at Socket.socketErrorListener (node:_http_client:495:9)\\n    at Socket.emit (node:events:514:28)\\n    at emitErrorNT (node:internal/streams/destroy:151:8)\\n    at emitErrorCloseNT (node:internal/streams/destroy:116:3)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\\n    at Axios.request (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3876:41)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\\n    at async C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\index.js:323:25\",\n        \"config\": {\n            \"transitional\": {\n                \"silentJSONParsing\": true,\n                \"forcedJSONParsing\": true,\n                \"clarifyTimeoutError\": false\n            },\n            \"adapter\": [\n                \"xhr\",\n                \"http\"\n            ],\n            \"transformRequest\": [\n                null\n            ],\n            \"transformResponse\": [\n                null\n            ],\n            \"timeout\": 0,\n            \"xsrfCookieName\": \"XSRF-TOKEN\",\n            \"xsrfHeaderName\": \"X-XSRF-TOKEN\",\n            \"maxContentLength\": -1,\n            \"maxBodyLength\": -1,\n            \"env\": {},\n            \"headers\": {\n                \"Accept\": \"application/json, text/plain, */*\",\n                \"User-Agent\": \"axios/1.6.8\",\n                \"Accept-Encoding\": \"gzip, compress, deflate, br\"\n            },\n            \"method\": \"delete\",\n            \"url\": \"http://localhost:5003/appointment/delete/1\"\n        },\n        \"code\": \"ECONNREFUSED\",\n        \"status\": null\n    }\n}"
+				},
+				{
+					"name": "500 - notification_micro is down",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5102/make_cancellation/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5102",
+							"path": [
+								"make_cancellation",
+								"1"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2184"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"888-hpACqY35iHswfKrLZKBC4Vs3oE4\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Mar 2024 03:52:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ERROR - The notification_microservice is down. http://localhost:5004/notification/update/1\",\n    \"error\": {\n        \"message\": \"\",\n        \"name\": \"AggregateError\",\n        \"stack\": \"AggregateError\\n    at AxiosError.from (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:836:14)\\n    at RedirectableRequest.handleRequestError (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3086:25)\\n    at RedirectableRequest.emit (node:events:514:28)\\n    at eventHandlers.<computed> (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\follow-redirects\\\\index.js:38:24)\\n    at ClientRequest.emit (node:events:514:28)\\n    at Socket.socketErrorListener (node:_http_client:495:9)\\n    at Socket.emit (node:events:514:28)\\n    at emitErrorNT (node:internal/streams/destroy:151:8)\\n    at emitErrorCloseNT (node:internal/streams/destroy:116:3)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\\n    at Axios.request (C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\node_modules\\\\axios\\\\dist\\\\node\\\\axios.cjs:3876:41)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\\n    at async C:\\\\Users\\\\Admin\\\\Desktop\\\\VSCode workspace\\\\Healthcare-API\\\\backend\\\\manage_cancellation_complex_microservice\\\\index.js:367:5\",\n        \"config\": {\n            \"transitional\": {\n                \"silentJSONParsing\": true,\n                \"forcedJSONParsing\": true,\n                \"clarifyTimeoutError\": false\n            },\n            \"adapter\": [\n                \"xhr\",\n                \"http\"\n            ],\n            \"transformRequest\": [\n                null\n            ],\n            \"transformResponse\": [\n                null\n            ],\n            \"timeout\": 0,\n            \"xsrfCookieName\": \"XSRF-TOKEN\",\n            \"xsrfHeaderName\": \"X-XSRF-TOKEN\",\n            \"maxContentLength\": -1,\n            \"maxBodyLength\": -1,\n            \"env\": {},\n            \"headers\": {\n                \"Accept\": \"application/json, text/plain, */*\",\n                \"Content-Type\": \"application/x-www-form-urlencoded\",\n                \"User-Agent\": \"axios/1.6.8\",\n                \"Accept-Encoding\": \"gzip, compress, deflate, br\"\n            },\n            \"method\": \"put\",\n            \"url\": \"http://localhost:5004/notification/update/1\"\n        },\n        \"code\": \"ECONNREFUSED\",\n        \"status\": null\n    }\n}"
+				}
+			]
+		}
+	]
+}
