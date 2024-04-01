@@ -1,6 +1,6 @@
 # Using Docker Compose
 
-Ensure you are at backend folder
+Ensure you are not in backend or frontend folders
 
 ### starting & stopping all microservices
 
