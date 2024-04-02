@@ -103,7 +103,7 @@ export default function Home() {
 		setCookie('userType', 'doctor');
 
 		// Get user data from user_microservice
-		axios.get('http://localhost:8080/user/v1/get/1/doctor').then((res) => {
+		axios.get('http://localhost:8080/user/v1/get_doctor/1').then((res) => {
 			// console.log(res.data.data);
 			setCookie('userData', res.data.data);
 		});
@@ -118,7 +118,7 @@ export default function Home() {
 		setCookie('userType', 'nurse');
 
 		// Get user data from user_microservice
-		axios.get('http://localhost:8080/user/v1/get/1/nurse').then((res) => {
+		axios.get('http://localhost:8080/user/v1/get_nurse/1').then((res) => {
 			// console.log(res.data.data);
 			setCookie('userData', res.data.data);
 		});

@@ -9,7 +9,7 @@
 	"endpoints": [
 		{
 			"@comment": "API gateway for time user microservice",
-			"endpoint": "/user/v1/get/{user}",
+			"endpoint": "/user/v1/get_patient/{user}",
 			"method": "GET",
 			"backend": [
 				{
@@ -25,7 +25,7 @@
 		},
 		{
 			"@comment": "API gateway for time user microservice",
-			"endpoint": "/user/v1/get/{doctor}/doctor",
+			"endpoint": "/user/v1/get_doctor/{doctor}",
 			"method": "GET",
 			"backend": [
 				{
@@ -41,7 +41,7 @@
 		},
 		{
 			"@comment": "API gateway for time user microservice",
-			"endpoint": "/user/v1/get/{nurse}/nurse",
+			"endpoint": "/user/v1/get_nurse/{nurse}",
 			"method": "GET",
 			"backend": [
 				{
@@ -218,23 +218,6 @@
 		},
 		{
 			"@comment": "API gateway for cancellation microservice",
-			"endpoint": "/cancellation/v1/request",
-			"method": "POST",
-			"backend": [
-				{
-					"method": "POST",
-					"host": ["http://manage_cancellation_microservice:5102"],
-					"url_pattern": "/make_cancellation_request",
-					"extra_config": {
-						"backend/http": {
-							"return_error_details": "backend_alias"
-						}
-					}
-				}
-			]
-		},
-		{
-			"@comment": "API gateway for cancellation microservice",
 			"endpoint": "/cancellation/v1/request/{session_id}",
 			"method": "POST",
 			"backend": [
@@ -322,7 +305,7 @@
 	"extra_config": {
 		"security/cors": {
 			"allow_origins": ["*"],
-			"allow_methods": ["POST", "GET", "PUT"],
+			"allow_methods": ["POST", "GET", "PUT", "DELETE"],
 			"allow_headers": ["Origin", "Authorization", "Content-Type"],
 			"expose_headers": ["Content-Length"],
 			"max_age": "12h"
