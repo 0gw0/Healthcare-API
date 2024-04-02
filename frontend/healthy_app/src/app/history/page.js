@@ -10,6 +10,10 @@ import React, { useState, useEffect } from 'react';
 import { getCookie } from 'cookies-next';
 import axios from 'axios';
 
+LOCAL_URL = "localhost"
+PEER_URL = "172.20.10.8"
+URL_TO_USE = PEER_URL
+
 export default function Page() {
 	const [medicationLogData, setMedicationLogData] = useState([]);
 
@@ -46,7 +50,7 @@ export default function Page() {
 
 			// Get all upcoming appointments by API
 			axios
-				.post('http://localhost:8080/appointment/v1/all', payload)
+				.post(`http://${URL_TO_USE}:8080/appointment/v1/all`, payload)
 				.then((res) => {
 					const Appts = res.data.data;
 
