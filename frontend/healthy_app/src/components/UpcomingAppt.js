@@ -79,7 +79,7 @@ function Avatar(props) {
 
         // Use API to cancel
         await axios
-            .put(`http://${URL_TO_USE}:8080/booking/v1/cancel/${id}`)
+            .put(`http://${URL_TO_USE}:5101/cancel_appointment/${id}`)
             .then((res) => {
                 console.log(res.data);
             });

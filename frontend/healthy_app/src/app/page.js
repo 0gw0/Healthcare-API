@@ -138,18 +138,16 @@ export default function Home() {
 
     // Database control - START
     function emptyDatabase() {
-        axios.post(`http://${URL_TO_USE}:8080/dataset/v1/empty`).then((res) => {
+        axios.post(`http://${URL_TO_USE}:5109/reset_empty`).then((res) => {
             console.log(res);
             alert("Database has been reset to empty!");
         });
     }
     function useDataset1() {
-        axios
-            .post(`http://${URL_TO_USE}:8080/dataset/v1/reset1`)
-            .then((res) => {
-                console.log(res);
-                alert("Database has been is now using Dataset_1!");
-            });
+        axios.post(`http://${URL_TO_USE}:5109/reset_dataset1`).then((res) => {
+            console.log(res);
+            alert("Database has been is now using Dataset_1!");
+        });
     }
     // Database control - END
 

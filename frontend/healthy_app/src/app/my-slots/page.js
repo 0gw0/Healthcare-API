@@ -128,7 +128,7 @@ export default function Page() {
         // - Hardcode doctor_id to 1
         // - Currently only one doctor
         await axios
-            .post(`http://${URL_TO_USE}:8080/cancellation/v1/request`, {
+            .post(`http://${URL_TO_USE}:5102/make_cancellation_request`, {
                 data: {
                     doctor_id: 1,
                 },

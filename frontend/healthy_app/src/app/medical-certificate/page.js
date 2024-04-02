@@ -112,7 +112,7 @@ export default function Page() {
 
         // Manage Consult via API
         axios
-            .put(`http://${URL_TO_USE}:8080/teleconsult/v1/complete`, payload)
+            .put(`http://${URL_TO_USE}:5104/complete_teleconsultation`, payload)
             .then((res) => {
                 console.log(res);
             })

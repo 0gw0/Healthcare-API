@@ -23,7 +23,7 @@ const SlotsTable = ({ data, setRequestData }) => {
         // Use API to approve
         await axios
             .post(
-                `http://${URL_TO_USE}:8080/cancellation/v1/request/${session_id}`
+                `http://${URL_TO_USE}:5102/make_cancellation/${session_id}`
             )
             .then((res) => {});
         reloadTable();

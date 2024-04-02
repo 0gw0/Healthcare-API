@@ -102,7 +102,7 @@ export default function Page() {
             // - Hardcode patient_id
             await axios
                 .post(
-                    `http://${URL_TO_USE}:8080/booking/v1/make/${session_id}`,
+                    `http://${URL_TO_USE}:5101/make_appointment/${session_id}`,
                     {
                         patient_id: 1,
                     }
