@@ -20,18 +20,21 @@ const LowInventoryModal = ({ onClose, data }) => {
 
             // Call API to restock
             await axios
-                .put(`http://127.0.0.1:5005/inventory/update/${item.id}`, {
-                    quantity_change: amountToAdd,
-                })
-                .then((res) => {
-                    console.log(res);
-                    console.log(
-                        `Restocking (${item.id}) ${item.name}, from ${item.quantity} to ${amountToRestock}`
-                    );
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
+				.put(
+					`http://localhost:8080/inventory/v1/update/${item.id}`,
+					{
+						quantity_change: amountToAdd,
+					}
+				)
+				.then((res) => {
+					console.log(res);
+					console.log(
+						`Restocking (${item.id}) ${item.name}, from ${item.quantity} to ${amountToRestock}`
+					);
+				})
+				.catch((error) => {
+					console.log(error);
+				});
         }
 
         onClose();

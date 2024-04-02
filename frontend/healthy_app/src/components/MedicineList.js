@@ -10,7 +10,7 @@ const MedicineList = ({ payloadItems, setPayloadItems }) => {
 	useEffect(() => {
 		if (!isRetrieved) {
 			axios
-				.get('http://127.0.0.1:5005/inventory/get/all')
+				.get('http://localhost:8080/inventory/v1/all')
 				.then((res) => {
 					console.log(res.data.data);
 

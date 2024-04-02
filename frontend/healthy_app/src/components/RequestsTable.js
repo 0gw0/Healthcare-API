@@ -18,8 +18,10 @@ const SlotsTable = ({ data, setRequestData }) => {
         // console.log(item);
         // Use API to approve
         await axios
-            .post(`http://127.0.0.1:5102/make_cancellation/${session_id}`)
-            .then((res) => {});
+			.post(
+				`http://localhost:8080/cancellation/v1/request/${session_id}`
+			)
+			.then((res) => {});
         reloadTable();
 
         setIsLoading(false);
@@ -30,10 +32,12 @@ const SlotsTable = ({ data, setRequestData }) => {
 
         // Use API to decline
         await axios
-            .delete(`http://127.0.0.1:5004/notification/delete/${session_id}`)
-            .then((res) => {
-                console.log(res.data);
-            });
+			.delete(
+				`http://localhost:8080/notification/v1/delete/${session_id}`
+			)
+			.then((res) => {
+				console.log(res.data);
+			});
         reloadTable();
 
         setIsLoading(false);
@@ -42,23 +46,23 @@ const SlotsTable = ({ data, setRequestData }) => {
     async function reloadTable() {
         // Use API to get new data
         await axios
-            .get("http://127.0.0.1:5004/notification/get/new/all")
-            .then((res) => {
-                let data = res.data.data;
+			.get('http://localhost:8080/notification/v1/all')
+			.then((res) => {
+				let data = res.data.data;
 
-                // Formate the data
-                for (let i = 0; i < data.length; i++) {
-                    data[i]["doctor_name"] = doctor_name;
-                    data[i]["patient_name"] = patient_name;
-                }
+				// Formate the data
+				for (let i = 0; i < data.length; i++) {
+					data[i]['doctor_name'] = doctor_name;
+					data[i]['patient_name'] = patient_name;
+				}
 
-                console.log(data);
-                setRequestData(data);
-            })
-            // Empty database
-            .catch((error) => {
-                setRequestData([]);
-            });
+				console.log(data);
+				setRequestData(data);
+			})
+			// Empty database
+			.catch((error) => {
+				setRequestData([]);
+			});
     }
 
     return (

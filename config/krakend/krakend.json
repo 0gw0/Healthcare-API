@@ -24,6 +24,38 @@
 			]
 		},
 		{
+			"@comment": "API gateway for time user microservice",
+			"endpoint": "/user/v1/get/{doctor}/doctor",
+			"method": "GET",
+			"backend": [
+				{
+					"host": ["http://user_microservice:5001"],
+					"url_pattern": "/user/get/doctors/{doctor}",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for time user microservice",
+			"endpoint": "/user/v1/get/{nurse}/nurse",
+			"method": "GET",
+			"backend": [
+				{
+					"host": ["http://user_microservice:5001"],
+					"url_pattern": "/user/get/nurse/{nurse}",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
 			"@comment": "API gateway for time slot microservice",
 			"endpoint": "/timeslot/v1/all",
 			"method": "POST",
@@ -88,6 +120,22 @@
 			]
 		},
 		{
+			"@comment": "API gateway for notification microservice",
+			"endpoint": "/notification/v1/delete/{session_id}",
+			"method": "DELETE",
+			"backend": [
+				{
+					"host": ["http://notification_microservice:5004"],
+					"url_pattern": "/notification/delete/{session_id}",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
 			"@comment": "API gateway for inventory microservice",
 			"endpoint": "/inventory/v1/all",
 			"method": "GET",
@@ -95,6 +143,22 @@
 				{
 					"host": ["http://inventory_microservice:5005"],
 					"url_pattern": "/inventory/get/all",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for inventory microservice",
+			"endpoint": "/inventory/v1/update/{itemId}",
+			"method": "PUT",
+			"backend": [
+				{
+					"host": ["http://inventory_microservice:5005"],
+					"url_pattern": "/inventory/update/{itemId}",
 					"extra_config": {
 						"backend/http": {
 							"return_error_details": "backend_alias"
@@ -170,6 +234,57 @@
 			]
 		},
 		{
+			"@comment": "API gateway for cancellation microservice",
+			"endpoint": "/cancellation/v1/request/{session_id}",
+			"method": "POST",
+			"backend": [
+				{
+					"method": "POST",
+					"host": ["http://manage_cancellation_microservice:5102"],
+					"url_pattern": "/make_cancellation/{session_id}",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for dataset microservice",
+			"endpoint": "/dataset/v1/empty",
+			"method": "POST",
+			"backend": [
+				{
+					"method": "POST",
+					"host": ["http://manage_dataset_microservice:5109"],
+					"url_pattern": "/reset_empty",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for dataset microservice",
+			"endpoint": "/dataset/v1/reset1",
+			"method": "POST",
+			"backend": [
+				{
+					"method": "POST",
+					"host": ["http://manage_dataset_microservice:5109"],
+					"url_pattern": "/reset_dataset1",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
 			"@comment": "API gateway for manage booking microservice",
 			"endpoint": "/booking/v1/make/{session_id}",
 			"method": "POST",
@@ -178,6 +293,23 @@
 					"method": "POST",
 					"host": ["http://manage_booking_microservice:5101"],
 					"url_pattern": "/make_appointment/{session_id}",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for manage booking microservice",
+			"endpoint": "/booking/v1/cancel/{id}",
+			"method": "PUT",
+			"backend": [
+				{
+					"method": "PUT",
+					"host": ["http://manage_booking_microservice:5101"],
+					"url_pattern": "/cancel_appointment/{id}",
 					"extra_config": {
 						"backend/http": {
 							"return_error_details": "backend_alias"

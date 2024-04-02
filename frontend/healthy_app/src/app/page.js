@@ -103,7 +103,7 @@ export default function Home() {
 		setCookie('userType', 'doctor');
 
 		// Get user data from user_microservice
-		axios.get('http://127.0.0.1:5001/user/get/doctors/1').then((res) => {
+		axios.get('http://localhost:8080/user/v1/get/1/doctor').then((res) => {
 			// console.log(res.data.data);
 			setCookie('userData', res.data.data);
 		});
@@ -118,7 +118,7 @@ export default function Home() {
 		setCookie('userType', 'nurse');
 
 		// Get user data from user_microservice
-		axios.get('http://127.0.0.1:5001/user/get/nurses/1').then((res) => {
+		axios.get('http://localhost:8080/user/v1/get/1/nurse').then((res) => {
 			// console.log(res.data.data);
 			setCookie('userData', res.data.data);
 		});
@@ -130,13 +130,13 @@ export default function Home() {
 
 	// Database control - START
 	function emptyDatabase() {
-		axios.post('http://127.0.0.1:5109/reset_empty').then((res) => {
+		axios.post('http://localhost:8080/dataset/v1/empty').then((res) => {
 			console.log(res);
 			alert('Database has been reset to empty!');
 		});
 	}
 	function useDataset1() {
-		axios.post('http://127.0.0.1:5109/reset_dataset1').then((res) => {
+		axios.post('http://localhost:8080/dataset/v1/reset1').then((res) => {
 			console.log(res);
 			alert('Database has been is now using Dataset_1!');
 		});

@@ -21,7 +21,7 @@ const UpcomingAppt = () => {
 	function reloadTable() {
 		// Get all upcoming appointments by API
 		axios
-			.post('http://127.0.0.1:5003/appointment/get/all', {
+			.post('http://localhost:8080/appointment/v1/all', {
 				data: {
 					patient_id: 1,
 					isCompleted: 0,
@@ -75,7 +75,7 @@ function Avatar(props) {
 
 		// Use API to cancel
 		await axios
-			.put(`http://127.0.0.1:5101/cancel_appointment/${id}`)
+			.put(`http://localhost:8080/booking/v1/cancel/${id}`)
 			.then((res) => {
 				console.log(res.data);
 			});
