@@ -4,9 +4,9 @@ import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 
 import axios from "axios";
 
-LOCAL_URL = "localhost";
-PEER_URL = "172.20.10.8";
-URL_TO_USE = PEER_URL;
+const LOCAL_URL = "localhost";
+const PEER_URL = "172.20.10.8";
+const URL_TO_USE = PEER_URL;
 
 const LowInventoryModal = ({ onClose, data }) => {
     const lowInventoryItems = data.filter((item) => item.quantity < 20);

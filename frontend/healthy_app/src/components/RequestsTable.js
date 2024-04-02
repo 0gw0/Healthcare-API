@@ -8,9 +8,9 @@ import axios from "axios";
 const doctor_name = "Dr. Michael Scott";
 const patient_name = "Mr. Dwight Schrute";
 
-LOCAL_URL = "localhost";
-PEER_URL = "172.20.10.8";
-URL_TO_USE = PEER_URL;
+const LOCAL_URL = "localhost";
+const PEER_URL = "172.20.10.8";
+const URL_TO_USE = PEER_URL;
 
 const SlotsTable = ({ data, setRequestData }) => {
     // Use state for loading buttons
