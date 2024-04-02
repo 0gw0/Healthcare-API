@@ -62,8 +62,14 @@ export default function Page() {
 
     const handleIssueMC = () => {
         // Send payment link via API
+
+        // Replace fullstop
+        let temp = consultFee.toString().replace(".", "");
+
+        console.log(temp);
+
         axios
-            .post(`http://${URL_TO_USE}:8080/payment/v1/${consultFee}`)
+            .post(`http://${URL_TO_USE}:5007/payment/send_payment/${temp}`)
             .then((res) => {
                 console.log(res);
             })
