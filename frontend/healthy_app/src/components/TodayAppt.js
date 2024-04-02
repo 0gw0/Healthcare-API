@@ -19,7 +19,7 @@ const TodayAppt = () => {
 			// - Hardcode doctor_id to 1
 			// - Currently only one doctor
 			axios
-				.post('http://127.0.0.1:5003/appointment/get/all', {
+				.post('http://localhost:8080/appointment/v1/all', {
 					data: {
 						doctor_id: 1,
 						isCompleted: 0,

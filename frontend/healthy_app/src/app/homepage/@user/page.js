@@ -41,7 +41,7 @@ export default function Page() {
 		if (!hasCookie('userData')) {
 			// Get user data from user_microservice
 			axios
-				.get('http://127.0.0.1:5001/user/get/patients/1')
+				.get('http://localhost:8080/user/v1/get/1')
 				.then((res) => {
 					const data = res.data.data;
 					// console.log(res.data.data);

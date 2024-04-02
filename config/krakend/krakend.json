@@ -1,0 +1,199 @@
+{
+	"$schema": "https://www.krakend.io/schema/v3.json",
+	"version": 3,
+	"name": "YATA Enterprise API Gateway",
+	"port": 8080,
+	"host": ["http://localhost:8080"],
+	"timeout": "3000ms",
+	"cache_ttl": "300s",
+	"endpoints": [
+		{
+			"@comment": "API gateway for time user microservice",
+			"endpoint": "/user/v1/get/{user}",
+			"method": "GET",
+			"backend": [
+				{
+					"host": ["http://user_microservice:5001"],
+					"url_pattern": "/user/get/patients/{user}",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for time slot microservice",
+			"endpoint": "/timeslot/v1/all",
+			"method": "POST",
+			"backend": [
+				{
+					"host": ["http://timeslot_microservice:5002"],
+					"url_pattern": "/timeslot/get/all",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for time slot microservice",
+			"endpoint": "/timeslot/v1/create",
+			"method": "POST",
+			"backend": [
+				{
+					"host": ["http://timeslot_microservice:5002"],
+					"url_pattern": "/timeslot/create",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for appointment microservice",
+			"endpoint": "/appointment/v1/all",
+			"method": "POST",
+			"backend": [
+				{
+					"host": ["http://appointment_microservice:5003"],
+					"url_pattern": "/appointment/get/all",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for notification microservice",
+			"endpoint": "/notification/v1/all",
+			"method": "GET",
+			"backend": [
+				{
+					"host": ["http://notification_microservice:5004"],
+					"url_pattern": "/notification/get/new/all",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for inventory microservice",
+			"endpoint": "/inventory/v1/all",
+			"method": "GET",
+			"backend": [
+				{
+					"host": ["http://inventory_microservice:5005"],
+					"url_pattern": "/inventory/get/all",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for zoom microservice",
+			"endpoint": "/zoom/v1/start",
+			"method": "POST",
+			"backend": [
+				{
+					"host": ["http://zoom_microservice:5009"],
+					"url_pattern": "/zoom/start",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for payment microservice",
+			"endpoint": "/payment/v1/{consultFee}",
+			"method": "POST",
+			"backend": [
+				{
+					"host": ["http://payment_microservice:5007"],
+					"url_pattern": "/payment/send_payment/{consultFee}",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for consult microservice",
+			"endpoint": "/teleconsult/v1/complete",
+			"method": "PUT",
+			"backend": [
+				{
+					"method": "PUT",
+					"host": ["http://manage_consult_microservice:5104"],
+					"url_pattern": "/complete_teleconsultation",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for cancellation microservice",
+			"endpoint": "/cancellation/v1/request",
+			"method": "POST",
+			"backend": [
+				{
+					"method": "POST",
+					"host": ["http://manage_cancellation_microservice:5102"],
+					"url_pattern": "/make_cancellation_request",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@comment": "API gateway for manage booking microservice",
+			"endpoint": "/booking/v1/make/{session_id}",
+			"method": "POST",
+			"backend": [
+				{
+					"method": "POST",
+					"host": ["http://manage_booking_microservice:5101"],
+					"url_pattern": "/make_appointment/{session_id}",
+					"extra_config": {
+						"backend/http": {
+							"return_error_details": "backend_alias"
+						}
+					}
+				}
+			]
+		}
+	],
+	"extra_config": {
+		"security/cors": {
+			"allow_origins": ["*"],
+			"allow_methods": ["POST", "GET", "PUT"],
+			"allow_headers": ["Origin", "Authorization", "Content-Type"],
+			"expose_headers": ["Content-Length"],
+			"max_age": "12h"
+		}
+	}
+}

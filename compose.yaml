@@ -10,7 +10,7 @@ services:
             - ./frontend/healthy_app:/app
         command: npm run dev
         ports:
-            - "3001:3001"
+            - '3001:3001'
         environment:
             NODE_ENV: development
 
@@ -24,7 +24,7 @@ services:
         image: yata/user:1.0
         restart: always
         ports:
-            - "5001:5001"
+            - '5001:5001'
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -38,7 +38,7 @@ services:
         image: yata/timeslot:1.0
         restart: always
         ports:
-            - "5002:5002"
+            - '5002:5002'
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -52,7 +52,7 @@ services:
         image: yata/appointment:1.0
         restart: always
         ports:
-            - "5003:5003"
+            - '5003:5003'
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -66,7 +66,7 @@ services:
         image: yata/notification:1.0
         restart: always
         ports:
-            - "5004:5004"
+            - '5004:5004'
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -80,7 +80,7 @@ services:
         image: yata/inventory:1.0
         restart: always
         ports:
-            - "5005:5005"
+            - '5005:5005'
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -94,7 +94,7 @@ services:
         image: yata/delivery_order:1.0
         restart: always
         ports:
-            - "5006:5006"
+            - '5006:5006'
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -108,7 +108,7 @@ services:
         image: yata/payment:1.0
         restart: always
         ports:
-            - "5007:5007"
+            - '5007:5007'
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -122,7 +122,7 @@ services:
         image: yata/medical_certificate:1.0
         restart: always
         ports:
-            - "5008:5008"
+            - '5008:5008'
         environment:
             PYTHONUNBUFFERED: 1
         depends_on:
@@ -138,7 +138,7 @@ services:
         image: yata/zoom:1.0
         restart: always
         ports:
-            - "5009:5009"
+            - '5009:5009'
         environment:
             PYTHONUNBUFFERED: 1
 
@@ -154,7 +154,7 @@ services:
         image: yata/manage_booking_complex:1.0
         restart: always
         ports:
-            - "5101:5101"
+            - '5101:5101'
         depends_on:
             - timeslot_microservice
             - appointment_microservice
@@ -171,7 +171,7 @@ services:
         image: yata/manage_cancellation_complex:1.0
         restart: always
         ports:
-            - "5102:5102"
+            - '5102:5102'
         depends_on:
             - timeslot_microservice
             - appointment_microservice
@@ -189,7 +189,7 @@ services:
         image: yata/create_delivery_complex:1.0
         restart: always
         ports:
-            - "5103:5103"
+            - '5103:5103'
         depends_on:
             - inventory_microservice
             - delivery_order_microservice
@@ -206,7 +206,7 @@ services:
         image: yata/manage_consult_complex:1.0
         restart: always
         ports:
-            - "5104:5104"
+            - '5104:5104'
         depends_on:
             - appointment_microservice
             - medical_certificate_microservice
@@ -225,7 +225,7 @@ services:
         image: yata/manage_dataset_complex:1.0
         restart: always
         ports:
-            - "5109:5109"
+            - '5109:5109'
         depends_on:
             - user_microservice
             - timeslot_microservice
@@ -248,8 +248,31 @@ services:
         hostname: rabbit
         restart: always
         ports:
-            - "5672:5672"
-            - "15672:15672"
+            - '5672:5672'
+            - '15672:15672'
         # environment:
         #     RABBITMQ_DEFAULT_USER: guest
         #     RABBITMQ_DEFAULT_PASS: guest
+
+    ################## Krakend ##################
+
+    #######################################################
+    # API Gateway: Krakend
+    #######################################################
+    krakend_ce:
+        # The :watch image restarts the service automatically when the configuration files change.
+        # Do not use this image in production, it's meant to speed up your testing and development.
+        image: devopsfaith/krakend:watch
+        volumes:
+            - ./config/krakend:/etc/krakend
+        ports:
+            - '8080:8080'
+        depends_on:
+            - user_microservice
+            - timeslot_microservice
+            - appointment_microservice
+            - inventory_microservice
+            - manage_cancellation_microservice
+            - manage_consult_microservice
+            - manage_booking_microservice
+        command: ['run', '-d', '-c', '/etc/krakend/krakend.json']
