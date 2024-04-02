@@ -42,7 +42,8 @@ export default function Page() {
     const handleZoomMeeting = async () => {
         // Start Zoom meeting with API
         await axios
-            .post(`http://${URL_TO_USE}:8080/zoom/v1/start`)
+            // .post(`http://${URL_TO_USE}:8080/zoom/v1/start`)
+            .post(`http://${URL_TO_USE}:5009/zoom/start`)
             .then((res) => {
                 console.log(res);
 

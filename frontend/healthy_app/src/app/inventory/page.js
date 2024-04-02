@@ -33,7 +33,7 @@ export default function Page() {
         // - First time get inventory
         if (!hasRetrieved) {
             axios
-                .get(`http://${URL_TO_USE}:8080/inventory/v1/all`)
+                .get(`http://${URL_TO_USE}:5005/inventory/get/all`)
                 .then((res) => {
                     let data = res.data.data;
                     console.log(data);
@@ -58,7 +58,7 @@ export default function Page() {
         // - Get inventory every 10 seconds
         setInterval(() => {
             axios
-                .get(`http://${URL_TO_USE}:8080/inventory/v1/all`)
+                .get(`http://${URL_TO_USE}:5005/inventory/get/all`)
                 .then((res) => {
                     let data = res.data.data;
                     console.log(data);

@@ -22,9 +22,7 @@ const SlotsTable = ({ data, setRequestData }) => {
         // console.log(item);
         // Use API to approve
         await axios
-            .post(
-                `http://${URL_TO_USE}:5102/make_cancellation/${session_id}`
-            )
+            .post(`http://${URL_TO_USE}:5102/make_cancellation/${session_id}`)
             .then((res) => {});
         reloadTable();
 
@@ -37,7 +35,7 @@ const SlotsTable = ({ data, setRequestData }) => {
         // Use API to decline
         await axios
             .delete(
-                `http://${URL_TO_USE}:8080/notification/v1/delete/${session_id}`
+                `http://${URL_TO_USE}:5004/notification/delete/${session_id}`
             )
             .then((res) => {
                 console.log(res.data);
@@ -50,7 +48,8 @@ const SlotsTable = ({ data, setRequestData }) => {
     async function reloadTable() {
         // Use API to get new data
         await axios
-            .get(`http://${URL_TO_USE}:8080/notification/v1/all`)
+            // .get(`http://${URL_TO_USE}:8080/notification/v1/all`)
+            .get(`http://${URL_TO_USE}:5004/notification/get/new/all`)
             .then((res) => {
                 let data = res.data.data;
 

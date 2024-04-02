@@ -38,8 +38,16 @@ export default function Page() {
                     },
                 })
                 .then((res) => {
-                    const data = res.data.data;
+                    let data = res.data.data;
                     console.log(data);
+
+                    // Sort data by timeslot_datetime
+                    data.sort((a, b) => {
+                        return (
+                            new Date(a.timeslot_datetime) -
+                            new Date(b.timeslot_datetime)
+                        );
+                    });
 
                     setTimeslotData(data);
                 })
@@ -59,8 +67,16 @@ export default function Page() {
                     },
                 })
                 .then((res) => {
-                    const data = res.data.data;
+                    let data = res.data.data;
                     console.log(data);
+
+                    // Sort data by timeslot_datetime
+                    data.sort((a, b) => {
+                        return (
+                            new Date(a.timeslot_datetime) -
+                            new Date(b.timeslot_datetime)
+                        );
+                    });
 
                     setAppointmentData(data);
                 })

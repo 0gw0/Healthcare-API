@@ -25,7 +25,7 @@ const UpcomingAppt = () => {
     function reloadTable() {
         // Get all upcoming appointments by API
         axios
-            .post(`http://${URL_TO_USE}:8080/appointment/v1/all`, {
+            .post(`http://${URL_TO_USE}:5003/appointment/get/all`, {
                 data: {
                     patient_id: 1,
                     isCompleted: 0,

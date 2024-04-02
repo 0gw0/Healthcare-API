@@ -138,6 +138,8 @@ export default function Home() {
 
     // Database control - START
     function emptyDatabase() {
+        console.log(5);
+        console.log(5);
         axios.post(`http://${URL_TO_USE}:5109/reset_empty`).then((res) => {
             console.log(res);
             alert("Database has been reset to empty!");

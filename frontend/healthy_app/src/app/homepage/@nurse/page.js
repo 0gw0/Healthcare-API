@@ -35,7 +35,7 @@ export default function Page() {
         if (!hasRetrieved) {
             // Get data from API
             axios
-                .get(`http://${URL_TO_USE}:8080/notification/v1/all`)
+                .get(`http://${URL_TO_USE}:5004/notification/get/new/all`)
                 .then((res) => {
                     let data = res.data.data;
 
@@ -58,7 +58,7 @@ export default function Page() {
         // - Get inventory every 10 seconds
         setInterval(() => {
             axios
-                .get(`http://${URL_TO_USE}:8080/notification/v1/all`)
+                .get(`http://${URL_TO_USE}:5004/notification/get/new/all`)
                 .then((res) => {
                     let data = res.data.data;
 

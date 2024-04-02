@@ -47,18 +47,27 @@ const TodayAppt = () => {
     return (
         <div className="flex flex-col items-center gap-5 px-5 py-5 bg-gray-200 lg:col-span-2 xl:col-auto dark:bg-gray-700 rounded-2xl">
             {/* Display Avatar for each appointment */}
-            {appointmentData.map((appointment) => (
-                <div
-                    key={appointment.id}
-                    className="h-full p-5 bg-white rounded-2xl dark:bg-trueGray-800"
-                >
-                    <Avatar
-                        name={patient_name}
-                        datetime={appointment.timeslot_datetime}
-                        id={appointment.id}
-                    />
+            {appointmentData &&
+                appointmentData.map((appointment) => (
+                    <div
+                        key={appointment.id}
+                        className="h-full p-5 bg-white rounded-2xl dark:bg-trueGray-800"
+                    >
+                        <Avatar
+                            name={patient_name}
+                            datetime={appointment.timeslot_datetime}
+                            id={appointment.id}
+                        />
+                    </div>
+                ))}
+
+            {!appointmentData && (
+                <div className="flex flex-col justify-between h-full px-5 py-5 mt-5 bg-white w-96 rounded-2xl dark:bg-trueGray-800">
+                    <div className="text-xl font-semibold text-center">
+                        No upcoming appointments
+                    </div>
                 </div>
-            ))}
+            )}
         </div>
     );
 };
